@@ -9,7 +9,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'pg'
+group :production do
+  gem 'pg'
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
 
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
