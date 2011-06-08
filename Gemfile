@@ -15,6 +15,7 @@ group :production do
 end
 
 # Asset template engines
+gem 'haml-rails'
 gem 'sass-rails', "~> 3.1.0.rc"
 gem 'coffee-script'
 gem 'uglifier'
