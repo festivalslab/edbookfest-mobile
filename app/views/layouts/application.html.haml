@@ -22,10 +22,13 @@
 %body
   #container
     %header
-      %h1 Edinburgh International Book Festival
+      %h1.ir Edinburgh International Book Festival
+      %h2 Events
     #main{:role => "main"}
       = yield
     %footer
+      %a.back-to-top{:href => "#container"} Back to top
+      %a.desktop-site{:href => "http://www.edbookfest.co.uk"} Desktop site
   = javascript_include_tag :application
   :javascript
     MBP.scaleFix();

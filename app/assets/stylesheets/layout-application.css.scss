@@ -1,0 +1,39 @@
+$padding: 10px;
+
+@mixin ir($image, $width, $height) {
+  background: transparent url(/assets/#{$image}) 0 0 no-repeat;
+  width: #{$width}px;
+  height: #{$height}px;
+}
+
+@mixin font($pixels) {
+  font-size: #{$pixels}px;
+  font-size: #{$pixels/10}rem;
+}
+
+html {
+  font: 62.5%/1.3 Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+#container {
+  text-align: center;
+}
+
+header {
+  margin: 0 auto;
+  padding: $padding;
+  position: relative;
+  
+  h1 {
+    @include ir("logo-77x46.png", 77, 46);
+    position: absolute;
+    top: $padding;
+    right: $padding;
+  }
+  
+  h2 {
+    @include font(20);
+    color: #fff;
+  }
+  
+}
