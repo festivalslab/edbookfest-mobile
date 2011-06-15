@@ -23,6 +23,7 @@ header {
   margin: 0 auto;
   padding: $padding;
   position: relative;
+  height: 46px;
   
   h1 {
     @include ir("logo-77x46.png", 77, 46);
@@ -33,6 +34,7 @@ header {
   
   h2 {
     @include font(20);
+    line-height: 46px;
     color: #fff;
   }
   
