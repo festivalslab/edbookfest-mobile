@@ -1,4 +1,6 @@
 $padding: 10px;
+$footerHeight: 40px;
+$headerHeight: 46px;
 
 @mixin ir($image, $width, $height) {
   background: transparent url(/assets/#{$image}) 0 0 no-repeat;
@@ -28,7 +30,7 @@ header {
   margin: 0 auto;
   padding: $padding;
   position: relative;
-  height: 46px;
+  height: $headerHeight;
   
   h1 {
     @include ir("logo-77x46.png", 77, 46);
@@ -39,7 +41,7 @@ header {
   
   h2 {
     @include font(20);
-    line-height: 46px;
+    line-height: $headerHeight;
     color: #fff;
   }
   
@@ -47,10 +49,10 @@ header {
 
 footer {
   position: relative;
-  height: 40px;
-  top: -40px;
+  height: $footerHeight;
+  top: -$footerHeight;
 }
 
 #main {
-  padding-bottom: 40px;
+  padding-bottom: $footerHeight;
 }
