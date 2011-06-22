@@ -1,4 +1,5 @@
-$baseColor: #c51f37; 
+$baseColor: #c51f37;
+$padding: 10px;
 
 .home {
   a {
@@ -15,7 +16,7 @@ $baseColor: #c51f37;
     border-top-color: $baseColor;
     
     .back-to-top {
-      background-position: 10px -280px;
+      background-position: $padding -290px;
     }
   }
 }

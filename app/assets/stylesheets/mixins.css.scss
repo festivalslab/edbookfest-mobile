@@ -1,0 +1,32 @@
+@mixin ir($image, $width, $height) {
+  display: block;
+  background: transparent url(#{$baseImagePath}#{$image}) 0 0 no-repeat;
+  width: #{$width}px;
+  height: #{$height}px;
+}
+
+@mixin font($pixels) {
+  font-size: #{$pixels}px;
+  font-size: #{$pixels/10}rem;
+}
+
+@mixin borderRadius($radius) {
+     -moz-border-radius: $radius; 
+  -webkit-border-radius: $radius;
+          border-radius: $radius;       
+     -moz-background-clip: padding; 
+  -webkit-background-clip: padding-box; 
+          background-clip: padding-box;
+}
+
+@mixin boxShadow($x, $y, $spread, $color) {
+     -moz-box-shadow: $x $y $spread $color;
+  -webkit-box-shadow: $x $y $spread $color; /* Saf3.0+, Chrome */
+          box-shadow: $x $y $spread $color;
+}
+
+@mixin boxShadowInset($x, $y, $spread, $color) {
+     -moz-box-shadow: inset $x $y $spread $color;
+  -webkit-box-shadow: inset $x $y $spread $color; /* Saf3.0+, Chrome */
+          box-shadow: inset $x $y $spread $color;
+}

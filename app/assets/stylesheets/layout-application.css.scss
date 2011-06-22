@@ -1,26 +1,3 @@
-$padding: 10px;
-$footerHeight: 40px;
-$headerHeight: 46px;
-
-$baseColor: #444;
-$baseImagePath: "<%= asset_path '' %>";
-
-@mixin ir($image, $width, $height) {
-  display: block;
-  background: transparent url(#{$baseImagePath}#{$image}) 0 0 no-repeat;
-  width: #{$width}px;
-  height: #{$height}px;
-}
-
-@mixin font($pixels) {
-  font-size: #{$pixels}px;
-  font-size: #{$pixels/10}rem;
-}
-
-@mixin spriteArrows($left, $top) {
-  background: transparent url(<%= asset_path 'sprite-arrows.png' %>) $left $top no-repeat;
-}
-
 html {
   font: 62.5%/1.3 Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
@@ -59,11 +36,22 @@ html, body {
     }
     
     .back {
+      @include font(16);
+      @include borderRadius(5px);
+      @include boxShadowInset(1px, 1px, 2px, rgba(0,0,0,.2));
+      font-weight: bold;
+      text-decoration: none;
       color: #fff;
+      background-color: rgba(0,0,0,0.1);
+      background-position: 10px -440px;
+      border: 1px solid rgba(255,255,255,0.2);
       position: absolute;
       display: inline-block;
-      top: 10px;
+      top: 15px;
       left: 10px;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 10px 0 26px;
     }
   }
 }
@@ -85,7 +73,7 @@ footer {
   }
   
   .back-to-top {
-    @include spriteArrows($padding, -230px);
+    background-position: 10px -240px;
     padding-left: $padding + 14px;
   }
   
@@ -94,4 +82,9 @@ footer {
     right: 0;
     text-align: right;
   }
+}
+
+.arrows {
+  background-image: url(#{$baseImagePath}sprite-arrows.png);
+  background-repeat: no-repeat;
 }
