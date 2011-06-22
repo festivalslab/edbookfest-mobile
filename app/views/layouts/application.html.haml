@@ -22,7 +22,8 @@
 %body{:class => @bodyClass}
   #container
     %header
-      %h1.ir Edinburgh International Book Festival
+      %h1.ir 
+        = link_to "Edinburgh International Book Festival", :controller => "home"
       %h2 Events
     #main{:role => "main"}
       = yield
