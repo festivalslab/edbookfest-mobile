@@ -15,7 +15,12 @@ html {
   font: 62.5%/1.3 Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 #container {
+  min-height: 100%;
   text-align: center;
 }
 
@@ -38,4 +43,14 @@ header {
     color: #fff;
   }
   
+}
+
+footer {
+  position: relative;
+  height: 40px;
+  top: -40px;
+}
+
+#main {
+  padding-bottom: 40px;
 }
