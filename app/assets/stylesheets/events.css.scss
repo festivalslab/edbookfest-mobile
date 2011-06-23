@@ -1,0 +1,22 @@
+$baseColor: #c51f37;
+$padding: 10px;
+
+body.events {
+  a {
+    color: $baseColor;
+  }
+  
+  #container {
+    header {
+      background-color: $baseColor;
+    }
+  }
+  
+  footer {
+    border-top-color: $baseColor;
+    
+    .back-to-top {
+      background-position: $padding -290px;
+    }
+  }
+}

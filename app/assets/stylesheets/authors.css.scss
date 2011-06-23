@@ -1,7 +1,7 @@
-$baseColor: #c51f37;
+$baseColor: #00a650;
 $padding: 10px;
 
-.home {
+body.authors {
   a {
     color: $baseColor;
   }
@@ -16,7 +16,7 @@ $padding: 10px;
     border-top-color: $baseColor;
     
     .back-to-top {
-      background-position: $padding -290px;
+      background-position: $padding -340px;
     }
   }
 }

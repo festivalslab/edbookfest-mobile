@@ -67,7 +67,9 @@ html, body {
 }
 
 #main {
-  padding-bottom: $footerHeight;
+  @include font(14);
+  padding: $padding $padding $footerHeight $padding;
+  text-align: left;
 }
 
 footer {

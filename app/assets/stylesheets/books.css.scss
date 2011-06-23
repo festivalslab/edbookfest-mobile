@@ -1,0 +1,22 @@
+$baseColor: #016096;
+$padding: 10px;
+
+body.books {
+  a {
+    color: $baseColor;
+  }
+  
+  #container {
+    header {
+      background-color: $baseColor;
+    }
+  }
+  
+  footer {
+    border-top-color: $baseColor;
+    
+    .back-to-top {
+      background-position: $padding -390px;
+    }
+  }
+}
