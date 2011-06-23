@@ -30,28 +30,38 @@ html, body {
     }
 
     h2 {
-      @include font(20);
+      @include font(14);
+      font-weight: normal;
       line-height: $headerHeight;
       color: #fff;
     }
     
-    .back {
-      @include font(16);
+    .button {
+      @include font(12);
       @include borderRadius(5px);
       @include boxShadowInset(1px, 1px, 2px, rgba(0,0,0,.2));
-      font-weight: bold;
+      text-transform: uppercase;
+      font-weight: normal;
       text-decoration: none;
       color: #fff;
       background-color: rgba(0,0,0,0.1);
-      background-position: 10px -440px;
-      border: 1px solid rgba(255,255,255,0.2);
-      position: absolute;
+      border: 1px solid rgba(255,255,255,0.15);
       display: inline-block;
-      top: 15px;
-      left: 10px;
       height: 32px;
       line-height: 32px;
-      padding: 0 10px 0 26px;
+      padding: 0 10px;
+      
+      &:hover, &:active {
+        background-color: rgba(0,0,0,0.2);
+      }
+    }
+    
+    .back {
+      background-position: 10px -440px;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      padding-left: 26px;
     }
   }
 }
@@ -87,4 +97,14 @@ footer {
 .arrows {
   background-image: url(#{$baseImagePath}sprite-arrows.png);
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 320px) {
+  #container header h2 {
+    @include font(20);
+  }
+  
+  #container header .button {
+    @include font(14);
+  }
 }
