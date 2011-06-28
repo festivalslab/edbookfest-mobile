@@ -1,19 +1,18 @@
-$baseColor: #c51f37;
-$padding: 10px;
-
 body.events {
+  a:link { -webkit-tap-highlight-color:$baseColorEvents; }
+  
   a {
-    color: $baseColor;
+    color: $baseColorEvents;
   }
   
   #container {
     header {
-      background-color: $baseColor;
+      background-color: $baseColorEvents;
     }
   }
   
   footer {
-    border-top-color: $baseColor;
+    border-top-color: $baseColorEvents;
     
     .back-to-top {
       background-position: $padding -290px;

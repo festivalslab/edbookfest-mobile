@@ -1,4 +1,7 @@
 EdbookfestMobile::Application.routes.draw do
+  
+  match "events/calendar" => 'events#calendar', :as => :calendar
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

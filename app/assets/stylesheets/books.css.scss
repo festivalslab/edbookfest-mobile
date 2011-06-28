@@ -1,19 +1,18 @@
-$baseColor: #016096;
-$padding: 10px;
-
 body.books {
+  a:link { -webkit-tap-highlight-color:$baseColorBooks; }
+  
   a {
-    color: $baseColor;
+    color: $baseColorBooks;
   }
   
   #container {
     header {
-      background-color: $baseColor;
+      background-color: $baseColorBooks;
     }
   }
   
   footer {
-    border-top-color: $baseColor;
+    border-top-color: $baseColorBooks;
     
     .back-to-top {
       background-position: $padding -390px;

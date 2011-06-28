@@ -1,0 +1,60 @@
+$themeBase: $baseColorEvents;
+$cellPadding: 5px;
+$cellBorderRadius: 3px;
+
+#calendar {
+  table {
+    width: 100%;
+    border-spacing: 4px;
+    border-collapse: separate;
+    position: relative;
+    top: -3px;
+  }
+  
+  td, th {
+    text-align: center;
+  }
+  
+  th {
+    color: $lightText;
+    width: 14.285%;
+    padding: 0;
+  }
+  
+  td {
+    @include font(16);
+    @include borderRadius($cellBorderRadius);
+    padding: $cellPadding 0;
+    background-color: #f3f3f3;
+    color: $lightText;
+    vertical-align: middle;
+    
+    &.otherMonth {
+      background-color: transparent;
+      color: $veryLightText;
+    }
+    
+    &.events {
+      padding: 0;
+    }
+    
+    a {
+      display: block;
+      font-weight: bold;
+      @include borderRadius($cellBorderRadius);
+      background-color: lighten($themeBase, 45%);
+      padding: $cellPadding 0;
+      text-decoration: none;
+    }
+    
+    &.today a, a:active, a:hover {
+      background-color: $themeBase;
+      color: #fff;
+    }
+  }
+  
+  abbr {
+    border-bottom: 0;
+  }
+  
+}

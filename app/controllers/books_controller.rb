@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
   def index
-    @bodyClass = "books"
+    @theme = "books"
   end
 end

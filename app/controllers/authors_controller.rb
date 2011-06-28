@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
   def index
-    @bodyClass = "authors"
+    @theme = "authors"
   end
 end

@@ -5,8 +5,17 @@ gem 'rails', '3.1.0.rc2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+gem 'calendar_helper', '~> 0.2.4'
+
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'ZenTest'
+  gem 'autotest-rails'
+  gem 'delorean'
 end
 
 group :production do

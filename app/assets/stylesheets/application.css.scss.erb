@@ -2,16 +2,16 @@
 
 $baseImagePath: "<%= asset_path '' %>";
 
-$padding: 10px;
-$footerHeight: 40px;
-$headerHeight: 46px;
-
-$baseColor: #444;
-
+@import "variables";
 @import "mixins";
 @import "reset";
 @import "layout-application";
+@import "typography";
+
+/* Events */
 @import "events";
+@import "calendar";
+
 @import "authors";
 @import "books";
 

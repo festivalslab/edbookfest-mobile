@@ -1,19 +1,18 @@
-$baseColor: #00a650;
-$padding: 10px;
-
 body.authors {
+  a:link { -webkit-tap-highlight-color:$baseColorAuthors; }
+  
   a {
-    color: $baseColor;
+    color: $baseColorAuthors;
   }
   
   #container {
     header {
-      background-color: $baseColor;
+      background-color: $baseColorAuthors;
     }
   }
   
   footer {
-    border-top-color: $baseColor;
+    border-top-color: $baseColorAuthors;
     
     .back-to-top {
       background-position: $padding -340px;
