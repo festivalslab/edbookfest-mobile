@@ -47,7 +47,7 @@ $cellBorderRadius: 3px;
       text-decoration: none;
     }
     
-    &.today a, a:active, a:hover {
+    &.events.today a, a:active, a:hover {
       background-color: $themeBase;
       color: #fff;
     }
