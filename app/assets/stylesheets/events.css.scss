@@ -1,21 +1,21 @@
 body.events {
-  a:link { -webkit-tap-highlight-color:$baseColorEvents; }
-  
-  a {
-    color: $baseColorEvents;
+  #main {
+
+    a {
+      color: $baseColorEvents;
+    }
   }
-  
+
   #container {
     header {
       background-color: $baseColorEvents;
     }
   }
   
-  footer {
-    border-top-color: $baseColorEvents;
-    
-    .back-to-top {
-      background-position: $padding -290px;
+  .nav-list {
+    .arrow {
+      color: $baseColor;
+      background-position: -10px 50%;
     }
   }
 }

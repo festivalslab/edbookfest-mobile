@@ -12,14 +12,14 @@ html, body {
   
   header {
     margin: 0 auto;
-    padding: $padding;
+    padding: $vPadding $padding;
     position: relative;
     height: $headerHeight;
     background-color: $baseColor;
 
     h1 {
       position: absolute;
-      top: $padding;
+      top: $vPadding;
       right: $padding;
       width: 77px;
       height: 46px;
@@ -38,7 +38,7 @@ html, body {
     
     .button {
       @include font(12);
-      @include borderRadius(5px);
+      @include borderRadius(7px);
       @include boxShadowInset(1px, 1px, 2px, rgba(0,0,0,.2));
       text-transform: uppercase;
       font-weight: normal;
@@ -57,9 +57,9 @@ html, body {
     }
     
     .back {
-      background-position: 10px -440px;
+      background: transparent url(#{$baseImagePath}header-footer-arrows.png) 10px -50px no-repeat;
       position: absolute;
-      top: 15px;
+      top: 13px;
       left: 10px;
       padding-left: 26px;
     }
@@ -68,24 +68,27 @@ html, body {
 
 #main {
   @include font(14);
-  padding: $padding $padding $footerHeight $padding;
+  padding: 0 0 $footerHeight 0;
   text-align: left;
 }
 
 footer {
+  border-top: 1px solid #999;
   @include font(12);
+  @include verticalGradient($lightBackground, rgba(0,0,0,.2), 0, rgba(0,0,0,0), 8px);
   position: relative;
-  height: $footerHeight;
-  top: -$footerHeight - 3px;
-  border-top: 3px solid $baseColor;
+  top: -$footerHeight;
+  background-color: $lightBackground;
   
-  .back-to-top, .desktop-site {
+  a {
+    color: $mediumText;
+    text-decoration: none;
     display: inline-block;
     padding: $padding;
   }
   
   .back-to-top {
-    background-position: 10px -240px;
+    background: transparent url(#{$baseImagePath}header-footer-arrows.png) 10px 0 no-repeat;
     padding-left: $padding + 14px;
   }
   
@@ -94,11 +97,6 @@ footer {
     right: 0;
     text-align: right;
   }
-}
-
-.arrows {
-  background-image: url(#{$baseImagePath}sprite-arrows.png);
-  background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 320px) {

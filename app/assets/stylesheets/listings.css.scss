@@ -1,0 +1,26 @@
+.events {
+  time {
+    position: absolute;
+    top: $padding;
+    left: $padding;
+  }
+  
+  time, h4, .subtitle {
+    line-height: 18px;
+    line-height: 1.8rem;
+  }
+  
+  time, .subtitle {
+    color: $lightText;
+    @include font(12);
+  }
+  
+  h4, .subtitle {
+    margin-left: $padding + 28px;
+  }
+  
+  h4 {
+    font-weight: normal;
+    color: #000;
+  }
+}

@@ -18,7 +18,13 @@ describe EventsHelper do
     
     it "returns anchor if date is in festival date range" do
       output = render_calendar_cell(Date.new(2011,8,13), fest_start, fest_end)
-      output[0].should == "<a href=\"#\">13</a>"
+      output[0].should =~ /<a href=\".*\">13<\/a>/
+    end
+    
+    it "returns link with date" do
+      output = render_calendar_cell(Date.new(2011,8,13), fest_start, fest_end)
+      url = /<a href=\"(.+)\">/.match(output[0])[1]
+      url.should =~ /2011-08-13/
     end
     
     it "sets the cell class if date is in festival date range" do

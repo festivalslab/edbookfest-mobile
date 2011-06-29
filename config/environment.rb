@@ -7,3 +7,5 @@ EdbookfestMobile::Application.initialize!
 Haml::Template.options[:format] = :html5
 Haml::Template.options[:attr_wrapper] = '"'
 
+Date::DATE_FORMATS[:title] = '%a %e %b %Y'
+Date::DATE_FORMATS[:time] = '%H:%M'

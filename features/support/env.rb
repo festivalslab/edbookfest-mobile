@@ -5,6 +5,10 @@
 # files.
 
 require 'cucumber/rails'
+require 'factory_girl'
+
+# include FactoryGirl factories
+Dir.glob(File.join(File.dirname(__FILE__), '../../spec/support/factories/*.rb')).each {|f| require f }
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd

@@ -6,6 +6,7 @@ gem 'rails', '3.1.0.rc2'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'calendar_helper', '~> 0.2.4'
+gem 'faker'
 
 group :development, :test do
   gem 'sqlite3'
@@ -16,6 +17,8 @@ group :development, :test do
   gem 'ZenTest'
   gem 'autotest-rails'
   gem 'delorean'
+  gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 group :production do

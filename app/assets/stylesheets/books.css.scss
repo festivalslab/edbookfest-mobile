@@ -1,8 +1,8 @@
 body.books {
-  a:link { -webkit-tap-highlight-color:$baseColorBooks; }
-  
-  a {
-    color: $baseColorBooks;
+  #main {
+    a {
+      color: $baseColorBooks;
+    }
   }
   
   #container {
@@ -11,11 +11,10 @@ body.books {
     }
   }
   
-  footer {
-    border-top-color: $baseColorBooks;
-    
-    .back-to-top {
-      background-position: $padding -390px;
+  .nav-list {
+    .arrow {
+      color: $baseColor;
+      background-position: -30px 50%;
     }
   }
 }

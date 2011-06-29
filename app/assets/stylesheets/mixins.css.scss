@@ -30,3 +30,24 @@
   -webkit-box-shadow: inset $x $y $spread $color; /* Saf3.0+, Chrome */
           box-shadow: inset $x $y $spread $color;
 }
+
+@mixin simpleGradient($fallback, $top, $bottom) {
+  background-color: $fallback;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom)); 
+  background-image: -webkit-linear-gradient(top, $top, $bottom);
+  background-image:    -moz-linear-gradient(top, $top, $bottom);
+  background-image:     -ms-linear-gradient(top, $top, $bottom);
+  background-image:      -o-linear-gradient(top, $top, $bottom);
+  background-image:         linear-gradient(top, $top, $bottom);
+}
+
+@mixin verticalGradient($fallback, $colorStop1, $colorStopPosition1, $colorStop2, $colorStopPosition2) {
+  background-color: $fallback;
+  background-image: -moz-linear-gradient(top, $colorStop1 $colorStopPosition1, $colorStop2 $colorStopPosition2); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop($colorStopPosition1,$colorStop1), color-stop($colorStopPosition2,$colorStop2)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, $colorStop1 $colorStopPosition1, $colorStop2 $colorStopPosition2); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top, $colorStop1 $colorStopPosition1, $colorStop2 $colorStopPosition2); /* Opera11.10+ */
+  background-image: -ms-linear-gradient(top, $colorStop1 $colorStopPosition1, $colorStop2 $colorStopPosition2); /* IE10+ */
+  background-image: linear-gradient(top, $colorStop1 $colorStopPosition1, $colorStop2 $colorStopPosition2); /* W3C */
+}
+

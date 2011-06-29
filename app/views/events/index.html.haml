@@ -1,0 +1,5 @@
+%h3
+  = @date.to_s :title
+  
+%ul.nav-list.events
+  = render(:partial => "event", :collection => @events)

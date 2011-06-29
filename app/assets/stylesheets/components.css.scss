@@ -1,0 +1,31 @@
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $divider;
+  
+  li {
+    @include simpleGradient(#fff, #fff, #f0f0f0);
+    border-bottom: 1px solid $divider;
+  }
+  
+  a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: $padding $padding+20px $padding $padding;
+  }
+  
+  .arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: $padding;
+    width: 10px;
+    height: 100%;
+    background-image: url(#{$baseImagePath}right-arrows.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+  
+}

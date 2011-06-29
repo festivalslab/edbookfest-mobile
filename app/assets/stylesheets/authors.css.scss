@@ -1,8 +1,8 @@
 body.authors {
-  a:link { -webkit-tap-highlight-color:$baseColorAuthors; }
-  
-  a {
-    color: $baseColorAuthors;
+  #main {
+    a {
+      color: $baseColorAuthors;
+    }
   }
   
   #container {
@@ -11,11 +11,10 @@ body.authors {
     }
   }
   
-  footer {
-    border-top-color: $baseColorAuthors;
-    
-    .back-to-top {
-      background-position: $padding -340px;
+  .nav-list {
+    .arrow {
+      color: $baseColor;
+      background-position: -20px 50%;
     }
   }
 }

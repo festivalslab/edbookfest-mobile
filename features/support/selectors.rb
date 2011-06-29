@@ -10,6 +10,9 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
+      
+    when /event (\d+)/
+      ".events li:nth-child(#{$1})"
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

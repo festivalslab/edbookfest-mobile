@@ -10,6 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110628170043) do
+
+  create_table "events", :force => true do |t|
+    t.integer  "eibf_id"
+    t.string   "title"
+    t.string   "sub_title"
+    t.string   "standfirst"
+    t.datetime "start_time"
+    t.date     "date"
+    t.boolean  "is_sold_out"
+    t.string   "event_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

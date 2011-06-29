@@ -13,6 +13,12 @@ module NavigationHelpers
       
     when /^the calendar page$/
       calendar_path
+      
+    when /^the listings page for (\d+)\/(\d+)\/(\d+)$/
+      listings_path("#{$3}-#{$2}-#{$1}")
+      
+    when /the event detail page for (\d)/
+      event_path(Event.find($1))
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

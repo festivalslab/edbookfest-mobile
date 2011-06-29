@@ -207,11 +207,6 @@ end
 #   end
 # end
 # 
-# Then /^show me the page$/ do
-#   save_and_open_page
-# end
-
-Then /^the title should be "([^"]*)"$/ do |text|
-  title = find("h2")
-  title.should have_content(text)
+Then /^show me the page$/ do
+  save_and_open_page
 end

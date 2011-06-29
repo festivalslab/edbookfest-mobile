@@ -25,3 +25,8 @@ Feature: Events calendar
     Given today is 22/08/2011
     When I go to the calendar page
     Then the 22nd should be highlighted
+    
+  Scenario: Dates link through to listings page
+    Given I am on the calendar page
+    When I click on day 22
+    Then I should be on the listings page for 22/08/2011

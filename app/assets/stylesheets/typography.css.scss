@@ -1,6 +1,8 @@
 h3 {
-  @include font(18);
-  color: #000;
+  @include font(16);
+  color: #fff;
+  background: rgba(0,0,0,.85);
   font-weight: normal;
-  margin: 0 0 $padding 0;
+  padding: $vPadding $padding;
+  @include boxShadow(0, 0, 8px, rgba(0,0,0,.6));
 }

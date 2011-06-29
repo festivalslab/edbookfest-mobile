@@ -9,4 +9,8 @@ class Festival
   def self.end_date
     @@end_date
   end
+  
+  def self.date_in_festival(date)
+    date >= @@start_date && date <= @@end_date
+  end
 end

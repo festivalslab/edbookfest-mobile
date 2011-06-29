@@ -1,15 +1,22 @@
 // Dimensions
 $padding: 10px;
-$footerHeight: 40px;
+$vPadding: 8px;
+$footerHeight: 35px;
 $headerHeight: 46px;
 
 // Colours
+$darkText: #000;
+$mediumText: #444;
 $lightText: #777;
 $veryLightText: #aaa;
 
+$charcoal: #222;
+$lightBackground: #ddd;
 $baseColor: #444;
 $baseColorEvents: #c51f37;
 $baseColorAuthors: #00a650;
 $baseColorBooks: #016096;
+
+$divider: #ccc;
 
 $lightEvents: lighten($baseColorEvents, 45%);

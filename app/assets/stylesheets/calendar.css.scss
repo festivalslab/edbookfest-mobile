@@ -3,6 +3,8 @@ $cellPadding: 5px;
 $cellBorderRadius: 3px;
 
 #calendar {
+  padding: $vPadding;
+  
   table {
     width: 100%;
     border-spacing: 4px;
