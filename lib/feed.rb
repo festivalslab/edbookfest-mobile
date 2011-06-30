@@ -8,7 +8,9 @@ class Feed
   end
   
   def update()
-    
+    @doc.css('Event').each do |event|
+      Event.create()
+    end
   end
   
 end
