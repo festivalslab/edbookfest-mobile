@@ -1,9 +1,14 @@
 require 'nokogiri'
+require 'open-uri'
 
 class Feed
   
-  def self.load_url(uri)
-    Nokogiri::XML(open(uri))
+  def load_url(url)
+    @doc = Nokogiri::XML(open(url))
+  end
+  
+  def update()
+    
   end
   
 end
