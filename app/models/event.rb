@@ -1,8 +1,5 @@
-class Event < ActiveRecord::Base
-  scope :on_date, lambda { |date| 
-    {
-      :conditions => { :date => date },
-      :order => 'start_time ASC'
-    }
-  }
+class Event < ActiveRecord::Base  
+  def self.on_date(date)
+    where("events.date = ?", date).order("events.start_time ASC")
+  end
 end
