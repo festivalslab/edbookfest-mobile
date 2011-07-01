@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe Feed::Import do
-  let(:import) { Feed::Import.new }
   let(:listings) { open(Rails.root + 'spec/support/listings.xml') } 
   let(:doc) { Nokogiri::XML(listings) }
   let(:url) { "http://foo.bar/woo" }
   let(:username) { "foo" } 
   let(:password) { "bar" }
+  let(:import) { Feed::Import.new(url, username, password) }
   
   describe "#load_url" do
     before(:each) do
@@ -16,19 +16,19 @@ describe Feed::Import do
     
     it "calls open" do
       import.should_receive(:open).with(url, :http_basic_authentication => [username, password])
-      import.load_url url, username, password
+      import.load
     end
     
     it "creates a Nokogiri XML doc" do
       Nokogiri::XML::Document.should_receive(:parse)
-      import.load_url url, username, password
+      import.load
     end
   end
   
   describe "#update" do
     before(:each) do
       import.stub!(:open).and_return(listings)
-      import.load_url url, username, password
+      import.load
     end
     
     describe "events" do

@@ -12,9 +12,18 @@ module Feed
   #   import.update
   class Import
     
+    def initialize(url, username, password)
+      @url, @username, @password = url, username, password
+    end
+    
     # Loads feed data from a URL
-    def load_url(url, username, password)
-      @doc = Nokogiri::XML(open(url, :http_basic_authentication => [username, password]))
+    def load()
+      @doc = Nokogiri::XML load_file
+    end
+    
+    # Loads feed file
+    def load_file()
+      open(@url, :http_basic_authentication => [@username, @password])
     end
     
     # Updates database records from feed data
