@@ -7,6 +7,16 @@ Given /^there (?:is|are) (\d+) events? for (\d+)\/(\d+)\/(\d+) starting at (\d+)
   end
 end
 
+Given /^there are (\d+) events for (\d+)\/(\d+)\/(\d+) with the same start time$/ do |count, day, month, year|
+  datePattern = "#{year}-#{month}-#{day}T#12:00:00+01:00"
+  date = Date.parse datePattern
+  dateTime = DateTime.parse datePattern
+  chars = ('a'..'z').to_a.reverse
+  count.to_i.times do |c|
+    Factory.create(:event, :date => date, :start_time => dateTime, :title => "Event #{chars[c]}")
+  end
+end
+
 When /^I click on day (\d+)$/ do |day|
   click_link(day)
 end

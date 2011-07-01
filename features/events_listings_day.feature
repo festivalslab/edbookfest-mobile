@@ -17,6 +17,13 @@ Feature: Events listings for one day
     Given there are 2 events for 22/08/2011 starting at 14:00
     When I go to the listings page for 22/08/2011
     Then event 1 starts before event 2
+    
+  Scenario: Events with the same start time are ordered by title
+    Given there are 3 events for 22/08/2011 with the same start time
+    When I go to the listings page for 22/08/2011
+    Then event 1 has a title of "Event x"
+    And event 2 has a title of "Event y"
+    And event 3 has a title of "Event z"
   
   Scenario: User is shown start time, title and subtitle
     Given there is 1 event for 22/08/2011 starting at 14:00
