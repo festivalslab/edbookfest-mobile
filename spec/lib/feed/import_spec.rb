@@ -1,54 +1,52 @@
 require 'spec_helper'
 
-# rake task will:
-# d = Feed.load_url('http://..')
-# Feed.update(d)
-
-describe Feed do
-  let(:feed) { Feed.new }
+describe Feed::Import do
+  let(:import) { Feed::Import.new }
   let(:listings) { open(Rails.root + 'spec/support/listings.xml') } 
   let(:doc) { Nokogiri::XML(listings) }
-  let(:url) { "http://foo.bar/woo" } 
+  let(:url) { "http://foo.bar/woo" }
+  let(:username) { "foo" } 
+  let(:password) { "bar" }
   
   describe "#load_url" do
     before(:each) do
-      feed.stub!(:open)
+      import.stub!(:open)
       Nokogiri::XML::Document.stub!(:parse).and_return(:doc)
     end
     
-    it "calls load" do
-      feed.should_receive(:open).with(url)
-      feed.load_url url
+    it "calls open" do
+      import.should_receive(:open).with(url, :http_basic_authentication => [username, password])
+      import.load_url url, username, password
     end
     
     it "creates a Nokogiri XML doc" do
       Nokogiri::XML::Document.should_receive(:parse)
-      feed.load_url url
+      import.load_url url, username, password
     end
   end
   
   describe "#update" do
     before(:each) do
-      feed.stub!(:open).and_return(listings)
-      feed.load_url(url)
+      import.stub!(:open).and_return(listings)
+      import.load_url url, username, password
     end
     
     describe "events" do
       let(:expected_count) { 32 } 
       
       it "creates the correct number of events" do
-        feed.update
+        import.update
         Event.all.count.should == expected_count
       end
       
       it "does not create duplicates" do
-        feed.update
-        feed.update
+        import.update
+        import.update
         Event.all.count.should == expected_count
       end
       
       it "creates the correct data for one event" do
-        feed.update
+        import.update
         e = Event.first
         e.eibf_id.should == 2055
         e.title.should == "Keep Them Reading: Book Awards"
@@ -65,13 +63,13 @@ describe Feed do
           :eibf_id => 2055,
           :title => 'The original title',
         })
-        feed.update
+        import.update
         Event.first.title.should == "Keep Them Reading: Book Awards"
       end
       
       it "deletes events that are not in the feed" do
         Event.create :eibf_id => 1234567
-        feed.update
+        import.update
         Event.find_by_eibf_id(1234567).should be_nil
       end
     end
