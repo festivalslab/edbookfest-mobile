@@ -7,6 +7,7 @@ gem 'rails', '3.1.0.rc2'
 
 gem 'calendar_helper', '~> 0.2.4'
 gem 'faker'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'sqlite3'
