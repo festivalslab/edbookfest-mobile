@@ -22,7 +22,7 @@ Feature: Events listings for one day
     Given there is 1 event for 22/08/2011 starting at 14:00
     When I go to the listings page for 22/08/2011
     Then event 1 has a start time of "14:00"
-    And event 1 has a datetime of "2011-08-22T14:00:00Z"
+    And event 1 has a datetime of "2011-08-22T14:00:00+01:00"
     And event 1 has a title of "Event title"
     And event 1 has a subtitle of "Event subtitle"
   

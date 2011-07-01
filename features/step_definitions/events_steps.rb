@@ -1,8 +1,7 @@
 Given /^there (?:is|are) (\d+) events? for (\d+)\/(\d+)\/(\d+) starting at (\d+):(\d+)$/ do |count, day, month, year, hours, minutes|
-  datePattern = "#{year}-#{month}-#{day}"
-  timePattern = "#{hours}:#{minutes}"
+  datePattern = "#{year}-#{month}-#{day}T#{hours}:#{minutes}:00+01:00"
   date = Date.parse datePattern
-  dateTime = DateTime.parse "#{datePattern} #{timePattern}"
+  dateTime = DateTime.parse datePattern
   count.to_i.times do |c|
     Factory.create(:event, :date => date, :start_time => dateTime + c.minutes)
   end
