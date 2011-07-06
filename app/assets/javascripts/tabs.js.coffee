@@ -3,6 +3,7 @@
   $.extend $.fn, 
     tabs: (groupSelector, titleSelector) ->
       container = $ this
+      return if container.find('ul.tabs').length
       sections = $(groupSelector, this)
       tabList = $('<ul/>').addClass 'tabs'
       

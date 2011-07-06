@@ -27,7 +27,7 @@
         return expect($('ul.tabs li').last()).not.toHaveClass('active');
       });
     });
-    return describe("when clicking on a nav link", function() {
+    describe("when clicking on a nav link", function() {
       beforeEach(function() {
         return $('#container ul.tabs li').first().next().trigger('click');
       });
@@ -40,6 +40,12 @@
         expect($('ul.tabs li').first()).not.toHaveClass('active');
         expect($('ul.tabs li').first().next()).toHaveClass('active');
         return expect($('ul.tabs li').last()).not.toHaveClass('active');
+      });
+    });
+    return describe("initialising twice", function() {
+      return it("does not create another set of tabs", function() {
+        $('#container').tabs('section', 'h3');
+        return expect($('#container ul.tabs').length).toEqual(1);
       });
     });
   });

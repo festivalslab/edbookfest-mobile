@@ -39,3 +39,9 @@ describe "tabs", ->
       expect($('ul.tabs li').first()).not.toHaveClass 'active'
       expect($('ul.tabs li').first().next()).toHaveClass 'active'
       expect($('ul.tabs li').last()).not.toHaveClass 'active'
+      
+  describe "initialising twice", ->
+  
+    it "does not create another set of tabs", ->
+      $('#container').tabs 'section', 'h3'
+      expect($('#container ul.tabs').length).toEqual 1 
