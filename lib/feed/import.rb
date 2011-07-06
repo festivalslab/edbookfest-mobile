@@ -49,7 +49,8 @@ module Feed
         :standfirst => event.at_css('Description Standfirst').text,
         :start_time => DateTime.parse(event.at_css('EventDateTime').text),
         :date => Date.parse(event.at_css('EventDateTime').text),
-        :event_type => event['event_type']
+        :event_type => event['event_type'],
+        :is_sold_out => event['isSoldOut']
       })
       @events_modified += 1
     end
