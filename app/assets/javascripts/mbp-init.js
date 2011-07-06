@@ -1,1 +1,0 @@
-MBP.hideUrlBar();

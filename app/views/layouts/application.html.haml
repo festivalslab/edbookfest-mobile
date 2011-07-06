@@ -25,18 +25,14 @@
       %h1.ir 
         = link_to "Edinburgh International Book Festival", :controller => "home"
       %h2 Events
-    #main{:role => "main"}
+    #main{:role => "main", :"data-pjax-container" => ""}
       = yield
   %footer
-    %a.back-to-top{:href => "#container"} Back to top
-    %a.desktop-site{:href => "http://www.edbookfest.co.uk"} Desktop site
+    %a.back-to-top{:href => "#container", :"data-anchor" => ""} Back to top
+    %a.desktop-site{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
   = javascript_include_tag :application
   :javascript
     MBP.scaleFix();
-    yepnope({
-      test : Modernizr.mq('(min-width)'),
-      nope : ['#{javascript_path "lib/respond.min.js"}']
-    });
   / <script src="https://getfirebug.com/firebug-lite.js"></script>
   :javascript
     var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];

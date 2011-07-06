@@ -25,6 +25,6 @@
       
 ) window.Zepto
 
-$(document).ready ->
+$(document).bind 'pageChanged', ->
   $('.tabs-container').tabs '.tab-content', '.tab-title'
   

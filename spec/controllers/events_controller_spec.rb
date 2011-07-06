@@ -11,6 +11,19 @@ describe EventsController do
     Festival.stub(:end_date).and_return(fest_end)
     Festival.stub(:date_in_festival).and_return(true)
   end
+  
+  describe "setting layout" do
+    it "uses the application layout for normal requests" do
+      get :calendar
+      response.should render_template("layouts/application")
+    end
+    
+    it "uses no layout for PJAX requests" do
+      request.env['X-PJAX'] = 'true'
+      get :calendar
+      response.should_not render_template("layouts/application")
+    end
+  end
 
   describe "GET 'calendar'" do
     it "should be successful" do

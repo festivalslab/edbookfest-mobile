@@ -1,6 +1,6 @@
-//= require lib/zepto
-//= require lib/mbp-helper
-//= require mbp-init
+//= require zepto
+//= require pjax
+//= require mbp-helper
 //= require navigation
 //= require home
 //= require tabs

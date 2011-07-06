@@ -30,3 +30,7 @@ Feature: Events calendar
     Given I am on the calendar page
     When I click on day 22
     Then I should be on the listings page for 22/08/2011
+    
+  
+  
+  

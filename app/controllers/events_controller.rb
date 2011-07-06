@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   helper CalendarHelper
   before_filter :set_theme
+  layout :set_layout
   
   def index
     @date = Date.parse(params[:date])

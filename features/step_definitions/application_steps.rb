@@ -6,6 +6,10 @@ When /^I wait until "([^"]*)" (?:are|is) visible$/ do |className|
   page.has_css?(".#{className}", :visible => true)
 end
 
+When /^I click the back button$/ do
+  page.find('a.back').click
+end
+
 Then /^the title should be "([^"]*)"$/ do |text|
   page.should have_css("h2", :text => text)
 end
@@ -16,4 +20,9 @@ end
 
 Then /^the page heading should be "([^"]*)"$/ do |text|
   page.should have_css("h3", :text => text)
+end
+
+Then /^I should be on the (\w+) page$/ do |page|
+  current_path = URI.parse(current_url).path
+  current_path.should == path_to("the #{page} page")
 end
