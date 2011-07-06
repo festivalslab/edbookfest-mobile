@@ -16,37 +16,37 @@ describe Feed::Import do
     
     it "calls open" do
       import.should_receive(:open).with(url, :http_basic_authentication => [username, password])
-      import.load
+      import.load false
     end
     
     it "creates a Nokogiri XML doc" do
       Nokogiri::XML::Document.should_receive(:parse)
-      import.load
+      import.load false
     end
   end
   
   describe "#update" do
     before(:each) do
       import.stub!(:open).and_return(listings)
-      import.load
+      import.load false
     end
     
     describe "events" do
       let(:expected_count) { 32 } 
       
       it "creates the correct number of events" do
-        import.update
+        import.update false
         Event.all.count.should == expected_count
       end
       
       it "does not create duplicates" do
-        import.update
-        import.update
+        import.update false
+        import.update false
         Event.all.count.should == expected_count
       end
       
       it "creates the correct data for one event" do
-        import.update
+        import.update false
         e = Event.first
         e.eibf_id.should == 2055
         e.title.should == "Keep Them Reading: Book Awards"
@@ -63,13 +63,13 @@ describe Feed::Import do
           :eibf_id => 2055,
           :title => 'The original title',
         })
-        import.update
+        import.update false
         Event.first.title.should == "Keep Them Reading: Book Awards"
       end
       
       it "deletes events that are not in the feed" do
         Event.create :eibf_id => 1234567
-        import.update
+        import.update false
         Event.find_by_eibf_id(1234567).should be_nil
       end
     end

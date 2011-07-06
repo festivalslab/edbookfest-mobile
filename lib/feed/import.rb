@@ -14,23 +14,29 @@ module Feed
     
     def initialize(url, username, password)
       @url, @username, @password = url, username, password
+      @events_modified = 0
     end
     
     # Loads feed data from a URL
-    def load()
-      @doc = Nokogiri::XML load_file
+    def load(output = true)
+      @doc = Nokogiri::XML load_file(output)
+      puts "Feed source has #{@doc.css('Event').size} events" if output
     end
     
     # Loads feed file
-    def load_file()
-      open(@url, :http_basic_authentication => [@username, @password])
+    def load_file(output = true)
+      file = open(@url, :http_basic_authentication => [@username, @password])
+      puts "Feed source loaded successfully" if output
+      file
     end
     
     # Updates database records from feed data
-    def update()
+    def update(output = true)
       eibf_ids = @doc.css('Event').map { |e| e['eibf_id'].to_i }
       Event.where("eibf_id not in (?)", eibf_ids).delete_all
       @doc.css('Event').each { |event| update_event(event) }
+      puts "#{@events_modified} events added or modified" if output
+      puts "There are now #{Event.all.count} events in the database" if output
     end
   
   private
@@ -45,6 +51,7 @@ module Feed
         :date => Date.parse(event.at_css('EventDateTime').text),
         :event_type => event['event_type']
       })
+      @events_modified += 1
     end
   end
   
