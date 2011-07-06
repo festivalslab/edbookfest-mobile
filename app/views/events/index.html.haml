@@ -1,5 +1,15 @@
 %h3
   = @date.to_s :title
-  
-%ul.nav-list.events
-  = render(:partial => "event", :collection => @events)
+
+.tabs-container
+  - if (@adult_events.any?) then  
+    %section.tab-content
+      %h4.tab-title Adult
+      %ul.nav-list.events.adult
+        = render(:partial => "event", :collection => @adult_events)
+
+  - if (@child_events.any?) then
+    %section.tab-content
+      %h4.tab-title Children
+      %ul.nav-list.events.children
+        = render(:partial => "event", :collection => @child_events)

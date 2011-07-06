@@ -1,4 +1,8 @@
 body.authors {
+  h4, .tabs li.active {
+    color: $baseColorAuthors;
+  }
+  
   #main {
     a {
       color: $baseColorAuthors;

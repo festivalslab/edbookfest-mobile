@@ -1,4 +1,6 @@
+//= require lib/zepto
 //= require lib/mbp-helper
-//= require lib/xui/xui.min
+//= require mbp-init
 //= require navigation
 //= require home
+//= require tabs

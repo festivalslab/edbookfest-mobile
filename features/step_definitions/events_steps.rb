@@ -1,9 +1,16 @@
-Given /^there (?:is|are) (\d+) events? for (\d+)\/(\d+)\/(\d+) starting at (\d+):(\d+)$/ do |count, day, month, year, hours, minutes|
+Given /^there (?:is|are) (\d+) (child|adult)?\s?(sold out)?\s?events? for (\d+)\/(\d+)\/(\d+) starting at (\d+):(\d+)$/ do |count, type, sold_out, day, month, year, hours, minutes|
+  eventType = (type == "child") ? "Children" : "Adult"
   datePattern = "#{year}-#{month}-#{day}T#{hours}:#{minutes}:00+01:00"
   date = Date.parse datePattern
   dateTime = DateTime.parse datePattern
   count.to_i.times do |c|
-    Factory.create(:event, :date => date, :start_time => dateTime + c.minutes)
+    factory_options = {
+      :date => date, 
+      :start_time => dateTime + c.minutes, 
+      :event_type => eventType
+    }
+    factory_options[:is_sold_out] = true if (sold_out)
+    Factory.create(:event, factory_options)
   end
 end
 
@@ -35,8 +42,9 @@ Then /^I should be on the event detail page for event (\d+)$/ do |index|
   current_path.should == path_to("the event detail page for #{index}")
 end
 
-Then /^I should see (\d+) events$/ do |count|
-  events = all('.events li')
+Then /^I should see (\d+) (adult|child)?\s?events$/ do |count, event_type|
+  list_class = event_type == "child" ? "children" : "adult"
+  events = all(".events.#{list_class} li")
   events.length.should == count.to_i
 end
 
@@ -51,14 +59,24 @@ Then /^event (\d+) has a start time of "(.+)"$/ do |index, time|
   event.should have_css("time", :text => time)
 end
 
-Then /^event (\d+) has a datetime of "([^"]*)"$/ do |index, datetime|
+Then /^event (\d+) is (not)?\s?sold out$/ do |index, inv|
   event = find(selector_for("event #{index}"))
+  if (inv) then
+    event.should_not have_content('Sold out')
+  else
+    event.should have_content('Sold out')
+  end
+end
+
+Then /^(child|adult)?\s?event (\d+) has a datetime of "([^"]*)"$/ do |event_type, index, datetime|
+  type = (event_type == "child") ? "children" : "adult"
+  event = find(selector_for("#{type} event #{index}"))
   event.should have_css("time[datetime='#{datetime}']")
 end
 
 Then /^event (\d+) has a title of "([^"]*)"$/ do |index, title|
   event = find(selector_for("event #{index}"))
-  event.should have_css("h4", :text => title)
+  event.should have_css("h5", :text => title)
 end
 
 Then /^event (\d+) has a subtitle of "([^"]*)"$/ do |index, subtitle|

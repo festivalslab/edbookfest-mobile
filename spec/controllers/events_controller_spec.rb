@@ -59,10 +59,16 @@ describe EventsController do
           assigns[:date].should eq(date);
         end
         
-        it "requests events for a date and assigns them to @events" do
-          Event.should_receive(:on_date).with(date)
+        it "requests adult events for a date and assigns them to @adult_events" do
+          Event.should_receive(:on_date).with(date, "Adult")
           get :index, :date => date.to_s
-          assigns[:events].should eq([1,2])
+          assigns[:adult_events].should eq([1,2])
+        end
+        
+        it "requests child events for a date and assigns them to @child_events" do
+          Event.should_receive(:on_date).with(date, "Children")
+          get :index, :date => date.to_s
+          assigns[:child_events].should eq([1,2])
         end
       end
       

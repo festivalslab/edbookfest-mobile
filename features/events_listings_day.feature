@@ -38,4 +38,57 @@ Feature: Events listings for one day
     When I go to the listings page for 22/08/2011
     And I click on event 1
     Then I should be on the event detail page for event 1
+    
+  Scenario: Sold out events are marked
+    Given there is 1 event for 22/08/2011 starting at 14:00
+    And there is 1 sold out event for 22/08/2011 starting at 15:00
+    When I go to the listings page for 22/08/2011
+    Then event 1 is not sold out
+    And event 2 is sold out
+  
+  Scenario: If there are only adult events, no children section is shown
+    Given there is 1 event for 22/08/2011 starting at 14:00
+    When I go to the listings page for 22/08/2011
+    Then I should see "Adult"
+    And I should not see "Children"
+  
+  Scenario: If there are only chidrens' events, no adult section is shown
+    Given there is 1 child event for 22/08/2011 starting at 14:00
+    When I go to the listings page for 22/08/2011
+    Then I should see "Children"
+    And I should not see "Adult"
+    
+  Scenario: Adult and child events are sorted into correct groups for each day
+    Given there are 2 adult events for 22/08/2011 starting at 14:00
+    And there are 3 child events for 22/08/2011 starting at 15:00
+    When I go to the listings page for 22/08/2011
+    Then I should see 2 adult events
+    And I should see 3 child events
+    And adult event 1 has a datetime of "2011-08-22T14:00:00+01:00"
+    And child event 1 has a datetime of "2011-08-22T15:00:00+01:00"
+    
+  @javascript
+  Scenario: Initial state of adult and children event tabs
+    Given there are 2 adult events for 22/08/2011 starting at 14:00
+    And there are 3 child events for 22/08/2011 starting at 15:00
+    When I go to the listings page for 22/08/2011
+    And I wait until "tabs" are visible
+    Then the adult tab should be highlighted
+    And the adult tab section should be visible
+    And the children tab should not be highlighted
+    And the children tab section should not be visible
+    
+  @javascript
+  Scenario: Swapping adult and children event tabs
+    Given there are 2 adult events for 22/08/2011 starting at 14:00
+    And there are 3 child events for 22/08/2011 starting at 15:00
+    When I go to the listings page for 22/08/2011
+    And I wait until "tabs" are visible
+    And I click the children tab
+    Then the children tab should be highlighted
+    And the children tab section should be visible
+    And the adult tab should not be highlighted
+    And the adult tab section should not be visible
+  
+  
   

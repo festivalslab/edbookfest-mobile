@@ -15,6 +15,9 @@ Dir.glob(File.join(File.dirname(__FILE__), '../../spec/support/factories/*.rb'))
 # prefer to use XPath just remove this line and adjust any selectors in your
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
+Capybara.register_driver :selenium do |app| 
+  Capybara::Selenium::Driver.new(app, :browser => :chrome) 
+end
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 

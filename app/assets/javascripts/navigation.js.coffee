@@ -1,9 +1,10 @@
 doBack = (ev) ->
   window.history.back()
-  false
+  ev.preventDefault()
 
-backLink = x$ '''<a href="#" class="button back">Back</a>'''
-backLink.touchstart doBack
-backLink.click doBack
-x$('header').bottom backLink
+init = ->
+  backLink = $ '''<a href="#" class="button back">Back</a>'''
+  backLink.bind 'touchstart click', doBack
+  $('header').append backLink
 
+$ init

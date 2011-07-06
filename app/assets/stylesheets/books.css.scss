@@ -1,4 +1,8 @@
 body.books {
+  h4, .tabs li.active {
+    color: $baseColorBooks;
+  }
+  
   #main {
     a {
       color: $baseColorBooks;

@@ -31,6 +31,12 @@
           box-shadow: inset $x $y $spread $color;
 }
 
+@mixin boxShadowReset() {
+  -mox-box-shadow: none;
+  -webkit-box-shadow: none;
+  -box-shadow: none;
+}
+
 @mixin simpleGradient($fallback, $top, $bottom) {
   background-color: $fallback;
   background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom)); 

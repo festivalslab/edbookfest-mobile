@@ -20,6 +20,11 @@ group :development, :test do
   gem 'delorean'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'autotest-growl'
+  gem 'guard'
+  gem 'guard-coffeescript'
+  gem 'guard-livereload'
+  gem 'jasmine', '1.0.2.1'
 end
 
 group :production do

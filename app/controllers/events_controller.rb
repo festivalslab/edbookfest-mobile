@@ -5,7 +5,8 @@ class EventsController < ApplicationController
   def index
     @date = Date.parse(params[:date])
     not_found if @date.nil? || !Festival.date_in_festival(@date)
-    @events = Event.on_date(@date)
+    @adult_events = Event.on_date(@date, "Adult")
+    @child_events = Event.on_date(@date, "Children")
   end
   
   def calendar

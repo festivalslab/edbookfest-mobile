@@ -1,7 +1,10 @@
 %li
   = link_to(event) do
-    %h4.ellipsis= event.title
-    %p.subtitle.ellipsis= event.sub_title
+    %h5.ellipsis= event.title
+    %p.subtitle.ellipsis
+      - if (event.is_sold_out)
+        %span.sold-out Sold out
+      = event.sub_title
     %time{:datetime => event.start_time.iso8601} 
       = event.start_time.to_s :time
     %span.arrow

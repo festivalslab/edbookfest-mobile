@@ -1,6 +1,11 @@
 body.events {
+  h4, 
+  .tabs li.active,
+  ul.events .sold-out {
+    color: $baseColorEvents;
+  }
+  
   #main {
-
     a {
       color: $baseColorEvents;
     }

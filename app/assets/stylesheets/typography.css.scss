@@ -6,3 +6,9 @@ h3 {
   padding: $vPadding $padding;
   @include boxShadow(0, 0, 8px, rgba(0,0,0,.6));
 }
+
+h4 {
+  @include font(14);
+  font-weight: bold;
+  padding: $vPadding $padding;
+}

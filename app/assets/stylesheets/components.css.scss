@@ -1,3 +1,5 @@
+// Standard list items with links
+
 .nav-list {
   list-style: none;
   margin: 0;
@@ -26,6 +28,40 @@
     background-image: url(#{$baseImagePath}right-arrows.png);
     background-repeat: no-repeat;
     background-position: 0 50%;
+  }
+  
+}
+
+// Tab set
+
+.tabs {
+  
+  list-style: none;
+  margin: 0;
+  padding: $vPadding $padding 0;
+  background-color: #e0e0e0;
+    
+  li {
+    @include font(11);
+    @include borderRadius(4px 4px 0 0);
+    @include simpleGradient($veryLightBackground, #fff, $veryLightBackground);
+    position: relative;
+    top: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding: $vPadding $padding;
+    border: 1px solid $divider;
+    margin-right: 2px;
+    color: $lightText;
+    cursor: pointer;
+    
+    &.active {
+      background-color: #fff;
+      border-bottom: 1px solid #fff;
+      color: $mediumText;
+      background-image: none;
+    }
   }
   
 }

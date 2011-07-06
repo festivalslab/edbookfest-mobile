@@ -2,6 +2,10 @@ Given /^today is (.+)$/ do |date|
   Delorean.time_travel_to(date)
 end
 
+When /^I wait until "([^"]*)" (?:are|is) visible$/ do |className|
+  page.has_css?(".#{className}", :visible => true)
+end
+
 Then /^the title should be "([^"]*)"$/ do |text|
   page.should have_css("h2", :text => text)
 end
