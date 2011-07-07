@@ -9,7 +9,7 @@ protected
   end
   
   def set_layout
-    request.headers['X-PJAX'] ? false : 'application'
+    request.headers['X-PJAX'] ? 'pjax' : 'application'
   end
   
 end

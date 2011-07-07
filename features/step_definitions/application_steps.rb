@@ -11,6 +11,11 @@ When /^I click the back button$/ do
 end
 
 Then /^the title should be "([^"]*)"$/ do |text|
+  title = page.find(:xpath, "//title").text
+  title.should =~ /#{text}/
+end
+
+Then /^the section title should be "([^"]*)"$/ do |text|
   page.should have_css("h2", :text => text)
 end
 

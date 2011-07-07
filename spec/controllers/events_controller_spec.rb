@@ -3,6 +3,7 @@ require 'spec_helper'
 describe EventsController do
   
   let(:expected_theme) { "events" }
+  let(:expected_section) { "Events" }
   let(:fest_start) { Date.new(2011,8,13) }
   let(:fest_end) { Date.new(2011,8,29) }
   
@@ -36,6 +37,16 @@ describe EventsController do
       assigns[:theme].should eq(expected_theme)
     end
     
+    it "assigns @section" do
+      get :calendar
+      assigns[:section].should eq(expected_section)
+    end
+    
+    it "assigns @title" do
+      get :calendar
+      assigns[:title].should eq("Events calendar")
+    end
+    
     it "assigns @start_date" do
       get :calendar
       assigns[:start_date].should eq(fest_start)
@@ -65,6 +76,16 @@ describe EventsController do
         it "assigns @theme" do
           get :index, :date => date.to_s
           assigns[:theme].should eq(expected_theme)
+        end
+        
+        it "assigns @section" do
+          get :index, :date => date.to_s
+          assigns[:section].should eq(expected_section)
+        end
+        
+        it "assigns @title" do
+          get :index, :date => date.to_s
+          assigns[:title].should eq("Events for Sat 13 Aug 2011")
         end
 
         it "assigns @date" do

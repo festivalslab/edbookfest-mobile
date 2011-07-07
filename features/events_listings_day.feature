@@ -97,6 +97,7 @@ Feature: Events listings for one day
     When I click on day 22
     Then I should be on the listings page for 22/08/2011
     And I should see 2 events
+    And the title should be "Events for Mon 22 Aug 2011"
   
   @javascript
   Scenario: Navigation from calendar to listings and back using back button works with ajax partial load
@@ -107,6 +108,7 @@ Feature: Events listings for one day
     And I wait until "tabs" are visible
     And I click the back button
     Then I should be on the calendar page
+    And the title should be "Events calendar"
   
   
   

@@ -3,7 +3,11 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" manifest="default.appcache?v=1"> <!--<![endif]-->
 %head
   %meta{:charset => "utf-8"}
-  %title EdBookFest
+  %title 
+    EdBookFest
+    - if @title
+      –
+      = @title
   %meta{:content => "", :name => "description"}
   %meta{:content => "", :name => "author"}
   %meta{:content => "True", :name => "HandheldFriendly"}
@@ -22,9 +26,8 @@
 %body{:class => @theme}
   #container
     %header
-      %h1.ir 
-        = link_to "Edinburgh International Book Festival", :controller => "home"
-      %h2 Events
+      %h1.ir= link_to "Edinburgh International Book Festival", :controller => "home"
+      %h2= @section
     #main{:role => "main", :"data-pjax-container" => ""}
       = yield
   %footer
