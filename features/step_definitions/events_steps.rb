@@ -24,6 +24,10 @@ Given /^there are (\d+) events for (\d+)\/(\d+)\/(\d+) with the same start time$
   end
 end
 
+Given /^there is an event called "([^\"]*)"$/ do |title|
+  Factory.create(:event, :title => title)
+end
+
 When /^I click on day (\d+)$/ do |day|
   click_link(day)
 end
