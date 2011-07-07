@@ -3,6 +3,7 @@ require 'spec_helper'
 describe EventsController do
   
   let(:expected_theme) { "events" }
+  let(:expected_section) { "Events" }
   let(:fest_start) { Date.new(2011,8,13) }
   let(:fest_end) { Date.new(2011,8,29) }
   
@@ -10,6 +11,19 @@ describe EventsController do
     Festival.stub(:start_date).and_return(fest_start)
     Festival.stub(:end_date).and_return(fest_end)
     Festival.stub(:date_in_festival).and_return(true)
+  end
+  
+  describe "setting layout" do
+    it "uses the application layout for normal requests" do
+      get :calendar
+      response.should render_template("layouts/application")
+    end
+    
+    it "uses no layout for PJAX requests" do
+      request.env['X-PJAX'] = 'true'
+      get :calendar
+      response.should_not render_template("layouts/application")
+    end
   end
 
   describe "GET 'calendar'" do
@@ -21,6 +35,16 @@ describe EventsController do
     it "assigns @theme" do
       get :calendar
       assigns[:theme].should eq(expected_theme)
+    end
+    
+    it "assigns @section" do
+      get :calendar
+      assigns[:section].should eq(expected_section)
+    end
+    
+    it "assigns @title" do
+      get :calendar
+      assigns[:title].should eq("Events calendar")
     end
     
     it "assigns @start_date" do
@@ -52,6 +76,16 @@ describe EventsController do
         it "assigns @theme" do
           get :index, :date => date.to_s
           assigns[:theme].should eq(expected_theme)
+        end
+        
+        it "assigns @section" do
+          get :index, :date => date.to_s
+          assigns[:section].should eq(expected_section)
+        end
+        
+        it "assigns @title" do
+          get :index, :date => date.to_s
+          assigns[:title].should eq("Events for Sat 13 Aug 2011")
         end
 
         it "assigns @date" do

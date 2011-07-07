@@ -8,4 +8,8 @@ protected
     raise ActionController::RoutingError.new('Not Found')
   end
   
+  def set_layout
+    request.headers['X-PJAX'] ? 'pjax' : 'application'
+  end
+  
 end

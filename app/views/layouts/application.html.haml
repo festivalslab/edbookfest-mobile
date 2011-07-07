@@ -3,7 +3,11 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" manifest="default.appcache?v=1"> <!--<![endif]-->
 %head
   %meta{:charset => "utf-8"}
-  %title EdBookFest
+  %title 
+    EdBookFest
+    - if @title
+      –
+      = @title
   %meta{:content => "", :name => "description"}
   %meta{:content => "", :name => "author"}
   %meta{:content => "True", :name => "HandheldFriendly"}
@@ -22,21 +26,16 @@
 %body{:class => @theme}
   #container
     %header
-      %h1.ir 
-        = link_to "Edinburgh International Book Festival", :controller => "home"
-      %h2 Events
-    #main{:role => "main"}
+      %h1.ir= link_to "Edinburgh International Book Festival", :controller => "home"
+      %h2= @section
+    #main{:role => "main", :"data-pjax-container" => ""}
       = yield
   %footer
-    %a.back-to-top{:href => "#container"} Back to top
-    %a.desktop-site{:href => "http://www.edbookfest.co.uk"} Desktop site
+    %a.back-to-top{:href => "#container", :"data-anchor" => ""} Back to top
+    %a.desktop-site{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
   = javascript_include_tag :application
   :javascript
     MBP.scaleFix();
-    yepnope({
-      test : Modernizr.mq('(min-width)'),
-      nope : ['#{javascript_path "lib/respond.min.js"}']
-    });
   / <script src="https://getfirebug.com/firebug-lite.js"></script>
   :javascript
     var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];

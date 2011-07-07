@@ -3,6 +3,7 @@
   $.extend $.fn, 
     tabs: (groupSelector, titleSelector) ->
       container = $ this
+      return if container.find('ul.tabs').length
       sections = $(groupSelector, this)
       tabList = $('<ul/>').addClass 'tabs'
       
@@ -25,6 +26,6 @@
       
 ) window.Zepto
 
-$(document).ready ->
+$(document).bind 'pageChanged', ->
   $('.tabs-container').tabs '.tab-content', '.tab-title'
   

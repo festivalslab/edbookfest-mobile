@@ -5,8 +5,9 @@ Feature: Events calendar
   
   Scenario: Show that user is in Events section
     Given I am on the calendar page
-    Then the title should be "Events"
+    Then the section title should be "Events"
     And the theme should be "events"
+    And the title should be "Events calendar"
     
   Scenario: Show every day in August 2011
     Given I am on the calendar page
@@ -30,3 +31,7 @@ Feature: Events calendar
     Given I am on the calendar page
     When I click on day 22
     Then I should be on the listings page for 22/08/2011
+    
+  
+  
+  

@@ -1,1 +1,1 @@
-//= require lib/modernizr-custom.js
+//= require modernizr-custom.js
