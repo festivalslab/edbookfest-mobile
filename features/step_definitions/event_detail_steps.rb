@@ -15,7 +15,7 @@ Then /^the event start time should be "([^\"]*)"$/ do |time|
 end
 
 Then /^the event duration should be "([^\"]*)"$/ do |duration|
-  page.should have_css(".duration", :text => duration)
+  page.find('.duration').should have_content duration
 end
 
 Then /^the event venue should be "([^\"]*)"$/ do |venue|
@@ -31,12 +31,13 @@ Then /^the event description should be "([^\"]*)"$/ do |description|
 end
 
 Then /^the event price should be "([^\"]*)"$/ do |price|
-  page.should have_css(".price", :text => price)
+  page.find('.price').should have_content price
 end
 
-Then /^the event image should be "([^\"]*)"$/ do |image_url|
+Then /^the event image should be "([^\"]*)" with alt text "([^\"]*)"$/ do |image_url, image_alt|
   image = page.find("img.event")
   image["src"].should eq(image_url)
+  image["alt"].should eq(image_alt)
 end
 
 Then /^the event theme should be "([^\"]*)"$/ do |theme|

@@ -5,7 +5,7 @@
       - if (event.is_sold_out)
         %span.sold-out Sold out
       = event.sub_title
-    %time{:datetime => event.start_time.iso8601} 
+    = time_tag event.start_time do
       = event.start_time.to_s :time
     %span.arrow
   
