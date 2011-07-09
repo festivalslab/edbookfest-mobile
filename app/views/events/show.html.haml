@@ -1,3 +1,20 @@
-%hgroup
-  %h3= @event.title
-  %h4= @event.sub_title
+%header
+  %hgroup
+    %h5.theme= @event.theme
+    %h5.title-sponsors= @event.title_sponsors
+    %h3= @event.title
+    %h4= @event.sub_title
+
+%img.event{:src => @event.image, :alt => @event.title}  
+
+%div
+  = succeed "," do
+    = time_tag(@event.start_time) { @event.start_time.to_s :friendly_time }
+  <span class="venue">#{@event.venue}</span>.
+  <span class="duration">#{@event.duration} mins</span>.
+  
+%p.standfirst= @event.standfirst
+
+%p.description= @event.description
+
+.price= raw(@event.price)
