@@ -50,7 +50,15 @@ module Feed
         :start_time => DateTime.parse(event.at_css('EventDateTime').text),
         :date => Date.parse(event.at_css('EventDateTime').text),
         :event_type => event['event_type'],
-        :is_sold_out => event['isSoldOut']
+        :is_sold_out => event['isSoldOut'],
+        :title_sponsors => event.at_css('TitleSponsors').text,
+        :duration => event.at_css('Duration').text.to_i,
+        :venue => event.at_css('PerformanceSpace').text,
+        :description => event.at_css('Description>Copy').text,
+        :price => event.at_css('Price>Formatted').text,
+        :image => event.at_css('Image')['href'],
+        :theme => event.at_css('Theme') ? event.at_css('Theme').text : '',
+        :main_site_url => event['href']
       })
       @events_modified += 1
     end

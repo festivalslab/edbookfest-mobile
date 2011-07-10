@@ -22,7 +22,7 @@
   %p.standfirst= @event.standfirst
 
 - if @event.description.present?
-  %p.description= @event.description
+  .description= raw(@event.description)
 
 - if @event.main_site_url.present?
   %a.buy-tickets{:href => @event.main_site_url} Buy tickets

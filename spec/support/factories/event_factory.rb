@@ -5,7 +5,7 @@ Factory.define :event do |f|
   f.title_sponsors "Event title sponsors"
   f.theme "Event theme"
   f.standfirst "Event standfirst"
-  f.description "Event description"
+  f.description "<p>Event <strong>description</strong></p>"
   f.start_time DateTime.new(2011,8,13,15,0,0) # 4pm
   f.date Date.new(2011,8,13)
   f.duration 60
