@@ -18,5 +18,6 @@ Feature: Event detail
     And the event price should be "£10 (£8)"
     And the event image should be "/event/image.jpg" with alt text "Joe Bloggs"
     And the event theme should be "Event theme"
-
+    And the event buy tickets button link should be "http://edbookfest.co.uk/event/buy"
+    
   

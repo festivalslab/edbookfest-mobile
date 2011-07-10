@@ -1,9 +1,8 @@
-%header
-  %hgroup
-    %h5.theme= @event.theme
-    %h5.title-sponsors= @event.title_sponsors
-    %h3= @event.title
-    %h4= @event.sub_title
+%hgroup
+  %h5.theme= @event.theme
+  %h5.title-sponsors= @event.title_sponsors
+  %h3= @event.title
+  %h4= @event.sub_title
 
 %img.event{:src => @event.image, :alt => @event.title}  
 
@@ -17,4 +16,5 @@
 
 %p.description= @event.description
 
+%a.buy-tickets{:href => @event.main_site_url} Buy tickets
 .price= raw(@event.price)
