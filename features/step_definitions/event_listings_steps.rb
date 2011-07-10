@@ -24,11 +24,13 @@ Given /^there are (\d+) events for (\d+)\/(\d+)\/(\d+) with the same start time$
   end
 end
 
-Given /^there is an event called "([^\"]*)"$/ do |title|
+Given /^there is an event called "([^\"]*)"( without optional data)?$/ do |title, without_optional|
   date_pattern = "2011-08-22T15:00:00+01:00"
   date = Date.parse date_pattern
   date_time = DateTime.parse date_pattern
-  Factory.create(:event, :title => title, :date => date, :start_time => date_time)
+  attributes = { :title => title, :date => date, :start_time => date_time }
+  attributes.merge!({ :sub_title => nil, :title_sponsors => nil, :standfirst => nil, :description => nil, :price => nil, :image => nil, :theme => nil, :main_site_url => nil, :duration => nil, :venue => nil }) if without_optional
+  Factory.create(:event, attributes)
 end
 
 When /^I click on day (\d+)$/ do |day|
