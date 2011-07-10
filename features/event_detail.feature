@@ -18,6 +18,19 @@ Feature: Event detail
     And the event price should be "£10 (£8)"
     And the event image should be "/event/image.jpg" with alt text "Joe Bloggs"
     And the event theme should be "Event theme"
-    And the event buy tickets button link should be "http://edbookfest.co.uk/event/buy"
+    And the event buy tickets button should be "http://edbookfest.co.uk/event/buy"
     
+  Scenario: Event detail page doesn't render blocks when no content is present
+    Given there is an event called "Joe Bloggs" without optional data
+    When I go to the "Joe Bloggs" event detail page
+    Then the event subtitle is missing
+    And the event title sponsors is missing
+    And the event standfirst is missing
+    And the event description is missing
+    And the event price is missing
+    And the event image is missing
+    And the event theme is missing
+    And the event buy tickets button is missing
+    And the event duration is missing
+    And the event venue is missing
   
