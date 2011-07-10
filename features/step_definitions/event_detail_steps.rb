@@ -43,3 +43,8 @@ end
 Then /^the event theme should be "([^\"]*)"$/ do |theme|
   page.should have_css(".theme", :text => theme)
 end
+
+Then /^the event buy tickets button link should be "([^\"]*)"$/ do |url|
+  href = page.find("a.buy-tickets")["href"]
+  href.should eq(url)
+end
