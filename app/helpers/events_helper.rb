@@ -3,7 +3,7 @@ module EventsHelper
     ["<a href=\"#{listings_path(date)}\">#{date.day}</a>", {:class => "events"}] if date >= start_date && date <= end_date
   end
   
-  def time_tag(date_time, &block)
-    content_tag(:time, :datetime => date_time.iso8601, &block)
+  def time_tag(date_time, classes = nil, &block)
+    content_tag(:time, :datetime => date_time.iso8601, :class => classes, &block)
   end
 end

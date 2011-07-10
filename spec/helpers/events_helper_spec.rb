@@ -37,12 +37,17 @@ describe EventsHelper do
     let(:date_time) { DateTime.new(2011,8,13,15,30) }
     
     before(:each) do
-      Date::DATE_FORMATS[:test] = '%a %e %b %Y'
+      Time::DATE_FORMATS[:test] = '%a %e %b %Y'
     end
     
     it "renders the time element with the yielded text" do
       output = time_tag(date_time) { "my text" }
       output.should == '<time datetime="2011-08-13T15:30:00+00:00">my text</time>'
+    end
+    
+    it "renders the time element with an optional class name" do
+      output = time_tag(date_time, "my-class") { "my text" }
+      output.should == '<time class="my-class" datetime="2011-08-13T15:30:00+00:00">my text</time>'
     end
   end
 end

@@ -1,3 +1,5 @@
+= time_tag(@event.date, "date") { @event.date.to_s :title }
+
 %hgroup
   - if @event.theme.present?
     %h5.theme= @event.theme
@@ -12,7 +14,7 @@
 
 %div
   = succeed "," do
-    = time_tag(@event.start_time) { @event.start_time.to_s :friendly_time }
+    = time_tag(@event.start_time, "start-time") { @event.start_time.to_s :friendly_time }
   - if @event.venue.present?
     <span class="venue">#{@event.venue}</span>.
   - if @event.duration.present?
