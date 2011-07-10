@@ -10,6 +10,7 @@ Feature: Event detail
     And the event title should be "Joe Bloggs"
     And the event subtitle should be "Event subtitle"
     And the event title sponsors should be "Event title sponsors"
+    And the event date should be "Mon 22 Aug 2011"
     And the event start time should be "3:00pm"
     And the event duration should be "60 mins"
     And the event venue should be "Event venue"

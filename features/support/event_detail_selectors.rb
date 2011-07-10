@@ -17,6 +17,9 @@ module HtmlSelectorsHelpers
     when "title sponsors"
       "h5.title-sponsors"
       
+    when "date"
+      "time.date"
+      
     when "standfirst"
       ".standfirst"
       
@@ -39,7 +42,7 @@ module HtmlSelectorsHelpers
       ".duration"
       
     when "time"
-      "time"
+      "time.start-time"
       
     when "buy tickets button"
       "a.buy-tickets"
