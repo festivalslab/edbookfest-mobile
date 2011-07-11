@@ -34,4 +34,11 @@ Feature: Event detail
     And the event buy tickets button is missing
     And the event duration is missing
     And the event venue is missing
+    
+  Scenario: Event detail page shows sold out when event is sold out
+    Given there is a sold out event called "Joe Bloggs"
+    When I go to the "Joe Bloggs" event detail page
+    Then the event is sold out
+    And the event buy tickets button is missing
+    And the event price is missing
   

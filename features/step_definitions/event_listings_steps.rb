@@ -24,12 +24,14 @@ Given /^there are (\d+) events for (\d+)\/(\d+)\/(\d+) with the same start time$
   end
 end
 
-Given /^there is an event called "([^\"]*)"( without optional data)?$/ do |title, without_optional|
+Given /^there is (an|a sold out) event called "([^\"]*)"( without optional data)?$/ do |sold_out, title, without_optional|
+  is_sold_out = sold_out =~ /sold out/
   date_pattern = "2011-08-22T15:00:00+01:00"
   date = Date.parse date_pattern
   date_time = DateTime.parse date_pattern
   attributes = { :title => title, :date => date, :start_time => date_time }
   attributes.merge!({ :sub_title => nil, :title_sponsors => nil, :standfirst => nil, :description => nil, :price => nil, :image => nil, :theme => nil, :main_site_url => nil, :duration => nil, :venue => nil }) if without_optional
+  attributes[:is_sold_out] = true if is_sold_out
   Factory.create(:event, attributes)
 end
 

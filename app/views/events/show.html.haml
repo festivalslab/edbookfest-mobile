@@ -26,8 +26,9 @@
 - if @event.description.present?
   .description= raw(@event.description)
 
-- if @event.main_site_url.present?
+- if @event.is_sold_out
+  %div.sold-out Sold out
+- elsif @event.main_site_url.present?
   %a.buy-tickets{:href => @event.main_site_url} Buy tickets
-
-- if @event.price.present?
-  .price= raw(@event.price)
+  - if @event.price.present?
+    .price= raw(@event.price)

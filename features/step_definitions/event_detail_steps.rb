@@ -56,3 +56,7 @@ end
 Then /^the event (.*) is missing$/ do |element|
   page.should_not have_css(event_detail_selector_for(element))
 end
+
+Then /^the event is sold out$/ do
+  page.should have_css('.sold-out', :text => 'Sold out')
+end
