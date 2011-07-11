@@ -32,4 +32,10 @@ namespace :feed do
     end
   end
   
+  task :local => :environment do
+    import = Feed::Import.new("tmp/feed/listings.xml")
+    import.load
+    import.update
+  end
+  
 end
