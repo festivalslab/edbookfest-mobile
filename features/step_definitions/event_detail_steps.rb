@@ -10,11 +10,7 @@ Then /^the event title sponsors should be "([^\"]*)"$/ do |text|
   page.should have_css(event_detail_selector_for("title sponsors"), :text => text)
 end
 
-Then /^the event date should be "([^\"]*)"$/ do |date|
-  page.should have_css(event_detail_selector_for("date"), :text => date)
-end
-
-Then /^the event start time should be "([^\"]*)"$/ do |time|
+Then /^the event time should be "([^\"]*)"$/ do |time|
   page.should have_css(event_detail_selector_for("time"), :text => time)
 end
 

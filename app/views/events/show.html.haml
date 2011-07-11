@@ -1,34 +1,33 @@
-= time_tag(@event.date, "date") { @event.date.to_s :title }
-
-%hgroup
-  - if @event.theme.present?
-    %h5.theme= @event.theme
-  - if @event.title_sponsors.present?
-    %h5.title-sponsors= @event.title_sponsors
-  %h3= @event.title
-  - if @event.sub_title.present?
-    %h4= @event.sub_title
-
-- if @event.image.present?    
-  %img.event{:src => @event.image, :alt => @event.title}  
-
-%div
-  = succeed "," do
-    = time_tag(@event.start_time, "start-time") { @event.start_time.to_s :friendly_time }
-  - if @event.venue.present?
-    <span class="venue">#{@event.venue}</span>.
-  - if @event.duration.present?
-    <span class="duration">#{@event.duration} mins</span>.
+.event-detail
+  %hgroup
+    .main-title
+      - if @event.theme.present?
+        %h5.theme= @event.theme
+      - if @event.title_sponsors.present?
+        %h5.title-sponsors= @event.title_sponsors
+      %h3= @event.title
+      - if @event.sub_title.present?
+        %h4= @event.sub_title
+  .content.details
+    = time_tag(@event.start_time, "start-time") { @event.start_time.to_s :full_date_time }
+    - if @event.venue.present?
+      <span class="venue">#{@event.venue}</span>.
+    - if @event.duration.present?
+      <span class="duration">#{@event.duration} mins</span>.
+    
+  - if @event.image.present?    
+    %img.event{:src => @event.image, :alt => @event.title}  
   
-- if @event.standfirst.present?
-  %p.standfirst= @event.standfirst
+  .content 
+    - if @event.standfirst.present?
+      %p.standfirst= @event.standfirst
 
-- if @event.description.present?
-  .description= raw(@event.description)
+    - if @event.description.present?
+      .description= raw(@event.description)
 
-- if @event.is_sold_out
-  %div.sold-out Sold out
-- elsif @event.main_site_url.present?
-  %a.buy-tickets{:href => @event.main_site_url} Buy tickets
-  - if @event.price.present?
-    .price= raw(@event.price)
+    - if @event.is_sold_out
+      %div.sold-out Sold out
+    - elsif @event.main_site_url.present?
+      %a.buy-tickets{:href => @event.main_site_url} Buy tickets
+      - if @event.price.present?
+        .price= raw(@event.price)
