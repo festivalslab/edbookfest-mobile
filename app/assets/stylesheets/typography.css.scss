@@ -11,13 +11,12 @@ h3, .main-title {
   h3 {
     @include font(20);
     padding: 0;
-    margin-bottom: 0.15em;
     background: transparent;
     @include boxShadowReset();
   }
   
   h4 {
-    @include font(11);
+    @include font(12);
     font-weight: normal;
     padding: 0;
   }
@@ -26,7 +25,6 @@ h3, .main-title {
     @include font(12);
     font-weight: normal;
     color: $veryLightText;
-    line-height: 1.4;
     margin-bottom: 0.1em;
     
     &.theme {
@@ -36,9 +34,9 @@ h3, .main-title {
 }
 
 h4 {
-  @include font(14);
+  @include font(12);
   font-weight: bold;
-  padding: $vPadding $padding;
+  margin: $padding 0;
 }
 
 .content {

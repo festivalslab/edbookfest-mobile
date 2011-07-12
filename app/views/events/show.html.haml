@@ -6,14 +6,16 @@
       - if @event.title_sponsors.present?
         %h5.title-sponsors= @event.title_sponsors
       %h3= @event.title
-      - if @event.sub_title.present?
-        %h4= @event.sub_title
-  .content.details
-    = time_tag(@event.start_time, "start-time") { @event.start_time.to_s :full_date_time }
-    - if @event.venue.present?
-      <span class="venue">#{@event.venue}</span>.
-    - if @event.duration.present?
-      <span class="duration">#{@event.duration} mins</span>.
+  
+  .content
+    - if @event.sub_title.present?
+      %h4.no-color= @event.sub_title
+    .details
+      = time_tag(@event.start_time, "start-time") { @event.start_time.to_s :full_date_time }
+      - if @event.venue.present?
+        <span class="venue">#{@event.venue}</span>.
+      - if @event.duration.present?
+        <span class="duration">#{@event.duration} mins</span>.
     
   - if @event.image.present?    
     %img.event{:src => @event.image, :alt => @event.title}  
@@ -28,6 +30,7 @@
     - if @event.is_sold_out
       %div.sold-out Sold out
     - elsif @event.main_site_url.present?
-      %a.buy-tickets{:href => @event.main_site_url} Buy tickets
-      - if @event.price.present?
-        .price= raw(@event.price)
+      %div.price
+        %a.button.buy-tickets{:href => @event.main_site_url} Buy tickets
+        - if @event.price.present?
+          %span.price= raw(@event.price)

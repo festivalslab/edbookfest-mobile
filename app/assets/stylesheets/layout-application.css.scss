@@ -1,5 +1,5 @@
 html {
-  font: 62.5%/1.3 Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font: 62.5%/1.4 Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 html, body {
@@ -70,7 +70,7 @@ html, body {
 
 #main {
   @include font(14);
-  padding: 0 0 $footerHeight 0;
+  padding: 0 0 $footerHeight+20px 0;
   text-align: left;
 }
 
