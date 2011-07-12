@@ -49,7 +49,15 @@ module Feed
     def update_event(event)
       eibf_id = event['eibf_id'].to_i
       e = Event.find_or_initialize_by_eibf_id(eibf_id)
-      e.update_attributes({
+      e.update_attributes(event_attributes(event))
+      
+      process_authors(e, event)
+    
+      @events_modified += 1
+    end
+    
+    def event_attributes(event)
+      {
         :title => event.at_css('Title MainTitle').text,
         :sub_title => event.at_css('Title SubTitle').text,
         :standfirst => event.at_css('Description Standfirst').text,
@@ -61,22 +69,35 @@ module Feed
         :duration => event.at_css('Duration').text.to_i,
         :venue => event.at_css('PerformanceSpace').text,
         :description => event.at_css('Description>Copy').text,
-        :price => event.at_css('Price>Formatted').text,
+        :price => event.at_css('Price>Formatted').text,\
         :image => event.at_css('Image')['href'],
         :theme => event.at_css('Theme') ? event.at_css('Theme').text : '',
         :main_site_url => event['href']
-      })
-      event.css('Author').each do |author|
-        author_eibf_id = author['eibf_id'].to_i
-        a = Author.find_or_initialize_by_eibf_id(author_eibf_id)
-        a.update_attributes({
-          :first_name => author.at_css('Forename').text,
-          :last_name => author.at_css('Surname').text
-        })
-        e.add_author a
-      end
-      @events_modified += 1
+      }
     end
+    
+    def author_attributes(author)
+      {
+        :first_name => author.at_css('Forename').text,
+        :last_name => author.at_css('Surname').text
+      }
+    end
+    
+    def process_authors(event_model, event)
+      author_ids = event.css('Author').collect { |author| author['eibf_id'] }
+      event_model.authors.clear
+      event.css('Author').each do |author| 
+        event_model.add_author(update_author(event_model, author))
+      end
+    end
+    
+    def update_author(event_model, author)
+      author_eibf_id = author['eibf_id'].to_i
+      a = Author.find_or_initialize_by_eibf_id(author_eibf_id)
+      a.update_attributes(author_attributes(author))
+      a
+    end
+    
   end
   
 end

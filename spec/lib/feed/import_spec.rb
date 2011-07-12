@@ -6,26 +6,37 @@ describe Feed::Import do
   let(:url) { "http://foo.bar/woo" }
   let(:username) { "foo" } 
   let(:password) { "bar" }
-  let(:import) { Feed::Import.new(url, username, password) }
   
   describe "#load_url" do
     before(:each) do
-      import.stub!(:open)
       Nokogiri::XML::Document.stub!(:parse).and_return(:doc)
     end
     
-    it "calls open" do
+    it "calls open with http basic authentication" do
+      import = Feed::Import.new(url, username, password)
+      import.stub!(:open)
       import.should_receive(:open).with(url, :http_basic_authentication => [username, password])
       import.load false
     end
     
+    it "calls open with no authentication" do
+      import = Feed::Import.new(url)
+      import.stub!(:open)
+      import.should_receive(:open).with(url)
+      import.load false
+    end
+    
     it "creates a Nokogiri XML doc" do
+      import = Feed::Import.new(url)
+      import.stub!(:open)
       Nokogiri::XML::Document.should_receive(:parse)
       import.load false
     end
   end
   
   describe "#update" do
+    let(:import) { Feed::Import.new(url) }
+    
     before(:each) do
       import.stub!(:open).and_return(listings)
       import.load false
@@ -83,6 +94,14 @@ describe Feed::Import do
     end
     
     describe "authors" do
+      let(:import_removed_author) { Feed::Import.new(url) }
+      let(:listings_removed_author) { open(Rails.root + 'spec/support/listings_removed_author.xml') } 
+      
+      before(:each) do
+        import_removed_author.stub!(:open).and_return(listings_removed_author)
+        import_removed_author.load false
+      end
+      
       it "does not create an author association where there aren't any" do
         import.update false
         e = Event.first
@@ -97,6 +116,36 @@ describe Feed::Import do
       
       it "does not create duplicate author associations" do
         import.update false
+        import.update false
+        e = Event.where(:eibf_id => 2056).first
+        e.authors.should have_exactly(2).items
+      end
+      
+      it "creates the correct author information" do
+        import.update false
+        e = Event.where(:eibf_id => 2056).first
+        a1, a2 = e.authors[0], e.authors[1]
+        a1.eibf_id.should == 5592
+        a1.first_name.should == "Sue"
+        a1.last_name.should == "Palmer"
+        a2.eibf_id.should == 6278
+        a2.first_name.should == "Neal"
+        a2.last_name.should == "Hoskins"
+      end
+      
+      it "removes an author from the association when no longer appearing in feed" do
+        import.update false
+        import_removed_author.update false
+        e = Event.where(:eibf_id => 2056).first
+        e.authors.should have_exactly(1).items
+        a1 = e.authors[0]
+        a1.eibf_id.should == 5592
+        a1.first_name.should == "Sue"
+        a1.last_name.should == "Palmer"
+      end
+      
+      it "adds new authors when added to feed" do
+        import_removed_author.update false
         import.update false
         e = Event.where(:eibf_id => 2056).first
         e.authors.should have_exactly(2).items
