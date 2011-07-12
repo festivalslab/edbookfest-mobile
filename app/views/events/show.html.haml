@@ -34,8 +34,8 @@
         %a.button.buy-tickets{:href => @event.main_site_url} Buy tickets
         - if @event.price.present?
           %span.price= raw(@event.price)
-          
-    %h4 Featured authors
     
-    %ul.authors
-      = render(:partial => "shared/author", :collection => @event.authors)
+    - if @event.authors.present?    
+      %h4 Featured authors
+      %ul.authors
+        = render(:partial => "shared/author", :collection => @event.authors)

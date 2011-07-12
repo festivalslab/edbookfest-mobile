@@ -1,5 +1,5 @@
 Factory.define :author do |f|
   f.sequence(:eibf_id) {|n| n }
-  f.first_name "Joe"
-  f.last_name "Bloggs"
+  f.first_name "First"
+  f.sequence(:last_name) {|n| "Last#{n}" }
 end

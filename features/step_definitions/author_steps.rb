@@ -2,9 +2,10 @@ Given /^there are (\d+) authors appearing at the "([^\"]*)" event$/ do |author_c
   event = Factory.build(:event, :title => event_title)
   authors = []
   author_count.to_i.times do |i|
-    authors.push Factory.build(:author, :first_name => "First#{i}", :last_name => "Last#{i}")
+    authors.push Factory.build(:author)
   end
   author_count.to_i.times do |i|
     appearance = Factory.create(:appearance, :event => event, :author => authors[i])
   end
+  event.save
 end

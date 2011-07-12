@@ -60,3 +60,12 @@ end
 Then /^the event should have (\d+) authors$/ do |author_count|
   page.should have_css('ul.authors li', :count => author_count)
 end
+
+Then /^the event should not have authors$/ do
+  page.should_not have_css('ul.authors')
+end
+
+Then /^event author (\d+) should be "(\w+) (\w+)"$/ do |index, first_name, last_name|
+  author = find(event_detail_selector_for("author #{index}"))
+  author.should have_content("#{first_name} #{last_name}")
+end
