@@ -1,5 +1,5 @@
 h3, .main-title {
-  @include font(16);
+  @include font(20);
   color: #fff;
   background: rgba(0,0,0,.85);
   font-weight: normal;
@@ -9,7 +9,6 @@ h3, .main-title {
 
 .main-title {
   h3 {
-    @include font(20);
     padding: 0;
     background: transparent;
     @include boxShadowReset();

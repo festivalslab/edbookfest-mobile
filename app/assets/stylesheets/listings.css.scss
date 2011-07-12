@@ -61,11 +61,19 @@ ul.events {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
   }
-}
-
-span.price {
-  @include font(16);
-  display: inline-block;
-  vertical-align: baseline;
-  padding-left: $padding/2;
+  
+  .buy-tickets {
+    margin-right: $padding/2;
+    margin-bottom: $vPadding;
+  }
+  
+  span.price {
+    @include font(16);
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  .description {
+    margin-bottom: $padding;
+  }
 }
