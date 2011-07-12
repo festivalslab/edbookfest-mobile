@@ -56,3 +56,7 @@ end
 Then /^the event is sold out$/ do
   page.should have_css('.sold-out', :text => 'Sold out')
 end
+
+Then /^the event should have (\d+) authors$/ do |author_count|
+  page.should have_css('ul.authors li', :count => author_count)
+end
