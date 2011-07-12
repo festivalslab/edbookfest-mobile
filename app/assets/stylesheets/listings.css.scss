@@ -1,3 +1,16 @@
+.sold-out {
+  @include font(12);
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid $divider;
+  line-height: 1;
+  padding: .25em .35em;
+  margin-right: 2px;
+  text-transform: uppercase;
+}
+
 ul.events {  
   time {
     position: absolute;
@@ -26,14 +39,41 @@ ul.events {
   
   .sold-out {
     @include font(9);
+  }
+}
+
+.event-detail {
+  .details {
+    @include font(14);
+    margin-bottom: $vPadding;
+    
+    time {
+      font-weight: bold;
+      display: block;
+    }
+  }
+  
+  img.event {
+    background-color: #aaa;
+    display: block;
+    width: 100%;
+    max-width: 369px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .buy-tickets {
+    margin-right: $padding/2;
+    margin-bottom: $vPadding;
+  }
+  
+  span.price {
+    @include font(16);
     display: inline-block;
-    position: relative;
-    font-weight: bold;
-    background: #fff;
-    border: 1px solid $divider;
-    line-height: 1;
-    padding: 2px 3px;
-    margin-right: 2px;
-    text-transform: uppercase;
+    vertical-align: baseline;
+  }
+  
+  .description {
+    margin-bottom: $padding;
   }
 }

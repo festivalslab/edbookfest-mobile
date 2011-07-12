@@ -56,6 +56,14 @@ describe Feed::Import do
         e.date.should == Date.parse('2011-08-18')
         e.is_sold_out.should_not be_true
         e.event_type.should == "Children"
+        e.title_sponsors.should == "Event title sponsors"
+        e.duration.should == 60
+        e.venue.should == "RBS Corner Theatre"
+        e.description.should == "Come and hear how to set up young adult book awards as a way to keep children reading. Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading, and how much both readers and authors can benefit from the experience."
+        e.price.should == '&pound;7.00, <span class="concession">&pound;5.00</span>'
+        e.image.should == "http://www.edbookfest.co.uk/uploads/event/event-image.jpg"
+        e.theme.should == "Guest Selector: Julia Donaldson"
+        e.main_site_url.should == "http://www.edbookfest.co.uk/the-festival/whats-on/keep-them-reading-book-awards"
       end
       
       it "updates the attributes of an existing event" do

@@ -65,3 +65,19 @@
   }
   
 }
+
+// Buttons
+
+.button {
+  @include font(12);
+  @include borderRadius(5px);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: $baseColor;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}

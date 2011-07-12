@@ -12,8 +12,9 @@
         <Title>
             <MainTitle><![CDATA[Keep Them Reading: Book Awards]]></MainTitle>
             <SubTitle><![CDATA[Come and hear how to set up young adult book awards as a way to keep children reading.]]></SubTitle>
-            <TitleSponsors></TitleSponsors>
+            <TitleSponsors>Event title sponsors</TitleSponsors>
         </Title>
+          <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/guest-selector-julia-donaldson"><![CDATA[Guest Selector: Julia Donaldson]]></Theme>
         <Venue>
             <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
             <Name>Charlotte Square Gardens</Name>
@@ -36,7 +37,7 @@
             <Copy><![CDATA[Come and hear how to set up young adult book awards as a way to keep children reading. Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading, and how much both readers and authors can benefit from the experience.]]></Copy>
             <Teaser><![CDATA[Come and hear how to set up young adult book awards as a way to keep children reading. Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading, and how much both readers]]></Teaser>
         </Description>
-        <Image href="http://www.edbookfest.co.uk/uploads/event/default.jpg" />
+        <Image href="http://www.edbookfest.co.uk/uploads/event/event-image.jpg" />
         <Authors>
             </Authors>
         <Books>

@@ -1,13 +1,13 @@
 Given /^there (?:is|are) (\d+) (child|adult)?\s?(sold out)?\s?events? for (\d+)\/(\d+)\/(\d+) starting at (\d+):(\d+)$/ do |count, type, sold_out, day, month, year, hours, minutes|
-  eventType = (type == "child") ? "Children" : "Adult"
-  datePattern = "#{year}-#{month}-#{day}T#{hours}:#{minutes}:00+01:00"
-  date = Date.parse datePattern
-  dateTime = DateTime.parse datePattern
+  event_type = (type == "child") ? "Children" : "Adult"
+  date_pattern = "#{year}-#{month}-#{day}T#{hours}:#{minutes}:00+01:00"
+  date = Date.parse date_pattern
+  date_time = DateTime.parse date_pattern
   count.to_i.times do |c|
     factory_options = {
       :date => date, 
-      :start_time => dateTime + c.minutes, 
-      :event_type => eventType
+      :start_time => date_time + c.minutes, 
+      :event_type => event_type
     }
     factory_options[:is_sold_out] = true if (sold_out)
     Factory.create(:event, factory_options)
@@ -15,13 +15,24 @@ Given /^there (?:is|are) (\d+) (child|adult)?\s?(sold out)?\s?events? for (\d+)\
 end
 
 Given /^there are (\d+) events for (\d+)\/(\d+)\/(\d+) with the same start time$/ do |count, day, month, year|
-  datePattern = "#{year}-#{month}-#{day}T#12:00:00+01:00"
-  date = Date.parse datePattern
-  dateTime = DateTime.parse datePattern
+  date_pattern = "#{year}-#{month}-#{day}T#12:00:00+01:00"
+  date = Date.parse date_pattern
+  date_time = DateTime.parse date_pattern
   chars = ('a'..'z').to_a.reverse
   count.to_i.times do |c|
-    Factory.create(:event, :date => date, :start_time => dateTime, :title => "Event #{chars[c]}")
+    Factory.create(:event, :date => date, :start_time => date_time, :title => "Event #{chars[c]}")
   end
+end
+
+Given /^there is (an|a sold out) event called "([^\"]*)"( without optional data)?$/ do |sold_out, title, without_optional|
+  is_sold_out = sold_out =~ /sold out/
+  date_pattern = "2011-08-22T15:00:00+01:00"
+  date = Date.parse date_pattern
+  date_time = DateTime.parse date_pattern
+  attributes = { :title => title, :date => date, :start_time => date_time }
+  attributes.merge!({ :sub_title => nil, :title_sponsors => nil, :standfirst => nil, :description => nil, :price => nil, :image => nil, :theme => nil, :main_site_url => nil, :duration => nil, :venue => nil }) if without_optional
+  attributes[:is_sold_out] = true if is_sold_out
+  Factory.create(:event, attributes)
 end
 
 When /^I click on day (\d+)$/ do |day|

@@ -1,13 +1,30 @@
 body.events {
   h4, 
   .tabs li.active,
-  ul.events .sold-out {
+  .sold-out {
     color: $baseColorEvents;
+  }
+  
+  h4.no-color {
+    color: $mediumText;
+  }
+  
+  .main-title h4 {
+    color: $nearlyWhiteText;
   }
   
   #main {
     a {
       color: $baseColorEvents;
+    }
+    
+    a.button {
+      color: #fff;
+      @include simpleGradient($baseColorEvents, lighten($baseColorEvents, 10%), darken($baseColorEvents, 7%));
+      
+      &:active, &:hover {
+        @include simpleGradient(darken($baseColorEvents, 5%), lighten($baseColorEvents, 5%), darken($baseColorEvents, 12%));
+      }
     }
   }
 

@@ -1,5 +1,5 @@
-h3 {
-  @include font(16);
+h3, .main-title {
+  @include font(20);
   color: #fff;
   background: rgba(0,0,0,.85);
   font-weight: normal;
@@ -7,8 +7,42 @@ h3 {
   @include boxShadow(0, 0, 8px, rgba(0,0,0,.6));
 }
 
+.main-title {
+  h3 {
+    padding: 0;
+    background: transparent;
+    @include boxShadowReset();
+  }
+  
+  h4 {
+    @include font(12);
+    font-weight: normal;
+    padding: 0;
+  }
+  
+  h5 {
+    @include font(12);
+    font-weight: normal;
+    color: $veryLightText;
+    margin-bottom: 0.1em;
+    
+    &.theme {
+      color: $nearlyWhiteText;
+    }
+  }
+}
+
 h4 {
-  @include font(14);
+  @include font(12);
   font-weight: bold;
-  padding: $vPadding $padding;
+  margin: $padding 0;
+}
+
+.content {
+  padding: 0 $padding;
+  margin: $vPadding 0 0 0;
+  
+  p {
+    margin: 0 0 1em 0;
+  }
 }

@@ -123,9 +123,28 @@ describe EventsController do
   end
   
   describe "GET 'show'" do
+    before(:each) do
+      Event.stub(:find).and_return "title" => "My Title"
+    end
+    
     it "should be successful" do
-      get 'show', :id => "1"
+      get :show, :id => 1
       response.should be_success
+    end
+    
+    it "requests the event" do
+      Event.should_receive(:find).with(1)
+      get :show, :id => 1
+    end
+    
+    it "assigns @event" do
+      get :show, :id => 1
+      assigns[:event].should eq "title" => "My Title"
+    end
+    
+    it "assigns @title" do
+      get :show, :id => 1
+      assigns[:title].should eq "My Title"
     end
   end
 
