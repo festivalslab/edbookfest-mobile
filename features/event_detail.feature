@@ -40,4 +40,11 @@ Feature: Event detail
     Then the event is sold out
     And the event buy tickets button is missing
     And the event price is missing
+    
+  @wip
+  Scenario: Event detail page shows featured authors
+    Given there are 2 authors appearing at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should see "Featured authors"
+    And the event should have 2 authors
   

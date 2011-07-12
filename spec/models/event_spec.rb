@@ -35,4 +35,15 @@ describe Event do
       events[1].should == @todayChild2
     end
   end
+  
+  describe "Author has_many_through association" do
+    before(:each) do
+      @event = Event.new
+    end
+    
+    it "allows an author association" do
+      @event.authors.build
+      @event.should have(:no).errors_on(:authors)
+    end
+  end
 end
