@@ -66,6 +66,15 @@ module Feed
         :theme => event.at_css('Theme') ? event.at_css('Theme').text : '',
         :main_site_url => event['href']
       })
+      event.css('Author').each do |author|
+        author_eibf_id = author['eibf_id'].to_i
+        a = Author.find_or_initialize_by_eibf_id(author_eibf_id)
+        a.update_attributes({
+          :first_name => author.at_css('Forename').text,
+          :last_name => author.at_css('Surname').text
+        })
+        e.add_author a
+      end
       @events_modified += 1
     end
   end

@@ -38,12 +38,20 @@ describe Event do
   
   describe "Author has_many_through association" do
     before(:each) do
-      @event = Event.new
+      @event = Event.create
     end
     
     it "allows an author association" do
       @event.authors.build
       @event.should have(:no).errors_on(:authors)
+    end
+    
+    describe "#add_author" do
+      it "adds an author" do
+        author = Author.create
+        @event.add_author author
+        @event.authors.should have_exactly(1).items
+      end
     end
   end
 end

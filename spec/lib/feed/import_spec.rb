@@ -81,5 +81,27 @@ describe Feed::Import do
         Event.find_by_eibf_id(1234567).should be_nil
       end
     end
+    
+    describe "authors" do
+      it "does not create an author association where there aren't any" do
+        import.update false
+        e = Event.first
+        e.authors.should have_exactly(0).items
+      end
+      
+      it "creates the correct number of authors" do
+        import.update false
+        e = Event.where(:eibf_id => 2056).first
+        e.authors.should have_exactly(2).items
+      end
+      
+      it "does not create duplicate author associations" do
+        import.update false
+        import.update false
+        e = Event.where(:eibf_id => 2056).first
+        e.authors.should have_exactly(2).items
+      end
+      
+    end
   end
 end
