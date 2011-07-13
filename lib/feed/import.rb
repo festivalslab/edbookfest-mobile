@@ -89,6 +89,7 @@ module Feed
       event.css('Author').each do |author| 
         event_model.add_author(update_author(event_model, author))
       end
+      Author.remove_authors_without_events
     end
     
     def update_author(event_model, author)

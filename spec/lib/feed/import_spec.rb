@@ -110,20 +110,20 @@ describe Feed::Import do
       
       it "creates the correct number of authors" do
         import.update false
-        e = Event.where(:eibf_id => 2056).first
+        e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
       
       it "does not create duplicate author associations" do
         import.update false
         import.update false
-        e = Event.where(:eibf_id => 2056).first
+        e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
       
       it "creates the correct author information" do
         import.update false
-        e = Event.where(:eibf_id => 2056).first
+        e = Event.find_by_eibf_id(2056)
         a1, a2 = e.authors[0], e.authors[1]
         a1.eibf_id.should == 5592
         a1.first_name.should == "Sue"
@@ -136,7 +136,7 @@ describe Feed::Import do
       it "removes an author from the association when no longer appearing in feed" do
         import.update false
         import_removed_author.update false
-        e = Event.where(:eibf_id => 2056).first
+        e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(1).items
         a1 = e.authors[0]
         a1.eibf_id.should == 5592
@@ -144,10 +144,16 @@ describe Feed::Import do
         a1.last_name.should == "Palmer"
       end
       
+      it "deletes the orphaned author" do
+        import.update false
+        import_removed_author.update false
+        Author.find_by_eibf_id(6278).should be_nil
+      end
+      
       it "adds new authors when added to feed" do
         import_removed_author.update false
         import.update false
-        e = Event.where(:eibf_id => 2056).first
+        e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
       
