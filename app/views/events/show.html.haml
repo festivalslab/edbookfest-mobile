@@ -40,3 +40,9 @@
       %h4 Featured authors
     %ul.authors.nav-list
       = render(:partial => "shared/author", :collection => @event.authors)
+      
+  - if @event.books.present?
+    .content
+      %h4 Featured books
+    %ul.books.nav-list
+      = render(:partial => "shared/book", :collection => @event.books)

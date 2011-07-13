@@ -52,13 +52,25 @@ module Feed
       e = Event.find_or_initialize_by_eibf_id(eibf_id)
       e.update_attributes(event_attributes(event))
       process_authors(e, event)
+      process_books(e, event)
       @events_modified += 1
     end
     
     def remove_orphans(output)
+      remove_orphaned_authors(output)
+      remove_orphaned_books(output)
+    end
+    
+    def remove_orphaned_authors(output)
       count1 = Author.count
-      Author.remove_authors_without_events
+      Author.without_events.destroy_all
       puts "#{count1 - Author.count} orphaned authors were removed" if output
+    end
+    
+    def remove_orphaned_books(output)
+      count1 = Book.count
+      Book.without_events.destroy_all
+      puts "#{count1 - Book.count} orphaned books were removed" if output
     end
     
     def event_attributes(event)
@@ -88,6 +100,15 @@ module Feed
       }
     end
     
+    def book_attributes(book)
+      {
+        :title => book.at_css('Title').text,
+        :amazon_url => book['href'],
+        :isbn => book['isbn'],
+        :amazon_image => book.at_css('Image') ? book.at_css('Image')['href'] : ''
+      }
+    end
+    
     def process_authors(event_model, event)
       event_model.authors.clear
       event.css('Author').each do |author| 
@@ -100,6 +121,20 @@ module Feed
       a = Author.find_or_initialize_by_eibf_id(author_eibf_id)
       a.update_attributes(author_attributes(author))
       a
+    end
+    
+    def process_books(event_model, event)
+      event_model.books.clear
+      event.css('Books>Book').each do |book|
+        event_model.add_book(update_book(event_model, book))
+      end
+    end
+    
+    def update_book(event_model, book)
+      book_eibf_id = book['eibf_id'].to_i
+      b = Book.find_or_initialize_by_eibf_id(book_eibf_id)
+      b.update_attributes(book_attributes(book))
+      b
     end
     
   end

@@ -61,4 +61,30 @@ Feature: Event detail
     And I click on author 1
     Then I should be on the author detail page for author 1
   
+  Scenario: Event detail page shows featured books
+    Given there are 2 books featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should see "Featured books"
+    And the event should have 2 books
+    And event book 1 should be "Book Title 1"
+    And event book 2 should be "Book Title 2"
+  
+  Scenario: Event detail featured book shows correct details
+    Given there is 1 book featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then event book 1 image is "http://book.image/image.jpg"
+  
+  Scenario: Event detail page does not show featured books if none exist
+    Given there are 0 books featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should not see "Featured books"
+    And the event should not have books
+    
+  Scenario: Event detail page links to featured books
+    Given there are 2 books featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    And I click on book 1
+    Then I should be on the book detail page for book 1
+  
+  
   

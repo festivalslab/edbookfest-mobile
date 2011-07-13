@@ -156,7 +156,77 @@ describe Feed::Import do
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
+    end
+    
+    describe "books" do
+      let(:import_removed_book) { Feed::Import.new(url) }
+      let(:listings_removed_book) { open(Rails.root + 'spec/support/listings_removed_book.xml') } 
       
+      before(:each) do
+        import_removed_book.stub!(:open).and_return(listings_removed_book)
+        import_removed_book.load false
+      end
+      
+      it "does not create a book association where there aren't any" do
+        import.update false
+        e = Event.first
+        e.books.should have_exactly(0).items
+      end
+      
+      it "creates the correct number of books" do
+        import.update false
+        e = Event.find_by_eibf_id(2060)
+        e.books.should have_exactly(2).items
+      end
+      
+      it "does not create duplicate book associations" do
+        import.update false
+        import.update false
+        e = Event.find_by_eibf_id(2060)
+        e.books.should have_exactly(2).items
+      end
+      
+      it "creates the correct book information" do
+        import.update false
+        e = Event.find_by_eibf_id(2060)
+        b1, b2 = e.books[0], e.books[1]
+        b1.eibf_id.should == 7539
+        b1.title.should == "Freddie and The Fairy"
+        b1.amazon_url.should == "http://www.amazon.co.uk/Freddie-Fairy-Julia-Donaldson/dp/0330511181%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0330511181"
+        b1.isbn.should == "9780330511186"
+        b1.amazon_image.should == "http://ecx.images-amazon.com/images/I/51uPRQNsC7L._SL110_.jpg"
+        b2.eibf_id.should == 7565
+        b2.title.should == "Zog"
+        b2.amazon_url.should == "http://www.amazon.co.uk/Zog-Julia-Donaldson/dp/1407115561%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1407115561"
+        b2.isbn.should == "9781407115566"
+        b2.amazon_image.should == "http://ecx.images-amazon.com/images/I/51soTM7-ctL._SL110_.jpg"
+      end
+      
+      it "removes the book from the association when no longer appearing in feed" do
+        import.update false
+        import_removed_book.update false
+        e = Event.find_by_eibf_id(2060)
+        e.books.should have_exactly(1).items
+        b1 = e.books[0]
+        b1.eibf_id.should == 7565
+        b1.title.should == "Zog"
+        b1.amazon_url.should == "http://www.amazon.co.uk/Zog-Julia-Donaldson/dp/1407115561%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1407115561"
+        b1.isbn.should == "9781407115566"
+        b1.amazon_image.should == "http://ecx.images-amazon.com/images/I/51soTM7-ctL._SL110_.jpg"
+      end
+      
+      it "deletes the orphaned book" do
+        import.update false
+        import_removed_book.update false
+        Book.find_by_eibf_id(7539).should be_nil
+      end
+      
+      it "adds new books when added to feed" do
+        import_removed_book.update false
+        import.update false
+        e = Event.find_by_eibf_id(2060)
+        e.books.should have_exactly(2).items
+      end
     end
   end
 end

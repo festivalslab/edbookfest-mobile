@@ -7,6 +7,9 @@ class BooksController < ApplicationController
     @section = "Books"
   end
   
+  def show
+    
+  end
 protected
 
   def set_theme

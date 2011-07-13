@@ -12,19 +12,16 @@ describe Author do
     end
   end
   
-  describe "#remove_authors_without_events" do
-    it "does not delete an author that still has events" do
+  describe "#without_events" do
+    it "does not select an author that still has events" do
       @author.events.build
       @author.save
-      Author.remove_authors_without_events
-      @author.should_not be_nil
-      @author.events.should have_exactly(1).items
+      Author.without_events.should have_exactly(0).items
     end
     
-    it "deletes an author that has no events" do
+    it "selects an author that has no events" do
       @author.save
-      Author.remove_authors_without_events
-      expect { Author.find(@author.id) }.to raise_error
+      Author.without_events.should have_exactly(1).items
     end
   end
 end

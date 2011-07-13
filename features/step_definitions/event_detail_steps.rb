@@ -1,5 +1,9 @@
 When /^I click on author (\d+)$/ do |index|
-  find(".authors li:nth-child(#{index}) a").click
+  find(event_detail_selector_for("author #{index}")).find('a').click
+end
+
+When /^I click on book (\d+)$/ do |index|
+  find(event_detail_selector_for("book #{index}")).find('a').click
 end
 
 Then /^the event title should be "([^\"]*)"$/ do |title|
@@ -77,4 +81,27 @@ end
 Then /^I should be on the author detail page for author (\d+)$/ do |index|
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the author detail page for #{index}")
+end
+
+Then /^the event should have (\d+) books$/ do |book_count|
+  page.should have_css('ul.books li', :count => book_count)
+end
+
+Then /^event book (\d+) should be "([^\"]*)"$/ do |index, title|
+  book = find(event_detail_selector_for("book #{index}"))
+  book.should have_content title
+end
+
+Then /^the event should not have books$/ do
+  page.should_not have_css('ul.books')
+end
+
+Then /^I should be on the book detail page for book (\d+)$/ do |index|
+  current_path = URI.parse(current_url).path
+  current_path.should == path_to("the book detail page for #{index}")
+end
+
+Then /^event book (\d+) image is "([^\"]*)"$/ do |index, image_url|
+  book = page.find(event_detail_selector_for("book #{index}"))
+  book.find('img')['src'].should == image_url
 end
