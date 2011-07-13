@@ -57,9 +57,20 @@ module Feed
     end
     
     def remove_orphans(output)
+      remove_orphaned_authors(output)
+      remove_orphaned_books(output)
+    end
+    
+    def remove_orphaned_authors(output)
       count1 = Author.count
-      Author.remove_authors_without_events
+      Author.without_events.destroy_all
       puts "#{count1 - Author.count} orphaned authors were removed" if output
+    end
+    
+    def remove_orphaned_books(output)
+      count1 = Book.count
+      Book.without_events.destroy_all
+      puts "#{count1 - Book.count} orphaned books were removed" if output
     end
     
     def event_attributes(event)
