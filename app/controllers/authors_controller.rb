@@ -6,6 +6,10 @@ class AuthorsController < ApplicationController
     @title = "Authors"
     @section = "Authors"
   end
+  
+  def show
+    
+  end
 
 protected
 

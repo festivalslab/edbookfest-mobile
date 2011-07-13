@@ -1,0 +1,1662 @@
+<?xml version="1.0"?><ProgrammeData xmlns="http://www.edbookfest.co.uk/eibf.programmedata.1.0.xsd">
+        <Event eibf_id="2055"
+           via_id="5926:462"
+           via_code="2055"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/keep-them-reading-book-awards"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Keep Them Reading: Book Awards]]></MainTitle>
+            <SubTitle><![CDATA[Come and hear how to set up young adult book awards as a way to keep children reading.]]></SubTitle>
+            <TitleSponsors>Event title sponsors</TitleSponsors>
+        </Title>
+          <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/guest-selector-julia-donaldson"><![CDATA[Guest Selector: Julia Donaldson]]></Theme>
+        <Venue>
+            <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-18T17:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[]]></Formatted>
+            <AgeLower></AgeLower>
+            <AgeUpper></AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00, <span class="concession">&pound;5.00</span>]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[5.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading.]]></Standfirst>
+            <Copy><![CDATA[Come and hear how to set up young adult book awards as a way to keep children reading. Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading, and how much both readers and authors can benefit from the experience.]]></Copy>
+            <Teaser><![CDATA[Come and hear how to set up young adult book awards as a way to keep children reading. Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading, and how much both readers]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/event-image.jpg" />
+        <Authors>
+            </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2056"
+           via_id="5926:463"
+           via_code="2056"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/the-multi-media-reading-experience"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[The Multi-Media Reading Experience]]></MainTitle>
+            <SubTitle><![CDATA[]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Imagination Lab</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-23T17:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[]]></Formatted>
+            <AgeLower></AgeLower>
+            <AgeUpper></AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00, <span class="concession">&pound;5.00</span>]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[5.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Neal Hoskins works with digital publisher WingedChariot to create beautifully simple digital picture books for pre-school children. Neal demonstrates the apps which feature text and narration, music and digital stickers to make the reading experience truly interactive. He is joined by Sue Palmer, writer, presenter and author of the bestselling Toxic Childhood to debate the impact of technology on young minds.</p>]]></Copy>
+            <Teaser><![CDATA[Neal Hoskins works with digital publisher WingedChariot to create beautifully simple digital picture books for pre-school children. Neal demonstrates the apps which feature text and narration, music and digital stickers to make the reading experience...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Palmer-%20Sue%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="5592" is_active="true">
+                <Forename><![CDATA[Sue]]></Forename>
+                <Surname><![CDATA[Palmer]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2057"
+           via_id="5926:464"
+           via_code="2057"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/getting-to-grips-with-graphic-novels"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Getting to Grips with Graphic Novels]]></MainTitle>
+            <SubTitle><![CDATA[]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-25T17:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[]]></Formatted>
+            <AgeLower></AgeLower>
+            <AgeUpper></AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00, <span class="concession">&pound;5.00</span>]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[5.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Girls don&rsquo;t read graphic novels. Comics are a threat to literacy. School library spend should go on &lsquo;real&rsquo; books. Dr Mel Gibson from the Northumbria University, along with graphic novelist and artist, Emma Vieceli, debate these questions and more, together demonstrating how to interpret the graphic novel as a medium in its own right and as an important addition to conventional texts.</p>]]></Copy>
+            <Teaser><![CDATA[Girls don&rsquo;t read graphic novels. Comics are a threat to literacy. School library spend should go on &lsquo;real&rsquo; books. Dr Mel Gibson from the Northumbria University, along with graphic novelist and artist, Emma Vieceli, debate these...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Gibson-%20Mel%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="8319" is_active="true">
+                <Forename><![CDATA[Mel]]></Forename>
+                <Surname><![CDATA[Gibson]]></Surname>
+                            </Author>
+        <Author eibf_id="10351" is_active="true">
+                <Forename><![CDATA[Emma]]></Forename>
+                <Surname><![CDATA[Vieceli]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2058"
+           via_id="5926:465"
+           via_code="2058"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/the-library-the-heart-of-the-school"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[The Library: the Heart of the School]]></MainTitle>
+            <SubTitle><![CDATA[]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-29T17:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[]]></Formatted>
+            <AgeLower></AgeLower>
+            <AgeUpper></AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00, <span class="concession">&pound;5.00</span>]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[5.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[Librarian Chris Morrison and Modern Language teacher Judith Cohen give an inspiring talk about cross-department collaborations with the school library at the centre. Chris and Judith demonstrate a fantastic ICT initiative which has proved to be a fun and informative way for children to develop information skills whilst at the same time using French to solve a series of interactive Cluedo-style mysteries.]]></Copy>
+            <Teaser><![CDATA[Librarian Chris Morrison and Modern Language teacher Judith Cohen give an inspiring talk about cross-department collaborations with the school library at the centre. Chris and Judith demonstrate a fantastic ICT initiative which has proved to be a fun and]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/default.jpg" />
+        <Authors>
+            <Author eibf_id="10326" is_active="true">
+                <Forename><![CDATA[Chris]]></Forename>
+                <Surname><![CDATA[Morrison]]></Surname>
+                            </Author>
+        <Author eibf_id="10355" is_active="true">
+                <Forename><![CDATA[Judith]]></Forename>
+                <Surname><![CDATA[Cohen]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2060"
+           via_id="5926:1786"
+           via_code="2060"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/dragons-and-fairies-with-julia-donaldson"
+           isCancelled="false"
+           isSoldOut="true"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Dragons and Fairies with Julia Donaldson]]></MainTitle>
+            <SubTitle><![CDATA[AGE 5 - 9]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+                <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/guest-selector-julia-donaldson"><![CDATA[Guest Selector: Julia Donaldson]]></Theme>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-13T10:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 5 - 9]]></Formatted>
+            <AgeLower>5</AgeLower>
+            <AgeUpper>9</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Come and enjoy our opening event with the newly appointed Children&rsquo;s Laureate and our 2011 guest-selector Julia Donaldson for a fantastic, interactive event featuring her new and recent picture books Freddie and the Fairy, The Highway Rat and Zog. Come in good voice and good cheer for a roof-raising start to this year&rsquo;s Festival.</p>]]></Copy>
+            <Teaser><![CDATA[Come and enjoy our opening event with the newly appointed Children&rsquo;s Laureate and our 2011 guest-selector Julia Donaldson for a fantastic, interactive event featuring her new and recent picture books Freddie and the Fairy, The Highway Rat and Zog....]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Donaldson-%20Julia%20%28369x283%29_1.jpg" />
+        <Authors>
+            <Author eibf_id="1569" is_active="true">
+                <Forename><![CDATA[Julia]]></Forename>
+                <Surname><![CDATA[Donaldson]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Donaldson_Julia.jpg" />
+                        </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7539" href="http://www.amazon.co.uk/Freddie-Fairy-Julia-Donaldson/dp/0330511181%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0330511181" isbn="9780330511186" is_active="true" >
+                <Title><![CDATA[Freddie and The Fairy]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51uPRQNsC7L._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7565" href="http://www.amazon.co.uk/Zog-Julia-Donaldson/dp/1407115561%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1407115561" isbn="9781407115566" is_active="true" >
+                <Title><![CDATA[Zog]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51soTM7-ctL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2061"
+           via_id="5926:1787"
+           via_code="2061"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/ring-of-solomon-with-jonathan-stroud"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Ring of Solomon with Jonathan Stroud]]></MainTitle>
+            <SubTitle><![CDATA[AGE 10 - 13]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-22T17:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 10 - 13]]></Formatted>
+            <AgeLower>10</AgeLower>
+            <AgeUpper>13</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Jonathan&#39;s acclaimed fantasy series about Bartimaeus the wise-cracking djinni has sold over six million copies in thirty seven languages. Bartimaeus has served hundreds of magicians during his 5,010 year career so he&rsquo;s pretty much seen and done it all. Join the author as he discusses inventing characters and creating fantasy worlds.</p>]]></Copy>
+            <Teaser><![CDATA[Jonathan&#39;s acclaimed fantasy series about Bartimaeus the wise-cracking djinni has sold over six million copies in thirty seven languages. Bartimaeus has served hundreds of magicians during his 5,010 year career so he&rsquo;s pretty much seen and...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Stroud-%20Jonathan%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="3268" is_active="true">
+                <Forename><![CDATA[Jonathan]]></Forename>
+                <Surname><![CDATA[Stroud]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7079" href="http://www.amazon.co.uk/Ring-Solomon-Bartimaeus-Sequence/dp/0552562947%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0552562947" isbn="9780552562942" is_active="true" >
+                <Title><![CDATA[Ring of Solomon]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51hOEeqRYJL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2293"
+           via_id="5926:1994"
+           via_code="2293"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/help-what-can-i-write-about"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Help! What Can I Write About?]]></MainTitle>
+            <SubTitle><![CDATA[AGE 12 - 15]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Workshop Tent</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-29T11:00:00+01:00</EventDateTime>
+        <Duration>90</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 12 - 15]]></Formatted>
+            <AgeLower>12</AgeLower>
+            <AgeUpper>15</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Calling all future authors. Do you ever sit in front of a blank screen and have your mind close down? Award-winning author Gill Arbuthnott gently guides you through ways to generate those elusive ideas and how to keep going when inspiration dries up. You&rsquo;ll never be afraid of a blank screen again. In conjunction with The Pushkin Creative Writing Prize.</p>]]></Copy>
+            <Teaser><![CDATA[Calling all future authors. Do you ever sit in front of a blank screen and have your mind close down? Award-winning author Gill Arbuthnott gently guides you through ways to generate those elusive ideas and how to keep going when inspiration dries up. You]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Arbuthnott-%20Gill%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="4621" is_active="true">
+                <Forename><![CDATA[Gill]]></Forename>
+                <Surname><![CDATA[Arbuthnott]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Arbuthnott_Gill_web_369_283.jpg" />
+                        </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7629" href="http://www.amazon.co.uk/Keepers-Daughter-Gill-Arbuthnott/dp/1905294948%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1905294948" isbn="9781905294947" is_active="true" >
+                <Title><![CDATA[The Keepers' Daughter]]></Title>
+                             </Book>
+        <Book eibf_id="7630" href="http://www.amazon.co.uk/Crazy-Creatures-Reality-Check-Arbuthnott/dp/1842994573%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1842994573" isbn="9781842994573" is_active="true" >
+                <Title><![CDATA[Crazy Creatures]]></Title>
+                             </Book>
+        <Book eibf_id="7631" href="http://www.amazon.co.uk/Scientists-Reality-Check-Gill-Arbuthnott/dp/1842995340%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1842995340" isbn="9781842995341" is_active="true" >
+                <Title><![CDATA[Mad Scientists]]></Title>
+                             </Book>
+        <Book eibf_id="7632" href="" isbn="9781842996089" is_active="true" >
+                <Title><![CDATA[Germ Wars]]></Title>
+                             </Book>
+        <Book eibf_id="7633" href="" isbn="9780863154225" is_active="true" >
+                <Title><![CDATA[Chaos Clock]]></Title>
+                             </Book>
+        <Book eibf_id="7634" href="" isbn="9780863154591" is_active="true" >
+                <Title><![CDATA[Chaos Quest]]></Title>
+                             </Book>
+        <Book eibf_id="7635" href="" isbn="9780863155307" is_active="true" >
+                <Title><![CDATA[Winterbringers]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/514NKH0KXPL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2295"
+           via_id="5926:1995"
+           via_code="2295"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/creative-writing-workshop-with-keith-gray"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Creative Writing Workshop with Keith Gray]]></MainTitle>
+            <SubTitle><![CDATA[AGE 11 - 14]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Workshop Tent</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-29T15:00:00+01:00</EventDateTime>
+        <Duration>120</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 11 - 14]]></Formatted>
+            <AgeLower>11</AgeLower>
+            <AgeUpper>14</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Award-winning novelist, Keith Gray, leads a creative writing workshop for all budding authors. Based around Ostrich Boys, he reveals how interesting characters act as the foundations for building exciting plots &ndash; prepare to hold the key to great story writing! In conjunction with The Pushkin Creative Writing Prize.</p>]]></Copy>
+            <Teaser><![CDATA[Award-winning novelist, Keith Gray, leads a creative writing workshop for all budding authors. Based around Ostrich Boys, he reveals how interesting characters act as the foundations for building exciting plots &ndash; prepare to hold the key to great...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Gray--Keith%20%28369%20x%20283%29.jpg" />
+        <Authors>
+            <Author eibf_id="1575" is_active="true">
+                <Forename><![CDATA[Keith]]></Forename>
+                <Surname><![CDATA[Gray]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Gray-%20Keith.jpg" />
+                        </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7558" href="http://www.amazon.co.uk/Ostrich-Boys-Definitions-Keith-Gray/dp/0099456575%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0099456575" isbn="9780099456575" is_active="true" >
+                <Title><![CDATA[Ostrich Boys]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51LVzwQjtqL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2296"
+           via_id="5926:1996"
+           via_code="2296"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/dr-recommenda-book-1"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Dr Recommenda Book]]></MainTitle>
+            <SubTitle><![CDATA[ALL AGES]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Children’s Bookshop</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-30T10:00:00+01:00</EventDateTime>
+        <Duration>180</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[ALL AGES]]></Formatted>
+            <AgeLower>0</AgeLower>
+            <AgeUpper>15</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[Free & Drop-in]]></Formatted>
+            <FullPrice><![CDATA[0.00]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[Tired of the same old books? Dying for something new to read? Dr Recommenda Book joins us from Edinburgh City Libraries to help everyone from babies to teens find the perfect book. You just say the types of books you like (and the ones you don’t) and the doctor writes up a prescription of inspiring titles for you to enjoy!]]></Copy>
+            <Teaser><![CDATA[Tired of the same old books? Dying for something new to read? Dr Recommenda Book joins us from Edinburgh City Libraries to help everyone from babies to teens find the perfect book. You just say the types of books you like (and the ones you don’t) and...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/default.jpg" />
+        <Authors>
+            </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2314"
+           via_id="5926:1997"
+           via_code="2314"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/darren-shan-barry-hutchison-alexander-gordon-smith-talk-horror"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Darren Shan, Barry Hutchison & Alexander Gordon Smith Talk Horror]]></MainTitle>
+            <SubTitle><![CDATA[AGE 10 - 14]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-20T13:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 10 - 14]]></Formatted>
+            <AgeLower>10</AgeLower>
+            <AgeUpper>14</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Warning: This event is not for the faint-hearted. Join three leading horror writers as they discuss where their creepy ideas come from, how to create the perfect end-of-chapter cliffhanger, how they make our skin crawl, our hearts beat faster and why we don&rsquo;t want to be left alone in the house at night. Come along &ndash; if you dare.</p>]]></Copy>
+            <Teaser><![CDATA[Warning: This event is not for the faint-hearted. Join three leading horror writers as they discuss where their creepy ideas come from, how to create the perfect end-of-chapter cliffhanger, how they make our skin crawl, our hearts beat faster and why we...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Shan-%20Darren%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="1532" is_active="true">
+                <Forename><![CDATA[Darren]]></Forename>
+                <Surname><![CDATA[O'Shaughnessy]]></Surname>
+                            </Author>
+        <Author eibf_id="8941" is_active="true">
+                <Forename><![CDATA[Barry]]></Forename>
+                <Surname><![CDATA[Hutchison]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Hutchinson_Barry_369_283.jpg" />
+                        </Author>
+        <Author eibf_id="5938" is_active="true">
+                <Forename><![CDATA[Alexander Gordon]]></Forename>
+                <Surname><![CDATA[Smith]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6761" href="http://www.amazon.co.uk/Saga-Larten-Crepsley-Ocean-Blood/dp/0007315902%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0007315902" isbn="9780007315901" is_active="true" >
+                <Title><![CDATA[Ocean of Blood]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/613tDZwgyNL._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="6859" href="http://www.amazon.co.uk/Furnace-Execution-Alexander-Gordon-Smith/dp/0571259405%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0571259405" isbn="9780571259403" is_active="true" >
+                <Title><![CDATA[Furnace 5: Execution]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51eOW0kR2GL._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7493" href="http://www.amazon.co.uk/Invisible-Fiends-Mumbles-Barry-Hutchison/dp/0007315155%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0007315155" isbn="9780007315154" is_active="true" >
+                <Title><![CDATA[Invisible Fiends: Mr Mumbles]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51bjx79w8NL._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7641" href="" isbn="9780007315192" is_active="true" >
+                <Title><![CDATA[Invisible Fiends: Doc Mortis]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51INncCFn5L._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2315"
+           via_id="5926:1998"
+           via_code="2315"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/tracey-corderoy"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Tracey Corderoy]]></MainTitle>
+            <SubTitle><![CDATA[AGE 4 - 7]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Imagination Lab</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-17T13:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 4 - 7]]></Formatted>
+            <AgeLower>4</AgeLower>
+            <AgeUpper>7</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Come and meet the author of hygienically challenged trolls The Grunt and the Grouch, guaranteed to make children giggle. Tracey, on the other hand, is very clean, so don&rsquo;t be afraid to join her in a fun-filled event of storytelling, and delve into the troll sack to find those troll goodies!</p>]]></Copy>
+            <Teaser><![CDATA[Come and meet the author of hygienically challenged trolls The Grunt and the Grouch, guaranteed to make children giggle. Tracey, on the other hand, is very clean, so don&rsquo;t be afraid to join her in a fun-filled event of storytelling, and delve into...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Corderoy-Tracey%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="8970" is_active="true">
+                <Forename><![CDATA[Tracey]]></Forename>
+                <Surname><![CDATA[Corderoy]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7020" href="http://www.amazon.co.uk/Oh-Dylan-Tracey-Corderoy/dp/184895137X%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D184895137X" isbn="9781848951372" is_active="true" >
+                <Title><![CDATA[Oh Dylan]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/31TqIX7LorL._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7568" href="http://www.amazon.co.uk/Little-White-Owl-Tracey-Corderoy/dp/1848950861%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1848950861" isbn="9781848950863" is_active="true" >
+                <Title><![CDATA[The Little White Owl]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51wXlcXPDHL._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7571" href="http://www.amazon.co.uk/Grunt-Grouch-Tracey-Corderoy/dp/1848950519%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1848950519" isbn="9781848950511" is_active="true" >
+                <Title><![CDATA[The Grunt and the Grouch]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/61n98XHqmFL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2316"
+           via_id="5926:1999"
+           via_code="2316"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/alasdair-gray-1"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Alasdair Gray]]></MainTitle>
+            <SubTitle><![CDATA[A LIFE IN WORDS AND PICTURES]]></SubTitle>
+            <TitleSponsors>                <Credit><![CDATA[The Skinny Event]]></Credit>
+            </TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-13T11:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Thirty years ago Lanark was published, which confirmed Alasdair Gray as the most ferociously inventive Scottish writer of his generation. His output since then has been characterised by a close relationship between his writing and his singular image-making style. Already the author of much-admired murals, he has just finished a new public art project at Glasgow Hillhead subway station. To celebrate his remarkable contribution to the written and visual landscape in Scotland, we are thrilled to welcome him back to the Book Festival.</p>]]></Copy>
+            <Teaser><![CDATA[Thirty years ago Lanark was published, which confirmed Alasdair Gray as the most ferociously inventive Scottish writer of his generation. His output since then has been characterised by a close relationship between his writing and his singular...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Gray--Alasdair%20%28369%20x%20283%29.jpg" />
+        <Authors>
+            <Author eibf_id="2566" is_active="true">
+                <Forename><![CDATA[Alasdair]]></Forename>
+                <Surname><![CDATA[Gray]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Gray-%20Alasdair.jpg" />
+                        </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6679" href="http://www.amazon.co.uk/Life-Pictures-Alasdair-Gray/dp/1841956406%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1841956406" isbn="9781841956404" is_active="true" >
+                <Title><![CDATA[A Life in Pictures]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51AUQKr9o8L._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2317"
+           via_id="5926:2000"
+           via_code="2317"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/t-c-boyle"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[T C Boyle]]></MainTitle>
+            <SubTitle><![CDATA[NATURE IS JUST AS MURDEROUS AS HUMAN BEINGS]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-13T16:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	When the Killing&#39;s Done is the new novel by one of the USA&#39;s finest contemporary writers. The story follows a National Park scientist and her bid to destroy a colony of human-introduced rats in order to avoid extinction of the indigenous bird colony. But first she must get past a rat-loving environmental activist who will stop at nothing to avoid cruelty to any animal. When it&#39;s humans against nature, the killing, needless to say, is never done.</p>]]></Copy>
+            <Teaser><![CDATA[When the Killing&#39;s Done is the new novel by one of the USA&#39;s finest contemporary writers. The story follows a National Park scientist and her bid to destroy a colony of human-introduced rats in order to avoid extinction of the indigenous bird...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Boyle-TC%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="2220" is_active="true">
+                <Forename><![CDATA[T.C.]]></Forename>
+                <Surname><![CDATA[Boyle]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7407" href="http://www.amazon.co.uk/When-Killings-Done-Coraghessan-Boyle/dp/1408811480%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1408811480" isbn="9781408811481" is_active="true" >
+                <Title><![CDATA[When the Killing's Done]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/41rNT1sFubL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2318"
+           via_id="5926:2001"
+           via_code="2318"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/julian-baggini-andrew-robinson-with-joan-bakewell"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Julian Baggini & Andrew Robinson with Joan Bakewell]]></MainTitle>
+            <SubTitle><![CDATA[KEY IDEAS OF THE 21ST CENTURY: CREATIVITY]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+                <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/guest-selector-joan-bakewell"><![CDATA[Guest Selector: Joan Bakewell]]></Theme>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-22T11:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	It is widely acknowledged that intellectual activity and creativity are key to our survival. But are they simply fuelling endless growth as demanded by capitalism? Where do our ideas come from and how will they actually contribute to our future? As part of her guest-selected series on ideas that will shape the century, Joan Bakewell chairs a discussion featuring the philosopher Julian Baggini and social historian Andrew Robinson.</p>]]></Copy>
+            <Teaser><![CDATA[It is widely acknowledged that intellectual activity and creativity are key to our survival. But are they simply fuelling endless growth as demanded by capitalism? Where do our ideas come from and how will they actually contribute to our future? As part]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Robinson-%20Andrew%20%28369x283%29_1.jpg" />
+        <Authors>
+            <Author eibf_id="2548" is_active="true">
+                <Forename><![CDATA[Julian]]></Forename>
+                <Surname><![CDATA[Baggini]]></Surname>
+                            </Author>
+        <Author eibf_id="7551" is_active="true">
+                <Forename><![CDATA[Andrew]]></Forename>
+                <Surname><![CDATA[Robinson]]></Surname>
+                            </Author>
+        <Author eibf_id="0" is_active="true">
+                <Forename><![CDATA[Joan]]></Forename>
+                <Surname><![CDATA[Bakewell]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7144" href="http://www.amazon.co.uk/Sudden-Genius-Breakthroughs-Creativity-extraordinary/dp/0199569959%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0199569959" isbn="9780199569953" is_active="true" >
+                <Title><![CDATA[Sudden Genius?]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/518FATiSI4L._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7204" href="http://www.amazon.co.uk/Ego-Trick-Julian-Baggini/dp/1847081924%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1847081924" isbn="9781847081926" is_active="true" >
+                <Title><![CDATA[The Ego Trick: In Search of the Self]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/410i%2BTk-GQL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2475"
+           via_id="5926:2156"
+           via_code="2475"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/janice-galloway-1"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Janice Galloway]]></MainTitle>
+            <SubTitle><![CDATA[A MEMOIR OF TEENAGE AYRSHIRE YEARS]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T11:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	After her first volume of autobiography, the ironically titled This is Not About Me, Galloway moves on to her teenage years with All Made Up. Through descriptions of puberty, sex and schoolroom politics, she directs her lucid and penetrating prose onto the morals and ambitions of a small Ayrshire town. When she entered secondary school, she was still sharing a bed with her mum and was more excited by Latin than boys, but soon almost everything she thought she knew began to change. Chaired by Ruth Wishart.</p>]]></Copy>
+            <Teaser><![CDATA[After her first volume of autobiography, the ironically titled This is Not About Me, Galloway moves on to her teenage years with All Made Up. Through descriptions of puberty, sex and schoolroom politics, she directs her lucid and penetrating prose onto...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Galloway-%20Janice%20cr%20Graham%20Jepson-Writer%20Pictures%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="1483" is_active="true">
+                <Forename><![CDATA[Janice]]></Forename>
+                <Surname><![CDATA[Galloway]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7441" href="http://www.amazon.co.uk/All-Made-Up-Janice-Galloway/dp/1847082483%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1847082483" isbn="9781847082480" is_active="true" >
+                <Title><![CDATA[All Made Up]]></Title>
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2476"
+           via_id="5926:2157"
+           via_code="2476"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/richard-dannatt"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Richard Dannatt]]></MainTitle>
+            <SubTitle><![CDATA[THE ROLE OF A MODERN ARMY ON TODAY’S BATTLEGROUNDS]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+                <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/living-memory"><![CDATA[Living Memory]]></Theme>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T13:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	In 2006, General Sir Richard Dannatt was handed overall charge of the British Army for a period of three turbulent years. This time was marked by some of the most ferocious fighting in Afghanistan to date and it needed a courageous leader and a powerful military figurehead to stay the course. Dannatt was indeed that man and in Leading from the Front, he reflects upon his years of military service whilst asking whether Britain&rsquo;s defence strategy will cope with the demands posed by the 21st century.</p>]]></Copy>
+            <Teaser><![CDATA[In 2006, General Sir Richard Dannatt was handed overall charge of the British Army for a period of three turbulent years. This time was marked by some of the most ferocious fighting in Afghanistan to date and it needed a courageous leader and a powerful...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Richard-Dannatt-_CCrown-Cop.gif" />
+        <Authors>
+            <Author eibf_id="9966" is_active="true">
+                <Forename><![CDATA[Richard]]></Forename>
+                <Surname><![CDATA[Dannatt]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6945" href="http://www.amazon.co.uk/Leading-Front-General-Richard-Dannatt/dp/0552162612%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0552162612" isbn="9780552162616" is_active="true" >
+                <Title><![CDATA[Leading from the Front]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51Vdp8tHHfL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2477"
+           via_id="5926:2158"
+           via_code="2477"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/ingrid-betancourt-with-kirsty-wark"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Ingrid Betancourt with Kirsty Wark]]></MainTitle>
+            <SubTitle><![CDATA[A TALE OF SURVIVAL AGAINST THE ODDS]]></SubTitle>
+            <TitleSponsors>                <Credit><![CDATA[The Baillie Gifford Event]]></Credit>
+            </TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-29T16:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	When Colombian presidential candidate Ingrid Betancourt went on the campaign trail in 2002, she could not have imagined that it would end in a kidnapping and six year incarceration at the hands of guerrilla forces. Even Silence Has an End is the tale of her jungle ordeal which included beatings by her captors, mutual distrust of fellow prisoners and a constant struggle to escape the attentions of red ants, tarantulas, anacondas and bears. She discusses her experiences with Kirsty Wark.</p>]]></Copy>
+            <Teaser><![CDATA[When Colombian presidential candidate Ingrid Betancourt went on the campaign trail in 2002, she could not have imagined that it would end in a kidnapping and six year incarceration at the hands of guerrilla forces. Even Silence Has an End is the tale of...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Betancourt-%20Ingrid%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="8784" is_active="true">
+                <Forename><![CDATA[Ingrid]]></Forename>
+                <Surname><![CDATA[Betancourt]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6839" href="http://www.amazon.co.uk/Even-Silence-Has-End-Captivity/dp/1844086135%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1844086135" isbn="9781844086139" is_active="true" >
+                <Title><![CDATA[Even Silence Has an End: My Six Years of Captivity in the Colombian Jungle]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51mjg8EmEyL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2479"
+           via_id="5926:2159"
+           via_code="2479"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/the-scottish-mortgage-investment-trust-awards"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[The Scottish Mortgage Investment Trust Awards]]></MainTitle>
+            <SubTitle><![CDATA[MEET THE WINNERS OF THE PRESTIGIOUS SCOTTISH LITERARY AWARD]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T16:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	The Scottish Mortgage Investment Trust Awards (formerly the Scottish Arts Council Book Awards) have been key to the promotion of Scottish literary talent. Past winners include Ali Smith, Kathleen Jamie, James Robertson and William Dalrymple. In today&rsquo;s exciting event, four winners in their individual categories discuss their winning books, and discover who has won the prestigious Book of the Year award, worth &pound;20,000. Join this year&rsquo;s category winners Leila Aboulelah (fiction), Stewart Conn (poetry), Jackie Kay (non-fiction) and Sue Peebles (debut).</p>]]></Copy>
+            <Teaser><![CDATA[The Scottish Mortgage Investment Trust Awards (formerly the Scottish Arts Council Book Awards) have been key to the promotion of Scottish literary talent. Past winners include Ali Smith, Kathleen Jamie, James Robertson and William Dalrymple. In...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Kay-%20Jackie%20%28369x283%29_1.jpg" />
+        <Authors>
+            <Author eibf_id="9396" is_active="true">
+                <Forename><![CDATA[Sue]]></Forename>
+                <Surname><![CDATA[Peebles]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Peebles-%20Sue%20-%20Credit%20-%20Peter%20Gregor.jpg" />
+                        </Author>
+        <Author eibf_id="1131" is_active="true">
+                <Forename><![CDATA[Stewart]]></Forename>
+                <Surname><![CDATA[Conn]]></Surname>
+                            </Author>
+        <Author eibf_id="1179" is_active="true">
+                <Forename><![CDATA[Jackie]]></Forename>
+                <Surname><![CDATA[Kay]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Kay_Jackie_web_369_283.jpg" />
+                        </Author>
+        <Author eibf_id="4488" is_active="true">
+                <Forename><![CDATA[Leila]]></Forename>
+                <Surname><![CDATA[Aboulela]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2480"
+           via_id="5926:2160"
+           via_code="2480"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/niall-ferguson-1"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Niall Ferguson]]></MainTitle>
+            <SubTitle><![CDATA[THE END OF TIMES?]]></SubTitle>
+            <TitleSponsors>                <Credit><![CDATA[The Turcan Connell Event]]></Credit>
+            </TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T18:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Are we living through the dying embers of Western ascendancy? For Scottish historian and broadcaster Niall Ferguson, the &lsquo;killer applications&rsquo; test is the best way to measure our status with the rest of the world. So, how are we doing when it comes to science, democracy, medicine, consumerism and the work ethic? Not so well, he reckons. Civilization takes us on an extraordinary journey from Nanjing to Namibia, for a story of sailboats, missiles, vaccines, blue jeans and Chinese bibles. Chaired by Iain Macwhirter.</p>]]></Copy>
+            <Teaser><![CDATA[Are we living through the dying embers of Western ascendancy? For Scottish historian and broadcaster Niall Ferguson, the &lsquo;killer applications&rsquo; test is the best way to measure our status with the rest of the world. So, how are we doing when...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Ferguson-%20Niall%20cr%20Dewald%20Aukema%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="2082" is_active="true">
+                <Forename><![CDATA[Niall]]></Forename>
+                <Surname><![CDATA[Ferguson]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6801" href="http://www.amazon.co.uk/Civilization-Ways-West-Beat-Rest/dp/1846142733%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1846142733" isbn="9781846142734" is_active="true" >
+                <Title><![CDATA[Civilisation: The West and the Rest]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/41XLkdcD-hL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2481"
+           via_id="5926:2161"
+           via_code="2481"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/ahdaf-soueif-hisham-matar-with-allan-little"
+           isCancelled="false"
+           isSoldOut="true"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Ahdaf Soueif & Hisham Matar with Allan Little]]></MainTitle>
+            <SubTitle><![CDATA[REVOLUTION IN THE 21ST CENTURY: NORTH AFRICA]]></SubTitle>
+            <TitleSponsors>                <Credit><![CDATA[THE BRITISH COUNCIL EVENT]]></Credit>
+            </TitleSponsors>
+        </Title>
+                <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/guest-selector-allan-little"><![CDATA[Guest Selector: Allan Little]]></Theme>
+        <Venue>
+            <PerformanceSpace>ScottishPower Studio Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T14:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Revolutionary protests in Morocco, Tunisia, Egypt and Libya over recent months have brought about the demise of a number of autocratic regimes. But is this really the beginning of what some have described as the &#39;Arab Spring&#39;? And what were the real underlying causes of the upheavals? As part of his guest-selected series on revolution in the 21st century, Allan Little discusses the historic events with the acclaimed Egyptian author Ahdaf Soueif and distinguished Libyan novelist Hisham Matar, both of whom have written novels shortlisted for the Man Booker Prize.</p>]]></Copy>
+            <Teaser><![CDATA[Revolutionary protests in Morocco, Tunisia, Egypt and Libya over recent months have brought about the demise of a number of autocratic regimes. But is this really the beginning of what some have described as the &#39;Arab Spring&#39;? And what were the...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Matar-%20Hisham%20cr%20Diana%20Matar%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="5793" is_active="true">
+                <Forename><![CDATA[Hisham]]></Forename>
+                <Surname><![CDATA[Matar]]></Surname>
+                            </Author>
+        <Author eibf_id="1245" is_active="true">
+                <Forename><![CDATA[Ahdaf]]></Forename>
+                <Surname><![CDATA[Soueif]]></Surname>
+                            </Author>
+        <Author eibf_id="0" is_active="true">
+                <Forename><![CDATA[Allan]]></Forename>
+                <Surname><![CDATA[Little]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6717" href="http://www.amazon.co.uk/Anatomy-Disappearance-Hisham-Matar/dp/067091651X%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D067091651X" isbn="9780670916511" is_active="true" >
+                <Title><![CDATA[Anatomy of a Disappearance]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51muYpbz6PL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2482"
+           via_id="5926:2162"
+           via_code="2482"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/alistair-moffat-1"
+           isCancelled="false"
+           isSoldOut="true"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="true">
+        <Title>
+            <MainTitle><![CDATA[Alistair Moffat]]></MainTitle>
+            <SubTitle><![CDATA[UNRAVELLING SCOTLAND'S DNA]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>ScottishPower Studio Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T15:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Where do Scottish people come from? That&#39;s the question posed in The Scots: A Genetic Journey. Moffat, a popular historian and highly-respected cultural impresario, draws on data provided by geneticist James Wilson and throws in a healthy dollop of history, archaeology and culture to produce a map of Scotland&#39;s DNA that proves we are a nation of immigrants. Join him to discover some surprising truths about our ancestors and their origins.</p>]]></Copy>
+            <Teaser><![CDATA[Where do Scottish people come from? That&#39;s the question posed in The Scots: A Genetic Journey. Moffat, a popular historian and highly-respected cultural impresario, draws on data provided by geneticist James Wilson and throws in a healthy dollop of...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Moffat-%20Alistair%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="2624" is_active="true">
+                <Forename><![CDATA[Alistair]]></Forename>
+                <Surname><![CDATA[Moffat]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7307" href="http://www.amazon.co.uk/Scots-Alistair-Moffat-Jim-Wilson/dp/1841589411%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1841589411" isbn="9781841589411" is_active="true" >
+                <Title><![CDATA[The Scots: A Genetic Journey]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51iivAk9CLL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2675"
+           via_id="5926:2352"
+           via_code="2675"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/jim-baggott-michael-brooks"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Jim Baggott & Michael Brooks]]></MainTitle>
+            <SubTitle><![CDATA[HAS SCIENCE LOST ITS WAY?]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>Peppers Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-18T12:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	The 20th century was an era in which science claimed to have all the answers, when we placed total faith in our scientists. Yet today scientists only seem to be sure that we are uncertain about pretty much everything. Jim Baggott&#39;s masterful history of Quantum theory explains the rollercoaster developments in this seminal theory, while Michael Brooks&#39; illuminating study of the work of scientists shows the venal ambition and vicious tactics behind many brilliant discoveries.</p>]]></Copy>
+            <Teaser><![CDATA[The 20th century was an era in which science claimed to have all the answers, when we placed total faith in our scientists. Yet today scientists only seem to be sure that we are uncertain about pretty much everything. Jim Baggott&#39;s masterful history...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Baggott-%20Jim%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="5509" is_active="true">
+                <Forename><![CDATA[Jim]]></Forename>
+                <Surname><![CDATA[Baggott]]></Surname>
+                            </Author>
+        <Author eibf_id="7497" is_active="true">
+                <Forename><![CDATA[Michael]]></Forename>
+                <Surname><![CDATA[Brooks]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6857" href="http://www.amazon.co.uk/Free-Radicals-secret-anarchy-science/dp/1846684056%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1846684056" isbn="9781846684050" is_active="true" >
+                <Title><![CDATA[Free Radicals: The Secret Anarchy of Science]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51qCIom09iL._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7301" href="http://www.amazon.co.uk/Quantum-Story-history-40-moments/dp/0199566844%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0199566844" isbn="9780199566846" is_active="true" >
+                <Title><![CDATA[The Quantum Story]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/514SRczMQfL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2676"
+           via_id="5926:2353"
+           via_code="2676"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/philippe-claudel"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Philippe Claudel]]></MainTitle>
+            <SubTitle><![CDATA[A PROFOUND AND MOVING LOVE STORY]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-20T19:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;7.00, <span class="concession">&pound;5.00</span>]]></Formatted>
+            <FullPrice><![CDATA[7.00]]></FullPrice>
+            <Concession><![CDATA[5.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	The winner of the Prix Goncourt in 2003 and the Independent Foreign Fiction Prize last year, Claudel is at the top of his game. He joins us to discuss Monsieur Linh and His Child, a novella whose emotional charge is impressive. It tells the story of two elderly men from Vietnam and France, sitting on a park bench in Paris. With no shared language, the two men forge an unlikely relationship. Warm, tender and ultimately heartbreaking, this is a story of love in the face of alienation and loss.</p>]]></Copy>
+            <Teaser><![CDATA[The winner of the Prix Goncourt in 2003 and the Independent Foreign Fiction Prize last year, Claudel is at the top of his game. He joins us to discuss Monsieur Linh and His Child, a novella whose emotional charge is impressive. It tells the story of two...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Claudel-%20Philippe%20%C2%A9%20David%20Balicki%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="7567" is_active="true">
+                <Forename><![CDATA[Philippe]]></Forename>
+                <Surname><![CDATA[Claudel]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6985" href="http://www.amazon.co.uk/Monsieur-Linh-Child-Philippe-Claudel/dp/1906694990%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1906694990" isbn="9781906694999" is_active="true" >
+                <Title><![CDATA[Monsieur Linh and his Child]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51Fa9UEqxtL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2677"
+           via_id="5926:2354"
+           via_code="2677"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/best-of-european-fiction-2011-kevin-barry-lucian-dan-teodorovici-manon-uphoff"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Best of European Fiction 2011: Kevin Barry, Lucian Dan Teodorovici & Manon Uphoff]]></MainTitle>
+            <SubTitle><![CDATA[UNFORGETTABLE WRITING FROM ACROSS THE CONTINENT]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+                <Theme href="http://www.edbookfest.co.uk/the-festival/whats-on/themes/europe-in-the-new-era"><![CDATA[Europe in the New Era]]></Theme>
+        <Venue>
+            <PerformanceSpace>Peppers Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-18T14:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	The impressive Best of European Fiction project presents an annual cross-section of writing from every corner of the continent, demonstrating that fiction is alive and kicking despite the age of austerity. Here the Irish writer Kevin Barry (author of the newly-published City of Bohane) is joined by Romanian novelist and screenwriter Lucian Dan Teodorovici (whose novels include The World Seen through a Hole the Width of a Spliff) and award-winning Dutch novelist and short story writer Manon Uphoff (author of The Players). Chaired by Stuart Kelly.</p>]]></Copy>
+            <Teaser><![CDATA[The impressive Best of European Fiction project presents an annual cross-section of writing from every corner of the continent, demonstrating that fiction is alive and kicking despite the age of austerity. Here the Irish writer Kevin Barry (author of the]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Barry-%20Kevin%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="9405" is_active="true">
+                <Forename><![CDATA[Kevin]]></Forename>
+                <Surname><![CDATA[Barry]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Barry-%20Kevin.jpg" />
+                        </Author>
+        <Author eibf_id="8769" is_active="true">
+                <Forename><![CDATA[Lucian Dan]]></Forename>
+                <Surname><![CDATA[Teodorovici]]></Surname>
+                            </Author>
+        <Author eibf_id="10407" is_active="true">
+                <Forename><![CDATA[Manon]]></Forename>
+                <Surname><![CDATA[Uphoff]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7180" href="http://www.amazon.co.uk/City-Bohane-Kevin-Barry/dp/0224090577%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0224090577" isbn="9780224090575" is_active="true" >
+                <Title><![CDATA[The City of Bohane]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/5114P6Xcn4L._SL110_.jpg" />
+                             </Book>
+        <Book eibf_id="7723" href="" isbn="9781564786005" is_active="true" >
+                <Title><![CDATA[Best of European Fiction 2011]]></Title>
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2748"
+           via_id="5926:2423"
+           via_code="2748"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/mal-peet"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Mal Peet]]></MainTitle>
+            <SubTitle><![CDATA[AGE 12 - 15]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Corner Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-23T17:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 12 - 15]]></Formatted>
+            <AgeLower>12</AgeLower>
+            <AgeUpper>15</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	After an eclectic career, including spells as a teacher and hospital mortuary worker, Mal decided to start his first novel at the age of 52! Since then each one has been a roaring success. His latest, Life: An Exploded Diagram, is a brilliant coming-of-age story set against the backdrop of the Cold War and events leading up to the Cuban Missile Crisis. Join him as he discusses his most autobiographical book to date with Keith Gray.</p>]]></Copy>
+            <Teaser><![CDATA[After an eclectic career, including spells as a teacher and hospital mortuary worker, Mal decided to start his first novel at the age of 52! Since then each one has been a roaring success. His latest, Life: An Exploded Diagram, is a brilliant...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Peet-%20Mal%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="5966" is_active="true">
+                <Forename><![CDATA[Mal]]></Forename>
+                <Surname><![CDATA[Peet]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6953" href="http://www.amazon.co.uk/Life-Exploded-Diagram-Mal-Peet/dp/1844281000%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1844281000" isbn="9781844281008" is_active="true" >
+                <Title><![CDATA[Life: An Exploded Diagram]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51afeEHsbGL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2750"
+           via_id="5926:2424"
+           via_code="2750"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/bookbugs-22"
+           isCancelled="false"
+           isSoldOut="true"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Bookbugs]]></MainTitle>
+            <SubTitle><![CDATA[AGE 0 - 3]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Workshop Tent</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-21T13:00:00+01:00</EventDateTime>
+        <Duration>30</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 0 - 3]]></Formatted>
+            <AgeLower>0</AgeLower>
+            <AgeUpper>3</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[FREE: Book in advance]]></Formatted>
+            <FullPrice><![CDATA[0.00]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[Fun action rhymes and songs for 0–3 year olds and their grown-ups with Edinburgh City Libraries. This incredibly popular event is guaranteed to get everyone involved in traditional and new rhymes and songs.]]></Copy>
+            <Teaser><![CDATA[Fun action rhymes and songs for 0–3 year olds and their grown-ups with Edinburgh City Libraries. This incredibly popular event is guaranteed to get everyone involved in traditional and new rhymes and songs.]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/default.jpg" />
+        <Authors>
+            </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2751"
+           via_id="5926:2425"
+           via_code="2751"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/total-gross-out-with-mitchell-symons"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Total Gross Out with Mitchell Symons]]></MainTitle>
+            <SubTitle><![CDATA[AGE 8 - 11]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Imagination Lab</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-21T16:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 8 - 11]]></Formatted>
+            <AgeLower>8</AgeLower>
+            <AgeUpper>11</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Mitchell has done many things in his life including working as a newspaper journalist and creating questions for Trivial Pursuits. Now he excels at writing fascinating fact books for all curious young readers, winning the Blue Peter Best Book with Facts award for the last two years. His new That&rsquo;s So Gross! series explores the darker side of nature and history &ndash; not for the squeamish!</p>]]></Copy>
+            <Teaser><![CDATA[Mitchell has done many things in his life including working as a newspaper journalist and creating questions for Trivial Pursuits. Now he excels at writing fascinating fact books for all curious young readers, winning the Blue Peter Best Book with Facts...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Symons-%20Mitchell%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="9304" is_active="true">
+                <Forename><![CDATA[Mitchell]]></Forename>
+                <Surname><![CDATA[Symons]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7157" href="http://www.amazon.co.uk/Thats-So-Gross-Mitchell-Symons/dp/1849411875%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1849411875" isbn="9781849411875" is_active="true" >
+                <Title><![CDATA[That's So Gross]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51ZkKATfaPL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2752"
+           via_id="5926:2426"
+           via_code="2752"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/liz-kessler"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Liz Kessler]]></MainTitle>
+            <SubTitle><![CDATA[AGE 8 - 11]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Imagination Lab</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-27T15:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 8 - 11]]></Formatted>
+            <AgeLower>8</AgeLower>
+            <AgeUpper>11</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Liz is well-known for her tales of mermaid Emily Windsnap but her latest story plays around with time and explores how a family copes with disaster. On her way to visit her best friend Autumn, Jenni suddenly finds she&#39;s been transported forward exactly one year. How does she cope and what exactly has taken place during the missing year? Find out in this intriguing event.</p>]]></Copy>
+            <Teaser><![CDATA[Liz is well-known for her tales of mermaid Emily Windsnap but her latest story plays around with time and explores how a family copes with disaster. On her way to visit her best friend Autumn, Jenni suddenly finds she&#39;s been transported forward...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Kessler-Liz%20%28369x283%29.png" />
+        <Authors>
+            <Author eibf_id="6713" is_active="true">
+                <Forename><![CDATA[Liz]]></Forename>
+                <Surname><![CDATA[Kessler]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="6696" href="http://www.amazon.co.uk/Year-without-Autumn-Liz-Kessler/dp/1842555863%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1842555863" isbn="9781842555866" is_active="true" >
+                <Title><![CDATA[A Year Without Autumn]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/41JVrwCbMFL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2753"
+           via_id="5926:2427"
+           via_code="2753"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/stripy-horse"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Stripy Horse]]></MainTitle>
+            <SubTitle><![CDATA[AGE 3 - 6]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Imagination Lab</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-14T16:30:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[AGE 3 - 6]]></Formatted>
+            <AgeLower>3</AgeLower>
+            <AgeUpper>6</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Stripy Horse lives in the Bric-a-Brac shop and at night has secret adventures. Join author Jim Helmore and illustrator Karen Wall for stories, pictures, music and movement all about Stripy and his friends; Hermann the draught-excluder, Roly and Pitch the salt and pepper pots and Muriel the lampshade bird.</p>]]></Copy>
+            <Teaser><![CDATA[Stripy Horse lives in the Bric-a-Brac shop and at night has secret adventures. Join author Jim Helmore and illustrator Karen Wall for stories, pictures, music and movement all about Stripy and his friends; Hermann the draught-excluder, Roly and Pitch the]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Helmore-%20Jim%20and%20Karen%20Wall%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="7740" is_active="true">
+                <Forename><![CDATA[Jim]]></Forename>
+                <Surname><![CDATA[Helmore]]></Surname>
+                            </Author>
+        <Author eibf_id="7741" is_active="true">
+                <Forename><![CDATA[Karen]]></Forename>
+                <Surname><![CDATA[Wall]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            <Book eibf_id="7142" href="http://www.amazon.co.uk/Hold-Tight-Stripy-Horse-Helmore/dp/1405248254%3FSubscriptionId%3DAKIAIWK2ZMBUAZJRUKIA%26tag%3Dedinbinterboo-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1405248254" isbn="9781405248259" is_active="true" >
+                <Title><![CDATA[Stripy Horse]]></Title>
+                                  <Image href="http://ecx.images-amazon.com/images/I/51GyNgWNlXL._SL110_.jpg" />
+                             </Book>
+        </Books>
+    </Event>
+        <Event eibf_id="2827"
+           via_id="5926:2442"
+           via_code="2827"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/elish-angiolini"
+           isCancelled="false"
+           isSoldOut="true"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Elish Angiolini]]></MainTitle>
+            <SubTitle><![CDATA[THE NLS DONALD DEWAR MEMORIAL LECTURE]]></SubTitle>
+            <TitleSponsors>                <Credit><![CDATA[The National Library of Scotland Event]]></Credit>
+            </TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Main Theatre</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-26T20:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[Created by the National Library of Scotland to mark the late Donald Dewar’s contribution to devolution and his long interest in books, this lecture has become one of the most prestigious events at the Book Festival. This year’s lecture is delivered by Elish Angiolini, who was Lord Advocate of Scotland for a four year period until May. Angiolini reflects on her work with two political administrations, and offers her personal views on society and the law in Scotland today. Chaired by Brian Taylor.]]></Copy>
+            <Teaser><![CDATA[Created by the National Library of Scotland to mark the late Donald Dewar’s contribution to devolution and his long interest in books, this lecture has become one of the most prestigious events at the Book Festival. This year’s lecture is delivered...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/default.jpg" />
+        <Authors>
+            <Author eibf_id="10412" is_active="true">
+                <Forename><![CDATA[Elish]]></Forename>
+                <Surname><![CDATA[Angiolini]]></Surname>
+                            </Author>
+        </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2828"
+           via_id="5926:2443"
+           via_code="2828"
+           event_type="Adult"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/get-an-audience-for-your-writing"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[Get An Audience for Your Writing]]></MainTitle>
+            <SubTitle><![CDATA[KICK-START YOUR WRITING CAREER]]></SubTitle>
+            <TitleSponsors>                <Credit><![CDATA[City of Literature Event]]></Credit>
+            </TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>Writers' Retreat</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-20T11:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <Price>
+            <Formatted><![CDATA[&pound;10.00, <span class="concession">&pound;8.00</span>]]></Formatted>
+            <FullPrice><![CDATA[10.00]]></FullPrice>
+            <Concession><![CDATA[8.00]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[Are you looking for fresh ideas and some smart solutions on how to get your work to a wider audience? Emerging writers look no further, come and join Edinburgh UNESCO City of Literature to tap into the buzz on zines, ebooks, blogs and live performance opportunities. It’s your chance to be inspired by folk who have come up with grassroots, independent, cross-platform and non-traditional ways of getting their work heard and read.]]></Copy>
+            <Teaser><![CDATA[Are you looking for fresh ideas and some smart solutions on how to get your work to a wider audience? Emerging writers look no further, come and join Edinburgh UNESCO City of Literature to tap into the buzz on zines, ebooks, blogs and live performance...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/default.jpg" />
+        <Authors>
+            </Authors>
+        <Books>
+            </Books>
+    </Event>
+        <Event eibf_id="2832"
+           via_id="5926:2444"
+           via_code="2832"
+           event_type="Children"
+           href="http://www.edbookfest.co.uk/the-festival/whats-on/the-guardian-children-s-fiction-prize"
+           isCancelled="false"
+           isSoldOut="false"
+           isActive="true"
+           isFeatured="false"
+           isBslInterpreted="false">
+        <Title>
+            <MainTitle><![CDATA[The Guardian Children's Fiction Prize]]></MainTitle>
+            <SubTitle><![CDATA[FAMILIES & 7+]]></SubTitle>
+            <TitleSponsors></TitleSponsors>
+        </Title>
+        <Venue>
+            <PerformanceSpace>RBS Imagination Lab</PerformanceSpace>
+            <Name>Charlotte Square Gardens</Name>
+            <Geocode>55.951903,-3.206913</Geocode>
+        </Venue>
+        <EventDateTime>2011-08-20T18:00:00+01:00</EventDateTime>
+        <Duration>60</Duration>
+        <AgeRange>
+            <Formatted><![CDATA[FAMILIES &amp; 7+]]></Formatted>
+            <AgeLower>7</AgeLower>
+            <AgeUpper>15</AgeUpper>
+        </AgeRange>
+        <Price>
+            <Formatted><![CDATA[&pound;4.50]]></Formatted>
+            <FullPrice><![CDATA[4.50]]></FullPrice>
+            <Concession><![CDATA[]]></Concession>
+        </Price>
+        <Description>
+            <Standfirst><![CDATA[]]></Standfirst>
+            <Copy><![CDATA[<p>
+	Chair of the Guardian Children&rsquo;s Fiction Prize and Guardian children&#39;s books editor, Julia Eccleshare is joined by the inimitable Andy Stanton, Mr Gum creator and one of this year&rsquo;s longlisted authors. Together they talk writing, awards and getting youngsters involved in the whole exciting process. The longlist was announced in June and the winner will announced in October.</p>]]></Copy>
+            <Teaser><![CDATA[Chair of the Guardian Children&rsquo;s Fiction Prize and Guardian children&#39;s books editor, Julia Eccleshare is joined by the inimitable Andy Stanton, Mr Gum creator and one of this year&rsquo;s longlisted authors. Together they talk writing, awards...]]></Teaser>
+        </Description>
+        <Image href="http://www.edbookfest.co.uk/uploads/event/Stanton-%20Andy%20c%20Egmont%20%28369x283%29.jpg" />
+        <Authors>
+            <Author eibf_id="5933" is_active="true">
+                <Forename><![CDATA[Andy]]></Forename>
+                <Surname><![CDATA[Stanton]]></Surname>
+                                    <Image href="http://www.edbookfest.co.uk/uploads/author/Stanton-%20Andy%20-%20Credit%20-%20Egmont%20UK%20Ltd.jpg" />
+                        </Author>
+        </Authors>
+        <Books>
+            </Books>
+    </Event>
+    </ProgrammeData>

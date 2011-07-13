@@ -1,11 +1,27 @@
-h3, .main-title {
+h3 {
   @include font(20);
+  line-height: 1.2;
   color: #fff;
-  background: rgba(0,0,0,.85);
   font-weight: normal;
+}
+
+h3, .main-title {
+  background: rgba(0,0,0,.85);
   padding: $vPadding $padding;
   @include boxShadow(0, 0, 8px, rgba(0,0,0,.6));
 }
+
+h4 {
+  @include font(16);
+  font-weight: bold;
+  margin: $padding 0;
+  
+  &.sub-title {
+    @include font(12);
+    font-weight: normal;
+  }
+}
+
 
 .main-title {
   h3 {
@@ -30,12 +46,6 @@ h3, .main-title {
       color: $nearlyWhiteText;
     }
   }
-}
-
-h4 {
-  @include font(12);
-  font-weight: bold;
-  margin: $padding 0;
 }
 
 .content {

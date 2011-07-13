@@ -123,8 +123,10 @@ describe EventsController do
   end
   
   describe "GET 'show'" do
+    let(:attributes) { {"title" => "My Title"} } 
+    
     before(:each) do
-      Event.stub(:find).and_return "title" => "My Title"
+      Event.stub(:find).and_return attributes
     end
     
     it "should be successful" do
@@ -139,7 +141,7 @@ describe EventsController do
     
     it "assigns @event" do
       get :show, :id => 1
-      assigns[:event].should eq "title" => "My Title"
+      assigns[:event].should eq attributes
     end
     
     it "assigns @title" do

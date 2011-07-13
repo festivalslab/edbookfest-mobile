@@ -46,6 +46,9 @@ module HtmlSelectorsHelpers
       
     when "buy tickets button"
       "a.buy-tickets"
+      
+    when /author (\d+)/
+      "ul.authors li:nth-child(#{$1})"
 
     else
       raise "Can't find mapping from \"#{locator}\" to a selector.\n" +

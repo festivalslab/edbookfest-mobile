@@ -10,7 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110710184340) do
+ActiveRecord::Schema.define(:version => 20110712081539) do
+
+  create_table "appearances", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "authors", :force => true do |t|
+    t.integer  "eibf_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.integer  "eibf_id"

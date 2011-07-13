@@ -40,4 +40,25 @@ Feature: Event detail
     Then the event is sold out
     And the event buy tickets button is missing
     And the event price is missing
+    
+  Scenario: Event detail page shows featured authors
+    Given there are 2 authors appearing at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should see "Featured authors"
+    And the event should have 2 authors
+    And event author 1 should be "First Last1"
+    And event author 2 should be "First Last2"
+    
+  Scenario: Event detail page does not show featured authors if none exist
+    Given there are 0 authors appearing at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should not see "Featured authors"
+    And the event should not have authors
+    
+  Scenario: Event detail page links to featured authors
+    Given there are 2 authors appearing at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    And I click on author 1
+    Then I should be on the author detail page for author 1
+  
   
