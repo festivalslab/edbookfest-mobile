@@ -5,6 +5,7 @@ EdbookfestMobile::Application.routes.draw do
   
   resources :events, :only => [:show]
   resources :authors, :only => [:show]
+  resources :books, :only => [:show]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

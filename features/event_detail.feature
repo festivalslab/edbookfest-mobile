@@ -74,3 +74,12 @@ Feature: Event detail
     When I go to the "Author debate" event detail page
     Then I should not see "Featured books"
     And the event should not have books
+    
+  Scenario: Event detail page links to featured books
+    Given there are 2 books featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    And I click on book 1
+    Then I should be on the book detail page for book 1
+  
+  
+  
