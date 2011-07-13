@@ -69,3 +69,8 @@ Feature: Event detail
     And event book 1 should be "Book Title 1"
     And event book 2 should be "Book Title 2"
   
+  Scenario: Event detail page does not show featured books if none exist
+    Given there are 0 books featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should not see "Featured books"
+    And the event should not have books

@@ -87,3 +87,7 @@ Then /^event book (\d+) should be "([^\"]*)"$/ do |index, title|
   book = find(event_detail_selector_for("book #{index}"))
   book.should have_content title
 end
+
+Then /^the event should not have books$/ do
+  page.should_not have_css('ul.books')
+end
