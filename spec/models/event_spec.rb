@@ -64,5 +64,13 @@ describe Event do
       @event.books.build
       @event.should have(:no).errors_on(:books)
     end
+    
+    describe "#add_book" do
+      it "adds a book" do
+        book = Book.create
+        @event.add_book book
+        @event.books.should have_exactly(1).items
+      end
+    end
   end
 end

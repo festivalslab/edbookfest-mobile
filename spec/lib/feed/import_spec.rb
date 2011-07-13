@@ -156,7 +156,20 @@ describe Feed::Import do
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
+    end
+    
+    describe "books" do
+      it "does not create a book association where there aren't any" do
+        import.update false
+        e = Event.first
+        e.books.should have_exactly(0).items
+      end
       
+      it "creates the correct number of books" do
+        import.update false
+        e = Event.find_by_eibf_id(2060)
+        e.books.should have_exactly(2).items
+      end
     end
   end
 end

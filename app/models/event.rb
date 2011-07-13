@@ -11,4 +11,8 @@ class Event < ActiveRecord::Base
   def add_author(author)
     authors << author
   end
+  
+  def add_book(book)
+    books << book
+  end
 end
