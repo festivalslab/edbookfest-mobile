@@ -49,6 +49,9 @@ module HtmlSelectorsHelpers
       
     when /author (\d+)/
       "ul.authors li:nth-child(#{$1})"
+      
+    when /book (\d+)/
+      "ul.books li:nth-child(#{$1})"
 
     else
       raise "Can't find mapping from \"#{locator}\" to a selector.\n" +

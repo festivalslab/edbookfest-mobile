@@ -78,3 +78,12 @@ Then /^I should be on the author detail page for author (\d+)$/ do |index|
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the author detail page for #{index}")
 end
+
+Then /^the event should have (\d+) books$/ do |book_count|
+  page.should have_css('ul.books li', :count => book_count)
+end
+
+Then /^event book (\d+) should be "([^\"]*)"$/ do |index, title|
+  book = find(event_detail_selector_for("book #{index}"))
+  book.should have_content title
+end

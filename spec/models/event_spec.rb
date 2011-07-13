@@ -54,4 +54,15 @@ describe Event do
       end
     end
   end
+  
+  describe "Book has_many_through association" do
+    before(:each) do
+      @event = Event.create
+    end
+    
+    it "allows a book association" do
+      @event.books.build
+      @event.should have(:no).errors_on(:books)
+    end
+  end
 end

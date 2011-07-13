@@ -61,4 +61,11 @@ Feature: Event detail
     And I click on author 1
     Then I should be on the author detail page for author 1
   
+  Scenario: Event detail page shows featured books
+    Given there are 2 books featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then I should see "Featured books"
+    And the event should have 2 books
+    And event book 1 should be "Book Title 1"
+    And event book 2 should be "Book Title 2"
   
