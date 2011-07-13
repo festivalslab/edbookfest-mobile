@@ -100,3 +100,8 @@ Then /^I should be on the book detail page for book (\d+)$/ do |index|
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the book detail page for #{index}")
 end
+
+Then /^event book (\d+) image is "([^\"]*)"$/ do |index, image_url|
+  book = page.find(event_detail_selector_for("book #{index}"))
+  book.find('img')['src'].should == image_url
+end

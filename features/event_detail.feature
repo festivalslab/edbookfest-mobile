@@ -69,6 +69,11 @@ Feature: Event detail
     And event book 1 should be "Book Title 1"
     And event book 2 should be "Book Title 2"
   
+  Scenario: Event detail featured book shows correct details
+    Given there is 1 book featured at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    Then event book 1 image is "http://book.image/image.jpg"
+  
   Scenario: Event detail page does not show featured books if none exist
     Given there are 0 books featured at the "Author debate" event
     When I go to the "Author debate" event detail page

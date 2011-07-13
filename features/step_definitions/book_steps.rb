@@ -1,4 +1,4 @@
-Given /^there are (\d+) books featured at the "([^\"]*)" event$/ do |book_count, event_title|
+Given /^there (?:is|are) (\d+) books? featured at the "([^\"]*)" event$/ do |book_count, event_title|
   event = Factory.build(:event, :title => event_title)
   books = []
   book_count.to_i.times do |i|

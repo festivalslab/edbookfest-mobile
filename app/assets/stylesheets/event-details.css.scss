@@ -1,0 +1,21 @@
+.books {
+  a {
+    height: 59px;
+    overflow: hidden;
+  }
+  
+  .title {
+    margin-left: 40px+$padding;
+    font-weight: normal;
+    position: relative;
+    top: 20px;
+  }
+  
+  img {
+    display: block;
+    position: absolute;
+    left: $padding;
+    top: $vPadding;
+    width: 40px;
+  }
+}

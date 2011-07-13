@@ -1,4 +1,5 @@
 %li 
   = link_to book do
-    #{book.title}
+    %h5.title.ellipsis= book.title
+    = image_tag(book.amazon_image, :alt => book.title)
     %span.arrow
