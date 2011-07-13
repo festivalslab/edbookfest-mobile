@@ -4,6 +4,7 @@ EdbookfestMobile::Application.routes.draw do
   match "events/calendar/:date"   => "events#index", :as => :listings, :constraints => { :date => /\d{4}-\d{2}-\d{2}/ }
   
   resources :events, :only => [:show]
+  resources :authors, :only => [:show]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

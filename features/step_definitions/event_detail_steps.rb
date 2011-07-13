@@ -1,3 +1,7 @@
+When /^I click on author (\d+)$/ do |index|
+  find(".authors li:nth-child(#{index}) a").click
+end
+
 Then /^the event title should be "([^\"]*)"$/ do |title|
   page.should have_css(event_detail_selector_for("title"), :text => title)
 end
@@ -68,4 +72,9 @@ end
 Then /^event author (\d+) should be "(\w+) (\w+)"$/ do |index, first_name, last_name|
   author = find(event_detail_selector_for("author #{index}"))
   author.should have_content("#{first_name} #{last_name}")
+end
+
+Then /^I should be on the author detail page for author (\d+)$/ do |index|
+  current_path = URI.parse(current_url).path
+  current_path.should == path_to("the author detail page for #{index}")
 end

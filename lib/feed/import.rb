@@ -7,8 +7,8 @@ module Feed
   # 
   # Usage:
   # 
-  #   import = Import.new
-  #   import.load_url("http://myurl")
+  #   import = Import.new(url, username, pasword)
+  #   import.load
   #   import.update
   class Import
     

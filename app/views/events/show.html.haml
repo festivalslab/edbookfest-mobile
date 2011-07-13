@@ -9,7 +9,7 @@
   
   .content
     - if @event.sub_title.present?
-      %h4.no-color= @event.sub_title
+      %h4.sub-title= @event.sub_title
     .details
       = time_tag(@event.start_time, "start-time") { @event.start_time.to_s :full_date_time }
       - if @event.venue.present?
@@ -35,7 +35,8 @@
         - if @event.price.present?
           %span.price= raw(@event.price)
     
-    - if @event.authors.present?    
+  - if @event.authors.present?    
+    .content
       %h4 Featured authors
-      %ul.authors
-        = render(:partial => "shared/author", :collection => @event.authors)
+    %ul.authors.nav-list
+      = render(:partial => "shared/author", :collection => @event.authors)

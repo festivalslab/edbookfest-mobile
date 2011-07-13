@@ -22,6 +22,9 @@ module NavigationHelpers
       
     when /the "(.*)" event detail page/
       event_path(Event.find_by_title($1))
+      
+    when /the author detail page for (\d)/
+      author_path(Author.find($1))
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

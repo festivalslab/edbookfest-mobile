@@ -54,4 +54,11 @@ Feature: Event detail
     When I go to the "Author debate" event detail page
     Then I should not see "Featured authors"
     And the event should not have authors
+    
+  Scenario: Event detail page links to featured authors
+    Given there are 2 authors appearing at the "Author debate" event
+    When I go to the "Author debate" event detail page
+    And I click on author 1
+    Then I should be on the author detail page for author 1
+  
   

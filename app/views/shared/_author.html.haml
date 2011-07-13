@@ -1,1 +1,5 @@
-%li #{author.first_name} #{author.last_name}
+%li 
+  = link_to author do
+    #{author.first_name} #{author.last_name}
+    %span.arrow
+    
