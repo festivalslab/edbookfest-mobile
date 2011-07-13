@@ -41,6 +41,7 @@ module Feed
       eibf_ids = @doc.css('Event').map { |e| e['eibf_id'].to_i }
       Event.where("eibf_id not in (?)", eibf_ids).delete_all
       @doc.css('Event').each { |event| update_event(event) }
+      remove_orphans output
       puts "#{@events_modified} events added or modified" if output
       puts "There are now #{Event.all.count} events in the database" if output
     end
@@ -50,10 +51,14 @@ module Feed
       eibf_id = event['eibf_id'].to_i
       e = Event.find_or_initialize_by_eibf_id(eibf_id)
       e.update_attributes(event_attributes(event))
-      
       process_authors(e, event)
-    
       @events_modified += 1
+    end
+    
+    def remove_orphans(output)
+      count1 = Author.count
+      Author.remove_authors_without_events
+      puts "#{count1 - Author.count} orphaned authors were removed" if output
     end
     
     def event_attributes(event)
@@ -84,12 +89,10 @@ module Feed
     end
     
     def process_authors(event_model, event)
-      author_ids = event.css('Author').collect { |author| author['eibf_id'] }
       event_model.authors.clear
       event.css('Author').each do |author| 
         event_model.add_author(update_author(event_model, author))
       end
-      Author.remove_authors_without_events
     end
     
     def update_author(event_model, author)
