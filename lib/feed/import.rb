@@ -86,7 +86,7 @@ module Feed
         :duration => event.at_css('Duration').text.to_i,
         :venue => event.at_css('PerformanceSpace').text,
         :description => event.at_css('Description>Copy').text,
-        :price => event.at_css('Price>Formatted').text,\
+        :price => event.at_css('Price>Formatted').text,
         :image => event.at_css('Image')['href'],
         :theme => event.at_css('Theme') ? event.at_css('Theme').text : '',
         :main_site_url => event['href']
@@ -96,7 +96,8 @@ module Feed
     def author_attributes(author)
       {
         :first_name => author.at_css('Forename').text,
-        :last_name => author.at_css('Surname').text
+        :last_name => author.at_css('Surname').text,
+        :image => author.at_css('Image') ? author.at_css('Image')['href'] : ''
       }
     end
     

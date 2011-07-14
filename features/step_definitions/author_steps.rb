@@ -19,3 +19,7 @@ end
 Then /^the author image should be "([^\"]*)"$/ do |image_url|
   page.should have_css('img.author', :src => image_url)
 end
+
+Then /^the author image is missing$/ do
+  page.should_not have_css('img.author')
+end

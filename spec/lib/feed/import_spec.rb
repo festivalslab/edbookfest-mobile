@@ -128,6 +128,7 @@ describe Feed::Import do
         a1.eibf_id.should == 5592
         a1.first_name.should == "Sue"
         a1.last_name.should == "Palmer"
+        a1.image.should == ""
         a2.eibf_id.should == 6278
         a2.first_name.should == "Neal"
         a2.last_name.should == "Hoskins"
@@ -155,6 +156,13 @@ describe Feed::Import do
         import.update false
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
+      end
+      
+      it "adds an image when present" do
+        import.update false
+        e = Event.find_by_eibf_id(2060)
+        a1 = e.authors[0]
+        a1.image.should == "http://www.edbookfest.co.uk/uploads/author/Donaldson_Julia.jpg"
       end
     end
     
