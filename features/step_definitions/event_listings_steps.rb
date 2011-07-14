@@ -40,7 +40,7 @@ When /^I click on day (\d+)$/ do |day|
 end
 
 When /^I click on event (\d+)$/ do |index|
-  find(".events li:nth-child(#{index}) a").click
+  find("ul.events li:nth-child(#{index}) a").click
 end
 
 Then /^I should be on the listings page for (\d+)\/(\d+)\/(\d+)$/ do |day, month, year|
@@ -53,10 +53,8 @@ Then /^I should be on the event detail page for event (\d+)$/ do |index|
   current_path.should == path_to("the event detail page for #{index}")
 end
 
-Then /^I should see (\d+) (adult|child)?\s?events$/ do |count, event_type|
-  list_class = event_type == "child" ? "children" : "adult"
-  events = all(".events.#{list_class} li")
-  events.length.should == count.to_i
+Then /^I should see (\d+) events$/ do |count|
+  page.should have_css("ul.events li", :count => count)
 end
 
 Then /^event (\d+) starts before event (\d+)$/ do |index1, index2|

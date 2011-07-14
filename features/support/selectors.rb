@@ -11,14 +11,11 @@ module HtmlSelectorsHelpers
     when "the page"
       "html > body"
       
-    when /(children|adult) event (\d+)/
-      ".events.#{$1} li:nth-child(#{$2})"
-      
     when /event (\d+)/
-      ".events li:nth-child(#{$1})"
+      "ul.events li:nth-child(#{$1})"
       
     when /tab (\d+)/
-      ".tabs li:nth-child(#{$1})"
+      "ul.tabs li:nth-child(#{$1})"
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

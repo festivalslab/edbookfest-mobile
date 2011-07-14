@@ -1,25 +1,13 @@
 When /^I click the (.*) tab$/ do |tab_text|
-  tab = find(".tabs li", :text => tab_text.upcase)
+  tab = find("ul.tabs li a", :text => tab_text)
   tab.click
 end
 
 Then /^the (.*) tab should (not)?\s?be highlighted$/ do |tab_text, inv|
-  active_tab = find(".tabs li.active")
+  active_tab = find("ul.tabs li.active a")
   if (inv) then
-    active_tab.text.should_not == tab_text.upcase
+    active_tab.text.should_not == tab_text
   else
-    active_tab.text.should == tab_text.upcase
-  end
-end
-
-Then /^the (.*) tab section should (not)?\s?be visible$/ do |tab_text, inv|
-  all_tabs = all(".tabs li").map &:text
-  tab = find(".tabs li", :text => tab_text.upcase)
-  index = all_tabs.index(tab.text)
-  section = all('.tabs-container .tab-content')[index]
-  if (inv) then
-    section.should_not be_visible
-  else
-    section.should be_visible
+    active_tab.text.should == tab_text
   end
 end

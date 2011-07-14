@@ -7,8 +7,8 @@ class EventsController < ApplicationController
     @date = Date.parse(params[:date])
     not_found if @date.nil? || !Festival.date_in_festival(@date)
     @title = "Events for #{@date.to_s :title}"
-    @adult_events = Event.on_date(@date, "Adult")
-    @child_events = Event.on_date(@date, "Children")
+    @type = params[:type].present? ? params[:type] : "Adult"
+    @events = Event.on_date(@date, @type)
   end
   
   def calendar

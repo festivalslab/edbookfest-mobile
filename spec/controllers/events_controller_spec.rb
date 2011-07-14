@@ -93,16 +93,31 @@ describe EventsController do
           assigns[:date].should eq(date);
         end
         
-        it "requests adult events for a date and assigns them to @adult_events" do
-          Event.should_receive(:on_date).with(date, "Adult")
-          get :index, :date => date.to_s
-          assigns[:adult_events].should eq([1,2])
+        describe "when no type parameter is provided" do
+          it "requests adult events for a date and assigns them to @events" do
+            Event.should_receive(:on_date).with(date, "Adult")
+            get :index, :date => date.to_s
+            assigns[:events].should eq([1,2])
+            assigns[:type].should eq("Adult")
+          end
         end
         
-        it "requests child events for a date and assigns them to @child_events" do
-          Event.should_receive(:on_date).with(date, "Children")
-          get :index, :date => date.to_s
-          assigns[:child_events].should eq([1,2])
+        describe "when type parameter is provided with 'adult'" do
+          it "requests adult events for a date and assigns them to @events" do
+            Event.should_receive(:on_date).with(date, "Adult")
+            get :index, :date => date.to_s, :type => "Adult"
+            assigns[:events].should eq([1,2])
+            assigns[:type].should eq("Adult")
+          end
+        end
+        
+        describe "when type parameter is provided with 'children'" do
+          it "requests child events for a date and assigns them to @events" do
+            Event.should_receive(:on_date).with(date, "Children")
+            get :index, :date => date.to_s, :type => "Children"
+            assigns[:events].should eq([1,2])
+            assigns[:type].should eq("Children")
+          end
         end
       end
       

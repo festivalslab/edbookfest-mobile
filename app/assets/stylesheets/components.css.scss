@@ -47,21 +47,22 @@
     @include simpleGradient($veryLightBackground, #fff, $veryLightBackground);
     position: relative;
     top: 1px;
-    text-transform: uppercase;
-    font-weight: bold;
     display: inline-block;
-    padding: $vPadding $padding;
     border: 1px solid $divider;
     margin-right: 2px;
-    color: $lightText;
-    cursor: pointer;
     
     &.active {
       background-color: #fff;
       border-bottom: 1px solid #fff;
-      color: $mediumText;
       background-image: none;
     }
+  }
+  
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding: $vPadding $padding;
   }
   
 }

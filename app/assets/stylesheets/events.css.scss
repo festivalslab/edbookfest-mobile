@@ -1,6 +1,5 @@
 body.events {
   h4,
-  .tabs li.active,
   .sold-out {
     color: $baseColorEvents;
   }
@@ -26,6 +25,17 @@ body.events {
     .nav-list a {
       color: #000;
     }
+    
+    .tabs {
+      a {
+        color: $lightText;
+        text-decoration: none;
+      }
+      .active a {
+        color: $baseColorEvents;
+      }
+    }
+      
   }
 
   #container {
