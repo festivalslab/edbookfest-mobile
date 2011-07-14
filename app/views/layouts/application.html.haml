@@ -28,7 +28,14 @@
       = yield
   %footer
     %a.back-to-top{:href => "#container", :"data-anchor" => ""} Back to top
-    %a.desktop-site{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
+    %p.guardian 
+      In association with  
+      %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} The Guardian
+    %div.sites
+      Mobile site 
+      |
+      %a{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
+    
   = javascript_include_tag :application
   :javascript
     MBP.scaleFix();
