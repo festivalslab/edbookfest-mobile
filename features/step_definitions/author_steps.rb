@@ -1,5 +1,7 @@
-Given /^there is an author called "(\w+) (\w+)"$/ do |first_name, last_name|
-  author = Factory.create(:author, :first_name => first_name, :last_name => last_name)
+Given /^there is an author called "(\w+) (\w+)"( with an image)?$/ do |first_name, last_name, image|
+  attributes = { :first_name => first_name, :last_name => last_name }
+  attributes[:image] = "http://author.image/image.jpg" if image
+  author = Factory.create(:author, attributes)
 end
 
 Given /^there are (\d+) authors appearing at the "([^\"]*)" event$/ do |author_count, event_title|
@@ -12,4 +14,8 @@ Given /^there are (\d+) authors appearing at the "([^\"]*)" event$/ do |author_c
     appearance = Factory.create(:appearance, :event => event, :author => authors[i])
   end
   event.save
+end
+
+Then /^the author image should be "([^\"]*)"$/ do |image_url|
+  page.should have_css('img.author', :src => image_url)
 end
