@@ -17,13 +17,17 @@ setTitle = (title) ->
 
 setSection = (section) ->
   $('#container header h2').text section
+  
+scrollTop = ->
+  window.scrollTo 0, 0
 
-$(document).bind 'endpjax', ->
+$(document).bind 'endpjax', (ev) ->
   pjaxEl = $ '.pjax-control'
   if pjaxEl.length
     setTheme pjaxEl.data 'theme'
     setTitle pjaxEl.data 'title'
     setSection pjaxEl.data 'section'
+    scrollTop()
     
 window.eibf.pageUpdate = {
   setTheme: setTheme
