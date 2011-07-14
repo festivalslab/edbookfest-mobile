@@ -14,9 +14,10 @@ h3, .main-title {
 h4 {
   @include font(16);
   font-weight: bold;
-  margin: $padding 0;
+  margin: $padding*2 0 $padding;
   
   &.sub-title {
+    margin-top: $padding;
     @include font(12);
     font-weight: normal;
   }
