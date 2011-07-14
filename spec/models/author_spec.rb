@@ -24,4 +24,12 @@ describe Author do
       Author.without_events.should have_exactly(1).items
     end
   end
+  
+  describe "#full_name" do
+    it "returns full name from first_name and last_name" do
+      @author.first_name = "Joe"
+      @author.last_name = "Bloggs"
+      @author.full_name.should == "Joe Bloggs"
+    end
+  end
 end

@@ -5,4 +5,8 @@ class Author < ActiveRecord::Base
   def self.without_events
     includes(:appearances).where( :appearances => { :event_id => nil } )
   end
+  
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

@@ -2,7 +2,7 @@ Given /^today is (.+)$/ do |date|
   Delorean.time_travel_to(date)
 end
 
-When /^I wait until "([^"]*)" (?:are|is) visible$/ do |className|
+When /^I wait until "([^\"]*)" (?:are|is) visible$/ do |className|
   page.has_css?(".#{className}", :visible => true)
 end
 
@@ -10,20 +10,20 @@ When /^I click the back button$/ do
   page.find('a.back').click
 end
 
-Then /^the title should be "([^"]*)"$/ do |text|
+Then /^the title should be "([^\"]*)"$/ do |text|
   title = page.find(:xpath, "//title").text
   title.should =~ /#{text}/
 end
 
-Then /^the section title should be "([^"]*)"$/ do |text|
+Then /^the section title should be "([^\"]*)"$/ do |text|
   page.should have_css("h2", :text => text)
 end
 
-Then /^the theme should be "([^"]*)"$/ do |theme|
+Then /^the theme should be "([^\"]*)"$/ do |theme|
   page.should have_css("body.#{theme}")
 end
 
-Then /^the page heading should be "([^"]*)"$/ do |text|
+Then /^the page heading should be "([^\"]*)"$/ do |text|
   page.should have_css("h3", :text => text)
 end
 
