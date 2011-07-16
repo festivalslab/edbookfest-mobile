@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   def index
     @author = Author.find(params[:author_id])
     @title = "#{@author.full_name} – Guardian articles"
+    @articles = Article.search @author.full_name
   end
   
 protected

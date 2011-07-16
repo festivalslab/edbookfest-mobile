@@ -7,6 +7,8 @@ describe ArticlesController do
   
   before(:each) do
     Author.stub(:find).and_return author
+    author.stub(:full_name).and_return("Joe Bloggs")
+    Article.stub(:search).and_return(["1","2"])
   end
 
   describe "GET 'index'" do
@@ -17,7 +19,6 @@ describe ArticlesController do
     end
     
     it "assigns title" do
-      author.stub(:full_name).and_return("Joe Bloggs")
       get 'index', :author_id => 1
       assigns[:title].should == "Joe Bloggs – Guardian articles"
     end
@@ -32,9 +33,24 @@ describe ArticlesController do
       assigns[:theme].should == "authors"
     end
     
-    it "assigns articles" do
-      get 'index', :author_id => 1
-      assigns[:articles].length.should == 10
+    context "when there are results" do      
+      it "assigns articles" do
+        Article.should_receive(:search).with("Joe Bloggs")
+        get 'index', :author_id => 1
+        assigns[:articles].length.should == 2
+      end 
+    end
+    
+    context "when there are no results" do
+      before(:each) do
+        Article.stub(:search).and_return([])
+      end
+      
+      it "assigns articles" do
+        Article.should_receive(:search).with("Joe Bloggs")
+        get 'index', :author_id => 1
+        assigns[:articles].length.should == 0
+      end
     end
     
     describe "setting layout" do

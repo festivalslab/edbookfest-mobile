@@ -8,6 +8,7 @@ gem 'rails', '3.1.0.rc2'
 gem 'calendar_helper', '~> 0.2.4'
 gem 'faker'
 gem 'nokogiri'
+gem 'httparty'
 
 group :development, :test do
   gem 'sqlite3'
@@ -25,6 +26,8 @@ group :development, :test do
   gem 'guard-coffeescript'
   gem 'guard-livereload'
   gem 'jasmine', '1.0.2.1'
+  gem 'fakeweb'
+  gem 'fakeweb-matcher'
 end
 
 group :production do

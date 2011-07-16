@@ -1,0 +1,171 @@
+{
+  "response":{
+    "status":"ok",
+    "userTier":"approved",
+    "total":352,
+    "startIndex":1,
+    "pageSize":10,
+    "currentPage":1,
+    "pages":36,
+    "orderBy":"newest",
+    "results":[{
+      "id":"books/2011/jul/07/death-summer-benjamin-black-review",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-07-07T09:16:57+01:00",
+      "webTitle":"A Death in Summer by Benjamin Black \u2013 review",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jul/07/death-summer-benjamin-black-review",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jul/07/death-summer-benjamin-black-review",
+      "fields":{
+        "headline":"A Death in Summer by Benjamin Black \u2013 review",
+        "shortUrl":"http://gu.com/p/3vbyj",
+        "standfirst":"John Banville's sleuthing alter ego is back",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/7/5/1309881721386/Illustration-by-Clifford--003.jpg",
+        "byline":"Mark Lawson",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/jul/04/dan-brown-oxfam-least-wanted-chart",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-07-04T13:33:53+01:00",
+      "webTitle":"Dan Brown stays top of Oxfam's 'least wanted' chart",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jul/04/dan-brown-oxfam-least-wanted-chart",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jul/04/dan-brown-oxfam-least-wanted-chart",
+      "fields":{
+        "headline":"Dan Brown stays top of Oxfam's 'least wanted' chart",
+        "shortUrl":"http://gu.com/p/3vanc",
+        "standfirst":"Da Vinci Code author heads charity shop's list of most-donated books for a third year",
+        "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/7/4/1309782793719/Oxfam-bookshop-003.jpg",
+        "byline":"Alison Flood",
+        "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2011/jul/03/blue-monday-nicci-french-review",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-07-03T00:05:02+01:00",
+      "webTitle":"Blue Monday by Nicci French \u2013 review",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jul/03/blue-monday-nicci-french-review",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jul/03/blue-monday-nicci-french-review",
+      "fields":{
+        "headline":"Blue Monday by Nicci French \u2013review",
+        "shortUrl":"http://gu.com/p/3v6kk",
+        "standfirst":"The husband-and-wife writing team introduce a new star \u2013 psychotherapist Frieda Klein \u2013 in a dark tale of child abduction",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/6/27/1309193227112/Blue-Monday-s-insomniac-h-003.jpg",
+        "byline":"Alison Flood",
+        "publication":"The Observer"
+      }
+    },{
+      "id":"books/2011/jun/30/real-life-ian-rankin-mystery-sculptures",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-30T12:57:48+01:00",
+      "webTitle":"Real-life Ian Rankin mystery of 'reverse heist' sculptures",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jun/30/real-life-ian-rankin-mystery-sculptures",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jun/30/real-life-ian-rankin-mystery-sculptures",
+      "fields":{
+        "headline":"Real-life Ian Rankin mystery of 'reverse heist' sculptures",
+        "shortUrl":"http://gu.com/p/3v8pb",
+        "standfirst":"Series of intricate paper artworks linked to Rebus author's work left around Edinburgh",
+        "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/30/1309435006655/Rankin-paper-sculpture-003.jpg",
+        "byline":"Alison Flood",
+        "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2011/jun/26/edinburgh-book-festival-tickets-sold-out",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-26T21:26:58+01:00",
+      "webTitle":"Edinburgh book festival: record levels of interest cause booking chaos",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jun/26/edinburgh-book-festival-tickets-sold-out",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jun/26/edinburgh-book-festival-tickets-sold-out",
+      "fields":{
+        "headline":"Edinburgh book festival: record levels of interest cause booking chaos",
+        "shortUrl":"http://gu.com/p/3v693",
+        "standfirst":"Director apologises to those unable to book online after high-profile events sell out on first day of full ticket sales",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/26/1309112487685/Alasdair-Gray-003.jpg",
+        "byline":"Severin Carrell, Scotland correspondent",
+        "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2011/jun/17/best-holiday-reads",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-17T23:55:00+01:00",
+      "webTitle":"The best holiday reads",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jun/17/best-holiday-reads",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jun/17/best-holiday-reads",
+      "fields":{
+        "headline":"The best holiday reads",
+        "shortUrl":"http://gu.com/p/3vv2d",
+        "standfirst":"Anna Karenina on the beach, The Corrections in Patagonia, Death in Venice overlooking the Lido ...  Writers recall their most memorable holiday reads \u2013 what are yours?",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/15/1308155216090/Man-reading-on-a-beach-003.jpg",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/jun/16/edinburgh-book-festival-highlights",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-16T09:46:00+01:00",
+      "webTitle":"Edinburgh book festival highlights",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jun/16/edinburgh-book-festival-highlights",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jun/16/edinburgh-book-festival-highlights",
+      "fields":{
+        "headline":"Edinburgh book festival highlights",
+        "shortUrl":"http://gu.com/p/3vvva",
+        "standfirst":"From fiction to poetry to children's illustrators, here is the pick of the events at the festival this year",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/6/16/1308213945148/The-city-of-Edinburgh-by--003.jpg",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"culture/2011/jun/16/edinburgh-book-festival-ian-rankin",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-16T09:24:00+01:00",
+      "webTitle":"Edinburgh book festival",
+      "webUrl":"http://www.guardian.co.uk/culture/2011/jun/16/edinburgh-book-festival-ian-rankin",
+      "apiUrl":"http://content.guardianapis.com/culture/2011/jun/16/edinburgh-book-festival-ian-rankin",
+      "fields":{
+        "headline":"Ian Rankin: 'Rain or shine, I'll be there'",
+        "shortUrl":"http://gu.com/p/2qqp9",
+        "standfirst":"Ian Rankin has hardly missed a year of the Edinburgh International Books Festival since his first, memorable days reporting it as a student in 1985. Here he explains why, despite the growth of literary events in recent years, it remains special",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/6/15/1308149412824/Ian-Rankin-003.jpg",
+        "byline":"Ian Rankin",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/jun/16/edinburgh-literary-festival-revolution-theme",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-16T07:50:00+01:00",
+      "webTitle":"Writers in revolutionary mood at Edinburgh International Book Festival",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jun/16/edinburgh-literary-festival-revolution-theme",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jun/16/edinburgh-literary-festival-revolution-theme",
+      "fields":{
+        "headline":"Writers in revolutionary mood at Edinburgh International Book Festival",
+        "shortUrl":"http://gu.com/p/2qqq3",
+        "standfirst":"Authors from 40 countries to attend literary event, with Alasdair Gray and AS Byatt among those unveiling new works",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/15/1308150468584/Ahdaf-Soueif-003.jpg",
+        "byline":"Alison Flood",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/booksblog/2011/jun/13/help-improve-books-site",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-06-13T10:56:21+01:00",
+      "webTitle":"Help us improve the books site",
+      "webUrl":"http://www.guardian.co.uk/books/booksblog/2011/jun/13/help-improve-books-site",
+      "apiUrl":"http://content.guardianapis.com/books/booksblog/2011/jun/13/help-improve-books-site",
+      "fields":{
+        "headline":"Help us improve the books site",
+        "shortUrl":"http://gu.com/p/2qk3p",
+        "standfirst":"This week, we'd like you tell us which authors' book lists you'd like to see",
+        "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/13/1307958922459/Lists-003.jpg",
+        "byline":"Hannah Freeman",
+        "publication":"guardian.co.uk"
+      }
+    }]
+  }
+}
