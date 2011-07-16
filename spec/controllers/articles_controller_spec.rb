@@ -32,6 +32,11 @@ describe ArticlesController do
       assigns[:theme].should == "authors"
     end
     
+    it "assigns articles" do
+      get 'index', :author_id => 1
+      assigns[:articles].length.should == 10
+    end
+    
     describe "setting layout" do
       it "uses the application layout for normal requests" do
         get :index, :author_id => 1
