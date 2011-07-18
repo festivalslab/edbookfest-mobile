@@ -66,5 +66,12 @@ describe ArticlesController do
       end
     end
   end
+  
+  describe "GET 'show'" do
+    it "succeeds" do
+      get :show, :author_id => 1, :id => CGI::escape('/foo/bar')
+      response.should be_success
+    end
+  end
 
 end

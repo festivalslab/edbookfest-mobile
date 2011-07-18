@@ -32,6 +32,9 @@ module NavigationHelpers
     when /the "(\w+) (\w+)" author articles page/
       author_articles_path(Author.find_by_first_name_and_last_name($1, $2))
       
+    when /the "(\w+) (\w+)" author article detail page for (.*)/
+      author_article_path(Author.find_by_first_name_and_last_name($1, $2), CGI::escape($3))
+      
     when /the book detail page for (\d)/
       book_path(Book.find($1))
 

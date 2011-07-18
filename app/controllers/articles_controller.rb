@@ -9,6 +9,10 @@ class ArticlesController < ApplicationController
     @articles = Article.search @author.full_name
   end
   
+  def show
+    
+  end
+  
 protected
 
   def set_theme
