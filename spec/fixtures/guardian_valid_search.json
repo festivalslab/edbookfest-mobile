@@ -1,14 +1,32 @@
+
 {
   "response":{
     "status":"ok",
     "userTier":"approved",
-    "total":352,
+    "total":353,
     "startIndex":1,
-    "pageSize":10,
+    "pageSize":25,
     "currentPage":1,
-    "pages":36,
+    "pages":15,
     "orderBy":"newest",
     "results":[{
+      "id":"books/2011/jul/17/literary-career-heroes-robert-mccrum",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-07-17T00:05:14+01:00",
+      "webTitle":"Why every novelist is holding out for a hero",
+      "webUrl":"http://www.guardian.co.uk/books/2011/jul/17/literary-career-heroes-robert-mccrum",
+      "apiUrl":"http://content.guardianapis.com/books/2011/jul/17/literary-career-heroes-robert-mccrum",
+      "fields":{
+        "headline":"Why every novelist is holding out for a hero",
+        "trailText":"<strong>Robert McCrum: </strong>Only by creating an enduring character can a writer entertain thoughts of a literary career",
+        "shortUrl":"http://gu.com/p/3vfyz",
+        "standfirst":"Only by creating an enduring character can a writer entertain thoughts of a literary career",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Observer/Pix/pictures/2011/7/12/1310476468178/Sherlock-Holmes-McCrum-003.jpg",
+        "byline":"Robert McCrum",
+        "publication":"The Observer"
+      }
+    },{
       "id":"books/2011/jul/07/death-summer-benjamin-black-review",
       "sectionId":"books",
       "sectionName":"Books",
@@ -18,6 +36,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jul/07/death-summer-benjamin-black-review",
       "fields":{
         "headline":"A Death in Summer by Benjamin Black \u2013 review",
+        "trailText":"John Banville's sleuthing alter ego is back \u2013 and <strong>Mark Lawson</strong> is glad",
         "shortUrl":"http://gu.com/p/3vbyj",
         "standfirst":"John Banville's sleuthing alter ego is back",
         "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/7/5/1309881721386/Illustration-by-Clifford--003.jpg",
@@ -34,6 +53,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jul/04/dan-brown-oxfam-least-wanted-chart",
       "fields":{
         "headline":"Dan Brown stays top of Oxfam's 'least wanted' chart",
+        "trailText":"Da Vinci Code author heads charity shop's list of most-donated books for a third year",
         "shortUrl":"http://gu.com/p/3vanc",
         "standfirst":"Da Vinci Code author heads charity shop's list of most-donated books for a third year",
         "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/7/4/1309782793719/Oxfam-bookshop-003.jpg",
@@ -50,6 +70,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jul/03/blue-monday-nicci-french-review",
       "fields":{
         "headline":"Blue Monday by Nicci French \u2013review",
+        "trailText":"<p>The husband-and-wife writing team introduce a new star \u2013 psychotherapist Frieda Klein \u2013 in a dark tale of child abduction, writes <strong>Alison Flood</strong></p>",
         "shortUrl":"http://gu.com/p/3v6kk",
         "standfirst":"The husband-and-wife writing team introduce a new star \u2013 psychotherapist Frieda Klein \u2013 in a dark tale of child abduction",
         "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/6/27/1309193227112/Blue-Monday-s-insomniac-h-003.jpg",
@@ -66,6 +87,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jun/30/real-life-ian-rankin-mystery-sculptures",
       "fields":{
         "headline":"Real-life Ian Rankin mystery of 'reverse heist' sculptures",
+        "trailText":"<p>Series of intricate paper artworks linked to Rebus author's work left around Edinburgh</p>",
         "shortUrl":"http://gu.com/p/3v8pb",
         "standfirst":"Series of intricate paper artworks linked to Rebus author's work left around Edinburgh",
         "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/30/1309435006655/Rankin-paper-sculpture-003.jpg",
@@ -82,6 +104,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jun/26/edinburgh-book-festival-tickets-sold-out",
       "fields":{
         "headline":"Edinburgh book festival: record levels of interest cause booking chaos",
+        "trailText":"Director apologises to those unable to book online after high-profile events sell out on first day of full ticket sales",
         "shortUrl":"http://gu.com/p/3v693",
         "standfirst":"Director apologises to those unable to book online after high-profile events sell out on first day of full ticket sales",
         "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/26/1309112487685/Alasdair-Gray-003.jpg",
@@ -98,6 +121,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jun/17/best-holiday-reads",
       "fields":{
         "headline":"The best holiday reads",
+        "trailText":"<p>Anna Karenina on the beach, The Corrections in Patagonia, Death in Venice in . . . where else?  Writers recall their most memorable holiday reads</p>",
         "shortUrl":"http://gu.com/p/3vv2d",
         "standfirst":"Anna Karenina on the beach, The Corrections in Patagonia, Death in Venice overlooking the Lido ...  Writers recall their most memorable holiday reads \u2013 what are yours?",
         "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/15/1308155216090/Man-reading-on-a-beach-003.jpg",
@@ -113,6 +137,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jun/16/edinburgh-book-festival-highlights",
       "fields":{
         "headline":"Edinburgh book festival highlights",
+        "trailText":"<p>From fiction to poetry to children's illustrators, here is the pick of the events at the festival this year</p>",
         "shortUrl":"http://gu.com/p/3vvva",
         "standfirst":"From fiction to poetry to children's illustrators, here is the pick of the events at the festival this year",
         "thumbnail":"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/6/16/1308213945148/The-city-of-Edinburgh-by--003.jpg",
@@ -128,6 +153,7 @@
       "apiUrl":"http://content.guardianapis.com/culture/2011/jun/16/edinburgh-book-festival-ian-rankin",
       "fields":{
         "headline":"Ian Rankin: 'Rain or shine, I'll be there'",
+        "trailText":"<p>Ian Rankin has hardly missed a year of the Edinburgh International Books Festival since his first, memorable days reporting it as a student in 1985. Here he explains why, despite the growth of literary events in recent years, it remains special</p>",
         "shortUrl":"http://gu.com/p/2qqp9",
         "standfirst":"Ian Rankin has hardly missed a year of the Edinburgh International Books Festival since his first, memorable days reporting it as a student in 1985. Here he explains why, despite the growth of literary events in recent years, it remains special",
         "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/6/15/1308149412824/Ian-Rankin-003.jpg",
@@ -144,6 +170,7 @@
       "apiUrl":"http://content.guardianapis.com/books/2011/jun/16/edinburgh-literary-festival-revolution-theme",
       "fields":{
         "headline":"Writers in revolutionary mood at Edinburgh International Book Festival",
+        "trailText":"<p>Authors from 40 countries to attend literary event, with Alasdair Gray and AS Byatt among those unveiling new works</p>",
         "shortUrl":"http://gu.com/p/2qqq3",
         "standfirst":"Authors from 40 countries to attend literary event, with Alasdair Gray and AS Byatt among those unveiling new works",
         "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/15/1308150468584/Ahdaf-Soueif-003.jpg",
@@ -160,11 +187,244 @@
       "apiUrl":"http://content.guardianapis.com/books/booksblog/2011/jun/13/help-improve-books-site",
       "fields":{
         "headline":"Help us improve the books site",
+        "trailText":"<p>This week, we'd like you tell us which authors' book lists you'd like to see</p>",
         "shortUrl":"http://gu.com/p/2qk3p",
         "standfirst":"This week, we'd like you tell us which authors' book lists you'd like to see",
         "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/13/1307958922459/Lists-003.jpg",
         "byline":"Hannah Freeman",
         "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2011/may/13/women-crime-fiction-prize-longlist",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-05-13T16:08:48+01:00",
+      "webTitle":"More women break into crime fiction prize longlist",
+      "webUrl":"http://www.guardian.co.uk/books/2011/may/13/women-crime-fiction-prize-longlist",
+      "apiUrl":"http://content.guardianapis.com/books/2011/may/13/women-crime-fiction-prize-longlist",
+      "fields":{
+        "headline":"More women break into crime fiction prize longlist",
+        "trailText":"A third of contenders for Theakston's Old Peculier award are by women",
+        "shortUrl":"http://gu.com/p/2p48p",
+        "standfirst":"A third of contenders for Theakston's Old Peculier award are by women",
+        "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/5/13/1305299175091/Sophie-Hannah-003.jpg",
+        "byline":"Alison Flood",
+        "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2011/apr/10/top-earning-crime-writers-uk",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-04-10T20:29:39+01:00",
+      "webTitle":"Ian Fleming and Agatha Christie lead list of UK's top-earning crimewriters",
+      "webUrl":"http://www.guardian.co.uk/books/2011/apr/10/top-earning-crime-writers-uk",
+      "apiUrl":"http://content.guardianapis.com/books/2011/apr/10/top-earning-crime-writers-uk",
+      "fields":{
+        "headline":"Ian Fleming and Agatha Christie lead list of UK's top-earning crimewriters",
+        "trailText":"<p>Dead authors are still making a fortune, while John Grisham and Dan Brown lead the US rankings</p>",
+        "shortUrl":"http://gu.com/p/2zbk5",
+        "standfirst":"Dead authors are still making a fortune, while John Grisham and Dan Brown lead the US rankings",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/4/10/1302459261861/Agatha-Christie-003.jpg",
+        "byline":"Maev Kennedy",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/apr/08/comic-convention-britain-kapow",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-04-08T16:40:44+01:00",
+      "webTitle":"Kapow! Superheroes come to Britain",
+      "webUrl":"http://www.guardian.co.uk/books/2011/apr/08/comic-convention-britain-kapow",
+      "apiUrl":"http://content.guardianapis.com/books/2011/apr/08/comic-convention-britain-kapow",
+      "fields":{
+        "headline":"Kapow! Superheroes come to Britain",
+        "trailText":"Comics convention billed as the UK's answer to sprawling US festivals dedicated to the industry and its spin-offs",
+        "shortUrl":"http://gu.com/p/2zbx3",
+        "standfirst":"Comics convention billed as the UK's answer to sprawling US festivals dedicated to the industry and its spin-offs",
+        "byline":"Ben Quinn",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/apr/03/henning-mankell-wallander-troubled-man",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-04-03T00:05:00+01:00",
+      "webTitle":"The Troubled Man: A Kurt Wallander Mystery by Henning Mankell \u2013 review",
+      "webUrl":"http://www.guardian.co.uk/books/2011/apr/03/henning-mankell-wallander-troubled-man",
+      "apiUrl":"http://content.guardianapis.com/books/2011/apr/03/henning-mankell-wallander-troubled-man",
+      "fields":{
+        "headline":"The Troubled Man: A Kurt Wallander Mystery by Henning Mankell \u2013 review",
+        "trailText":"<p>The world's most popular fictional detective bows out, gloriously gloomy as ever, writes <strong>Brian Oliver</strong></p>",
+        "shortUrl":"http://gu.com/p/2nqtq",
+        "standfirst":"The world's most popular fictional detective bows out, gloriously gloomy as ever",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Observer/Pix/pictures/2011/3/21/1300724739118/Mankell-003.jpg",
+        "byline":"Brian Oliver",
+        "publication":"The Observer"
+      }
+    },{
+      "id":"books/2011/mar/26/authors-secrets-writing",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-03-26T00:05:44Z",
+      "webTitle":"On writing: authors reveal the secrets of their craft",
+      "webUrl":"http://www.guardian.co.uk/books/2011/mar/26/authors-secrets-writing",
+      "apiUrl":"http://content.guardianapis.com/books/2011/mar/26/authors-secrets-writing",
+      "fields":{
+        "headline":"On writing: authors reveal the secrets of their craft",
+        "trailText":"<p>Listen in to interviews with some of our&nbsp;most&nbsp;celebrated writers recorded for the British Library, and enter our competition to identify the mystery writer</p>",
+        "shortUrl":"http://gu.com/p/2z26m",
+        "standfirst":"How do you set about writing a novel? What inspires a poem? Pencil or computer? Pain or pleasure? Listen in to interviews with some of our&nbsp;most&nbsp;celebrated writers recorded for the British Library, and enter our competition to identify the mystery writer",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/3/25/1301048101214/William-Faulkner-In-Holly-003.jpg",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/mar/25/preview-authors-secrets-writing",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-03-25T12:31:00Z",
+      "webTitle":"Preview: authors reveal the secrets of their craft",
+      "webUrl":"http://www.guardian.co.uk/books/2011/mar/25/preview-authors-secrets-writing",
+      "apiUrl":"http://content.guardianapis.com/books/2011/mar/25/preview-authors-secrets-writing",
+      "fields":{
+        "headline":"Preview: authors reveal the secrets of their craft",
+        "trailText":"<p>In this preview from tomorrow's Guardian Review, listen in to some of our&nbsp;most&nbsp;celebrated writers, as they explain the secrets of their craft, and enter our competition to identify the mystery writer</p>",
+        "shortUrl":"http://gu.com/p/2z2a5",
+        "standfirst":"How do you set about writing a novel? What inspires a poem? Pencil or computer? Pain or pleasure? In a preview from tomorrow's Guardian Review, listen to Ian McEwan, Howard Jacobson, Ian Rankin, Hilary Mantel and Beryl Bainbridge, and enter our competition to identify the mystery writer",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/3/25/1301048101214/William-Faulkner-In-Holly-003.jpg",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/audio/2011/mar/25/writing-life-ian-rankin-audio",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-03-25T12:24:37Z",
+      "webTitle":"The Writing Life: Ian Rankin",
+      "webUrl":"http://www.guardian.co.uk/books/audio/2011/mar/25/writing-life-ian-rankin-audio",
+      "apiUrl":"http://content.guardianapis.com/books/audio/2011/mar/25/writing-life-ian-rankin-audio",
+      "fields":{
+        "headline":" The Writing Life: Ian Rankin",
+        "trailText":"<p>Ian Rankin talks about structuring a crime novel in an extract from the British Library CD The Writing Life</p>",
+        "shortUrl":"http://gu.com/p/2z2vx",
+        "standfirst":"Ian Rankin talks about structuring a crime novel in an extract from the British Library CD The Writing Life",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Travel/Pix/pictures/2007/01/10/rankinedinburgh84.jpg",
+        "byline":"guardian.co.uk",
+        "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2011/mar/04/best-world-books-night-presents",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-03-04T11:19:03Z",
+      "webTitle":"The great books giveaway",
+      "webUrl":"http://www.guardian.co.uk/books/2011/mar/04/best-world-books-night-presents",
+      "apiUrl":"http://content.guardianapis.com/books/2011/mar/04/best-world-books-night-presents",
+      "fields":{
+        "headline":"The great books giveaway",
+        "trailText":"<p>To mark World Book Night, 45 celebrated writers tell us which books they give as gifts and which they've been most pleased to receive. </p>",
+        "shortUrl":"http://gu.com/p/2ngax",
+        "standfirst":"On Saturday 5 March, a million books will be given away across the UK in the first ever World Book Night. We asked writers which books they give as gifts and which they've been most pleased to receive. And children's authors recommended books to give to children",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/3/4/1299234656203/Young-Reader-003.jpg",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/feb/27/ian-rankin-tries-comic-strip-writing",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-02-27T14:47:05Z",
+      "webTitle":"Life after Rebus: Ian Rankin turns his hand to the comic strip",
+      "webUrl":"http://www.guardian.co.uk/books/2011/feb/27/ian-rankin-tries-comic-strip-writing",
+      "apiUrl":"http://content.guardianapis.com/books/2011/feb/27/ian-rankin-tries-comic-strip-writing",
+      "fields":{
+        "headline":"Life after Rebus: Ian Rankin turns his hand to the comic strip",
+        "trailText":"<p>Best-selling crime writer pens murder story with a twist for CLiNT magazine</p>",
+        "shortUrl":"http://gu.com/p/2ncpc",
+        "standfirst":"Best-selling crime writer pens murder story with a twist for CLiNT magazine",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/2/27/1298817130622/Ian-Rankin-003.jpg",
+        "byline":"Mark Brown, arts correspondent",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/feb/18/library-most-borrowed-books",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-02-18T12:49:49Z",
+      "webTitle":"The most borrowed library books of 2010",
+      "webUrl":"http://www.guardian.co.uk/books/2011/feb/18/library-most-borrowed-books",
+      "apiUrl":"http://content.guardianapis.com/books/2011/feb/18/library-most-borrowed-books",
+      "fields":{
+        "headline":"The most borrowed library books of 2010",
+        "trailText":"<p>John Dugdale finds library users turning to crime, with thrillers and detective fiction making up almost two-thirds of books borrowed in 2010</p>",
+        "shortUrl":"http://gu.com/p/2n6gp",
+        "standfirst":"John Dugdale finds library users turning to crime, with thrillers and detective fiction making up almost two-thirds of books borrowed in 2010<br /><a href=\"http://www.guardian.co.uk/news/datablog/2011/feb/18/libraries-book-lending-borrowed-data\" title=\"\">Get all the data</a>",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/2/18/1298031663720/borrowing-books-library-003.jpg",
+        "byline":"John Dugdale",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"uk/2011/feb/18/children-top-library-books-authors",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-02-18T06:00:00Z",
+      "webTitle":"Children's authors dominate list of favourite UK library books",
+      "webUrl":"http://www.guardian.co.uk/uk/2011/feb/18/children-top-library-books-authors",
+      "apiUrl":"http://content.guardianapis.com/uk/2011/feb/18/children-top-library-books-authors",
+      "fields":{
+        "headline":"Children's authors dominate list of favourite UK library books",
+        "trailText":"<p>Seven of the UK's top ten most borrowed authors write books for children</p>",
+        "shortUrl":"http://gu.com/p/2n7jk",
+        "standfirst":"Seven of the UK's top ten most borrowed authors write books for children<br />\u2022<a href=\"http://www.guardian.co.uk/news/datablog/2011/feb/18/libraries-book-lending-borrowed-data\"> Datablog: check out the full list</a>",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Guardian/About/General/2011/2/17/1297969027751/Julia-Donaldson-003.jpg",
+        "byline":"Maev Kennedy",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2011/feb/07/scottish-academy-literature-plans-dropped",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2011-02-07T16:07:46Z",
+      "webTitle":"Scottish Academy of Literature plan dropped",
+      "webUrl":"http://www.guardian.co.uk/books/2011/feb/07/scottish-academy-literature-plans-dropped",
+      "apiUrl":"http://content.guardianapis.com/books/2011/feb/07/scottish-academy-literature-plans-dropped",
+      "fields":{
+        "headline":"Scottish Academy of Literature plan dropped",
+        "trailText":"Culture minister Fiona Hyslop says economic pressures mean the scheme cannot currently be realised",
+        "shortUrl":"http://gu.com/p/2nvy7",
+        "standfirst":"Culture minister Fiona Hyslop says economic pressures mean the scheme cannot currently be realised",
+        "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/2/7/1297094795240/Fiona-Hyslop-003.jpg",
+        "byline":"Benedicte Page",
+        "publication":"guardian.co.uk"
+      }
+    },{
+      "id":"books/2010/dec/18/literary-review-quiz-answers",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2010-12-18T00:06:04Z",
+      "webTitle":"Guardian Review literary quiz answers",
+      "webUrl":"http://www.guardian.co.uk/books/2010/dec/18/literary-review-quiz-answers",
+      "apiUrl":"http://content.guardianapis.com/books/2010/dec/18/literary-review-quiz-answers",
+      "fields":{
+        "headline":"Guardian Review literary quiz answers",
+        "trailText":"<p>How did you do? Put your pens down: Here are the answers to our fiendish literary quiz</p>",
+        "shortUrl":"http://gu.com/p/2yqng",
+        "standfirst":"How did you do? Put your pens down: Here are the answers to <a href=\"http://www.guardian.co.uk/books/2010/dec/16/guardian-review-literary-quiz\">our fiendish literary quiz</a>",
+        "thumbnail":"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2010/12/16/1292506130768/Literary-quiz-002.jpg",
+        "publication":"The Guardian"
+      }
+    },{
+      "id":"books/2010/dec/16/guardian-review-literary-quiz",
+      "sectionId":"books",
+      "sectionName":"Books",
+      "webPublicationDate":"2010-12-16T12:56:46Z",
+      "webTitle":"The Guardian Review literary quiz",
+      "webUrl":"http://www.guardian.co.uk/books/2010/dec/16/guardian-review-literary-quiz",
+      "apiUrl":"http://content.guardianapis.com/books/2010/dec/16/guardian-review-literary-quiz",
+      "fields":{
+        "headline":"The Guardian Review literary quiz",
+        "trailText":"<p>Test your literary knowledge with a fiendish set of questions from our panel of writers including Iain Banks, Jilly Cooper, David Hare, Nick Hornby, Lorrie Moore and Will Self, with a chance to win some of this year's best books.</p>",
+        "shortUrl":"http://gu.com/p/2yq4j",
+        "standfirst":"Test your literary knowledge with a fiendish set of questions from our panel of writers including Iain Banks, Jilly Cooper, David Hare, Nick Hornby, Lorrie Moore and Will Self. <br /><br />Readers with the highest scores will go into a draw for a set of five of the most nominated Books of the Year. Please send your answers to <a href=\"mailto:books.competition@guardian.co.uk\">books.competition@guardian.co.uk</a> <strong>before midnight this Friday, 17 December</strong>, as the answers will be printed in Saturday's Review. For the full terms and conditions, <a href=\"http://www.guardian.co.uk/books/2010/dec/16/terms-conditions-guardian-literary-quiz\" title=\"\">click here</a>",
+        "thumbnail":"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2010/12/16/1292502085814/Dublin-river-Liffey-003.jpg",
+        "publication":"The Guardian"
       }
     }]
   }

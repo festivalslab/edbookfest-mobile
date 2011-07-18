@@ -7,7 +7,8 @@ class Article
       :format => "json",
       :"api-key" => ENV["EIBF_GUARDIAN_API"],
       :section => %w{books childrens-books-site}.join("|"),
-      :"show-fields" => %w{headline shortUrl standfirst thumbnail byline publication}.join(","),
+      :"show-fields" => %w{headline trailText shortUrl standfirst thumbnail byline publication}.join(","),
+      :"page-size" => 25,
       :q => term
     }
     get('/search', :query => query)['response']['results']
