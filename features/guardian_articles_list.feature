@@ -10,9 +10,14 @@ Feature: Guardian articles list
     And the section title should be "Authors"
     And the page heading should be "Joe Bloggs"
   
-  @wip
-  Scenario: Author article page shows 10 articles
+  Scenario: Author article page shows articles (real API)
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author articles page
     Then I should see at least 1 article
+  
+  Scenario: Author article page shows articles (fake API)
+    Given there is an author called "Joe Bloggs"
+    And the article search returns good results
+    When I go to the "Joe Bloggs" author articles page
+    Then I should see 25 articles
   

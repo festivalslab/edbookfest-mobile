@@ -15,7 +15,6 @@ describe Article do
     
     it "uses the correct query string params" do
       articles = Article.search "Joe Bloggs"
-      puts FakeWeb.last_request.path
       expected_fields = %w{headline trailText shortUrl standfirst thumbnail byline publication}.join('%2C')
       FakeWeb.should have_requested(:get, /q=Joe%20Bloggs/)
       FakeWeb.should have_requested(:get, /section=books%7Cchildrens-books-site/)
