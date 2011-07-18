@@ -22,5 +22,10 @@ Feature: Guardian articles list
     And article 1 should have a date
     And article 1 should have date text
     And article 1 should link to an article
- 
+
+  Scenario: Author article page shows message when there are no articles
+    Given there is an author called "Alksadlfkjoi Bkajlaksdjflk"
+    When I go to the "Alksadlfkjoi Bkajlaksdjflk" author articles page
+    Then I should see 0 articles
+    And I should see "No Guardian articles were found for Alksadlfkjoi Bkajlaksdjflk"
   

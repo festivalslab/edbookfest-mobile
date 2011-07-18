@@ -1,3 +1,6 @@
 %h3= @author.full_name
-%ul.articles.nav-list
-  = render(:partial => "article", :collection => @articles, :locals => { :author => @author })
+- if @articles.present?
+  %ul.articles.nav-list
+    = render(:partial => "article", :collection => @articles, :locals => { :author => @author })
+- else
+  %p.message No Guardian articles were found for #{@author.full_name}

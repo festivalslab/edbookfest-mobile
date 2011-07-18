@@ -11,6 +11,11 @@ class Article
       :"page-size" => 25,
       :q => term
     }
-    get('/search', :query => query)['response']['results']
+    res = get('/search', :query => query)
+    if res && res['response'] && res['response']['results'] then 
+      res['response']['results'] 
+    else 
+      [] 
+    end
   end
 end
