@@ -16,6 +16,12 @@ module HtmlSelectorsHelpers
       
     when /tab (\d+)/
       "ul.tabs li:nth-child(#{$1})"
+    
+    when /article (\d+) date/
+      "ul.articles li:nth-child(#{$1}) time"
+      
+    when /article (\d+)/
+      "ul.articles li:nth-child(#{$1})"
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

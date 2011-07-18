@@ -20,4 +20,10 @@ Feature: Guardian articles list
     And the article search returns good results
     When I go to the "Joe Bloggs" author articles page
     Then I should see 25 articles
-  
+    
+  Scenario: Author article page shows correct article details
+    Given there is an author called "Joe Bloggs"
+    And the article search returns good results
+    When I go to the "Joe Bloggs" author articles page
+    Then article 1 title should be "Why every novelist is holding out for a hero"
+    And article 1 date should de "17 July 2011"

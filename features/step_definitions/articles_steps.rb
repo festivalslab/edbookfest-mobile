@@ -10,3 +10,13 @@ Then /^I should see (at least )?(\d+) articles?$/ do |at_least, count|
     articles.count.should == count.to_i
   end
 end
+
+Then /^article (\d+) title should be "([^\"]*)"$/ do |index, title_text|
+  article = find selector_for("article #{index}")
+  article.should have_content title_text
+end
+
+Then /^article (\d+) date should de "([^\"]*)"$/ do |index, date_text|
+  date = find selector_for("article #{index} date")
+  date.should have_content date_text
+end

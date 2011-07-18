@@ -1,1 +1,4 @@
-%li= article['webTitle']
+%li
+  %time{:datetime => article['webPublicationDate']}= format_string_date(article['webPublicationDate'], :short)
+  = article['fields']['headline']
+  
