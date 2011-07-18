@@ -15,23 +15,12 @@ Feature: Guardian articles list
     When I go to the "Ian Rankin" author articles page
     Then I should see at least 1 article
   
-  Scenario: Author article page shows articles (fake API)
-    Given there is an author called "Joe Bloggs"
-    And the article search returns good results
-    When I go to the "Joe Bloggs" author articles page
-    Then I should see 25 articles
-    
   Scenario: Author article page shows correct article details
-    Given there is an author called "Joe Bloggs"
-    And the article search returns good results
-    When I go to the "Joe Bloggs" author articles page
-    Then article 1 title should be "Why every novelist is holding out for a hero"
-    And article 1 date should de "17 July 2011"
-    
-  Scenario: Author article page links to individual article
-    Given there is an author called "Joe Bloggs"
-    And the article search returns good results
-    When I go to the "Joe Bloggs" author articles page
-    And I click on article 1
-    Then I should be on the "Joe Bloggs" author article detail page for "books/2011/jul/17/literary-career-heroes-robert-mccrum"
+    Given there is an author called "Ian Rankin"
+    When I go to the "Ian Rankin" author articles page
+    Then article 1 should have a title
+    And article 1 should have a date
+    And article 1 should have date text
+    And article 1 should link to an article
+ 
   

@@ -20,6 +20,9 @@ module HtmlSelectorsHelpers
     when /article (\d+) date/
       "ul.articles li:nth-child(#{$1}) time"
       
+    when /article (\d+) link/
+      "ul.articles li:nth-child(#{$1}) a"
+      
     when /article (\d+)/
       "ul.articles li:nth-child(#{$1})"
       

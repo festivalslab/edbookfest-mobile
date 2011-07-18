@@ -26,8 +26,8 @@ group :development, :test do
   gem 'guard-coffeescript'
   gem 'guard-livereload'
   gem 'jasmine', '1.0.2.1'
-  gem 'fakeweb'
-  gem 'fakeweb-matcher'
+  gem 'fakeweb', :require => false
+  gem 'fakeweb-matcher', :require => false
 end
 
 group :production do
