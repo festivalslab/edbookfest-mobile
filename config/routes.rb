@@ -6,7 +6,9 @@ EdbookfestMobile::Application.routes.draw do
   resources :events, :only => [:show]
   resources :authors, :only => [:show] do 
     resources :articles, :only => [:index] do
-      match '*id' => 'articles#show'
+      member do
+        get :show, :constraints => {:id => /.*/ }
+      end
     end
   end
   resources :books, :only => [:show]
