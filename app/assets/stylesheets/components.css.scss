@@ -40,6 +40,9 @@
   margin: 0;
   padding: $vPadding $padding 0;
   background-color: #e0e0e0;
+  border-bottom: 1px solid $divider;
+  position: relative;
+  top: 1px;
     
   li {
     @include font(11);
