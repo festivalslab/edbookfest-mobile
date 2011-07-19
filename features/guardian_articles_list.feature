@@ -28,4 +28,10 @@ Feature: Guardian articles list
     When I go to the "Alksadlfkjoi Bkajlaksdjflk" author articles page
     Then I should see 0 articles
     And I should see "No Guardian articles were found for Alksadlfkjoi Bkajlaksdjflk"
+    
+  Scenario: Tab navigation navigates between author pages
+    Given there is an author called "Joe Bloggs"
+    When I go to the "Joe Bloggs" author articles page
+    And I click the Bibliography tab
+    Then I am on the "Joe Bloggs" author detail page
   

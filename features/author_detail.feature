@@ -29,6 +29,8 @@ Feature: Author detail
     And tab 2 should be "Articles"
     And tab 1 is highlighted
   
-  
-  
-  
+  Scenario: Tab navigation navigates between author pages
+    Given there is an author called "Joe Bloggs"
+    When I go to the "Joe Bloggs" author detail page
+    And I click the Guardian articles tab
+    Then I am on the "Joe Bloggs" author articles page
