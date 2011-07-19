@@ -1,0 +1,10 @@
+%h3= @author.full_name
+= render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
+%h4.powered-by-guardian
+  %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} Powered by The Guardian
+
+- if @articles.present?
+  %ul.articles.nav-list
+    = render :partial => "article", :collection => @articles, :locals => { :author => @author }
+- else
+  %p.content.message No Guardian articles were found for #{@author.full_name}

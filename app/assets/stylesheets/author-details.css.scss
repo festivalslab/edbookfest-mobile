@@ -1,0 +1,20 @@
+h4.powered-by-guardian {
+  text-align: right;
+  margin: 0;
+  padding: $vPadding $padding;
+  
+  a {
+    width: 131px;
+    height: 36px;
+    background-image: url(#{$baseImagePath}/powered-by-guardian.png);
+  }
+}
+
+.articles {
+  time {
+    display: block;
+    margin-bottom: 3px;
+    @include font(12);
+    color: $lightText;
+  }
+}

@@ -2,6 +2,8 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'fakeweb'
+require 'fakeweb_matcher'
 Dir[Rails.root.join("lib/feed/*.rb")].each {|f| require f}
 
 # Requires supporting ruby files with custom matchers and macros, etc,

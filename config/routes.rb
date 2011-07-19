@@ -4,7 +4,13 @@ EdbookfestMobile::Application.routes.draw do
   match "events/calendar/:date(/:type)" => "events#index", :as => :listings, :constraints => { :date => /\d{4}-\d{2}-\d{2}/, :type => /(Adult|Children)/ }
   
   resources :events, :only => [:show]
-  resources :authors, :only => [:show]
+  resources :authors, :only => [:show] do 
+    resources :articles, :only => [:index] do
+      member do
+        get :show, :constraints => {:id => /.*/ }
+      end
+    end
+  end
   resources :books, :only => [:show]
   
   # The priority is based upon order of creation:

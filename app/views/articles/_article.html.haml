@@ -1,0 +1,6 @@
+%li
+  = link_to(author_article_url(author, article['id'])) do 
+    %time{:datetime => article['webPublicationDate']}= format_string_date(article['webPublicationDate'], :short)
+    = article['fields']['headline']
+    %span.arrow
+  

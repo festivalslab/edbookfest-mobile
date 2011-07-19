@@ -11,6 +11,20 @@ body.authors {
     a {
       color: $baseColorAuthors;
     }
+    
+    .nav-list a {
+      color: #000;
+    }
+    
+    .tabs {
+      a {
+        color: $lightText;
+        text-decoration: none;
+      }
+      .active a {
+        color: $baseColorAuthors;
+      }
+    }
   }
   
   #container {
