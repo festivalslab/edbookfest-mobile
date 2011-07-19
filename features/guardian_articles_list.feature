@@ -34,4 +34,9 @@ Feature: Guardian articles list
     When I go to the "Joe Bloggs" author articles page
     And I click the Bibliography tab
     Then I am on the "Joe Bloggs" author detail page
+    
+  Scenario: Powered by Guardian logo is displayed
+    Given there is an author called "Joe Bloggs"
+    When I go to the "Joe Bloggs" author articles page
+    Then I should see the Powered by Guardian logo
   

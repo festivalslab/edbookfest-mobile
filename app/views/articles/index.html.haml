@@ -1,5 +1,7 @@
 %h3= @author.full_name
 = render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
+%a.powered-by-guardian{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""}
+  = image_tag "powered-by-guardian.png", :size => "140x45", :alt => "Powered by The Guardian", :class => "powered-by-guardian"
 
 - if @articles.present?
   %ul.articles.nav-list

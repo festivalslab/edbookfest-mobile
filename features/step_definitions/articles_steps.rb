@@ -37,3 +37,7 @@ Then /^I should be on the "(\w+) (\w+)" author article detail page for "([^\"]*)
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the \"#{first_name} #{last_name}\" author article detail page for #{article_id}")
 end
+
+Then /^I should see the Powered by Guardian logo$/ do
+  page.should have_css('img.powered-by-guardian')
+end
