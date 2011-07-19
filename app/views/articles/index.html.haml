@@ -1,6 +1,8 @@
 %h3= @author.full_name
+= render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
+
 - if @articles.present?
   %ul.articles.nav-list
-    = render(:partial => "article", :collection => @articles, :locals => { :author => @author })
+    = render :partial => "article", :collection => @articles, :locals => { :author => @author }
 - else
   %p.message No Guardian articles were found for #{@author.full_name}

@@ -1,0 +1,5 @@
+%ul.tabs
+  %li{:class => (active == "Bibliography") ? "active" : nil}
+    = link_to("Bibliography", author_path(author))
+  %li{:class => (active == "Guardian articles") ? "active" : nil}
+    = link_to("Guardian articles", author_articles_path(author))
