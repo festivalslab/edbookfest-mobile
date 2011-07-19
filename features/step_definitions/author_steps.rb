@@ -1,4 +1,4 @@
-Given /^there is an author called "(\w+) (\w+)"( with an image)?$/ do |first_name, last_name, image|
+Given /^there is an author called "(\S+) (\S+)"( with an image)?$/ do |first_name, last_name, image|
   attributes = { :first_name => first_name, :last_name => last_name }
   attributes[:image] = "http://author.image/image.jpg" if image
   author = Factory.create(:author, attributes)

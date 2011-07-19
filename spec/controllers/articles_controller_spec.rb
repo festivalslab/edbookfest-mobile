@@ -8,10 +8,13 @@ describe ArticlesController do
   before(:each) do
     Author.stub(:find).and_return author
     author.stub(:full_name).and_return("Joe Bloggs")
-    Article.stub(:search).and_return(["1","2"])
   end
 
   describe "GET 'index'" do
+    before(:each) do
+      Article.stub(:search).and_return(["1","2"])
+    end
+    
     it "assigns author" do
       Author.should_receive(:find).with(1)
       get :index, :author_id => 1
@@ -68,9 +71,32 @@ describe ArticlesController do
   end
   
   describe "GET 'show'" do
+    let(:article) { { "fields" => { "headline" => "Article title" }} }
+    
+    before(:each) do
+      Article.stub(:find).and_return(article)
+    end
+    
     it "succeeds" do
-      get :show, :author_id => 1, :id => CGI::escape('/foo/bar')
+      get :show, :author_id => 1, :id => 'foo/bar'
       response.should be_success
+    end
+    
+    it "assigns author" do
+      Author.should_receive(:find).with(1)
+      get :show, :author_id => 1, :id => 'foo/bar'
+      assigns[:author].should eq(author)
+    end
+    
+    it "assigns article" do
+      Article.should_receive(:find).with('foo/bar')
+      get :show, :author_id => 1, :id => 'foo/bar'
+      assigns[:article].should eq(article)
+    end
+    
+    it "assigns title" do
+      get 'show', :author_id => 1, :id => 'foo/bar'
+      assigns[:title].should == "Article title"
     end
   end
 

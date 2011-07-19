@@ -26,4 +26,18 @@ class Article
       [] 
     end
   end
+  
+  def self.find(id)
+    query = {
+     :format => "json",
+     :"api-key" => ENV["EIBF_GUARDIAN_API"],
+     :"show-fields" => "all"
+    }
+    res = get("/#{id}", :query => query)
+    if res && res['response'] && res['response']['content'] then
+      res['response']['content']
+    else
+      nil
+    end
+  end
 end

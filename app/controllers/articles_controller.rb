@@ -4,13 +4,15 @@ class ArticlesController < ApplicationController
   layout :set_layout
   
   def index
-    @author = Author.find(params[:author_id])
+    @author = Author.find params[:author_id]
     @title = "#{@author.full_name} – Guardian articles"
     @articles = Article.search @author.full_name
   end
   
   def show
-    
+    @author = Author.find params[:author_id]
+    @article = Article.find params[:id]
+    @title = @article['fields']['headline']
   end
   
 protected

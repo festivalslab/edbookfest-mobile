@@ -57,6 +57,33 @@ describe Article do
       end
     end
   end
+  
+  describe "#find" do
+    context "valid, populated response" do
+      before(:each) do
+        stub_guardian_request("foo", "guardian_valid_item.json")
+      end
+      
+      it "uses the correct query string params" do
+        article = Article.find "foo/bar"
+        FakeWeb.should have_requested(:get, /content\.guardianapis\.com\/foo\/bar/)
+        FakeWeb.should have_requested(:get, /format=json/)
+        FakeWeb.should have_requested(:get, /show-fields=all/)
+        FakeWeb.should have_requested(:get, /api-key=#{ENV["EIBF_GUARDIAN_API"]}/)
+      end
+      
+      it "returns the correct article details" do
+        article = Article.find "foo/bar"
+        article['webTitle'].should == "Why every novelist is holding out for a hero"
+        article['webUrl'].should == "http://www.guardian.co.uk/books/2011/jul/17/literary-career-heroes-robert-mccrum"
+        article['fields']['headline'].should == "Why every novelist is holding out for a hero"
+        article['fields']['body'].should =~ /Despite the received wisdom of the book trade, writers don't have careers in the conventional sense\./
+        article['fields']['standfirst'].should == "Only by creating an enduring character can a writer entertain thoughts of a literary career"
+        article['fields']['thumbnail'].should == "http://static.guim.co.uk/sys-images/Observer/Pix/pictures/2011/7/12/1310476468178/Sherlock-Holmes-McCrum-003.jpg"
+        article['fields']['byline'].should == "Robert McCrum"
+      end
+    end
+  end
 end
 
 
