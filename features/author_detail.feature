@@ -26,7 +26,7 @@ Feature: Author detail
     When I go to the "Joe Bloggs" author detail page
     Then I should see 2 tabs
     And tab 1 should be "Bibliography"
-    And tab 2 should be "Articles"
+    And tab 2 should be "Guardian articles"
     And tab 1 is highlighted
   
   Scenario: Tab navigation navigates between author pages

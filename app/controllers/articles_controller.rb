@@ -12,7 +12,8 @@ class ArticlesController < ApplicationController
   def show
     @author = Author.find params[:author_id]
     @article = Article.find params[:id]
-    @title = @article['fields']['headline']
+    @fields = @article['fields']
+    @title = @fields['headline']
   end
   
 protected

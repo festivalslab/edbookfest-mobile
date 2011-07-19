@@ -17,7 +17,7 @@ Then /^I should see (\d+) tabs$/ do |tab_count|
 end
 
 Then /^tab (\d+) should be "([^\"]*)"$/ do |tab_index, label|
-  page.should have_css("ul.tabs li:nth-child(#{tab_index})", :content => label)
+  page.should have_css("ul.tabs li:nth-child(#{tab_index})", :text => label)
 end
 
 Then /^tab (\d+) is highlighted$/ do |tab_index|

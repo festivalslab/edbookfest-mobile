@@ -94,6 +94,11 @@ describe ArticlesController do
       assigns[:article].should eq(article)
     end
     
+    it "assigns fields" do
+      get :show, :author_id => 1, :id => 'foo/bar'
+      assigns[:fields].should eq(article['fields'])
+    end
+    
     it "assigns title" do
       get 'show', :author_id => 1, :id => 'foo/bar'
       assigns[:title].should == "Article title"
