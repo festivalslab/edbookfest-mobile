@@ -9,6 +9,7 @@ gem 'calendar_helper', '~> 0.2.4'
 gem 'faker'
 gem 'nokogiri'
 gem 'httparty'
+gem 'multi_json'
 
 group :development, :test do
   gem 'sqlite3'

@@ -1,3 +1,11 @@
+module HTTParty
+  class Parser
+    def json
+      MultiJson.decode(body)
+    end
+  end
+end
+
 class Article
   include HTTParty
   base_uri 'content.guardianapis.com'
