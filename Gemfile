@@ -1,10 +1,6 @@
 source 'http://rubygems.org'
 
-# gem 'rails', '3.1.0.rc4'
-
-gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
-gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
-
+gem 'rails', '3.1.0.rc4'
 gem 'calendar_helper'
 gem 'faker'
 gem 'nokogiri'
@@ -33,7 +29,7 @@ end
 
 group :production do
   gem 'pg'
-# gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'therubyracer-heroku', '0.8.1.pre3'
 end
 
 # Asset template engines
