@@ -22,7 +22,7 @@
 %body{:class => @theme}
   #container
     %header
-      %h1.ir= link_to "Edinburgh International Book Festival", :controller => "home"
+      %h1.ir= link_to "Edinburgh International Book Festival", root_path
       %h2= @section
     #main{:role => "main", :"data-pjax-container" => ""}
       = yield

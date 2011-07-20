@@ -1,10 +1,6 @@
 class AuthorsController < ApplicationController
   before_filter :set_theme, :set_section
   layout :set_layout
-
-  def index
-    @title = "Authors"
-  end
   
   def show
     @author = Author.find(params[:id])
