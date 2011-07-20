@@ -21,24 +21,30 @@
 .article-detail {
   
   h4 {
-    @include font(18);
+    @include font(20);
     font-weight: normal;
   }
   
   .powered-by-guardian {
     padding: 0;
-    float: right;
-    width: 106px;
     height: 29px;
     margin: 0 0 $vPadding $padding;
     position: relative;
     top: 5px;
     
     a {
+      position: absolute;
+      top: 0;
+      right: 0;
       width: 106px;
       height: 29px;
       background-image: url(#{$baseImagePath}/powered-by-guardian-s.png);
     }
+  }
+  
+  .standfirst {
+    @include font(16);
+    color: $lightText;
   }
   
   img {
@@ -46,6 +52,34 @@
     margin: 0 0 $vPadding $padding;
     border: 1px solid $divider;
     max-width: 140px;
+  }
+  
+  .guardian-link {
+    margin-top: $padding;
+  }
+  
+  .not-available {
+    position: relative;
+    padding-left: 1.6em;
+    
+    &:before {
+      @include font(16);
+      @include borderRadius(3px);
+      font-family: Georgia, "Times New Roman", serif;
+      vertical-align: baseline;
+      line-height: 1;
+      font-style: italic;
+      content: "i";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-right: $vPadding;
+      padding: 2px 5px;
+      font-weight: bold;
+      color: #fff;
+      background-color: $baseColorAuthors;
+    }
   }
 }
 

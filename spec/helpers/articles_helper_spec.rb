@@ -26,5 +26,17 @@ describe ArticlesHelper do
         guardian_body(content, thumbnail).should == '<p class="not-available">This article is only available on The Guardian website.</p>'
       end
     end
+    
+    context "when the content is nil" do
+      let(:content) { nil }
+      
+      it "returns a message explaining that content is not available" do
+        guardian_body(content, nil).should == '<p class="not-available">This article is only available on The Guardian website.</p>'
+      end
+      
+      it "retursn only the message, even when there is an image" do
+        guardian_body(content, thumbnail).should == '<p class="not-available">This article is only available on The Guardian website.</p>'
+      end
+    end
   end
 end

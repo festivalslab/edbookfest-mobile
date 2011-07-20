@@ -15,7 +15,7 @@
       %p.standfirst= @fields['standfirst']
     .article-info 
       - if @fields['byline'].present?
-        <span class="byline">#{@fields['byline']}</span>, 
+        <span class="byline">#{@fields['byline']}</span><br> 
       <span class="publication">#{@fields['publication']}</span>,
       %time{:datetime => @article['webPublicationDate']}= format_string_date(@article['webPublicationDate'], :short)
 
