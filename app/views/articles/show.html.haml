@@ -12,7 +12,7 @@
       %p.powered-by-guardian
         %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} Powered by The Guardian
       %h4= @fields['headline']
-      %p.standfirst= @fields['standfirst']
+      %p.standfirst= raw(@fields['standfirst'])
     .article-info 
       - if @fields['byline'].present?
         <span class="byline">#{@fields['byline']}</span><br> 
