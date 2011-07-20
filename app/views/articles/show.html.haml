@@ -2,7 +2,7 @@
 
 = render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
 
-%article.article-detail
+%article.article-detail.content
   - if @error.present?
     %h4= @title
     %p.content.message= @error
@@ -10,12 +10,13 @@
     %h4= @fields['headline']
     %p.standfirst= @fields['standfirst']
     .article-info 
-      <span class="byline">#{@fields['byline']}</span>, 
+      - if @fields['byline'].present?
+        <span class="byline">#{@fields['byline']}</span>, 
       <span class="publication">#{@fields['publication']}</span>,
       %time{:datetime => @article['webPublicationDate']}= format_string_date(@article['webPublicationDate'], :short)
     
     .article-body
-      = raw(guardian_body(@fields['body']))
+      = raw(guardian_body(@fields['body'], @fields['thumbnail']))
     
     %a.guardian-link{:href => @article['webUrl'], :"data-remote" => ""} View article on guardian.co.uk
       
