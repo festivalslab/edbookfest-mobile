@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc2'
+# gem 'rails', '3.1.0.rc4'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
+gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
 
-gem 'calendar_helper', '~> 0.2.4'
+gem 'calendar_helper'
 gem 'faker'
 gem 'nokogiri'
 gem 'httparty'
@@ -26,14 +26,14 @@ group :development, :test do
   gem 'guard'
   gem 'guard-coffeescript'
   gem 'guard-livereload'
-  gem 'jasmine', '1.0.2.1'
+  gem 'jasmine'
   gem 'fakeweb', :require => false
   gem 'fakeweb-matcher', :require => false
 end
 
 group :production do
   gem 'pg'
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+# gem 'therubyracer-heroku', '0.8.1.pre3'
 end
 
 # Asset template engines
@@ -46,12 +46,6 @@ gem 'jquery-rails'
 
 # Webserver
 gem 'thin'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
   # Pretty printed test output
