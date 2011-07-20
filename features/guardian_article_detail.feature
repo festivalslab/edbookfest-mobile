@@ -22,5 +22,13 @@ Feature: Guardian articles detail
     And the article link should have a url of "http://www.guardian.co.uk/books/2011/jan/22/the-leopard-jo-nesbo-review"
     And the article body should contain "Since The Girl With the Dragon Tattoo was published in 2008"
     
+  Scenario: Tab navigation
+    Given there is an author called "Jo Nesbø"
+    When I am on the "Jo Nesbø" author article detail page for books/2011/jan/22/the-leopard-jo-nesbo-review
+    Then I should see 2 tabs
+    And tab 1 should be "Bibliography"
+    And tab 2 should be "Guardian articles"
+    And tab 2 is highlighted
+    
 
   

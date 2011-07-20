@@ -1,5 +1,7 @@
 %h3= @author.full_name
 
+= render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
+
 %article.article-detail
   %h4= @fields['headline']
   %p.standfirst= @fields['standfirst']
