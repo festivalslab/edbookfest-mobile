@@ -8,10 +8,13 @@ describe ArticlesController do
   before(:each) do
     Author.stub(:find).and_return author
     author.stub(:full_name).and_return("Joe Bloggs")
-    Article.stub(:search).and_return(["1","2"])
   end
 
   describe "GET 'index'" do
+    before(:each) do
+      Article.stub(:search).and_return(["1","2"])
+    end
+    
     it "assigns author" do
       Author.should_receive(:find).with(1)
       get :index, :author_id => 1
@@ -53,6 +56,18 @@ describe ArticlesController do
       end
     end
     
+    context "when Article raises a GuardianApiError exception" do
+      before(:each) do
+        Article.stub(:search).and_raise(Exceptions::GuardianApiError)
+      end
+      
+      it "assigns error" do
+        Article.should_receive(:search).with("Joe Bloggs")
+        get 'index', :author_id => 1
+        assigns[:error].should == "There was a problem connecting to The Guardian website."
+      end
+    end
+    
     describe "setting layout" do
       it "uses the application layout for normal requests" do
         get :index, :author_id => 1
@@ -68,10 +83,69 @@ describe ArticlesController do
   end
   
   describe "GET 'show'" do
-    it "succeeds" do
-      get :show, :author_id => 1, :id => CGI::escape('/foo/bar')
-      response.should be_success
+    let(:article) { { "fields" => { "headline" => "Article title" }} }
+    
+    context "when article is returned successfully" do
+      before(:each) do
+        Article.stub(:find).and_return(article)
+      end
+
+      it "succeeds" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        response.should be_success
+      end
+
+      it "assigns author" do
+        Author.should_receive(:find).with(1)
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:author].should eq(author)
+      end
+
+      it "assigns article" do
+        Article.should_receive(:find).with('foo/bar')
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:article].should eq(article)
+      end
+
+      it "assigns fields" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:fields].should eq(article['fields'])
+      end
+
+      it "assigns title" do
+        get 'show', :author_id => 1, :id => 'foo/bar'
+        assigns[:title].should == "Article title"
+      end
     end
+    
+    context "when article is not returned" do
+      before(:each) do
+        Article.stub(:find).and_return(nil)
+      end
+      
+      it "404s" do
+        lambda {
+          get :show, :author_id => 1, :id => 'foo/bar'
+        }.should raise_exception(ActionController::RoutingError)
+      end
+    end
+    
+    context "when Article raises a GuardianApiError exception" do
+      before(:each) do
+        Article.stub(:find).and_raise(Exceptions::GuardianApiError)
+      end
+      
+      it "assigns error" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:error].should == "There was a problem connecting to The Guardian website."
+      end
+      
+      it "assigns title" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:title].should == "Guardian article"
+      end
+    end
+    
   end
 
 end

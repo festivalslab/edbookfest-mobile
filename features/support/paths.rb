@@ -26,13 +26,13 @@ module NavigationHelpers
     when /^the author detail page for (\d+)$/
       author_path(Author.find($1))
       
-    when /^the "(\w+) (\w+)" author detail page$/
+    when /^the "(\S+) (\S+)" author detail page$/
       author_path(Author.find_by_first_name_and_last_name($1, $2))
       
-    when /^the "(\w+) (\w+)" author articles page$/
+    when /^the "(\S+) (\S+)" author articles page$/
       author_articles_path(Author.find_by_first_name_and_last_name($1, $2))
       
-    when /^the "(\w+) (\w+)" author article detail page for (.*)$/
+    when /^the "(\S+) (\S+)" author article detail page for (.*)$/
       author_article_path(Author.find_by_first_name_and_last_name($1, $2), $3)
       
     when /^the book detail page for (\d)$/

@@ -4,13 +4,22 @@ class ArticlesController < ApplicationController
   layout :set_layout
   
   def index
-    @author = Author.find(params[:author_id])
+    @author = Author.find params[:author_id]
     @title = "#{@author.full_name} – Guardian articles"
     @articles = Article.search @author.full_name
+  rescue Exceptions::GuardianApiError => e
+    @error = e.message
   end
   
   def show
-    
+    @author = Author.find params[:author_id]
+    @article = Article.find params[:id]
+    not_found if @article.nil?
+    @fields = @article['fields']
+    @title = @fields['headline']
+  rescue Exceptions::GuardianApiError => e
+    @error = e.message
+    @title = "Guardian article"
   end
   
 protected
