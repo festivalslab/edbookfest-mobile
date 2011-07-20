@@ -11,7 +11,7 @@
     %time{:datetime => @article['webPublicationDate']}= format_string_date(@article['webPublicationDate'], :short)
     
   .article-body
-    = raw(@fields['body'])
+    = raw(guardian_body(@fields['body']))
     
   %a.guardian-link{:href => @article['webUrl'], :"data-remote" => ""} View article on guardian.co.uk
       

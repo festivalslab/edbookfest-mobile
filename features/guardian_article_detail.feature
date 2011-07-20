@@ -30,5 +30,17 @@ Feature: Guardian articles detail
     And tab 2 should be "Guardian articles"
     And tab 2 is highlighted
     
-
+  Scenario: If article content not available, user is informed 
+    Given there is an author called "Jo Nesbø"
+    When I am on the "Jo Nesbø" author article detail page for books/2010/nov/28/writers-favourite-translations
+    Then the article headline should be "Writers pick their favourite translations..."
+    And the article standfirst should be "Novelists and translators on the translated books that have impressed them most"
+    And the article byline should be "Various"
+    And the article publication should be "The Observer"
+    And the article publication date should have a value of "2010-11-28T00:08:00Z"
+    And the article publication date should be "28 November 2010"
+    And the article link should have a url of "http://www.guardian.co.uk/books/2010/nov/28/writers-favourite-translations"
+    And show me the page
+    And the article body should be "This article is only available on The Guardian website."
+  
   
