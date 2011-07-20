@@ -16,8 +16,8 @@ def stub_guardian_request(url, filename=nil, status=nil)
   stub_guardian url, filename, status, "application/json"
 end
 
-def stub_guardian_error_request(url, filename=nil, status=404)
-  stub_guardian url, filename, status, "text/html"
+def stub_guardian_error_request(url, filename=nil, status=404, content_type="text/html")
+  stub_guardian url, filename, status, content_type
 end
 
 def fixture_file(filename)

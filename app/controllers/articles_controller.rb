@@ -7,6 +7,8 @@ class ArticlesController < ApplicationController
     @author = Author.find params[:author_id]
     @title = "#{@author.full_name} – Guardian articles"
     @articles = Article.search @author.full_name
+  rescue Exceptions::GuardianApiError => e
+    @error = e.message
   end
   
   def show
@@ -15,6 +17,9 @@ class ArticlesController < ApplicationController
     not_found if @article.nil?
     @fields = @article['fields']
     @title = @fields['headline']
+  rescue Exceptions::GuardianApiError => e
+    @error = e.message
+    @title = "Guardian article"
   end
   
 protected

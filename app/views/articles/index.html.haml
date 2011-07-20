@@ -6,5 +6,7 @@
 - if @articles.present?
   %ul.articles.nav-list
     = render :partial => "article", :collection => @articles, :locals => { :author => @author }
+- elsif @error.present?
+  %p.content.message= @error
 - else
   %p.content.message No Guardian articles were found for #{@author.full_name}

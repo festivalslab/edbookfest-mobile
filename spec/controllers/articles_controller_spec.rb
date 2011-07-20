@@ -56,6 +56,18 @@ describe ArticlesController do
       end
     end
     
+    context "when Article raises a GuardianApiError exception" do
+      before(:each) do
+        Article.stub(:search).and_raise(Exceptions::GuardianApiError)
+      end
+      
+      it "assigns error" do
+        Article.should_receive(:search).with("Joe Bloggs")
+        get 'index', :author_id => 1
+        assigns[:error].should == "There was a problem connecting to The Guardian website."
+      end
+    end
+    
     describe "setting layout" do
       it "uses the application layout for normal requests" do
         get :index, :author_id => 1
@@ -115,6 +127,22 @@ describe ArticlesController do
         lambda {
           get :show, :author_id => 1, :id => 'foo/bar'
         }.should raise_exception(ActionController::RoutingError)
+      end
+    end
+    
+    context "when Article raises a GuardianApiError exception" do
+      before(:each) do
+        Article.stub(:find).and_raise(Exceptions::GuardianApiError)
+      end
+      
+      it "assigns error" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:error].should == "There was a problem connecting to The Guardian website."
+      end
+      
+      it "assigns title" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:title].should == "Guardian article"
       end
     end
     

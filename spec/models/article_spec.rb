@@ -48,12 +48,24 @@ describe Article do
     
     context "404 response" do
       before(:each) do
-        stub_guardian_request("search", "guardian_error_search.json", 404)
+        stub_guardian_error_request("search", "guardian_404_item.html", 404)
       end
       
       it "returns 0 items" do
         articles = Article.search "Joe Bloggs"
         articles.should have_exactly(0).items
+      end
+    end
+    
+    context "403 response (e.g. invalid API key)" do
+      before(:each) do
+        stub_guardian_error_request("search", "guardian_403_invalid.json", 403, "application/json")
+      end
+      
+      it "raises a GuardianApi exception" do
+        lambda {
+          articles = Article.search "Joe Bloggs"
+        }.should raise_exception Exceptions::GuardianApiError
       end
     end
   end
@@ -92,6 +104,18 @@ describe Article do
       it "returns nil" do
         article = Article.find "foo/bar"
         article.should be_nil
+      end
+    end
+    
+    context "403 response (e.g. invalid API key)" do
+      before(:each) do
+        stub_guardian_error_request("foo", "guardian_403_invalid.json", 403, "application/json")
+      end
+      
+      it "raises a GuardianApi exception" do
+        lambda {
+          articles = Article.find "foo/bar"
+        }.should raise_exception Exceptions::GuardianApiError
       end
     end
   end
