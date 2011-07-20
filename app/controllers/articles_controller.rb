@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   def show
     @author = Author.find params[:author_id]
     @article = Article.find params[:id]
+    not_found if @article.nil?
     @fields = @article['fields']
     @title = @fields['headline']
   end

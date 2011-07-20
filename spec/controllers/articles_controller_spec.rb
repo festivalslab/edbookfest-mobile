@@ -73,36 +73,51 @@ describe ArticlesController do
   describe "GET 'show'" do
     let(:article) { { "fields" => { "headline" => "Article title" }} }
     
-    before(:each) do
-      Article.stub(:find).and_return(article)
+    context "when article is returned successfully" do
+      before(:each) do
+        Article.stub(:find).and_return(article)
+      end
+
+      it "succeeds" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        response.should be_success
+      end
+
+      it "assigns author" do
+        Author.should_receive(:find).with(1)
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:author].should eq(author)
+      end
+
+      it "assigns article" do
+        Article.should_receive(:find).with('foo/bar')
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:article].should eq(article)
+      end
+
+      it "assigns fields" do
+        get :show, :author_id => 1, :id => 'foo/bar'
+        assigns[:fields].should eq(article['fields'])
+      end
+
+      it "assigns title" do
+        get 'show', :author_id => 1, :id => 'foo/bar'
+        assigns[:title].should == "Article title"
+      end
     end
     
-    it "succeeds" do
-      get :show, :author_id => 1, :id => 'foo/bar'
-      response.should be_success
+    context "when article is not returned" do
+      before(:each) do
+        Article.stub(:find).and_return(nil)
+      end
+      
+      it "404s" do
+        lambda {
+          get :show, :author_id => 1, :id => 'foo/bar'
+        }.should raise_exception(ActionController::RoutingError)
+      end
     end
     
-    it "assigns author" do
-      Author.should_receive(:find).with(1)
-      get :show, :author_id => 1, :id => 'foo/bar'
-      assigns[:author].should eq(author)
-    end
-    
-    it "assigns article" do
-      Article.should_receive(:find).with('foo/bar')
-      get :show, :author_id => 1, :id => 'foo/bar'
-      assigns[:article].should eq(article)
-    end
-    
-    it "assigns fields" do
-      get :show, :author_id => 1, :id => 'foo/bar'
-      assigns[:fields].should eq(article['fields'])
-    end
-    
-    it "assigns title" do
-      get 'show', :author_id => 1, :id => 'foo/bar'
-      assigns[:title].should == "Article title"
-    end
   end
 
 end

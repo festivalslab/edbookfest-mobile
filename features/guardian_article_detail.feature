@@ -40,7 +40,6 @@ Feature: Guardian articles detail
     And the article publication date should have a value of "2010-11-28T00:08:00Z"
     And the article publication date should be "28 November 2010"
     And the article link should have a url of "http://www.guardian.co.uk/books/2010/nov/28/writers-favourite-translations"
-    And show me the page
     And the article body should be "This article is only available on The Guardian website."
   
   

@@ -83,6 +83,17 @@ describe Article do
         article['fields']['byline'].should == "Robert McCrum"
       end
     end
+    
+    context "404 not found response" do
+      before(:each) do
+        stub_guardian_error_request("foo", "guardian_404_item.html", 404)
+      end
+      
+      it "returns nil" do
+        article = Article.find "foo/bar"
+        article.should be_nil
+      end
+    end
   end
 end
 
