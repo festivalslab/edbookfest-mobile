@@ -2,21 +2,25 @@
 
 = render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
 
-%article.article-detail.content
+%article.article-detail
   - if @error.present?
-    %h4= @title
-    %p.content.message= @error
+    .content
+      %h4= @title
+      %p.content.message= @error
   - else
-    %h4= @fields['headline']
-    %p.standfirst= @fields['standfirst']
+    .content
+      %p.powered-by-guardian
+        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} Powered by The Guardian
+      %h4= @fields['headline']
+      %p.standfirst= @fields['standfirst']
     .article-info 
       - if @fields['byline'].present?
         <span class="byline">#{@fields['byline']}</span>, 
       <span class="publication">#{@fields['publication']}</span>,
       %time{:datetime => @article['webPublicationDate']}= format_string_date(@article['webPublicationDate'], :short)
-    
-    .article-body
+
+    .article-body.content
       = raw(guardian_body(@fields['body'], @fields['thumbnail']))
-    
-    %a.guardian-link{:href => @article['webUrl'], :"data-remote" => ""} View article on guardian.co.uk
-      
+
+      %a.button.guardian-link{:href => @article['webUrl'], :"data-remote" => ""} View article on guardian.co.uk
+  

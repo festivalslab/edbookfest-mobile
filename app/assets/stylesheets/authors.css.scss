@@ -1,8 +1,4 @@
-body.authors {
-  h4, .tabs li.active {
-    color: $baseColorAuthors;
-  }
-  
+body.authors {  
   .main-title h4 {
     color: $nearlyWhiteText;
   }
@@ -14,6 +10,15 @@ body.authors {
     
     .nav-list a {
       color: #000;
+    }
+    
+    a.button {
+      color: #fff;
+      @include simpleGradient($baseColorAuthors, lighten($baseColorAuthors, 10%), darken($baseColorAuthors, 7%));
+      
+      &:active, &:hover {
+        @include simpleGradient(darken($baseColorAuthors, 5%), lighten($baseColorAuthors, 5%), darken($baseColorAuthors, 12%));
+      }
     }
     
     .tabs {

@@ -1,5 +1,4 @@
-h4.powered-by-guardian {
-  text-align: right;
+.powered-by-guardian {
   margin: 0;
   padding: $padding;
   
@@ -16,5 +15,51 @@ h4.powered-by-guardian {
     margin-bottom: 3px;
     @include font(12);
     color: $lightText;
+  }
+}
+
+.article-detail {
+  
+  h4 {
+    @include font(18);
+    font-weight: normal;
+  }
+  
+  .powered-by-guardian {
+    padding: 0;
+    float: right;
+    width: 106px;
+    height: 29px;
+    margin: 0 0 $vPadding $padding;
+    position: relative;
+    top: 5px;
+    
+    a {
+      width: 106px;
+      height: 29px;
+      background-image: url(#{$baseImagePath}/powered-by-guardian-s.png);
+    }
+  }
+  
+  img {
+    float: right;
+    margin: 0 0 $vPadding $padding;
+    border: 1px solid $divider;
+    max-width: 140px;
+  }
+}
+
+.article-info {
+  @include font(14);
+  color: $lightText;
+  padding: $vPadding $padding;
+  margin-bottom: 1em;
+  background-color: $nearlyWhiteBackground;
+  border-top: 1px solid $divider;
+  border-bottom: 1px solid $divider;
+  
+  .byline {
+    font-weight: bold;
+    color: $baseColor;
   }
 }
