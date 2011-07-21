@@ -27,14 +27,15 @@
     #main{:role => "main", :"data-pjax-container" => ""}
       = yield
   %footer
-    %a.back-to-top{:href => "#container", :"data-anchor" => ""} Back to top
-    %p.guardian 
-      In association with  
-      %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} The Guardian
-    %div.sites
-      Mobile site 
-      |
-      %a{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
+    .footer-links
+      %a.back-to-top{:href => "#container", :"data-anchor" => ""} Back to top
+      %a.desktop-site{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
+    .logos
+      %p.eibf.ir
+        Edinburgh International Book Festival
+      %p.guardian 
+        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} In association with The Guardian
+    
     
   = javascript_include_tag :application
   :javascript
