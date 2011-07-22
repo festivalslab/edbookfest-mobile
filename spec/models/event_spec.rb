@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'spec_helper'
 
 describe Event do
@@ -71,6 +72,23 @@ describe Event do
         @event.add_book book
         @event.books.should have_exactly(1).items
       end
+    end
+  end
+  
+  describe "#to_param" do
+    it "uses eibf_id and title to create a unique SEO friendly URL" do
+      @event = Event.create(:eibf_id => 1234, :title => "A Simple Title")
+      @event.to_param.should == "1234-a-simple-title"
+    end
+    
+    it "converts non-iso-8851-9 letters" do
+      @event = Event.create(:eibf_id => 1234, :title => "Jo Nésbø")
+      @event.to_param.should == "1234-jo-nesbo"
+    end
+    
+    it "removes non-letter characters" do
+      @event = Event.create(:eibf_id => 1234, :title => "Jo Nesbø !*&§•ª¶€")
+      @event.to_param.should == "1234-jo-nesbo"
     end
   end
 end

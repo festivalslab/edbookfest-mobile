@@ -141,26 +141,26 @@ describe EventsController do
     let(:attributes) { {"title" => "My Title"} } 
     
     before(:each) do
-      Event.stub(:find).and_return attributes
+      Event.stub(:find_by_eibf_id).and_return attributes
     end
     
     it "should be successful" do
-      get :show, :id => 1
+      get :show, :id => "1234-title"
       response.should be_success
     end
     
     it "requests the event" do
-      Event.should_receive(:find).with(1)
-      get :show, :id => 1
+      Event.should_receive(:find_by_eibf_id).with("1234-title")
+      get :show, :id => "1234-title"
     end
     
     it "assigns @event" do
-      get :show, :id => 1
+      get :show, :id => "1234-title"
       assigns[:event].should eq attributes
     end
     
     it "assigns @title" do
-      get :show, :id => 1
+      get :show, :id => "1234-title"
       assigns[:title].should eq "My Title"
     end
   end

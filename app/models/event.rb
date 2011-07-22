@@ -8,6 +8,10 @@ class Event < ActiveRecord::Base
     where("events.date = ? AND events.event_type = ?", date, event_type).order("events.start_time ASC, events.title ASC")
   end
   
+  def to_param
+    "#{eibf_id}-#{title.parameterize}"
+  end
+  
   def add_author(author)
     authors << author
   end
