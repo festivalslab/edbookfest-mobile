@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'spec_helper'
 
 describe Book do
@@ -22,6 +24,14 @@ describe Book do
     it "selects a book that has no events" do
       @book.save
       Book.without_events.should have_exactly(1).items
+    end
+  end
+  
+  describe "#to_param" do
+    it "creates an id out of eibf_id and title" do
+      @book.eibf_id = 1234
+      @book.title = "Book Title With non-iso ChåractÉrs"
+      @book.to_param.should == "1234-book-title-with-non-iso-characters"
     end
   end
 end
