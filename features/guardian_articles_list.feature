@@ -3,6 +3,7 @@ Feature: Guardian articles list
   As a festival-goer
   I want to view a list of the 10 latest Guardian articles mentioning an author
 
+  @guardianapi
   Scenario: Author article page shows correct page details
     Given there is an author called "Joe Bloggs"
     When I go to the "Joe Bloggs" author articles page
@@ -10,11 +11,13 @@ Feature: Guardian articles list
     And the section title should be "Authors"
     And the page heading should be "Joe Bloggs"
   
+  @guardianapi
   Scenario: Author article page shows articles (real API)
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author articles page
     Then I should see at least 1 article
   
+  @guardianapi
   Scenario: Author article page shows correct article details
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author articles page
@@ -23,12 +26,14 @@ Feature: Guardian articles list
     And article 1 should have date text
     And article 1 should link to an article
 
+  @guardianapi
   Scenario: Author article page shows message when there are no articles
     Given there is an author called "Alksadlfkjoi Bkajlaksdjflk"
     When I go to the "Alksadlfkjoi Bkajlaksdjflk" author articles page
     Then I should see 0 articles
     And I should see "No Guardian articles were found for Alksadlfkjoi Bkajlaksdjflk"
     
+  @guardianapi
   Scenario: Tab navigation navigates between author pages
     Given there is an author called "Joe Bloggs"
     When I go to the "Joe Bloggs" author articles page

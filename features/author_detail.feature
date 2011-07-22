@@ -29,6 +29,7 @@ Feature: Author detail
     And tab 2 should be "Guardian articles"
     And tab 1 is highlighted
   
+  @guardianapi
   Scenario: Tab navigation navigates between author pages
     Given there is an author called "Joe Bloggs"
     When I go to the "Joe Bloggs" author detail page

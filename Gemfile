@@ -25,6 +25,8 @@ group :development, :test do
   gem 'jasmine'
   gem 'fakeweb', :require => false
   gem 'fakeweb-matcher', :require => false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do
