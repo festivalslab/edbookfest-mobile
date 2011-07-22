@@ -9,3 +9,7 @@ Given /^there (?:is|are) (\d+) books? featured at the "([^\"]*)" event$/ do |boo
   end
   event.save
 end
+
+Given /^there is a book called "([^\"]*)" with isbn (\d+)$/ do |book_title, isbn|
+  book = Factory.create(:book, :title => book_title, :isbn => isbn)
+end
