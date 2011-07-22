@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'spec_helper'
 
 describe Author do
@@ -30,6 +31,15 @@ describe Author do
       @author.first_name = "Joe"
       @author.last_name = "Bloggs"
       @author.full_name.should == "Joe Bloggs"
+    end
+  end
+  
+  describe "#to_param" do
+    it "creates a friendly URL from eibf_id, first name and surname" do
+      @author.first_name = "Jo"
+      @author.last_name = "Nesbø"
+      @author.eibf_id = "1234"
+      @author.to_param.should == "1234-jo-nesbo"
     end
   end
 end

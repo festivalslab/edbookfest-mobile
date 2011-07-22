@@ -3,7 +3,7 @@ class AuthorsController < ApplicationController
   layout :set_layout
   
   def show
-    @author = Author.find(params[:id])
+    @author = Author.find_by_eibf_id(params[:id])
     @title = @author.full_name
   end
 

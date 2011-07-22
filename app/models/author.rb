@@ -6,6 +6,10 @@ class Author < ActiveRecord::Base
     includes(:appearances).where( :appearances => { :event_id => nil } )
   end
   
+  def to_param
+    "#{eibf_id}-#{full_name.parameterize}"
+  end
+  
   def full_name
     "#{first_name} #{last_name}"
   end

@@ -30,7 +30,7 @@ end
 
 Then /^article (\d+) should link to an article$/ do |index|
   link = find selector_for("article #{index} link")
-  link['href'].should =~ /authors\/\d+\/articles\/.+$/
+  link['href'].should =~ /authors\/\d+[a-zA-Z0-9_-]+\/articles\/.+$/
 end
 
 Then /^I should be on the "(\w+) (\w+)" author article detail page for "([^\"]*)"$/ do |first_name, last_name, article_id|
