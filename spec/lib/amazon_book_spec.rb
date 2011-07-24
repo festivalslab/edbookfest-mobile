@@ -22,7 +22,7 @@ describe AmazonBook do
     let(:response) { get_response(isbn) } 
     
     before(:each) do
-      @amazon_book = AmazonBook.new(response)
+      @amazon_book = AmazonBook.new response
     end
     
     it "returns the author" do
@@ -61,7 +61,7 @@ describe AmazonBook do
     let(:response) { get_response(isbn) }
     
     before(:each) do
-      @amazon_book = AmazonBook.new(response)
+      @amazon_book = AmazonBook.new response
     end
     
     it "returns nil when asking for the description" do
@@ -80,7 +80,7 @@ describe AmazonBook do
     let(:response) { get_response(isbn) }
     
     before(:each) do
-      @amazon_book = AmazonBook.new(response)
+      @amazon_book = AmazonBook.new response
     end
     
     it "returns nil when asking for the jacket image" do

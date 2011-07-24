@@ -35,9 +35,27 @@ Feature: Book detail page
     When I go to the "The Leopard" book detail page
     Then the book amazon review should not be present
     
-  @wip
   @amazon_lookup
   Scenario: Book jacket image not shown when not present
     Given there is a book called "The Stolen Sister" with isbn 9781846471292
     When I go to the "The Stolen Sister" book detail page
     Then the book jacket image should not be present
+    
+  @amazon_lookup
+  Scenario: Only book title and author is shown for an unsuccessful amazon lookup
+    Given there is a book called "An Unknown Book" with isbn 9780000000000
+    When I go to the "An Unknown Book" book detail page
+    Then the title should be "An Unknown Book"
+    And the section title should be "Books"
+    And the page heading should be "An Unknown Book"
+    And I should see "Details for An Unknown Book could not be found."
+    And the book authors should not be present
+    And the book jacket image should not be present
+    And the book short description should not be present
+    And the book amazon review should not be present
+    And the book publisher should not be present
+    And the book publication date should not be present
+    And the book page count should not be present
+  
+  
+  

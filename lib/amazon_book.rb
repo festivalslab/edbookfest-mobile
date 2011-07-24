@@ -25,7 +25,8 @@ class AmazonBook
   end
   
   def publication_date
-    Date.parse @response['PublicationDate'].first
+    date = @response['PublicationDate']
+    (date.empty?) ? nil : Date.parse(date.first)
   end
   
   def page_count

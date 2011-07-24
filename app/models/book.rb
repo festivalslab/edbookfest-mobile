@@ -20,6 +20,7 @@ class Book < ActiveRecord::Base
       'ResponseGroup' => 'Images,ItemAttributes,EditorialReview',
       'SearchIndex' => 'Books'
     }
-    AmazonBook.new(request.get)
+    response = request.get
+    (response.has_errors?) ? nil : AmazonBook.new(response)
   end
 end
