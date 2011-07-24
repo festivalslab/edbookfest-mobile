@@ -3,8 +3,8 @@
   - if @amazon_book.present?
     - if @amazon_book.jacket_image.present?
       %img.jacket{:src => @amazon_book.jacket_image, :alt => "Book jacket for #{@book.title}"}
-    - if @amazon_book.author.present?
-      %h4.authors= @amazon_book.author
+    - if @amazon_book.authors.present?
+      %h4.authors= @amazon_book.authors.join(", ")
     - if @amazon_book.product_description.present?
       %p.short-description= @amazon_book.product_description
     - if @amazon_book.amazon_review.present?

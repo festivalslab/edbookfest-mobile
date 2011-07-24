@@ -56,6 +56,10 @@ Feature: Book detail page
     And the book publisher should not be present
     And the book publication date should not be present
     And the book page count should not be present
-  
-  
+    
+  @amazon_lookup
+  Scenario: Where there are multiple authors, all are shown
+    Given there is a book called "Pathways" with isbn 9780852652268
+    When I go to the "Pathways" book detail page
+    Then the book authors should be "David Stewart, Nicholas Rudd-Jones"
   

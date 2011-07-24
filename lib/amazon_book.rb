@@ -3,8 +3,8 @@ class AmazonBook
     @response = response
   end
   
-  def author
-    @response['Author'].first
+  def authors
+    @response['Author']
   end
   
   def product_description

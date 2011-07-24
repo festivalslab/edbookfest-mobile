@@ -26,7 +26,7 @@ describe AmazonBook do
     end
     
     it "returns the author" do
-      @amazon_book.author.should == "Ian Rankin"
+      @amazon_book.authors.should == ["Ian Rankin"]
     end
     
     it "returns the product description" do
@@ -85,6 +85,21 @@ describe AmazonBook do
     
     it "returns nil when asking for the jacket image" do
       @amazon_book.jacket_image.should be_nil
+    end
+  end
+  
+  context "valid response with multiple authors" do
+    use_vcr_cassette "amazon_book"
+    
+    let(:isbn) { "9780852652268" } # Pathways by David Stewart and Nicholas Rudd-Jones
+    let(:response) { get_response(isbn) }
+    
+    before(:each) do
+      @amazon_book = AmazonBook.new response
+    end
+    
+    it "returns an array of authors" do
+      @amazon_book.authors.should == ["David Stewart", "Nicholas Rudd-Jones"]
     end
   end
 end
