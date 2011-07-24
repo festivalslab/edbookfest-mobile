@@ -12,7 +12,8 @@ class AmazonBook
   end
   
   def jacket_image
-    @response['MediumImage'].first['URL']
+    image_item = @response['MediumImage']
+    (image_item.empty?) ? nil : image_item.first['URL']
   end
   
   def amazon_review

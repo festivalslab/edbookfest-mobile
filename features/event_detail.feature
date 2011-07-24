@@ -81,12 +81,16 @@ Feature: Event detail
     Then I should not see "Featured books"
     And the event should not have books
     
+  Scenario: Book image is not shown if empty
+    Given there is 1 book featured at the "Author debate" event without an image
+    When I go to the "Author debate" event detail page
+    Then the event should have 1 book
+    And event book 1 image is not present
+  
   @amazon_lookup
   Scenario: Event detail page links to featured books
     Given there are 2 books featured at the "Author debate" event
     When I go to the "Author debate" event detail page
     And I click on book 1
     Then I should be on the book detail page for book 1
-  
-  
   

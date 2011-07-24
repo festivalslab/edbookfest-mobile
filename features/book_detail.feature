@@ -34,3 +34,10 @@ Feature: Book detail page
     Given there is a book called "The Leopard" with isbn 9780099548973
     When I go to the "The Leopard" book detail page
     Then the book amazon review should not be present
+    
+  @wip
+  @amazon_lookup
+  Scenario: Book jacket image not shown when not present
+    Given there is a book called "The Stolen Sister" with isbn 9781846471292
+    When I go to the "The Stolen Sister" book detail page
+    Then the book jacket image should not be present

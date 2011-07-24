@@ -1,8 +1,12 @@
-Given /^there (?:is|are) (\d+) books? featured at the "([^\"]*)" event$/ do |book_count, event_title|
+Given /^there (?:is|are) (\d+) books? featured at the "([^\"]*)" event( without an image)?$/ do |book_count, event_title, no_image|
   event = Factory.build :event, :title => event_title
   books = []
   book_count.to_i.times do |i|
-    books.push Factory.build(:book)
+    if no_image
+      books.push Factory.build(:book, :amazon_image => "")
+    else
+      books.push Factory.build(:book)
+    end
   end
   book_count.to_i.times do |i|
     featured_book = Factory.create :featured_book, :event => event, :book => books[i]

@@ -83,7 +83,7 @@ Then /^I should be on the author detail page for author (\d+)$/ do |index|
   current_path.should == path_to("the author detail page for #{index}")
 end
 
-Then /^the event should have (\d+) books$/ do |book_count|
+Then /^the event should have (\d+) books?$/ do |book_count|
   page.should have_css('ul.books li', :count => book_count)
 end
 
@@ -104,4 +104,9 @@ end
 Then /^event book (\d+) image is "([^\"]*)"$/ do |index, image_url|
   book = page.find(event_detail_selector_for("book #{index}"))
   book.find('img')['src'].should == image_url
+end
+
+Then /^event book (\d+) image is not present$/ do |index|
+  book = page.find(event_detail_selector_for("book #{index}"))
+  book.should_not have_css('img')
 end

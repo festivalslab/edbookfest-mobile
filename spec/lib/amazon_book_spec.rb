@@ -72,4 +72,19 @@ describe AmazonBook do
       @amazon_book.amazon_review.should be_nil
     end
   end
+  
+  context "valid response without jacket image" do
+    use_vcr_cassette "amazon_book"
+    
+    let(:isbn) { "9781846471292" } # The Stolen Sister by Joan Lingard 
+    let(:response) { get_response(isbn) }
+    
+    before(:each) do
+      @amazon_book = AmazonBook.new(response)
+    end
+    
+    it "returns nil when asking for the jacket image" do
+      @amazon_book.jacket_image.should be_nil
+    end
+  end
 end
