@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find_by_eibf_id(params[:id])
     @title = @book.title
+    @amazon_book = @book.amazon_lookup
   end
   
 protected

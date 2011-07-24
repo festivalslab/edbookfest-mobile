@@ -9,4 +9,16 @@ class Book < ActiveRecord::Base
   def to_param
     "#{eibf_id}-#{title.parameterize}"
   end
+  
+  def amazon_lookup
+    request = Sucker.new
+    request << {
+      'Operation' => 'ItemLookup',
+      'IdType' => 'EAN',
+      'ItemId' => isbn.to_s,
+      'ResponseGroup' => 'Images,ItemAttributes,EditorialReview',
+      'SearchIndex' => 'Books'
+    }
+    AmazonBook.new(request.get)
+  end
 end

@@ -27,4 +27,5 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+  config.extend VCR::RSpec::Macros
 end

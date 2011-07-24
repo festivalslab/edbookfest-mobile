@@ -34,4 +34,17 @@ describe Book do
       @book.to_param.should == "1234-book-title-with-non-iso-characters"
     end
   end
+  
+  describe "#amazon_lookup" do
+    use_vcr_cassette "Amazon Lookup"
+    
+    let(:amazon_book) { double("AmazonBook") } 
+    
+    it "returns an AmazonBook" do
+      AmazonBook.should_receive(:new)
+      @book.isbn = "9780099548973"
+      b = @book.amazon_lookup
+    end
+    
+  end
 end

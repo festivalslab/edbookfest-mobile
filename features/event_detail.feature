@@ -61,6 +61,7 @@ Feature: Event detail
     And I click on author 1
     Then I should be on the author detail page for author 1
   
+  @amazon_lookup
   Scenario: Event detail page shows featured books
     Given there are 2 books featured at the "Author debate" event
     When I go to the "Author debate" event detail page
@@ -80,6 +81,7 @@ Feature: Event detail
     Then I should not see "Featured books"
     And the event should not have books
     
+  @amazon_lookup
   Scenario: Event detail page links to featured books
     Given there are 2 books featured at the "Author debate" event
     When I go to the "Author debate" event detail page

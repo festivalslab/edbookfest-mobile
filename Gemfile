@@ -6,6 +6,7 @@ gem 'faker'
 gem 'nokogiri'
 gem 'httparty'
 gem 'multi_json'
+gem 'sucker'
 
 group :development, :test do
   gem 'sqlite3'
@@ -25,6 +26,7 @@ group :development, :test do
   gem 'jasmine'
   gem 'fakeweb', :require => false
   gem 'fakeweb-matcher', :require => false
+  gem 'awesome_print'
 end
 
 group :test do 
