@@ -2,8 +2,10 @@
 .book-detail.content
   %img.jacket{:src => @amazon_book.jacket_image, :alt => "Book jacket for #{@book.title}"}
   %h4.authors= @amazon_book.author
-  %p.short-description= @amazon_book.product_description
-  .amazon-review= raw(@amazon_book.amazon_review)
+  - if @amazon_book.product_description.present?
+    %p.short-description= @amazon_book.product_description
+  - if @amazon_book.product_description.present?
+    .amazon-review= raw(@amazon_book.amazon_review)
   .book-details 
     <span class="publisher">#{@amazon_book.publisher}</span>,
     <time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time>,

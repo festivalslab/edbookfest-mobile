@@ -22,3 +22,15 @@ Feature: Book detail page
     And the book publisher should be "Orion"
     And the book publication date should be "5 August 2010"
     And the book page count should be "496 pages"
+    
+  @amazon_lookup
+  Scenario: Description not shown when not available
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    When I go to the "The Leopard" book detail page
+    Then the book short description should not be present
+  
+  @amazon_lookup
+  Scenario: Amazon review not shown when not available
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    When I go to the "The Leopard" book detail page
+    Then the book amazon review should not be present

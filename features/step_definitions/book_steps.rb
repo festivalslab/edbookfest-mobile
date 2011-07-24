@@ -25,3 +25,7 @@ end
 Then /^the book (.*) should contain "([^\"]*)"$/ do |field, value|
   page.should have_css book_selector_for(field), :content => value
 end
+
+Then /^the book (.*) should not be present$/ do |field|
+  page.should_not have_css book_selector_for field
+end

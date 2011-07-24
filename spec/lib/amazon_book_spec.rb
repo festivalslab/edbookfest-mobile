@@ -53,4 +53,23 @@ describe AmazonBook do
       @amazon_book.page_count.should == "496"
     end
   end
+  
+  context "valid response without review or description" do
+    use_vcr_cassette "amazon_book"
+    
+    let(:isbn) { "9780099548973" } # The Leopard by Jo Nesbo
+    let(:response) { get_response(isbn) }
+    
+    before(:each) do
+      @amazon_book = AmazonBook.new(response)
+    end
+    
+    it "returns nil when asking for the description" do
+      @amazon_book.product_description.should be_nil
+    end
+    
+    it "returns nil when asking for the amazon review" do
+      @amazon_book.amazon_review.should be_nil
+    end
+  end
 end

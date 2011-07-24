@@ -34,7 +34,8 @@ class AmazonBook
 private
   
   def review_content(type)
-    @response['EditorialReview'].select { |r| r['Source'] == type }.first['Content']
+    review_item = @response['EditorialReview'].select { |r| r['Source'] == type }
+    (review_item.empty?) ? nil : review_item.first['Content']
   end
   
 end
