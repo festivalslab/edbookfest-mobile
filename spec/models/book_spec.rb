@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Book do
   before(:each) do
-    @book = Book.new
+    @book = Book.new :isbn => "9780099548973"
   end
   
   describe "Event has_many_through association" do
@@ -42,7 +42,6 @@ describe Book do
     
     it "returns an AmazonBook" do
       AmazonBook.should_receive(:new)
-      @book.isbn = "9780099548973"
       b = @book.amazon_lookup
     end
     

@@ -62,13 +62,13 @@ describe Event do
     end
     
     it "allows a book association" do
-      @event.books.build
+      @event.books.build :isbn => "9780001234567"
       @event.should have(:no).errors_on(:books)
     end
     
     describe "#add_book" do
       it "adds a book" do
-        book = Book.create
+        book = Book.create :isbn => "9780099548973"
         @event.add_book book
         @event.books.should have_exactly(1).items
       end

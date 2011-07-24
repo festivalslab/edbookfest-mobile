@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   
   def show
     @book = Book.find_by_eibf_id(params[:id])
+    not_found if @book.isbn.empty?
     @title = @book.title
     @amazon_book = @book.amazon_lookup
   end

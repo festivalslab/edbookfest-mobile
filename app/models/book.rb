@@ -1,6 +1,7 @@
 class Book < ActiveRecord::Base
   has_many :featured_books
   has_many :events, :through => :featured_books, :uniq => true
+  validates_length_of :isbn, :is => 13
   
   def self.without_events
     includes(:featured_books).where( :featured_books => { :event_id => nil } )

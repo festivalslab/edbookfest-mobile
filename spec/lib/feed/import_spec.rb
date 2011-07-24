@@ -235,6 +235,11 @@ describe Feed::Import do
         e = Event.find_by_eibf_id(2060)
         e.books.should have_exactly(2).items
       end
+      
+      it "does not import books without isbns" do
+        import.update false
+        Book.find_by_eibf_id(7142).should be_nil
+      end
     end
   end
 end
