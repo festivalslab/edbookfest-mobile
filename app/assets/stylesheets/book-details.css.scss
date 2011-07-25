@@ -30,6 +30,8 @@
 }
 
 .book-info {
+  margin-top: $padding*2;
+  
   .publisher {
     font-weight: bold;
     color: $baseColor;

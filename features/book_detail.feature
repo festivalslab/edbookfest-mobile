@@ -62,4 +62,32 @@ Feature: Book detail page
     Given there is a book called "Pathways" with isbn 9780852652268
     When I go to the "Pathways" book detail page
     Then the book authors should be "David Stewart, Nicholas Rudd-Jones"
+
+  @amazon_lookup
+  @javascript
+  Scenario: Amazon review is invisible by default
+    Given there is a book called "The World's Wife" with isbn 9780330372220
+    When I go to the "The World's Wife" book detail page
+    Then the book amazon review should not be visible
+    And the book amazon review link should be "SHOW AMAZON REVIEW"
+
+  @amazon_lookup
+  @javascript
+  Scenario: Amazon review can be shown
+    Given there is a book called "The World's Wife" with isbn 9780330372220
+    When I go to the "The World's Wife" book detail page
+    And I click the book amazon review link
+    Then the book amazon review should be visible
+    And the book amazon review link should be "HIDE AMAZON REVIEW"
+
+  @amazon_lookup
+  @javascript
+  Scenario: Amazon review can be hidden again
+    Given there is a book called "The World's Wife" with isbn 9780330372220
+    When I go to the "The World's Wife" book detail page
+    And I click the book amazon review link
+    And I click the book amazon review link
+    Then the book amazon review should not be visible
+    And the book amazon review link should be "HOW AMAZON REVIEW"
+
   

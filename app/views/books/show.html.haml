@@ -8,8 +8,9 @@
     - if @amazon_book.product_description.present?
       %p.short-description= @amazon_book.product_description
     - if @amazon_book.amazon_review.present?
-      %h4 Amazon.co.uk review
-      .amazon-review= raw(@amazon_book.amazon_review)
+      .amazon-review
+        %h4 Amazon.co.uk review
+        = raw(@amazon_book.amazon_review)
   - if (@amazon_book.publisher.present? || @amazon_book.publication_date.present? || @amazon_book.page_count.present?)
     .book-info.info-panel
       - if @amazon_book.publisher.present?

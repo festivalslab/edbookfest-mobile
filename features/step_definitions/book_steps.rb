@@ -23,7 +23,7 @@ Then /^the book jacket image should have a url of "([^\"]*)"$/ do |url|
 end
 
 Then /^the book (.*) should be "([^\"]*)"$/ do |field, value|
-  page.should have_css book_selector_for(field), :text => value
+  page.should have_css book_selector_for(field), :text => value, :visible => true
 end
 
 Then /^the book (.*) should contain "([^\"]*)"$/ do |field, value|
@@ -32,4 +32,16 @@ end
 
 Then /^the book (.*) should not be present$/ do |field|
   page.should_not have_css book_selector_for field
+end
+
+Then /^the book (.*) should be visible$/ do |field|
+  page.should have_css book_selector_for(field), :visible => true
+end
+
+Then /^the book (.*) should not be visible$/ do |field|
+  page.should have_css book_selector_for(field), :visible => false
+end
+
+When /^I click the book amazon review link$/ do
+  page.find(book_selector_for("amazon review link")).click
 end
