@@ -2,7 +2,7 @@
   img {
     float: right;
     margin: 0 0 $vPadding $padding;
-    border: 1px solid $divider;
+    @include boxShadow(0, 2px, 4px, rgba(0,0,0,.5))
   }
   
   h4.authors {
@@ -30,10 +30,11 @@
 }
 
 .book-info {
-  margin-top: $padding*2;
+  margin-top: $padding;
+  @include font(12);
+  color: $lightText;
   
   .publisher {
     font-weight: bold;
-    color: $baseColor;
   }
 }
