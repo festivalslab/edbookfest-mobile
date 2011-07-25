@@ -22,6 +22,7 @@ Feature: Book detail page
     And the book publisher should be "Orion"
     And the book publication date should be "5 August 2010"
     And the book page count should be "496 pages"
+    And the book amazon affiliate link should have a url that contains "http://www.amazon.co.uk/Complaints-Ian-Rankin/dp/1409103471"
     
   @amazon_lookup
   Scenario: Description not shown when not available
@@ -56,6 +57,7 @@ Feature: Book detail page
     And the book publisher should not be present
     And the book publication date should not be present
     And the book page count should not be present
+    And the book amazon affiliate link should not be present
     
   @amazon_lookup
   Scenario: Where there are multiple authors, all are shown

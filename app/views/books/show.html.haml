@@ -19,6 +19,9 @@
           <time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time>,
         - if @amazon_book.page_count.present?
           <span class="page-count">#{@amazon_book.page_count} pages</span>
+    %h4 Buy this book
+    - if @amazon_book.amazon_affiliate_link.present?
+      %a.button.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link} Buy from Amazon.co.uk
 - else
   .book-detail.content
     %p Details for <em>#{@book.title}</em> could not be found.

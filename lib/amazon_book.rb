@@ -33,6 +33,10 @@ class AmazonBook
     @response['NumberOfPages'].first
   end
   
+  def amazon_affiliate_link
+    @response['DetailPageURL'].first
+  end
+  
 private
   
   def review_content(type)
