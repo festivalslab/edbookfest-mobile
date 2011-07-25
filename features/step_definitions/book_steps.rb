@@ -48,6 +48,6 @@ end
 
 Then /^the book amazon affiliate link should have a url that contains "([^\"]*)"$/ do |url_part|
   link = page.find book_selector_for("amazon affiliate link")
-  link['href'].should contain(url_part)
+  link['href'].should include(url_part)
 end
 
