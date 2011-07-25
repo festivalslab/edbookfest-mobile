@@ -15,13 +15,13 @@ module HtmlSelectorsHelpers
       ".book-detail .short-description"
       
     when "publisher"
-      ".book-detail .publisher"
+      ".book-info .publisher"
       
     when "publication date"
-      ".book-detail .publication-date"
+      ".book-info .publication-date"
       
     when "page count"
-      ".book-detail .page-count"
+      ".book-info .page-count"
       
     when "jacket image"
       ".book-detail img.jacket"

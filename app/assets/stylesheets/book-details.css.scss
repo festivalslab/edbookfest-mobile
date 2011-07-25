@@ -1,0 +1,37 @@
+.book-detail {
+  img {
+    float: right;
+    margin: 0 0 $vPadding $padding;
+    border: 1px solid $divider;
+  }
+  
+  h4.authors {
+    @include font(18);
+    font-weight: normal;
+  }
+}
+
+.amazon-review {
+  p {
+    margin: 1em 0;
+  }
+  
+  i {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+  }
+  
+  blockquote {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    margin-left: 1.3em;
+    color: $lightText;
+  }
+}
+
+.book-info {
+  .publisher {
+    font-weight: bold;
+    color: $baseColor;
+  }
+}

@@ -7,6 +7,10 @@ body.books {
     color: $nearlyWhiteText;
   }
   
+  .book-detail h4.authors {
+    color: $lightText;
+  }
+  
   #main {
     a {
       color: $baseColorBooks;

@@ -1,21 +1,23 @@
 %h3= @book.title
-.book-detail.content
-  - if @amazon_book.present?
+- if @amazon_book.present?
+  .book-detail.content
     - if @amazon_book.jacket_image.present?
       %img.jacket{:src => @amazon_book.jacket_image, :alt => "Book jacket for #{@book.title}"}
     - if @amazon_book.authors.present?
-      %h4.authors= @amazon_book.authors.join(", ")
+      %h4.authors by #{@amazon_book.authors.join(", ")}
     - if @amazon_book.product_description.present?
       %p.short-description= @amazon_book.product_description
     - if @amazon_book.amazon_review.present?
+      %h4 Amazon.co.uk review
       .amazon-review= raw(@amazon_book.amazon_review)
-    - if (@amazon_book.publisher.present? || @amazon_book.publication_date.present? || @amazon_book.page_count.present?)
-      .book-details 
-        - if @amazon_book.publisher.present?
-          <span class="publisher">#{@amazon_book.publisher}</span>,
-        - if @amazon_book.publication_date.present?
-          <time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time>,
-        - if @amazon_book.page_count.present?
-          <span class="page-count">#{@amazon_book.page_count} pages</span>
-  - else
+  - if (@amazon_book.publisher.present? || @amazon_book.publication_date.present? || @amazon_book.page_count.present?)
+    .book-info.info-panel
+      - if @amazon_book.publisher.present?
+        <span class="publisher">#{@amazon_book.publisher}</span>,
+      - if @amazon_book.publication_date.present?
+        <time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time>,
+      - if @amazon_book.page_count.present?
+        <span class="page-count">#{@amazon_book.page_count} pages</span>
+- else
+  .book-detail.content
     %p Details for <em>#{@book.title}</em> could not be found.

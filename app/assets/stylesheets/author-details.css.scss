@@ -83,15 +83,7 @@
   }
 }
 
-.article-info {
-  @include font(14);
-  color: $lightText;
-  padding: $vPadding $padding;
-  margin-bottom: 1em;
-  background-color: $nearlyWhiteBackground;
-  border-top: 1px solid $divider;
-  border-bottom: 1px solid $divider;
-  
+.article-info {  
   .byline {
     font-weight: bold;
     color: $baseColor;

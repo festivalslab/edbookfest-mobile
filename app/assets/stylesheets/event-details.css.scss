@@ -1,4 +1,4 @@
-.books {
+ul.books {
   
   a {
     height: 59px;
@@ -30,5 +30,6 @@
     left: $padding;
     top: $vPadding;
     width: 40px;
+    border: 1px solid $divider;
   }
 }
