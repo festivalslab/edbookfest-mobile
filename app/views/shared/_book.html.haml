@@ -1,5 +1,6 @@
-%li 
+%li{:class => (book.amazon_image.empty?) ? "no-image" : ""} 
   = link_to book do
     %h5.title.ellipsis= book.title
-    = image_tag(book.amazon_image, :alt => book.title)
+    - if(book.amazon_image.present?)
+      = image_tag(book.amazon_image, :alt => book.title)
     %span.arrow

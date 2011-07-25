@@ -1,8 +1,10 @@
-.books {
+ul.books {
+  
   a {
     height: 59px;
     overflow: hidden;
   }
+  
   
   .title {
     margin-left: 40px+$padding;
@@ -11,11 +13,23 @@
     top: 20px;
   }
   
+  .no-image {
+    a {
+      height: auto;
+    }
+    
+    .title {
+      margin-left: 0;
+      top: 0;
+    }
+  }
+  
   img {
     display: block;
     position: absolute;
     left: $padding;
     top: $vPadding;
     width: 40px;
+    border: 1px solid $divider;
   }
 }

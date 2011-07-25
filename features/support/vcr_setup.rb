@@ -6,5 +6,5 @@ VCR.config do |c|
 end
 
 VCR.cucumber_tags do |t|
-  t.tag '@guardianapi'
+  t.tags '@guardianapi', '@amazon_lookup'
 end

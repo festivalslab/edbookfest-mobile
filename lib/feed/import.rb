@@ -127,7 +127,8 @@ module Feed
     def process_books(event_model, event)
       event_model.books.clear
       event.css('Books>Book').each do |book|
-        event_model.add_book(update_book(event_model, book))
+        book_model = update_book(event_model, book)
+        event_model.add_book(book_model) unless book_model.nil?
       end
     end
     
@@ -135,7 +136,7 @@ module Feed
       book_eibf_id = book['eibf_id'].to_i
       b = Book.find_or_initialize_by_eibf_id(book_eibf_id)
       b.update_attributes(book_attributes(book))
-      b
+      b.valid? ? b : nil
     end
     
   end

@@ -37,6 +37,9 @@ module NavigationHelpers
       
     when /^the book detail page for (\d)$/
       book_path(Book.find($1))
+      
+    when /^the "(.*)" book detail page$/
+      book_path(Book.find_by_title($1))
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -5,7 +5,6 @@ describe AuthorsController do
   describe "GET 'show'" do
     let(:expected_theme) { "authors" }
     let(:expected_section) { "Authors" }  
-    let(:attributes) { {"first_name" => "Joe", "last_name" => "Bloggs"} } 
     let(:author) { mock_model(Author).as_null_object } 
     
     before(:each) do

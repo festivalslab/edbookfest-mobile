@@ -7,9 +7,22 @@ body.books {
     color: $nearlyWhiteText;
   }
   
+  .book-detail h4.authors {
+    color: $lightText;
+  }
+  
   #main {
     a {
       color: $baseColorBooks;
+    }
+    
+    a.button {
+      color: #fff;
+      @include simpleGradient($baseColorBooks, lighten($baseColorBooks, 10%), darken($baseColorBooks, 7%));
+      
+      &:active, &:hover {
+        @include simpleGradient(darken($baseColorBooks, 5%), lighten($baseColorBooks, 5%), darken($baseColorBooks, 12%));
+      }
     }
   }
   

@@ -38,6 +38,7 @@ GEM
     autotest-growl (0.2.9)
     autotest-rails (4.1.0)
       ZenTest
+    awesome_print (0.4.0)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
     calendar_helper (0.2.4)
@@ -110,6 +111,7 @@ GEM
     hike (1.2.0)
     httparty (0.7.8)
       crack (= 0.1.8)
+    httpclient (2.2.1)
     i18n (0.6.0)
     jasmine (1.0.2.1)
       json_pure (>= 1.4.3)
@@ -188,6 +190,9 @@ GEM
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.3)
+    sucker (2.0.0)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.4)
     term-ansicolor (1.0.5)
     therubyracer-heroku (0.8.1.pre3)
     thin (1.2.11)
@@ -218,6 +223,7 @@ DEPENDENCIES
   ZenTest
   autotest-growl
   autotest-rails
+  awesome_print
   calendar_helper
   capybara
   coffee-script
@@ -243,6 +249,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.0.rc)
   sqlite3
+  sucker
   therubyracer-heroku (= 0.8.1.pre3)
   thin
   turn
