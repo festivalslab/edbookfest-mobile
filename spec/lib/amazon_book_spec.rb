@@ -52,6 +52,10 @@ describe AmazonBook do
     it "returns the page count" do
       @amazon_book.page_count.should == "496"
     end
+    
+    it "returns the amazon affiliate link" do
+      @amazon_book.amazon_affiliate_link.should =~ /http:\/\/www\.amazon\.co\.uk\/Complaints-Ian-Rankin\/dp\/1409103471/
+    end
   end
   
   context "valid response without review or description" do

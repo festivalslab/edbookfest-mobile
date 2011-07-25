@@ -32,6 +32,9 @@ module HtmlSelectorsHelpers
     when "amazon review link"
       ".book-detail .amazon-review-link"
       
+    when "amazon affiliate link"
+      ".book-detail .amazon-affiliate-link"
+      
     else
       raise "Can't find mapping from \"#{locator}\" to a selector.\n" +
         "Now, go and add a mapping in #{__FILE__}"
