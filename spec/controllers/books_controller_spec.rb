@@ -19,6 +19,11 @@ describe BooksController do
         get :show, :id => "1234-book-title"
         response.should be_success
       end
+      
+      it "sets the cache headers to an hour" do
+        get :show, :id => "1234-book-title"
+        response.headers['Cache-Control'].should == 'public, max-age=3600'
+      end
 
       it "assigns book" do
         Book.should_receive(:find_by_eibf_id).with("1234-book-title")
