@@ -22,8 +22,9 @@
 %body{:class => @theme}
   #container
     %header
-      %h1.ir= link_to "Edinburgh International Book Festival", root_path
+      %h1.visuallyhidden Edinburgh International Book Festival
       %h2= @section
+      = link_to "Home", root_path, :class => "button home"
     #main{:role => "main", :"data-pjax-container" => ""}
       = yield
   %footer
@@ -34,7 +35,8 @@
       %p.eibf.ir
         Edinburgh International Book Festival
       %p.guardian 
-        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} In association with The Guardian
+        In association with
+        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} The Guardian
     
     
   = javascript_include_tag :application
