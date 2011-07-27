@@ -46,8 +46,8 @@ Then /^the book (.*) should not be visible$/ do |field|
   page.should have_css book_selector_for(field), :visible => false
 end
 
-Then /^the book amazon affiliate link should have a url that contains "([^\"]*)"$/ do |url_part|
-  link = page.find book_selector_for("amazon affiliate link")
+Then /^the book (.*) should have a url that contains "([^\"]*)"$/ do |field, url_part|
+  link = page.find book_selector_for(field)
   link['href'].should include(url_part)
 end
 

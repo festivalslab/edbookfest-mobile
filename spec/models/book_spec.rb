@@ -38,7 +38,7 @@ describe Book do
     end
 
     describe "#amazon_lookup" do
-      use_vcr_cassette "Amazon Lookup"
+      use_vcr_cassette "amazon lookup"
 
       let(:amazon_book) { double("AmazonBook") } 
 
@@ -46,7 +46,17 @@ describe Book do
         AmazonBook.should_receive(:new)
         b = @book.amazon_lookup
       end
-
+    end
+    
+    describe "#kindle_lookup" do
+      use_vcr_cassette "kindle lookup"
+      
+      let(:amazon_book) { double("AmazonBook") }
+      
+      it "returns an AmazonBook" do
+        AmazonBook.should_receive(:new)
+        b = @book.kindle_lookup "B002S0KB4U"
+      end
     end
   end
   

@@ -37,6 +37,11 @@ class AmazonBook
     @response['DetailPageURL'].first
   end
   
+  def kindle_asin
+    kindle_alternate = @response['AlternateVersion'].select { |av| av['Binding'] == 'Kindle Edition' }
+    (kindle_alternate.empty?) ? nil : kindle_alternate.first['ASIN']
+  end
+  
 private
   
   def review_content(type)

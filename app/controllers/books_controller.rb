@@ -7,6 +7,7 @@ class BooksController < ApplicationController
     not_found if @book.isbn.empty?
     @title = @book.title
     @amazon_book = @book.amazon_lookup
+    @kindle_book = (@amazon_book && @amazon_book.kindle_asin) ? @book.kindle_lookup(@amazon_book.kindle_asin) : nil
   end
   
 protected

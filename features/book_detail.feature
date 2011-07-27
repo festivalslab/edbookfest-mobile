@@ -91,5 +91,15 @@ Feature: Book detail page
     And I click the book amazon review link
     Then the book amazon review should not be visible
     And the book amazon review link should be "HOW AMAZON REVIEW"
-
+    
+  @kindle_lookup
+  Scenario: Kindle link shown for book that has a Kindle edition
+    Given there is a book called "Comedy Rules" with isbn 9780571277957
+    When I go to the "Comedy Rules" book detail page
+    Then the book kindle link should have a url that contains "http://www.amazon.co.uk/Comedy-Rules-Cambridge-Footlights-ebook/dp/B0056HIODM"
   
+  @kindle_lookup
+  Scenario: Kindle link not shown for book that has no Kindle edition
+    Given there is a book called "Silly Doggy" with isbn 9781848775565
+    When I go to the "Silly Doggy" book detail page
+    Then the book kindle link should not be present

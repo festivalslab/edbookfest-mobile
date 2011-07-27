@@ -22,6 +22,9 @@
     %h4 Buy this book
     - if @amazon_book.amazon_affiliate_link.present?
       %a.button.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link} Buy from Amazon.co.uk
+    - if @kindle_book.present?
+      %h4 Buy this e-book
+      %a.button.kindle-affiliate-link{:"data-remote" => "", :href => @kindle_book.amazon_affiliate_link} Buy Kindle edition
 - else
   .book-detail.content
     %p Details for <em>#{@book.title}</em> could not be found.
