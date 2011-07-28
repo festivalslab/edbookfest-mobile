@@ -37,6 +37,9 @@ module HtmlSelectorsHelpers
       
     when "kindle link"
       ".book-detail .kindle-affiliate-link"
+    
+    when "iTunes link"
+      ".book-detail .itunes-affiliate-link"
       
     else
       raise "Can't find mapping from \"#{locator}\" to a selector.\n" +
