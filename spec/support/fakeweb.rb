@@ -1,4 +1,4 @@
-FakeWeb.allow_net_connect = false
+FakeWeb.allow_net_connect = true
 
 def guardian_url(url)
   /content\.guardianapis\.com\/#{url}/

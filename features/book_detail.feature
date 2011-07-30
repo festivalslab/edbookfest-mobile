@@ -103,3 +103,16 @@ Feature: Book detail page
     Given there is a book called "Silly Doggy" with isbn 9781848775565
     When I go to the "Silly Doggy" book detail page
     Then the book kindle link should not be present
+    
+  @itunes_lookup
+  Scenario: itunes link shown for book that has an iBooks edition
+    Given there is a book called "India" with isbn 9781846142147
+    When I go to the "India" book detail page
+    Then the book iTunes link should have a url that contains "http://itunes.apple.com/gb/book/india/id419753457"
+    
+  @itunes_lookup
+  Scenario: itunes link not shown for book that has no iBooks edition
+    Given there is a book called "Silly Doggy" with isbn 9781848775565
+    When I go to the "Silly Doggy" book detail page
+    Then the book iTunes link should not be present
+

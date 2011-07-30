@@ -96,6 +96,23 @@ describe BooksController do
         assigns[:kindle_book].should be_nil
       end
     end
+    
+    context "when there is an itunes edition" do
+      before(:each) do
+        Book.stub(:find_by_eibf_id).and_return book
+        book.stub(:isbn).and_return "9781846142147"
+        book.stub(:amazon_lookup).and_return amazon_book
+        book.stub(:itunes_lookup).and_return "http://itunes.apple.com/some/item"
+        amazon_book.stub(:kindle_asin).and_return nil
+        
+      end
+      
+      it "performs an itunes lookup" do
+        book.should_receive :itunes_lookup
+        get :show, :id => "1234-book-title"
+        assigns[:itunes_link].should == "http://itunes.apple.com/some/item"
+      end
+    end
 
   end
 end
