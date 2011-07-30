@@ -12,4 +12,13 @@ namespace :stock do
     end
   end
   
+  desc "Imports book stock information into database, creating new books as needed"
+  task :import => :environment do
+    raise "Stock feed URL missing" if ENV['EIBF_STOCK_URL'].nil?
+    url = ENV['EIBF_STOCK_URL']
+    stock = Feed::Stock.new url
+    stock.load
+    stock.update
+  end
+  
 end
