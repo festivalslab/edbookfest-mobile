@@ -56,6 +56,15 @@ class Book < ActiveRecord::Base
     end  
   end
   
+  def in_stock?
+    case stock_status
+    when "available", "limited"
+      true
+    else
+      false
+    end
+  end
+  
 private
 
   def sucker_request(options)

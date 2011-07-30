@@ -72,7 +72,7 @@ describe Book do
       end
     end
     
-    describe "#availability" do
+    describe "#availability and #in_stock?" do
       context "when book is available" do
         before(:each) do
           @book.stock_status = "available"
@@ -80,6 +80,10 @@ describe Book do
         
         it "says the book is available" do
           @book.availability.should == "is available"
+        end
+        
+        it "is in stock" do
+          @book.in_stock?.should be_true
         end
       end
       
@@ -91,6 +95,10 @@ describe Book do
         it "says the book has limited availibility" do
           @book.availability.should == "has limited availability"
         end
+        
+        it "is in stock" do
+          @book.in_stock?.should be_true
+        end
       end
       
       context "when book has no availability" do
@@ -101,11 +109,19 @@ describe Book do
         it "says the book is not available" do
           @book.availability.should == "is not available"
         end
+        
+        it "is not in stock" do
+          @book.in_stock?.should be_false
+        end
       end
       
       context "when stock_status is nil" do
         it "says the the book is not available" do
           @book.availability.should == "is not available"
+        end
+        
+        it "is not in stock" do
+          @book.in_stock?.should be_false
         end
       end
     end
