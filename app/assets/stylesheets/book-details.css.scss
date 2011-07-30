@@ -6,8 +6,9 @@
   }
   
   h4.authors {
-    @include font(18);
+    @include font(16);
     font-weight: normal;
+    margin-top: $vPadding;
   }
 }
 
