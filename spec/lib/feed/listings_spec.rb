@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Feed::Import do
-  let(:listings) { open(Rails.root + 'spec/support/listings.xml') } 
+describe Feed::Listings do
+  let(:listings_file) { open(Rails.root + 'spec/support/listings.xml') } 
   let(:doc) { Nokogiri::XML(listings) }
   let(:url) { "http://foo.bar/woo" }
   let(:username) { "foo" } 
@@ -13,51 +13,51 @@ describe Feed::Import do
     end
     
     it "calls open with http basic authentication" do
-      import = Feed::Import.new(url, username, password)
-      import.stub!(:open)
-      import.should_receive(:open).with(url, :http_basic_authentication => [username, password])
-      import.load false
+      listings = Feed::Listings.new(url, username, password)
+      listings.stub!(:open)
+      listings.should_receive(:open).with(url, :http_basic_authentication => [username, password])
+      listings.load false
     end
     
     it "calls open with no authentication" do
-      import = Feed::Import.new(url)
-      import.stub!(:open)
-      import.should_receive(:open).with(url)
-      import.load false
+      listings = Feed::Listings.new(url)
+      listings.stub!(:open)
+      listings.should_receive(:open).with(url)
+      listings.load false
     end
     
     it "creates a Nokogiri XML doc" do
-      import = Feed::Import.new(url)
-      import.stub!(:open)
+      listings = Feed::Listings.new(url)
+      listings.stub!(:open)
       Nokogiri::XML::Document.should_receive(:parse)
-      import.load false
+      listings.load false
     end
   end
   
   describe "#update" do
-    let(:import) { Feed::Import.new(url) }
+    let(:listings) { Feed::Listings.new(url) }
     
     before(:each) do
-      import.stub!(:open).and_return(listings)
-      import.load false
+      listings.stub!(:open).and_return(listings_file)
+      listings.load false
     end
     
     describe "events" do
       let(:expected_count) { 32 } 
       
       it "creates the correct number of events" do
-        import.update false
+        listings.update false
         Event.all.count.should == expected_count
       end
       
       it "does not create duplicates" do
-        import.update false
-        import.update false
+        listings.update false
+        listings.update false
         Event.all.count.should == expected_count
       end
       
       it "creates the correct data for one event" do
-        import.update false
+        listings.update false
         e = Event.first
         e.eibf_id.should == 2055
         e.title.should == "Keep Them Reading: Book Awards"
@@ -82,47 +82,47 @@ describe Feed::Import do
           :eibf_id => 2055,
           :title => 'The original title',
         })
-        import.update false
+        listings.update false
         Event.first.title.should == "Keep Them Reading: Book Awards"
       end
       
       it "deletes events that are not in the feed" do
         Event.create :eibf_id => 1234567
-        import.update false
+        listings.update false
         Event.find_by_eibf_id(1234567).should be_nil
       end
     end
     
     describe "authors" do
-      let(:import_removed_author) { Feed::Import.new(url) }
-      let(:listings_removed_author) { open(Rails.root + 'spec/support/listings_removed_author.xml') } 
+      let(:listings_removed_author) { Feed::Listings.new(url) }
+      let(:listings_removed_author_file) { open(Rails.root + 'spec/support/listings_removed_author.xml') } 
       
       before(:each) do
-        import_removed_author.stub!(:open).and_return(listings_removed_author)
-        import_removed_author.load false
+        listings_removed_author.stub!(:open).and_return(listings_removed_author_file)
+        listings_removed_author.load false
       end
       
       it "does not create an author association where there aren't any" do
-        import.update false
+        listings.update false
         e = Event.first
         e.authors.should have_exactly(0).items
       end
       
       it "creates the correct number of authors" do
-        import.update false
+        listings.update false
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
       
       it "does not create duplicate author associations" do
-        import.update false
-        import.update false
+        listings.update false
+        listings.update false
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
       
       it "creates the correct author information" do
-        import.update false
+        listings.update false
         e = Event.find_by_eibf_id(2056)
         a1, a2 = e.authors[0], e.authors[1]
         a1.eibf_id.should == 5592
@@ -135,8 +135,8 @@ describe Feed::Import do
       end
       
       it "removes an author from the association when no longer appearing in feed" do
-        import.update false
-        import_removed_author.update false
+        listings.update false
+        listings_removed_author.update false
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(1).items
         a1 = e.authors[0]
@@ -146,20 +146,20 @@ describe Feed::Import do
       end
       
       it "deletes the orphaned author" do
-        import.update false
-        import_removed_author.update false
+        listings.update false
+        listings_removed_author.update false
         Author.find_by_eibf_id(6278).should be_nil
       end
       
       it "adds new authors when added to feed" do
-        import_removed_author.update false
-        import.update false
+        listings_removed_author.update false
+        listings.update false
         e = Event.find_by_eibf_id(2056)
         e.authors.should have_exactly(2).items
       end
       
       it "adds an image when present" do
-        import.update false
+        listings.update false
         e = Event.find_by_eibf_id(2060)
         a1 = e.authors[0]
         a1.image.should == "http://www.edbookfest.co.uk/uploads/author/Donaldson_Julia.jpg"
@@ -167,35 +167,35 @@ describe Feed::Import do
     end
     
     describe "books" do
-      let(:import_removed_book) { Feed::Import.new(url) }
-      let(:listings_removed_book) { open(Rails.root + 'spec/support/listings_removed_book.xml') } 
+      let(:listings_removed_book) { Feed::Listings.new(url) }
+      let(:listings_removed_book_file) { open(Rails.root + 'spec/support/listings_removed_book.xml') } 
       
       before(:each) do
-        import_removed_book.stub!(:open).and_return(listings_removed_book)
-        import_removed_book.load false
+        listings_removed_book.stub!(:open).and_return(listings_removed_book_file)
+        listings_removed_book.load false
       end
       
       it "does not create a book association where there aren't any" do
-        import.update false
+        listings.update false
         e = Event.first
         e.books.should have_exactly(0).items
       end
       
       it "creates the correct number of books" do
-        import.update false
+        listings.update false
         e = Event.find_by_eibf_id(2060)
         e.books.should have_exactly(2).items
       end
       
       it "does not create duplicate book associations" do
-        import.update false
-        import.update false
+        listings.update false
+        listings.update false
         e = Event.find_by_eibf_id(2060)
         e.books.should have_exactly(2).items
       end
       
       it "creates the correct book information" do
-        import.update false
+        listings.update false
         e = Event.find_by_eibf_id(2060)
         b1, b2 = e.books[0], e.books[1]
         b1.eibf_id.should == 7539
@@ -211,8 +211,8 @@ describe Feed::Import do
       end
       
       it "removes the book from the association when no longer appearing in feed" do
-        import.update false
-        import_removed_book.update false
+        listings.update false
+        listings_removed_book.update false
         e = Event.find_by_eibf_id(2060)
         e.books.should have_exactly(1).items
         b1 = e.books[0]
@@ -224,20 +224,20 @@ describe Feed::Import do
       end
       
       it "deletes the orphaned book" do
-        import.update false
-        import_removed_book.update false
+        listings.update false
+        listings_removed_book.update false
         Book.find_by_eibf_id(7539).should be_nil
       end
       
       it "adds new books when added to feed" do
-        import_removed_book.update false
-        import.update false
+        listings_removed_book.update false
+        listings.update false
         e = Event.find_by_eibf_id(2060)
         e.books.should have_exactly(2).items
       end
       
       it "does not import books without isbns" do
-        import.update false
+        listings.update false
         Book.find_by_eibf_id(7142).should be_nil
       end
     end
