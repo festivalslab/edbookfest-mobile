@@ -24,22 +24,20 @@ class Book < ActiveRecord::Base
   end
   
   def amazon_lookup
-    response = make_sucker_request(
+    sucker_request(
       'Operation' => 'ItemLookup', 
       'IdType' => 'EAN',
       'ItemId' => isbn.to_s,
       'ResponseGroup' => 'Images,ItemAttributes,EditorialReview,AlternateVersions',
       'SearchIndex' => 'Books')
-    (response.has_errors?) ? nil : AmazonBook.new(response)
   end
   
   def kindle_lookup(asin)
-    response = make_sucker_request(
+    sucker_request(
       'Operation' => 'ItemLookup',
       'IdType' => 'ASIN',
       'ItemId' => asin,
       'ResponseGroup' => 'ItemAttributes')
-    (response.has_errors?) ? nil : AmazonBook.new(response)
   end
   
   def itunes_lookup
@@ -49,10 +47,11 @@ class Book < ActiveRecord::Base
   
 private
 
-  def make_sucker_request(options)
+  def sucker_request(options)
     request = Sucker.new
     request << options
-    request.get
+    response = request.get
+    (response.has_errors?) ? nil : AmazonBook.new(response)
   end
   
 end
