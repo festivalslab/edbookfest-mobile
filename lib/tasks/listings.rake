@@ -1,4 +1,4 @@
-namespace :feed do
+namespace :listings do
   
   desc "Erase and populate database with faked data"
   task :fake => :environment do
@@ -8,7 +8,7 @@ namespace :feed do
   end
   
   desc "Imports feed from URL and updates / creates records accordingly"
-  task :listings => :environment do
+  task :import => :environment do
     raise "Feed URL missing" if ENV['EIBF_FEED_URL'].nil?
     raise "Feed username missing" if ENV['EIBF_FEED_USERNAME'].nil?
     raise "Feed password missing" if ENV['EIBF_FEED_PASSWORD'].nil?

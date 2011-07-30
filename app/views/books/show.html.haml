@@ -20,6 +20,8 @@
         - if @amazon_book.page_count.present?
           <span class="page-count">#{@amazon_book.page_count} pages</span>
     %h4 Buy this book
+    %h5 Buy from the Festival Bookshop
+    %p.availability This book #{@book.availability}.
     - if @amazon_book.amazon_affiliate_link.present?
       %a.button.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link} Buy from Amazon.co.uk
     - if @kindle_book.present? || @itunes_link.present?

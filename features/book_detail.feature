@@ -115,4 +115,28 @@ Feature: Book detail page
     Given there is a book called "Silly Doggy" with isbn 9781848775565
     When I go to the "Silly Doggy" book detail page
     Then the book iTunes link should not be present
+    
+  @amazon_lookup
+  Scenario Outline: Stock availability status is shown
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    And the book "The Leopard" has "<status>" stock availability
+    When I go to the "The Leopard" book detail page
+    Then I should see "<text>"
+
+    Examples:
+      | status    | text                               |
+      | available | This book is available             |
+      | limited   | This book has limited availability |
+      | none      | This book is not available         |
+      
+  @amazon_lookup
+  Scenario: Stock availability status is shown for book with nil stock status
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    When I go to the "The Leopard" book detail page
+    Then I should see "This book is not available"
+  
+  
+  
+  
+
 

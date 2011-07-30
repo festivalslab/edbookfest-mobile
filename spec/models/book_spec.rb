@@ -71,6 +71,44 @@ describe Book do
         @book.itunes_lookup.should be_nil
       end
     end
+    
+    describe "#availability" do
+      context "when book is available" do
+        before(:each) do
+          @book.stock_status = "available"
+        end
+        
+        it "says the book is available" do
+          @book.availability.should == "is available"
+        end
+      end
+      
+      context "when book has limited availability" do
+        before(:each) do
+          @book.stock_status = "limited"
+        end
+        
+        it "says the book has limited availibility" do
+          @book.availability.should == "has limited availability"
+        end
+      end
+      
+      context "when book has no availability" do
+        before(:each) do
+          @book.stock_status = "none"
+        end
+        
+        it "says the book is not available" do
+          @book.availability.should == "is not available"
+        end
+      end
+      
+      context "when stock_status is nil" do
+        it "says the the book is not available" do
+          @book.availability.should == "is not available"
+        end
+      end
+    end
   end
   
   context "invalid isbn" do
