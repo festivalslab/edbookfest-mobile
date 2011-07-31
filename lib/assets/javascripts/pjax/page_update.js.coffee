@@ -20,14 +20,23 @@ setSection = (section) ->
   
 scrollTop = ->
   window.scrollTo 0, 0
-
-$(document).bind 'endpjax', (ev) ->
-  pjaxEl = $ '.pjax-control'
-  if pjaxEl.length
-    setTheme pjaxEl.data 'theme'
-    setTitle pjaxEl.data 'title'
-    setSection pjaxEl.data 'section'
-    scrollTop()
+  
+showLoading = (ev) ->
+  $('#loading').css({ 'top': window.scrollY }).show()
+  
+hideLoading = (ev) ->
+  $('#loading').hide()
+  
+$(document).bind('startpjax', showLoading)
+  .bind('endpjax', hideLoading)
+  .bind('endpjax', (ev) ->
+    pjaxEl = $ '.pjax-control'
+    if pjaxEl.length
+      setTheme pjaxEl.data 'theme'
+      setTitle pjaxEl.data 'title'
+      setSection pjaxEl.data 'section'
+      scrollTop()
+  )
     
 window.eibf.pageUpdate = {
   setTheme: setTheme
