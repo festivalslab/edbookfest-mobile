@@ -1,3 +1,6 @@
+loadTimeout = null
+timeoutPeriod = 20000
+
 themes = [
   "events"
   "books"
@@ -21,15 +24,20 @@ setSection = (section) ->
 scrollTop = ->
   window.scrollTo 0, 0
   
-showLoading = (ev) ->
-  $('#loading').css({ 'top': window.scrollY }).show()
+loadTimedOut = ->
+  hideLoading()
   
-hideLoading = (ev) ->
+showLoading = ->
+  $('#loading').css({ 'top': window.scrollY }).show()
+  loadTimeout = window.setTimeout(loadTimedOut, timeoutPeriod)
+  
+hideLoading = ->
+  window.clearTimeout loadTimeout
   $('#loading').hide()
   
 $(document).bind('startpjax', showLoading)
-  .bind('endpjax', hideLoading)
   .bind('endpjax', (ev) ->
+    hideLoading()
     pjaxEl = $ '.pjax-control'
     if pjaxEl.length
       setTheme pjaxEl.data 'theme'
