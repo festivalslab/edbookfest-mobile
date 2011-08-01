@@ -1,4 +1,4 @@
-desc "Cron task called by Heroku - used to run the feed:import task"
+desc "Cron task called by Heroku"
 task :cron do
   Rake::Task["listings:import"].invoke
   Rake::Task["stock:import"].invoke
