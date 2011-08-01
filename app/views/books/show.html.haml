@@ -14,12 +14,12 @@
     - if (@amazon_book.publisher.present? || @amazon_book.publication_date.present? || @amazon_book.page_count.present?)
       .book-info
         - if @amazon_book.publisher.present?
-          <span class="publisher">#{@amazon_book.publisher}</span>,
+          <div class="publisher">#{@amazon_book.publisher}</div>
         - if @amazon_book.publication_date.present?
-          <time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time>,
+          <div><time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time></div>
         - if @amazon_book.page_count.present?
-          <span class="page-count">#{@amazon_book.page_count} pages</span>
-    %h4 Buy this book
+          <div class="page-count">#{@amazon_book.page_count} pages</div>
+    %h4.clear Buy this book
     %h5 Buy from the Festival Bookshop
     %p.availability This book #{@book.availability}.
     - if @amazon_book.amazon_affiliate_link.present?
