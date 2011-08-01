@@ -92,6 +92,16 @@ Then /^event book (\d+) should be "([^\"]*)"$/ do |index, title|
   book.should have_content title
 end
 
+Then /^event book (\d+) should be in stock$/ do |index|
+  book = find(event_detail_selector_for("book #{index}"))
+  book.should have_content "in stock"
+end
+
+Then /^event book (\d+) should not be in stock$/ do |index|
+  book = find(event_detail_selector_for("book #{index}"))
+  book.should_not have_content "in stock"
+end
+
 Then /^the event should not have books$/ do
   page.should_not have_css('ul.books')
 end

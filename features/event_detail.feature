@@ -70,11 +70,14 @@ Feature: Event detail
   @amazon_lookup
   Scenario: Event detail page shows featured books
     Given there are 2 books featured at the "Author debate" event
+    And the book "Book Title 1" has "available" stock availability
     When I go to the "Author debate" event detail page
     Then I should see "Featured books"
     And the event should have 2 books
     And event book 1 should be "Book Title 1"
     And event book 2 should be "Book Title 2"
+    And event book 1 should be in stock
+    And event book 2 should not be in stock
   
   @nowebmock
   Scenario: Event detail featured book shows correct details

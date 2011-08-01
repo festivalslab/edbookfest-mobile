@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bookstock>
+  <book isbn13="9780199119943">
+    <title>Oxford Illustrated Children's Thesaurus: 2010</title>
+    <stock>available</stock>
+    <authors/>
+  </book>
+  <book isbn13="9781444900217">
+    <title>Dear Vampa</title>
+    <stock>available</stock>
+    <authors/>
+  </book>
+  <book isbn13="9781906427528">
+    <title>Rockoholic</title>
+    <stock>limited</stock>
+    <authors>
+      <author eibf_id="9288">
+        <full_name>C.J. Skuse</full_name>
+      </author>
+    </authors>
+  </book>
+  <book isbn13="9780199119936">
+    <title>Oxford Illustrated Children's Dictionary: 2010</title>
+    <stock>limited</stock>
+    <authors/>
+  </book>
+  <book isbn13="9781862338166">
+    <title>Doodleday</title>
+    <stock>available</stock>
+    <authors/>
+  </book>
+  <book isbn13="9781902419558">
+    <title>Great Crowns of Stone: The Recumbent Stone Circles of Scotland</title>
+    <stock>none</stock>
+    <authors/>
+  </book>
+</bookstock>
