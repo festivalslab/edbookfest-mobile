@@ -30,10 +30,14 @@ describe AmazonBook do
       use_vcr_cassette "amazon_book"
 
       let(:isbn) { "9781409103479" } # The Complaints by Ian Rankin
-      let(:response) { get_lookup_response isbn } 
+      let(:response) { get_lookup_response isbn }
 
       before(:each) do
-        @amazon_book = AmazonBook.new response
+        @amazon_book = AmazonBook.new(response['Item'].first)
+      end
+      
+      it "returns the title" do
+        @amazon_book.title.should == "The Complaints"
       end
 
       it "returns the author" do
@@ -80,15 +84,15 @@ describe AmazonBook do
       let(:response) { get_lookup_response isbn }
 
       before(:each) do
-        @amazon_book = AmazonBook.new response
+        @amazon_book = AmazonBook.new(response['Item'].first)
       end
 
-      it "returns nil when asking for the description" do
-        @amazon_book.product_description.should be_nil
+      it "returns an empty string when asking for the description" do
+        @amazon_book.product_description.should == ""
       end
 
-      it "returns nil when asking for the amazon review" do
-        @amazon_book.amazon_review.should be_nil
+      it "returns an empty string when asking for the amazon review" do
+        @amazon_book.amazon_review.should == ""
       end
     end
 
@@ -99,11 +103,11 @@ describe AmazonBook do
       let(:response) { get_lookup_response isbn }
 
       before(:each) do
-        @amazon_book = AmazonBook.new response
+        @amazon_book = AmazonBook.new(response['Item'].first)
       end
 
-      it "returns nil when asking for the jacket image" do
-        @amazon_book.jacket_image.should be_nil
+      it "returns an empty string when asking for the jacket image" do
+        @amazon_book.jacket_image.should == ""
       end
     end
 
@@ -114,7 +118,7 @@ describe AmazonBook do
       let(:response) { get_lookup_response isbn }
 
       before(:each) do
-        @amazon_book = AmazonBook.new response
+        @amazon_book = AmazonBook.new(response['Item'].first)
       end
 
       it "returns an array of authors" do
@@ -129,11 +133,11 @@ describe AmazonBook do
       let(:response) { get_lookup_response isbn } 
 
       before(:each) do
-        @amazon_book = AmazonBook.new response
+        @amazon_book = AmazonBook.new(response['Item'].first)
       end
 
-      it "returns nil for the kindle_asin" do
-        @amazon_book.kindle_asin.should be_nil
+      it "returns an empty string for the kindle_asin" do
+        @amazon_book.kindle_asin.should == ""
       end
     end
   end
@@ -146,7 +150,7 @@ describe AmazonBook do
       let(:response) { get_kindle_response asin } 
 
       before(:each) do
-        @kindle_book = AmazonBook.new response
+        @kindle_book = AmazonBook.new(response['Item'].first)
       end
       
       it "returns the kindle affiliate link" do

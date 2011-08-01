@@ -5,6 +5,7 @@ class AuthorsController < ApplicationController
   def show
     @author = Author.find_by_eibf_id(params[:id])
     @title = @author.full_name
+    @books = @author.bibliography
   end
 
 protected

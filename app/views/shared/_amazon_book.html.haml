@@ -1,0 +1,6 @@
+%li{:class => (amazon_book.jacket_image.empty?) ? "no-image ellipsis" : "ellipsis"} 
+  %a{:href => "#"}
+    %h5.title.ellipsis= amazon_book.title
+    - if(amazon_book.jacket_image.present?)
+      = image_tag(amazon_book.jacket_image, :alt => amazon_book.title)
+    %span.arrow

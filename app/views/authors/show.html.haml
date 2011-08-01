@@ -1,5 +1,6 @@
 .author-detail
   %h3= @author.full_name
   = render :partial => 'tabs', :locals => { :author => @author, :active => 'Bibliography' }
-  - if @author.image.present?
-    %img.author{:src => @author.image}
+  
+  %ul.books.nav-list
+    = render(:partial => "shared/amazon_book", :collection => @books)

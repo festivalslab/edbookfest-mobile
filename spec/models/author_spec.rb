@@ -42,4 +42,17 @@ describe Author do
       @author.to_param.should == "1234-jo-nesbo"
     end
   end
+  
+  describe "#bibliography" do
+    use_vcr_cassette "amazon search"
+    
+    let(:amazon_book) { double("AmazonBook") }
+    
+    it "creates an AmazonBook objects for each book returned" do
+      @author.first_name = "Ian"
+      @author.last_name = "Rankin"
+      AmazonBook.should_receive(:new).exactly(10).times
+      @author.bibliography.length.should == 10
+    end
+  end
 end

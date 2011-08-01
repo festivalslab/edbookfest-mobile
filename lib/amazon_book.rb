@@ -1,10 +1,19 @@
 class AmazonBook
-  def initialize(response)
-    @response = response
+  def initialize(item)
+    @item = item
+  end
+  
+  def attrs
+    @item['ItemAttributes']
+  end
+  
+  def title
+    attrs['Title']
   end
   
   def authors
-    @response['Author']
+    auths = attrs['Author']
+    (auths.is_a?(String)) ? [auths] : auths
   end
   
   def product_description
@@ -12,8 +21,8 @@ class AmazonBook
   end
   
   def jacket_image
-    image_item = @response['MediumImage']
-    (image_item.empty?) ? nil : image_item.first['URL']
+    image_item = @item['MediumImage']
+    (image_item) ? image_item['URL'] : ""
   end
   
   def amazon_review
@@ -21,32 +30,34 @@ class AmazonBook
   end
   
   def publisher
-    @response['Publisher'].first
+    attrs['Publisher']
   end
   
   def publication_date
-    date = @response['PublicationDate']
-    (date.empty?) ? nil : Date.parse(date.first)
+    date = attrs['PublicationDate']
+    (date.empty?) ? nil : Date.parse(date)
   end
   
   def page_count
-    @response['NumberOfPages'].first
+    attrs['NumberOfPages']
   end
   
   def amazon_affiliate_link
-    @response['DetailPageURL'].first
+    @item['DetailPageURL']
   end
   
   def kindle_asin
-    kindle_alternate = @response['AlternateVersion'].select { |av| av['Binding'] == 'Kindle Edition' }
-    (kindle_alternate.empty?) ? nil : kindle_alternate.first['ASIN']
+    return "" if @item['AlternateVersions'].nil? or @item['AlternateVersions']['AlternateVersion'].nil?
+    kindle_alternate = @item['AlternateVersions']['AlternateVersion'].select { |av| av['Binding'] == 'Kindle Edition' }
+    (kindle_alternate.empty?) ? "" : kindle_alternate.first['ASIN']
   end
   
 private
   
   def review_content(type)
-    review_item = @response['EditorialReview'].select { |r| r['Source'] == type }
-    (review_item.empty?) ? nil : review_item.first['Content']
+    return "" if @item['EditorialReviews'].nil? or @item['EditorialReviews']['EditorialReview'].nil?
+    review_item = @item['EditorialReviews']['EditorialReview'].select { |r| r['Source'] == type }
+    (review_item.empty?) ? "" : review_item.first['Content']
   end
   
 end

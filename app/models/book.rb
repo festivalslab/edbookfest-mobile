@@ -51,7 +51,7 @@ private
     request = Sucker.new
     request << options
     response = request.get
-    (response.has_errors?) ? nil : AmazonBook.new(response)
+    (response.has_errors?) ? nil : AmazonBook.new(response['Item'].first)
   end
   
 end

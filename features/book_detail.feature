@@ -94,9 +94,9 @@ Feature: Book detail page
     
   @kindle_lookup
   Scenario: Kindle link shown for book that has a Kindle edition
-    Given there is a book called "Comedy Rules" with isbn 9780571277957
-    When I go to the "Comedy Rules" book detail page
-    Then the book kindle link should have a url that contains "http://www.amazon.co.uk/Comedy-Rules-Cambridge-Footlights-ebook/dp/B0056HIODM"
+    Given there is a book called "India" with isbn 9781846142147
+    When I go to the "India" book detail page
+    Then the book kindle link should have a url that contains "http://www.amazon.co.uk/India-A-Portrait-ebook/dp/B004NNULLI"
   
   @kindle_lookup
   Scenario: Kindle link not shown for book that has no Kindle edition

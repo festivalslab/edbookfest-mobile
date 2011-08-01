@@ -13,4 +13,23 @@ class Author < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+  
+  def bibliography
+    request = Sucker.new
+    request << { 
+      'Operation' => 'ItemSearch', 
+      'SearchIndex' => 'Books',
+      'Author' => full_name,
+      'ResponseGroup' => 'ItemAttributes,ItemIds,Images',
+      'Sort' => 'salesrank',
+      'MerchantId' => 'Amazon',
+      'Condition' => 'New'
+    }
+    response = request.get
+    books = []
+    unless response.has_errors?
+      response['Item'].each { |item| books << AmazonBook.new(item) } 
+    end
+    books
+  end
 end

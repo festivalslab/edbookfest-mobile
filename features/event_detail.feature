@@ -55,6 +55,7 @@ Feature: Event detail
     Then I should not see "Featured authors"
     And the event should not have authors
     
+  @amazon_search
   Scenario: Event detail page links to featured authors
     Given there are 2 authors appearing at the "Author debate" event
     When I go to the "Author debate" event detail page

@@ -23,3 +23,7 @@ end
 Then /^the author image is missing$/ do
   page.should_not have_css('img.author')
 end
+
+Then /^the author should have (\d+) books$/ do |book_count|
+  page.should have_css('ul.books li', :count => book_count)
+end

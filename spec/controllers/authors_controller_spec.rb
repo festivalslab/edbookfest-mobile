@@ -43,6 +43,13 @@ describe AuthorsController do
       assigns[:title].should eq("Joe Bloggs")
     end
     
+    it "requests an author bibliography" do
+      bibliography = [{'foo' => 'bar'}]
+      author.stub(:bibliography).and_return(bibliography)
+      get :show, :id => "1234-first-last"
+      assigns[:books].should eq(bibliography)
+    end
+    
     describe "setting layout" do
       it "uses the application layout for normal requests" do
         get :show, :id => "1234-first-last"
