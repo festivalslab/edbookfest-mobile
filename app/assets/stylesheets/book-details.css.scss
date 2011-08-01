@@ -1,14 +1,39 @@
 .book-detail {
   img {
     float: right;
-    margin: 0 0 $vPadding $padding;
-    @include boxShadow(0, 2px, 4px, rgba(0,0,0,.5))
+    margin: 0 0 $padding $padding;
+    @include boxShadow(0, 2px, 4px, rgba(0,0,0,.5));
+    width: 90px;
   }
   
   h4.authors {
     @include font(16);
     font-weight: normal;
     margin-top: $vPadding;
+  }
+  
+  .availability {
+    display: inline-block;
+    @include borderRadius(5px);
+    padding: $vPadding $padding;
+  }
+  
+  .available, .limited {
+    background-color: $authorsTint;
+    color: darken($baseColorAuthors, 4%);
+    
+    strong {
+      color: darken($baseColorAuthors, 8%);
+    }
+  }
+  
+  .none {
+    background-color: $nearlyWhiteBackground;
+    color: $lightText;
+    
+    strong {
+      color: $charcoal;
+    }
   }
 }
 

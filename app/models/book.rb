@@ -45,17 +45,6 @@ class Book < ActiveRecord::Base
     (res && res['results'] && res['results'][0]) ? res['results'][0]['trackViewUrl'] : nil
   end
   
-  def availability
-    case stock_status
-    when "available"
-      "is available"
-    when "limited"
-      "has limited availability"
-    else
-      "is not available"
-    end  
-  end
-  
   def in_stock?
     case stock_status
     when "available", "limited"

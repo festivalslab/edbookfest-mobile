@@ -61,3 +61,8 @@ h4 {
     margin-top: 0;
   }
 }
+
+.info {
+  @include font(12);
+  color: $lightText;
+}
