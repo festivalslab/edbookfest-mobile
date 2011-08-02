@@ -27,12 +27,17 @@ scrollTop = ->
 loadTimedOut = ->
   hideLoading()
   
-showLoading = ->
+renderLoading = ->
   $('#loading').css({ 'top': window.scrollY }).show()
-  loadTimeout = window.setTimeout(loadTimedOut, timeoutPeriod)
+
+showLoading = ->
+  renderLoading()
+  $(window).bind 'scroll', renderLoading
+  loadTimeout = window.setTimeout loadTimedOut, timeoutPeriod
   
 hideLoading = ->
   window.clearTimeout loadTimeout
+  $(window).unbind 'scroll', renderLoading
   $('#loading').hide()
   
 $(document).bind('startpjax', showLoading)

@@ -151,6 +151,7 @@ footer {
   background: #000 url(#{$baseImagePath}loading.gif) 50% 50% no-repeat;
   color: #fff;
   opacity: .7;
+  z-index: 100;
 }
 
 @media only screen and (min-width: 320px) {
