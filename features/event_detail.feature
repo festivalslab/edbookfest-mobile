@@ -3,6 +3,7 @@ Feature: Event detail
   As a festival-goer
   I want to view detailed information about an event on one page
 
+  @nowebmock
   Scenario: Event detail page has accurate information
     Given there is an event called "Joe Bloggs"
     When I go to the "Joe Bloggs" event detail page
@@ -19,7 +20,8 @@ Feature: Event detail
     And the event image should be "/event/image.jpg" with alt text "Joe Bloggs"
     And the event theme should be "Event theme"
     And the event buy tickets button should be "http://edbookfest.co.uk/event/buy"
-    
+  
+  @nowebmock  
   Scenario: Event detail page doesn't render blocks when no content is present
     Given there is an event called "Joe Bloggs" without optional data
     When I go to the "Joe Bloggs" event detail page
@@ -33,14 +35,16 @@ Feature: Event detail
     And the event buy tickets button is missing
     And the event duration is missing
     And the event venue is missing
-    
+  
+  @nowebmock  
   Scenario: Event detail page shows sold out when event is sold out
     Given there is a sold out event called "Joe Bloggs"
     When I go to the "Joe Bloggs" event detail page
     Then the event is sold out
     And the event buy tickets button is missing
     And the event price is missing
-    
+  
+  @nowebmock  
   Scenario: Event detail page shows featured authors
     Given there are 2 authors appearing at the "Author debate" event
     When I go to the "Author debate" event detail page
@@ -48,13 +52,14 @@ Feature: Event detail
     And the event should have 2 authors
     And event author 1 should be "First Last1"
     And event author 2 should be "First Last2"
-    
+  
+  @nowebmock  
   Scenario: Event detail page does not show featured authors if none exist
     Given there are 0 authors appearing at the "Author debate" event
     When I go to the "Author debate" event detail page
     Then I should not see "Featured authors"
     And the event should not have authors
-    
+
   @amazon_search
   Scenario: Event detail page links to featured authors
     Given there are 2 authors appearing at the "Author debate" event
@@ -65,23 +70,29 @@ Feature: Event detail
   @amazon_lookup
   Scenario: Event detail page shows featured books
     Given there are 2 books featured at the "Author debate" event
+    And the book "Book Title 1" has "available" stock availability
     When I go to the "Author debate" event detail page
     Then I should see "Featured books"
     And the event should have 2 books
     And event book 1 should be "Book Title 1"
     And event book 2 should be "Book Title 2"
+    And event book 1 should be in stock
+    And event book 2 should not be in stock
   
+  @nowebmock
   Scenario: Event detail featured book shows correct details
     Given there is 1 book featured at the "Author debate" event
     When I go to the "Author debate" event detail page
     Then event book 1 image is "http://book.image/image.jpg"
   
+  @nowebmock
   Scenario: Event detail page does not show featured books if none exist
     Given there are 0 books featured at the "Author debate" event
     When I go to the "Author debate" event detail page
     Then I should not see "Featured books"
     And the event should not have books
-    
+  
+  @nowebmock  
   Scenario: Book image is not shown if empty
     Given there is 1 book featured at the "Author debate" event without an image
     When I go to the "Author debate" event detail page

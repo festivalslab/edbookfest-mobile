@@ -90,7 +90,7 @@ Feature: Book detail page
     And I click the book amazon review link
     And I click the book amazon review link
     Then the book amazon review should not be visible
-    And the book amazon review link should be "HOW AMAZON REVIEW"
+    And the book amazon review link should be "SHOW AMAZON REVIEW"
     
   @kindle_lookup
   Scenario: Kindle link shown for book that has a Kindle edition
@@ -115,4 +115,28 @@ Feature: Book detail page
     Given there is a book called "Silly Doggy" with isbn 9781848775565
     When I go to the "Silly Doggy" book detail page
     Then the book iTunes link should not be present
+    
+  @amazon_lookup
+  Scenario Outline: Stock availability status is shown
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    And the book "The Leopard" has "<status>" stock availability
+    When I go to the "The Leopard" book detail page
+    Then I should see "<text>"
+
+    Examples:
+      | status    | text                                |
+      | available | This book is available              |
+      | limited   | This book has limited availability  |
+      | none      | This book is currently out of stock |
+      
+  @amazon_lookup
+  Scenario: Stock availability status is shown for book with nil stock status
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    When I go to the "The Leopard" book detail page
+    Then I should see "This book is currently out of stock"
+  
+  
+  
+  
+
 

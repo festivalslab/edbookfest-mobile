@@ -10,7 +10,7 @@ Feature: Author detail
     Then the title should be "Joe Bloggs"
     And the section title should be "Authors"
     And the page heading should be "Joe Bloggs"
-    
+  
   @amazon_search
   Scenario: Tab navigation for authors
     Given there is an author called "Joe Bloggs"

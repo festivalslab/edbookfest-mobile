@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110714115348) do
+ActiveRecord::Schema.define(:version => 20110730135559) do
 
   create_table "appearances", :force => true do |t|
     t.integer  "event_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20110714115348) do
     t.string   "amazon_image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "stock_status"
   end
 
   create_table "events", :force => true do |t|
