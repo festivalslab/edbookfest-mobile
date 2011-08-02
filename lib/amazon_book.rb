@@ -35,7 +35,12 @@ class AmazonBook
   
   def publication_date
     date = attrs['PublicationDate']
-    (date.empty?) ? nil : Date.parse(date)
+    return nil if (date.empty?)
+    begin 
+      Date.parse(date)
+    rescue
+      nil
+    end
   end
   
   def page_count

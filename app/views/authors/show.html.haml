@@ -2,5 +2,5 @@
   %h3= @author.full_name
   = render :partial => 'tabs', :locals => { :author => @author, :active => 'Bibliography' }
   
-  %ul.books.nav-list
+  %ul.amazon-books.nav-list
     = render(:partial => "shared/amazon_book", :collection => @books)

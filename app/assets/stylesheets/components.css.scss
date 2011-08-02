@@ -99,3 +99,20 @@
   border-top: 1px solid $divider;
   border-bottom: 1px solid $divider;
 }
+
+// Stock indicator
+
+.stock {
+  @include font(10);
+  @include rotate(-45);
+  
+  position: absolute;
+  padding: 1px 20px;
+  text-align: center;
+  top: .9em;
+  left: -2.1em;
+  z-index: 1;
+  color: #fff;
+  background: $baseColorBooks;
+  font-weight: bold;
+}

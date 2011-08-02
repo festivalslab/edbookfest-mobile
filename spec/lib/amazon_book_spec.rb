@@ -140,6 +140,21 @@ describe AmazonBook do
         @amazon_book.kindle_asin.should == ""
       end
     end
+    
+    context "invalid date response" do
+      use_vcr_cassette "amazon_book"
+      
+      let(:isbn) { "9783548280493" } # Kakerlaken by Jo Nesbo
+      let(:response) { get_lookup_response isbn }
+      
+      before(:each) do
+        @amazon_book = AmazonBook.new(response['Item'].first)
+      end 
+      
+      it "returns an empty string for the date" do
+        @amazon_book.publication_date.should be_nil
+      end
+    end
   end
   
   describe "kindle lookup response" do

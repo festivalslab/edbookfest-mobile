@@ -25,5 +25,15 @@ Then /^the author image is missing$/ do
 end
 
 Then /^the author should have (\d+) books$/ do |book_count|
-  page.should have_css('ul.books li', :count => book_count)
+  page.should have_css('ul.amazon-books li', :count => book_count)
+end
+
+Then /^bibliography book (\d+) (.*) should be "([^\"]*)"$/ do |index, field, value|
+  book = find "ul.amazon-books li:nth-child(#{index})"
+  book.should have_css(bibliography_selector_for(field), :text => value)
+end
+
+Then /^bibliography book (\d+) (.*) should have source of "([^\"]*)"$/ do |index, field, value|
+  book = find "ul.amazon-books li:nth-child(#{index})"
+  book.should have_css(bibliography_selector_for(field), :src => value)
 end
