@@ -40,6 +40,9 @@ module NavigationHelpers
       
     when /^the "(.*)" book detail page$/
       book_path(Book.find_by_title($1))
+    
+    when /^the book detail page with isbn \"(\d+)\"$/
+      book_path($1)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

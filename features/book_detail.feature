@@ -43,23 +43,6 @@ Feature: Book detail page
     Then the book jacket image should not be present
     
   @amazon_lookup
-  Scenario: Only book title and author is shown for an unsuccessful amazon lookup
-    Given there is a book called "An Unknown Book" with isbn 9780000000000
-    When I go to the "An Unknown Book" book detail page
-    Then the title should be "An Unknown Book"
-    And the section title should be "Books"
-    And the page heading should be "An Unknown Book"
-    And I should see "Details for An Unknown Book could not be found."
-    And the book authors should not be present
-    And the book jacket image should not be present
-    And the book short description should not be present
-    And the book amazon review should not be present
-    And the book publisher should not be present
-    And the book publication date should not be present
-    And the book page count should not be present
-    And the book amazon affiliate link should not be present
-    
-  @amazon_lookup
   Scenario: Where there are multiple authors, all are shown
     Given there is a book called "Pathways" with isbn 9780852652268
     When I go to the "Pathways" book detail page
@@ -134,9 +117,13 @@ Feature: Book detail page
     Given there is a book called "The Leopard" with isbn 9780099548973
     When I go to the "The Leopard" book detail page
     Then I should see "This book is currently out of stock"
-  
-  
-  
-  
-
-
+    
+  @amazon_lookup
+  Scenario: Book detail shown for book that has no model
+    When I go to the book detail page with isbn "9780007276912"
+    Then the book authors should be "Mark Mills"
+    And the book jacket image should have a url of "http://ecx.images-amazon.com/images/I/51KyDgk59IL._SL160_.jpg"
+    And the book publisher should be "Harper"
+    And the book publication date should be "7 July 2011"
+    And the book page count should be "400 pages"
+    And the book amazon affiliate link should have a url that contains "http://www.amazon.co.uk/House-Hanged-Mark-Mills/dp/0007276915" 

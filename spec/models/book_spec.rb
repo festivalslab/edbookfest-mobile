@@ -8,6 +8,7 @@ describe Book do
     before(:each) do
       @book = Book.new :isbn => "9780099548973"
       @book_with_itunes = Book.new :isbn => "9781846142147"
+      @book_wihout_itunes = Book.new :isbn => "9780689837593"
     end
 
     describe "Event has_many_through association" do
@@ -66,8 +67,8 @@ describe Book do
         @book_with_itunes.itunes_lookup.should == "http://itunes.apple.com/gb/book/india/id419753457?mt=11&uo=4"
       end
       
-      it "returns nil for a book that has now itunes edition" do
-        @book.itunes_lookup.should be_nil
+      it "returns nil for a book that has no itunes edition" do
+        @book_wihout_itunes.itunes_lookup.should be_nil
       end
     end
     

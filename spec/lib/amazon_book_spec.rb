@@ -49,7 +49,7 @@ describe AmazonBook do
       end
 
       it "returns the jacket image" do
-        @amazon_book.jacket_image.should == "http://ecx.images-amazon.com/images/I/51sg218Ru8L._SL160_.jpg"
+        @amazon_book.jacket_image.should == "http://ecx.images-amazon.com/images/I/41pZW0BOBqL._SL160_.jpg"
       end
 
       it "returns the amazon review" do

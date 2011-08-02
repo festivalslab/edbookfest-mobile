@@ -3,7 +3,7 @@ require 'spec_helper'
 describe BooksController do
   describe "GET 'show'" do
     let(:book) { mock_model(Book).as_null_object }
-    let(:amazon_book) { double "AmazonBook" }
+    let(:amazon_book) { double("AmazonBook").as_null_object }
     
     context "when book model is present" do
       before(:each) do
@@ -30,7 +30,7 @@ describe BooksController do
       end
 
       it "assigns @title" do
-        book.stub(:title).and_return("Book Title")
+        amazon_book.stub(:title).and_return "Book Title"
         get :show, :id => "9780001234567890"
         assigns[:title].should == "Book Title"
       end
@@ -91,7 +91,6 @@ describe BooksController do
         book.stub(:amazon_lookup).and_return amazon_book
         book.stub(:itunes_lookup).and_return "http://itunes.apple.com/some/item"
         amazon_book.stub(:kindle_asin).and_return nil
-        
       end
       
       it "performs an itunes lookup" do
@@ -100,6 +99,38 @@ describe BooksController do
         assigns[:itunes_link].should == "http://itunes.apple.com/some/item"
       end
     end
+    
+    context "when there is no book model but there is a valid amazon response" do
+      before(:each) do
+        Book.stub(:find_by_isbn).and_return nil
+        Book.stub(:new).and_return book
+        amazon_book.stub(:kindle_asin).and_return "ABC123"
+      end
 
+      it "should be successful" do
+        get :show, :id => "9780001234567890"
+        response.should be_success
+      end
+      
+      it "assigns a new book" do
+        Book.should_receive(:new).with(:isbn => "9780001234567890")
+        get :show, :id => "9780001234567890"
+        assigns[:book].should == book
+      end
+    end
+
+    context "when there is no book model and no amazon response" do
+      before(:each) do
+        Book.stub(:find_by_isbn).and_return nil
+        Book.stub(:new).and_return book
+        book.stub(:amazon_lookup).and_return nil
+      end
+      
+      it "404s" do
+        lambda {
+          get :show, :id => "9780001234567890"
+        }.should raise_exception(ActionController::RoutingError) 
+      end
+    end
   end
 end

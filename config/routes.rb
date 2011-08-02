@@ -11,7 +11,11 @@ EdbookfestMobile::Application.routes.draw do
       end
     end
   end
-  resources :books, :only => [:show]
+  resources :books, :only => [:show] do
+    member do
+      get :show, :constraints => {:id => /978\d{10}/}
+    end
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
