@@ -20,7 +20,7 @@ class Book < ActiveRecord::Base
   end
   
   def to_param
-    "#{eibf_id}-#{title.parameterize}"
+    isbn
   end
   
   def amazon_lookup

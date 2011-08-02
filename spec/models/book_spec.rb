@@ -31,10 +31,9 @@ describe Book do
     end
 
     describe "#to_param" do
-      it "creates an id out of eibf_id and title" do
-        @book.eibf_id = 1234
-        @book.title = "Book Title With non-iso ChåractÉrs"
-        @book.to_param.should == "1234-book-title-with-non-iso-characters"
+      it "uses isbn as the id" do
+        @book.isbn = "9780001234567890"
+        @book.to_param.should == "9780001234567890"
       end
     end
 

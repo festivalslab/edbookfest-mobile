@@ -3,8 +3,7 @@ class BooksController < ApplicationController
   layout :set_layout
   
   def show
-    @book = Book.find_by_eibf_id(params[:id])
-    not_found if @book.isbn.empty?
+    @book = Book.find_by_isbn(params[:id])
     @title = @book.title
     @amazon_book = @book.amazon_lookup
     @kindle_book = (@amazon_book && @amazon_book.kindle_asin) ? @book.kindle_lookup(@amazon_book.kindle_asin) : nil
