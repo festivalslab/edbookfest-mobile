@@ -32,6 +32,7 @@ end
 group :test do 
   gem 'vcr'
   gem 'webmock'
+  gem 'webmock-disabler'
 end
 
 group :production do

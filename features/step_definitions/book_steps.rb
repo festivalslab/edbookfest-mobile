@@ -18,6 +18,11 @@ Given /^there is a book called "([^\"]*)" with isbn (\d+)$/ do |book_title, isbn
   book = Factory.create :book, :title => book_title, :isbn => isbn
 end
 
+Given /^the book "([^\"]*)" has "([^\"]*)" stock availability$/ do |book_title, availibility|
+  book = Book.find_by_title book_title
+  book.update_attribute :stock_status, availibility
+end
+
 When /^I click the book amazon review link$/ do
   page.find(book_selector_for("amazon review link")).click
 end
@@ -49,5 +54,9 @@ end
 Then /^the book (.*) should have a url that contains "([^\"]*)"$/ do |field, url_part|
   link = page.find book_selector_for(field)
   link['href'].should include(url_part)
+end
+
+Then /^the stock availability is "([^\"]*)"$/ do |availibility|
+  page.should have_css book_selector_for("availibility"), :text => availibility
 end
 
