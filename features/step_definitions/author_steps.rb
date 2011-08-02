@@ -28,6 +28,10 @@ Then /^the author should have (\d+) books$/ do |book_count|
   page.should have_css('ul.amazon-books li', :count => book_count)
 end
 
+Then /^the author should not have books$/ do
+  page.should_not have_css('ul.amazon-books')
+end
+
 Then /^bibliography book (\d+) (.*) should be "([^\"]*)"$/ do |index, field, value|
   book = find "ul.amazon-books li:nth-child(#{index})"
   book.should have_css(bibliography_selector_for(field), :text => value)

@@ -42,3 +42,10 @@ Feature: Author detail
     And bibliography book 1 publication date should be "7 August 2008"
     And bibliography book 1 jacket image should have source of "http://ecx.images-amazon.com/images/I/419MNIz1-nL._SL160_.jpg"
   
+  @amazon_search
+  Scenario: Bibliography shows message when no books found
+    Given there is an author called "Blkajlasdkf Boiulkjwlkjefr"
+    When I go to the "Blkajlasdkf Boiulkjwlkjefr" author detail page
+    Then the author should not have books
+    And I should see "Sorry, no books were found for Blkajlasdkf Boiulkjwlkjefr"
+  

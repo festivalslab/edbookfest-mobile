@@ -54,5 +54,11 @@ describe Author do
       AmazonBook.should_receive(:new).exactly(10).times
       @author.bibliography.length.should == 10
     end
+    
+    it "returns an empty array if the author has no books" do
+      @author.first_name = "Bkjasdlkfjlksda"
+      @author.last_name = "Sasdflkjadsfjas"
+      @author.bibliography.length.should == 0
+    end
   end
 end
