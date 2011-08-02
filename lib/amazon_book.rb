@@ -7,6 +7,10 @@ class AmazonBook
     @item['ItemAttributes']
   end
   
+  def isbn
+    attrs['EAN']
+  end
+  
   def title
     attrs['Title']
   end

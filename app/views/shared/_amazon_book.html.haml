@@ -1,11 +1,12 @@
-%li{:class => (amazon_book.jacket_image.empty?) ? "no-image ellipsis" : "ellipsis"} 
-  %a{:href => "#"}
-    .details
-      %h5.title.ellipsis= amazon_book.title
-      - if(amazon_book.authors.present?) 
-        %p.authors.ellipsis= amazon_book.authors.join(", ")
-      - if(amazon_book.publication_date.present?)
-        %time.publication-date.ellipsis{:datetime => amazon_book.publication_date.to_s}= amazon_book.publication_date.to_s(:short)
-    - if(amazon_book.jacket_image.present?)
-      = image_tag(amazon_book.jacket_image, :alt => amazon_book.title)
-    %span.arrow
+- if amazon_book.isbn.present?
+  %li{:class => (amazon_book.jacket_image.empty?) ? "no-image ellipsis" : "ellipsis"} 
+    = link_to book_path(amazon_book.isbn) do
+      .details
+        %h5.title.ellipsis= amazon_book.title
+        - if(amazon_book.authors.present?) 
+          %p.authors.ellipsis= amazon_book.authors.join(", ")
+        - if(amazon_book.publication_date.present?)
+          %time.publication-date.ellipsis{:datetime => amazon_book.publication_date.to_s}= amazon_book.publication_date.to_s(:short)
+      - if(amazon_book.jacket_image.present?)
+        = image_tag(amazon_book.jacket_image, :alt => amazon_book.title)
+      %span.arrow

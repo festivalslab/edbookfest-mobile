@@ -75,6 +75,10 @@ describe AmazonBook do
       it "returns the kindle edition ASIN" do
         @amazon_book.kindle_asin.should == "B002S0KB4U"
       end
+      
+      it "returns the isbn" do
+        @amazon_book.isbn.should == "9781409103479"
+      end
     end
 
     context "valid response without review or description" do

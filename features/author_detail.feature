@@ -28,10 +28,10 @@ Feature: Author detail
     Then I am on the "Joe Bloggs" author articles page
     
   @amazon_search
-  Scenario: Bibliography shows 10 books for author with more than 10 books
+  Scenario: Bibliography shows books for author
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
-    Then the author should have 10 books
+    Then the author should have 4 books
     
   @amazon_search
   Scenario: Bibliography show correct details for an item
@@ -48,4 +48,19 @@ Feature: Author detail
     When I go to the "Blkajlasdkf Boiulkjwlkjefr" author detail page
     Then the author should not have books
     And I should see "Sorry, no books were found for Blkajlasdkf Boiulkjwlkjefr"
-  
+
+  @amazon_search
+  Scenario: Bibliography links to book detail page for book in database
+    Given there is an author called "Ian Rankin"
+    And there is a book called "Knots and Crosses" with isbn 9780752883533
+    When I go to the "Ian Rankin" author detail page
+    And I click bibliography book 1
+    Then I should be on the "Knots and Crosses" book detail page
+    
+  @amazon_search
+  Scenario: Bibliography links to book detail page for book that isn't in database
+    Given there is an author called "Ian Rankin"
+    When I go to the "Ian Rankin" author detail page
+    And I click bibliography book 1
+    Then I should be on the book detail page for isbn 9780752883533
+

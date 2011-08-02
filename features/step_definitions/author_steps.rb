@@ -16,6 +16,10 @@ Given /^there are (\d+) authors appearing at the "([^\"]*)" event$/ do |author_c
   event.save
 end
 
+When /^I click bibliography book (\d+)$/ do |index|
+  find("ul.amazon-books li:nth-child(#{index}) a").click
+end
+
 Then /^the author image should be "([^\"]*)"$/ do |image_url|
   page.should have_css('img.author', :src => image_url)
 end
