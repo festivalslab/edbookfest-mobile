@@ -159,10 +159,20 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background: #000 url(#{$baseImagePath}loading.gif) 50% 50% no-repeat;
   color: #fff;
+  background-color: #000;
   opacity: .7;
   z-index: 100;
+  
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background: transparent url(#{$baseImagePath}loading.gif) 50% 50% no-repeat;
+    width: 100%;
+    height: 24px;
+  }
 }
 
 @media only screen and (min-width: 320px) {
