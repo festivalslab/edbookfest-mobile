@@ -56,4 +56,13 @@ h4 {
   p {
     margin: 0 0 1em 0;
   }
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.info {
+  @include font(12);
+  color: $lightText;
 }

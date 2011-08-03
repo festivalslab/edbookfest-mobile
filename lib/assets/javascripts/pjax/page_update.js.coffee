@@ -1,3 +1,6 @@
+loadTimeout = null
+timeoutPeriod = 20000
+
 themes = [
   "events"
   "books"
@@ -20,14 +23,33 @@ setSection = (section) ->
   
 scrollTop = ->
   window.scrollTo 0, 0
+  
+loadTimedOut = ->
+  hideLoading()
+  
+renderLoading = ->
+  $('#loading').css({ 'top': window.scrollY }).show()
 
-$(document).bind 'endpjax', (ev) ->
-  pjaxEl = $ '.pjax-control'
-  if pjaxEl.length
-    setTheme pjaxEl.data 'theme'
-    setTitle pjaxEl.data 'title'
-    setSection pjaxEl.data 'section'
-    scrollTop()
+showLoading = ->
+  renderLoading()
+  $(window).bind 'scroll', renderLoading
+  loadTimeout = window.setTimeout loadTimedOut, timeoutPeriod
+  
+hideLoading = ->
+  window.clearTimeout loadTimeout
+  $(window).unbind 'scroll', renderLoading
+  $('#loading').hide()
+  
+$(document).bind('startpjax', showLoading)
+  .bind('endpjax', (ev) ->
+    hideLoading()
+    pjaxEl = $ '.pjax-control'
+    if pjaxEl.length
+      setTheme pjaxEl.data 'theme'
+      setTitle pjaxEl.data 'title'
+      setSection pjaxEl.data 'section'
+      scrollTop()
+  )
     
 window.eibf.pageUpdate = {
   setTheme: setTheme

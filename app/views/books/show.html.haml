@@ -14,14 +14,24 @@
     - if (@amazon_book.publisher.present? || @amazon_book.publication_date.present? || @amazon_book.page_count.present?)
       .book-info
         - if @amazon_book.publisher.present?
-          <span class="publisher">#{@amazon_book.publisher}</span>,
+          <div class="publisher">#{@amazon_book.publisher}</div>
         - if @amazon_book.publication_date.present?
-          <time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time>,
+          <div><time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time></div>
         - if @amazon_book.page_count.present?
-          <span class="page-count">#{@amazon_book.page_count} pages</span>
-    %h4 Buy this book
+          <div class="page-count">#{@amazon_book.page_count} pages</div>
+    %h4 Festival Bookshops
+    = raw(availability(@book.stock_status))
+    %p.info Our independent bookshops are open in Charlotte Square Gardens every day during the festival.
     - if @amazon_book.amazon_affiliate_link.present?
-      %a.button.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link} Buy from Amazon.co.uk
+      %h4 Buy online
+      %a.button.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link} from Amazon.co.uk
+    - if @kindle_book.present? || @itunes_link.present?
+      %h4 E-book
+      - if @kindle_book.present?
+        %a.button.kindle-affiliate-link{:"data-remote" => "", :href => @kindle_book.amazon_affiliate_link} Buy for Kindle
+      - if @itunes_link.present?
+        %a.button.itunes-affiliate-link{:"data-remote" => "", :href => @itunes_link} Buy for iPad &amp; iPhone
+      
 - else
   .book-detail.content
     %p Details for <em>#{@book.title}</em> could not be found.

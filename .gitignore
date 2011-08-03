@@ -8,3 +8,4 @@ chromedriver.log
 public/javascripts/compiled/*
 features/support/cassettes/*
 spec/support/cassettes/*
+rerun.txt

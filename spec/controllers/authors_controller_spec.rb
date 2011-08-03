@@ -16,6 +16,11 @@ describe AuthorsController do
       response.should be_success
     end
     
+    it "sets the cache headers to an hour" do
+      get :show, :id => "1234-first-last"
+      response.headers['Cache-Control'].should == 'public, max-age=3600'
+    end
+    
     it "assigns @theme" do
       get :show, :id => "1234-first-last"
       assigns[:theme].should eq(expected_theme)

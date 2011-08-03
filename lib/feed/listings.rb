@@ -7,10 +7,10 @@ module Feed
   # 
   # Usage:
   # 
-  #   import = Import.new(url, username, pasword)
-  #   import.load
-  #   import.update
-  class Import
+  #   listings = Feed::Listings.new(url, username, pasword)
+  #   listings.load
+  #   listings.update
+  class Listings
     
     def initialize(url, username = nil, password = nil)
       @url, @username, @password = url, username, password

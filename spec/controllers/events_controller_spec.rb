@@ -32,6 +32,11 @@ describe EventsController do
       response.should be_success
     end
     
+    it "sets the cache headers to an hour" do
+      get :calendar
+      response.headers['Cache-Control'].should == 'public, max-age=3600'
+    end
+    
     it "assigns @theme" do
       get :calendar
       assigns[:theme].should eq(expected_theme)
@@ -71,6 +76,11 @@ describe EventsController do
         it "should be successful" do
           get :index, :date => date.to_s
           response.should be_success
+        end
+        
+        it "sets the cache headers to an hour" do
+          get :index, :date => date.to_s
+          response.headers['Cache-Control'].should == 'public, max-age=3600'
         end
         
         it "assigns @theme" do
@@ -147,6 +157,11 @@ describe EventsController do
     it "should be successful" do
       get :show, :id => "1234-title"
       response.should be_success
+    end
+    
+    it "sets the cache headers to an hour" do
+      get :show, :id => "1234-title"
+      response.headers['Cache-Control'].should == 'public, max-age=3600'
     end
     
     it "requests the event" do

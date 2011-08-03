@@ -32,4 +32,19 @@ ul.books {
     width: 40px;
     border: 1px solid $divider;
   }
+  
+  .stock {
+    @include font(10);
+    @include rotate(-45);
+    
+    position: absolute;
+    padding: 1px 20px;
+    text-align: center;
+    top: .9em;
+    left: -2.1em;
+    z-index: 1;
+    color: #fff;
+    background: $baseColorBooks;
+    font-weight: bold;
+  }
 }

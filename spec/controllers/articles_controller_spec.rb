@@ -15,6 +15,11 @@ describe ArticlesController do
       Article.stub(:search).and_return(["1","2"])
     end
     
+    it "sets the cache headers to an hour" do
+      get :index, :author_id => "1234-joe-bloggs"
+      response.headers['Cache-Control'].should == 'public, max-age=3600'
+    end
+    
     it "assigns author" do
       Author.should_receive(:find_by_eibf_id).with("1234-joe-bloggs")
       get :index, :author_id => "1234-joe-bloggs"
@@ -93,6 +98,11 @@ describe ArticlesController do
       it "succeeds" do
         get :show, :author_id => "1234-joe-bloggs", :id => 'foo/bar'
         response.should be_success
+      end
+      
+      it "sets the cache headers to an hour" do
+        get :show, :author_id => "1234-joe-bloggs", :id => 'foo/bar'
+        response.headers['Cache-Control'].should == 'public, max-age=3600'
       end
 
       it "assigns author" do

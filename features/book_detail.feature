@@ -90,6 +90,53 @@ Feature: Book detail page
     And I click the book amazon review link
     And I click the book amazon review link
     Then the book amazon review should not be visible
-    And the book amazon review link should be "HOW AMAZON REVIEW"
-
+    And the book amazon review link should be "SHOW AMAZON REVIEW"
+    
+  @kindle_lookup
+  Scenario: Kindle link shown for book that has a Kindle edition
+    Given there is a book called "Comedy Rules" with isbn 9780571277957
+    When I go to the "Comedy Rules" book detail page
+    Then the book kindle link should have a url that contains "http://www.amazon.co.uk/Comedy-Rules-Cambridge-Footlights-ebook/dp/B0056HIODM"
   
+  @kindle_lookup
+  Scenario: Kindle link not shown for book that has no Kindle edition
+    Given there is a book called "Silly Doggy" with isbn 9781848775565
+    When I go to the "Silly Doggy" book detail page
+    Then the book kindle link should not be present
+    
+  @itunes_lookup
+  Scenario: itunes link shown for book that has an iBooks edition
+    Given there is a book called "India" with isbn 9781846142147
+    When I go to the "India" book detail page
+    Then the book iTunes link should have a url that contains "http://itunes.apple.com/gb/book/india/id419753457"
+    
+  @itunes_lookup
+  Scenario: itunes link not shown for book that has no iBooks edition
+    Given there is a book called "Silly Doggy" with isbn 9781848775565
+    When I go to the "Silly Doggy" book detail page
+    Then the book iTunes link should not be present
+    
+  @amazon_lookup
+  Scenario Outline: Stock availability status is shown
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    And the book "The Leopard" has "<status>" stock availability
+    When I go to the "The Leopard" book detail page
+    Then I should see "<text>"
+
+    Examples:
+      | status    | text                                |
+      | available | This book is available              |
+      | limited   | This book has limited availability  |
+      | none      | This book is currently out of stock |
+      
+  @amazon_lookup
+  Scenario: Stock availability status is shown for book with nil stock status
+    Given there is a book called "The Leopard" with isbn 9780099548973
+    When I go to the "The Leopard" book detail page
+    Then I should see "This book is currently out of stock"
+  
+  
+  
+  
+
+
