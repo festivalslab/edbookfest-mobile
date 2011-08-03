@@ -31,7 +31,7 @@ Feature: Author detail
   Scenario: Bibliography shows books for author
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
-    Then the author should have 4 books
+    Then the author should have 5 books
     
   @amazon_search
   Scenario: Bibliography show correct details for an item

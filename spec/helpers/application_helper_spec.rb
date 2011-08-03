@@ -27,4 +27,34 @@ describe ApplicationHelper do
       output.should == "17 Jul 2011"
     end
   end
+  
+  describe "#jacket_image" do
+    let(:amazon_book) { double("AmazonBook").as_null_object }
+    let(:image) { "http://domain.com/some/image.jpg" }
+    let(:book_title) { "Book Title" } 
+    
+    before(:each) do
+      amazon_book.stub(:title).and_return book_title
+    end
+    
+    context "jacket image is present" do
+      before(:each) do
+        amazon_book.stub(:jacket_image).and_return image
+      end
+      
+      it "outputs the image" do
+        jacket_image(amazon_book.jacket_image, book_title).should == "<img alt=\"#{book_title}\" src=\"#{image}\" />"
+      end
+    end
+    
+    context "jacket image is not present" do
+      before(:each) do
+        amazon_book.stub(:jacket_image).and_return ""
+      end
+      
+      it "outputs the default image" do
+        jacket_image(amazon_book.jacket_image).should == "<img alt=\"\" src=\"/images/jacket-default.png\" />"
+      end
+    end
+  end
 end
