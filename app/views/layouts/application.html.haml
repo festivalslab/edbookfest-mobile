@@ -12,6 +12,7 @@
   %link{:href => image_path("h/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
   %link{:href => image_path("m/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
   %link{:href => image_path("l/apple-touch-icon-precomposed.png"), :rel => "apple-touch-icon-precomposed"}
+  %link{:href => image_path("l/apple-touch-icon.png"), :rel => "shortcut icon"}
   %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
   %link{:rel => "apple-touch-startup-image", :href => image_path("l/splash.png") }
   %meta{:content => "on", "http-equiv" => "cleartype"}
@@ -21,8 +22,9 @@
 %body{:class => @theme}
   #container
     %header
-      %h1.ir= link_to "Edinburgh International Book Festival", root_path
+      %h1.visuallyhidden Edinburgh International Book Festival
       %h2= @section
+      = link_to "Home", root_path, :class => "button home"
     #main{:role => "main", :"data-pjax-container" => ""}
       = yield
   %footer
@@ -33,9 +35,9 @@
       %p.eibf.ir
         Edinburgh International Book Festival
       %p.guardian 
-        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} In association with The Guardian
+        In association with
+        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} The Guardian
   #loading.ir{:style => "display:none"} Loading
-  
   = javascript_include_tag :application
   :javascript
     MBP.scaleFix();
