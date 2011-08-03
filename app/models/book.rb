@@ -20,7 +20,7 @@ class Book < ActiveRecord::Base
   end
   
   def to_param
-    "#{eibf_id}-#{title.parameterize}"
+    isbn
   end
   
   def amazon_lookup
@@ -60,7 +60,7 @@ private
     request = Sucker.new
     request << options
     response = request.get
-    (response.has_errors?) ? nil : AmazonBook.new(response)
+    (response.has_errors?) ? nil : AmazonBook.new(response['Item'].first)
   end
   
 end

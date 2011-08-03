@@ -1,3 +1,53 @@
+ul.amazon-books {
+  
+  margin-bottom: $padding;
+  
+  a {
+    height: 59px;
+    overflow: hidden;
+  }
+  
+  .details {
+    margin-left: 40px+$padding;
+    padding-top: 2px;
+  }
+  
+  .title {
+    font-weight: normal;
+  }
+  
+  .publication, .authors {
+    display: block;
+    @include font(12);
+    line-height: 1.5;
+    color: $lightText;
+  }
+  
+  .binding {
+    font-weight: bold;
+  }
+  
+  .no-image {
+    a {
+      height: auto;
+    }
+    
+    .title {
+      margin-left: 0;
+      top: 0;
+    }
+  }
+  
+  img {
+    display: block;
+    position: absolute;
+    left: $padding;
+    top: $vPadding;
+    width: 40px;
+    border: 1px solid $divider;
+  }
+}
+
 .powered-by-guardian {
   margin: 0;
   padding: $padding;

@@ -8,6 +8,7 @@ describe Book do
     before(:each) do
       @book = Book.new :isbn => "9780099548973"
       @book_with_itunes = Book.new :isbn => "9781846142147"
+      @book_wihout_itunes = Book.new :isbn => "9780689837593"
     end
 
     describe "Event has_many_through association" do
@@ -31,10 +32,9 @@ describe Book do
     end
 
     describe "#to_param" do
-      it "creates an id out of eibf_id and title" do
-        @book.eibf_id = 1234
-        @book.title = "Book Title With non-iso ChåractÉrs"
-        @book.to_param.should == "1234-book-title-with-non-iso-characters"
+      it "uses isbn as the id" do
+        @book.isbn = "9780001234567890"
+        @book.to_param.should == "9780001234567890"
       end
     end
 
@@ -67,8 +67,8 @@ describe Book do
         @book_with_itunes.itunes_lookup.should == "http://itunes.apple.com/gb/book/india/id419753457?mt=11&uo=4"
       end
       
-      it "returns nil for a book that has now itunes edition" do
-        @book.itunes_lookup.should be_nil
+      it "returns nil for a book that has no itunes edition" do
+        @book_wihout_itunes.itunes_lookup.should be_nil
       end
     end
     

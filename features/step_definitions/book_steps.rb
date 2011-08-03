@@ -60,3 +60,12 @@ Then /^the stock availability is "([^\"]*)"$/ do |availibility|
   page.should have_css book_selector_for("availibility"), :text => availibility
 end
 
+Then /^I should be on the "([^\"]*)" book detail page$/ do |title|
+  current_path = URI.parse(current_url).path
+  current_path.should == path_to("the \"#{title}\" book detail page")
+end
+
+Then /^I should be on the book detail page for isbn (\d+)$/ do |isbn|
+  current_path = URI.parse(current_url).path
+  current_path.should == path_to("the book detail page with isbn \"#{isbn}\"")
+end

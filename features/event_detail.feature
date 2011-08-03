@@ -59,8 +59,8 @@ Feature: Event detail
     When I go to the "Author debate" event detail page
     Then I should not see "Featured authors"
     And the event should not have authors
-  
-  @nowebmock  
+
+  @amazon_search
   Scenario: Event detail page links to featured authors
     Given there are 2 authors appearing at the "Author debate" event
     When I go to the "Author debate" event detail page

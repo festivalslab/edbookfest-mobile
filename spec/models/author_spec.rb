@@ -42,4 +42,31 @@ describe Author do
       @author.to_param.should == "1234-jo-nesbo"
     end
   end
+  
+  describe "#bibliography" do
+    use_vcr_cassette "amazon search"
+    
+    let(:amazon_book) { double("AmazonBook") }
+    
+    it "creates an AmazonBook objects for each book returned" do
+      @author.first_name = "Ian"
+      @author.last_name = "Rankin"
+      AmazonBook.should_receive(:new).exactly(10).times
+      @author.bibliography.length.should == 10
+    end
+    
+    it "returns an empty array if the author has no books" do
+      @author.first_name = "Bkjasdlkfjlksda"
+      @author.last_name = "Sasdflkjadsfjas"
+      @author.bibliography.length.should == 0
+    end
+  end
+  
+  describe "#amazon_search_link" do
+    it "returns the correct search link" do
+      @author.first_name = "Joe"
+      @author.last_name = "Bloggs"
+      @author.amazon_search_link.should == "http://www.amazon.co.uk/gp/search?index=books&keywords=Joe+Bloggs&ie=UTF8&tag=#{ENV['EIBF_AMAZON_TRACKING_ID']}"
+    end
+  end
 end
