@@ -1,6 +1,6 @@
 ul.amazon-books {
   
-  margin-bottom: $vPadding;
+  margin-bottom: $padding;
   
   a {
     height: 59px;
@@ -16,11 +16,15 @@ ul.amazon-books {
     font-weight: normal;
   }
   
-  .authors, .publication-date {
+  .publication, .authors {
     display: block;
     @include font(12);
     line-height: 1.5;
     color: $lightText;
+  }
+  
+  .binding {
+    font-weight: bold;
   }
   
   .no-image {

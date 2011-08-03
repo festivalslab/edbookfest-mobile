@@ -37,6 +37,10 @@ class AmazonBook
     attrs['Publisher']
   end
   
+  def edition_binding
+    attrs['Binding']
+  end
+  
   def publication_date
     date = attrs['PublicationDate']
     return nil if (date.empty?)

@@ -20,6 +20,9 @@ module HtmlSelectorsHelpers
     when "jacket image"
       "img"
       
+    when "binding"
+      ".binding"
+      
     when "more link"
       ".more-books"
       

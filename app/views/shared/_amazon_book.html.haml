@@ -5,8 +5,11 @@
         %h5.title.ellipsis= amazon_book.title
         - if(amazon_book.authors.present?) 
           %p.authors.ellipsis= amazon_book.authors.join(", ")
-        - if(amazon_book.publication_date.present?)
-          %time.publication-date.ellipsis{:datetime => amazon_book.publication_date.to_s}= amazon_book.publication_date.to_s(:short)
+        .publication.ellipsis
+          - if(amazon_book.edition_binding.present?)
+            <span class="binding">#{amazon_book.edition_binding}</span>
+          - if(amazon_book.publication_date.present?)
+            %time.publication-date{:datetime => amazon_book.publication_date.to_s}= amazon_book.publication_date.to_s(:short)
       = jacket_image(amazon_book.jacket_image, amazon_book.title)
       %span.arrow
       - if amazon_book.in_stock?

@@ -80,6 +80,10 @@ describe AmazonBook do
         @amazon_book.isbn.should == "9781409103479"
       end
       
+      it "returns the binding (format)" do
+        @amazon_book.edition_binding.should == "Paperback"
+      end
+      
     end
 
     context "valid response without review or description" do

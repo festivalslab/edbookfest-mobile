@@ -31,7 +31,7 @@ Feature: Author detail
   Scenario: Bibliography shows books for author
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
-    Then the author should have 5 books
+    Then the author should have 10 books
     
   @amazon_search
   Scenario: Bibliography show correct details for an item
@@ -41,6 +41,7 @@ Feature: Author detail
     And bibliography book 1 authors should be "Ian Rankin"
     And bibliography book 1 publication date should be "7 August 2008"
     And bibliography book 1 jacket image should have source of "http://ecx.images-amazon.com/images/I/419MNIz1-nL._SL160_.jpg"
+    And bibliography book 1 binding should be "Paperback" 
   
   @amazon_search
   Scenario: Bibliography shows message when no books found
