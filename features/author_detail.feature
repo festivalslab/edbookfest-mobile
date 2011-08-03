@@ -85,3 +85,12 @@ Feature: Author detail
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
     Then bibliography book 1 should not be in stock
+    
+  @amazon_search
+  Scenario: More books link shown for author with more books available
+    Given there is an author called "Ian Rankin"
+    When I go to the "Ian Rankin" author detail page
+    Then bibliography more link should have a url containing "http://www.amazon.co.uk/gp/search?index=books&keywords=Ian+Rankin"
+  
+  
+  

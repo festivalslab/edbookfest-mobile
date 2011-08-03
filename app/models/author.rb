@@ -32,4 +32,8 @@ class Author < ActiveRecord::Base
     end
     books
   end
+  
+  def amazon_search_link
+    "http://www.amazon.co.uk/gp/search?index=books&keywords=#{CGI::escape(full_name)}&ie=UTF8&tag=#{ENV['EIBF_AMAZON_TRACKING_ID']}"
+  end
 end

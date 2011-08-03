@@ -61,4 +61,12 @@ describe Author do
       @author.bibliography.length.should == 0
     end
   end
+  
+  describe "#amazon_search_link" do
+    it "returns the correct search link" do
+      @author.first_name = "Joe"
+      @author.last_name = "Bloggs"
+      @author.amazon_search_link.should == "http://www.amazon.co.uk/gp/search?index=books&keywords=Joe+Bloggs&ie=UTF8&tag=#{ENV['EIBF_AMAZON_TRACKING_ID']}"
+    end
+  end
 end

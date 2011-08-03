@@ -46,6 +46,11 @@ Then /^bibliography book (\d+) (.*) should have source of "([^\"]*)"$/ do |index
   book.should have_css(bibliography_selector_for(field), :src => value)
 end
 
+Then /^bibliography more link should have a url containing "([^\"]*)"$/ do |url|
+  link = find(bibliography_selector_for("more link"))
+  link['href'].should include(url)
+end
+
 Then /^bibliography book (\d+) should be in stock$/ do |index|
   book = find "ul.amazon-books li:nth-child(#{index})"
   book.should have_content "in stock"
