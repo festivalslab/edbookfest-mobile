@@ -61,6 +61,11 @@ class AmazonBook
     (kindle_alternate.empty?) ? "" : kindle_alternate.first['ASIN']
   end
   
+  def in_stock?
+    book = Book.find_by_isbn isbn
+    book ? book.in_stock? : false
+  end
+  
 private
   
   def review_content(type)

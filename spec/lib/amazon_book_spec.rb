@@ -79,6 +79,7 @@ describe AmazonBook do
       it "returns the isbn" do
         @amazon_book.isbn.should == "9781409103479"
       end
+      
     end
 
     context "valid response without review or description" do
@@ -176,6 +177,44 @@ describe AmazonBook do
         @kindle_book.amazon_affiliate_link.should =~ /http:\/\/www\.amazon\.co\.uk\/The-Complaints-ebook\/dp\/B002S0KB4U/
       end
       
+    end
+  end
+  
+  describe "#in_stock?" do
+    use_vcr_cassette "amazon_book"
+    
+    let(:isbn) { "9781409103479" } # The Complaints by Ian Rankin
+    let(:response) { get_lookup_response isbn }
+    let(:book) { mock_model(Book).as_null_object }
+    
+    before(:each) do
+      @amazon_book = AmazonBook.new(response['Item'].first)
+    end
+    
+    context "when there is an associated book record" do
+      before(:each) do
+        Book.stub(:find_by_isbn).and_return book
+      end
+      
+      it "returns true when book is in stock" do
+        book.should_receive(:'in_stock?').and_return true
+        @amazon_book.in_stock?.should be_true
+      end
+      
+      it "returns false when book is not in stock" do
+        book.should_receive(:'in_stock?').and_return false
+        @amazon_book.in_stock?.should_not be_true
+      end
+    end
+    
+    context "when there no associated book record" do
+      before(:each) do
+        Book.stub(:find_by_isbn).and_return nil
+      end
+      
+      it "returns false" do
+        @amazon_book.in_stock?.should_not be_true
+      end
     end
   end
 end

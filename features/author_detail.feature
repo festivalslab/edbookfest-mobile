@@ -64,3 +64,24 @@ Feature: Author detail
     And I click bibliography book 1
     Then I should be on the book detail page for isbn 9780752883533
 
+  @amazon_search
+  Scenario: In stock indicator shown for books in stock
+    Given there is an author called "Ian Rankin"
+    And there is a book called "Knots and Crosses" with isbn 9780752883533
+    And the book "Knots and Crosses" has "available" stock availability
+    When I go to the "Ian Rankin" author detail page
+    Then bibliography book 1 should be in stock
+    
+  @amazon_search
+  Scenario: In stock indicator not shown for book in db that is not in stock
+    Given there is an author called "Ian Rankin"
+    And there is a book called "Knots and Crosses" with isbn 9780752883533
+    And the book "Knots and Crosses" has "none" stock availability
+    When I go to the "Ian Rankin" author detail page
+    Then bibliography book 1 should not be in stock
+    
+  @amazon_search
+  Scenario: In stock indicator not shown for book not in db
+    Given there is an author called "Ian Rankin"
+    When I go to the "Ian Rankin" author detail page
+    Then bibliography book 1 should not be in stock

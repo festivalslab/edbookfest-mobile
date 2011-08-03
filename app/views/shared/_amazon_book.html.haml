@@ -10,3 +10,5 @@
       - if(amazon_book.jacket_image.present?)
         = image_tag(amazon_book.jacket_image, :alt => amazon_book.title)
       %span.arrow
+      - if amazon_book.in_stock?
+        %div.stock in stock
