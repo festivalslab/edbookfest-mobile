@@ -44,8 +44,8 @@ html, body {
       font-weight: normal;
       text-decoration: none;
       color: #fff;
-      background-color: rgba(0,0,0,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
+      background-color: rgba(0,0,0,.1);
+      border: 1px solid rgba(255,255,255,.15);
       display: inline-block;
       height: 32px;
       line-height: 32px;
@@ -56,14 +56,24 @@ html, body {
       }
     }
     
+    .home, .back {
+      position: absolute;
+      top: 10px;
+      padding-left: 26px;
+    }
+    
     .back {
       background-image: url(#{$baseImagePath}header-footer-arrows.png);
       background-position: 10px -50px;
       background-repeat: no-repeat;
-      position: absolute;
-      top: 13px;
-      left: 10px;
-      padding-left: 26px;
+      left: $padding;
+    }
+    
+    .home {
+      background-image: url(#{$baseImagePath}header-footer-arrows.png);
+      background-position: 10px -91px;
+      background-repeat: no-repeat;
+      right: $padding;
     }
   }
 }
@@ -118,23 +128,24 @@ footer {
     .eibf {
       display: inline-block;
       width: 98px;
-      height: 58px;
+      height: 59px;
       background: transparent url(#{$baseImagePath}footer-logo.png) 0 0 no-repeat;
     }
     
     .guardian {
       position: absolute;
-      top: 10px;
+      bottom: 10px;
       right: 10px;
       text-align: right;
       display: inline-block;
+      @include font(11);
 
       a {
         display: block;
         padding: 0;
         margin-top: 3px;
-        height: 37px;
-        width: 124px;
+        height: 22px;
+        width: 122px;
         background: transparent url(#{$baseImagePath}in-association-with-guardian.png) 0 0 no-repeat;
       }
     }
@@ -148,10 +159,20 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background: #000 url(#{$baseImagePath}loading.gif) 50% 50% no-repeat;
   color: #fff;
+  background-color: #000;
   opacity: .7;
   z-index: 100;
+  
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background: transparent url(#{$baseImagePath}loading.gif) 50% 50% no-repeat;
+    width: 100%;
+    height: 24px;
+  }
 }
 
 @media only screen and (min-width: 320px) {

@@ -1,4 +1,6 @@
 loadTimeout = null
+scrollInterval = null
+scrollIntervalTime = 100
 timeoutPeriod = 20000
 
 themes = [
@@ -24,19 +26,21 @@ setSection = (section) ->
 scrollTop = ->
   window.scrollTo 0, 0
   
-loadTimedOut = ->
-  hideLoading()
-  
+positionLoader = ->
+  $('#loading span').css({ 'top': window.scrollY + window.innerHeight/2 - 12 + 'px' })
+
 renderLoading = ->
-  $('#loading').css({ 'top': window.scrollY }).show()
+  positionLoader()
+  $('#loading').css({ 'height': window.outerHeight + 'px' }).show()
 
 showLoading = ->
   renderLoading()
-  $(window).bind 'scroll', renderLoading
-  loadTimeout = window.setTimeout loadTimedOut, timeoutPeriod
+  scrollInterval = window.setInterval positionLoader, scrollIntervalTime
+  loadTimeout = window.setTimeout hideLoading, timeoutPeriod
   
 hideLoading = ->
   window.clearTimeout loadTimeout
+  window.clearInterval scrollInterval
   $(window).unbind 'scroll', renderLoading
   $('#loading').hide()
   
