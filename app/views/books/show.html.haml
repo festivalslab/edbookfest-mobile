@@ -20,7 +20,7 @@
           <div><time class="publication-date" datetime="#{@amazon_book.publication_date.to_s}">#{@amazon_book.publication_date.to_s(:short)}</time></div>
         - if @amazon_book.page_count.present?
           <div class="page-count">#{@amazon_book.page_count} pages</div>
-    %h4 Festival Bookshops
+    %h4 Book Festival Bookshops
     = raw(availability(@book.stock_status))
     %p.info Our independent bookshops are open in Charlotte Square Gardens every day during the festival.
     - if @amazon_book.amazon_affiliate_link.present?
