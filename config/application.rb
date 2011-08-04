@@ -41,5 +41,6 @@ module EdbookfestMobile
     config.assets.enabled = true
     
     config.page_cache_minutes = 60
+    config.cron_type = "none"
   end
 end
