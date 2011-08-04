@@ -30,11 +30,15 @@ describe ApplicationHelper do
   
   describe "#jacket_image" do
     let(:amazon_book) { double("AmazonBook").as_null_object }
-    let(:image) { "http://domain.com/some/image.jpg" }
+    let(:image) { double("JacketImage") } 
+    let(:url) { "http://domain.com/some/image.jpg" }
+    let(:ratio_height) { 60 }
     let(:book_title) { "Book Title" } 
     
     before(:each) do
       amazon_book.stub(:title).and_return book_title
+      image.stub(:src).and_return url
+      image.stub(:ratio_height).and_return ratio_height
     end
     
     context "jacket image is present" do
@@ -43,7 +47,7 @@ describe ApplicationHelper do
       end
       
       it "outputs the image" do
-        jacket_image(amazon_book.jacket_image, book_title).should == "<img alt=\"#{book_title}\" src=\"#{image}\" />"
+        jacket_image(amazon_book.jacket_image, 40, book_title).should == "<img alt=\"#{book_title}\" height=\"60\" src=\"#{url}\" width=\"40\" />"
       end
     end
     
@@ -53,7 +57,7 @@ describe ApplicationHelper do
       end
       
       it "outputs the default image" do
-        jacket_image(amazon_book.jacket_image).should == "<img alt=\"\" src=\"/images/jacket-default.png\" />"
+        jacket_image(amazon_book.jacket_image, 40).should == "<img alt=\"\" height=\"60\" src=\"/images/jacket-default.png\" width=\"40\" />"
       end
     end
   end

@@ -25,8 +25,10 @@ class AmazonBook
   end
   
   def jacket_image
+    return @jacket_image if @jacket_image
     image_item = @item['MediumImage']
-    (image_item) ? image_item['URL'] : ""
+    @jacket_image = (image_item) ? JacketImage.new(image_item) : ""
+    @jacket_image
   end
   
   def amazon_review

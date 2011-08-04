@@ -45,6 +45,7 @@ ul.amazon-books {
     top: $vPadding;
     width: 40px;
     border: 1px solid $divider;
+    background: #f0f0f0 url(#{$baseImagePath}jacket-default.png) 50% 50% no-repeat;
   }
 }
 
@@ -55,7 +56,7 @@ ul.amazon-books {
   a {
     width: 131px;
     height: 36px;
-    background-image: url(#{$baseImagePath}/powered-by-guardian.png);
+    background-image: url(#{$baseImagePath}powered-by-guardian.png);
   }
 }
 

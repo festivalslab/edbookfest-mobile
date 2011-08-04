@@ -10,7 +10,7 @@
             <span class="binding">#{amazon_book.edition_binding}</span>
           - if(amazon_book.publication_date.present?)
             %time.publication-date{:datetime => amazon_book.publication_date.to_s}= amazon_book.publication_date.to_s(:short)
-      = jacket_image(amazon_book.jacket_image, amazon_book.title)
+      = jacket_image(amazon_book.jacket_image, 40, amazon_book.title)
       %span.arrow
       - if amazon_book.in_stock?
         %div.stock in stock

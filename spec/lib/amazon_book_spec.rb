@@ -31,9 +31,11 @@ describe AmazonBook do
 
       let(:isbn) { "9781409103479" } # The Complaints by Ian Rankin
       let(:response) { get_lookup_response isbn }
+      let(:jacket_image) { double("JacketImage") } 
 
       before(:each) do
         @amazon_book = AmazonBook.new(response['Item'].first)
+        JacketImage.stub(:new).and_return(jacket_image)
       end
       
       it "returns the title" do
@@ -49,7 +51,8 @@ describe AmazonBook do
       end
 
       it "returns the jacket image" do
-        @amazon_book.jacket_image.should == "http://ecx.images-amazon.com/images/I/41pZW0BOBqL._SL160_.jpg"
+        JacketImage.should_receive(:new).with(response['Item'].first['MediumImage'])
+        @amazon_book.jacket_image.should == jacket_image
       end
 
       it "returns the amazon review" do
