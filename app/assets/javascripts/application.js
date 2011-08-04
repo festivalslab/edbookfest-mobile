@@ -6,3 +6,4 @@
 //= require books
 //= require events
 //= require jacket-images
+//= require analytics-outbound

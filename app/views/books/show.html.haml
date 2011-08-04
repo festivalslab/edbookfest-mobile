@@ -2,7 +2,7 @@
 - if @amazon_book.present?
   .book-detail.content.clearfix
     - if @amazon_book.jacket_image.present?
-      %a.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link}
+      %a.amazon-affiliate-link{:"data-remote" => "", :"data-analytics-action" => "Amazon book", :href => @amazon_book.amazon_affiliate_link}
         = jacket_image(@amazon_book.jacket_image, :width => 90, :alt => "Book jacket for #{@book.title}", :class => "jacket")
     - if @amazon_book.authors.present?
       %h4.authors by #{@amazon_book.authors.join(", ")}
@@ -25,13 +25,13 @@
     %p.info Our independent bookshops are open in Charlotte Square Gardens every day during the festival.
     - if @amazon_book.amazon_affiliate_link.present?
       %h4 Buy online
-      %a.button.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link} from Amazon.co.uk
+      %a.button.amazon-affiliate-link{:"data-remote" => "", :"data-analytics-action" => "Amazon book", :href => @amazon_book.amazon_affiliate_link} from Amazon.co.uk
     - if @kindle_book.present? || @itunes_link.present?
       %h4 E-book
       - if @kindle_book.present?
-        %a.button.kindle-affiliate-link{:"data-remote" => "", :href => @kindle_book.amazon_affiliate_link} Buy for Kindle
+        %a.button.kindle-affiliate-link{:"data-remote" => "", :"data-analytics-action" => "Kindle book", :href => @kindle_book.amazon_affiliate_link} Buy for Kindle
       - if @itunes_link.present?
-        %a.button.itunes-affiliate-link{:"data-remote" => "", :href => @itunes_link} Buy for iPad &amp; iPhone
+        %a.button.itunes-affiliate-link{:"data-remote" => "", :"data-analytics-action" => "iTunes book", :href => @itunes_link} Buy for iPad &amp; iPhone
       
 - else
   .book-detail.content

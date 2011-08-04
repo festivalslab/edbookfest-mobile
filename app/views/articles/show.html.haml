@@ -10,7 +10,7 @@
   - else
     .content
       %p.powered-by-guardian
-        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} Powered by The Guardian
+        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => "", :"data-analytics-action" => "Powered by The Guardian"} Powered by The Guardian
       %h4= @fields['headline']
       %p.standfirst= raw(@fields['standfirst'])
     .article-info.info-panel 
@@ -22,5 +22,5 @@
     .article-body.content
       = raw(guardian_body(@fields['body'], @fields['thumbnail']))
 
-      %a.button.guardian-link{:href => @article['webUrl'], :"data-remote" => ""} View article on guardian.co.uk
+      %a.button.guardian-link{:href => @article['webUrl'], :"data-remote" => "", :"data-analytics-action" => "Guardian article"} View article on guardian.co.uk
   

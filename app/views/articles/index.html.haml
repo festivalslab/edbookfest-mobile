@@ -1,7 +1,7 @@
 %h3= @author.full_name
 = render :partial => 'authors/tabs', :locals => { :author => @author, :active => 'Guardian articles' }
 %h4.powered-by-guardian
-  %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} Powered by The Guardian
+  %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => "", :"data-analytics-action" => "Powered by The Guardian"} Powered by The Guardian
 
 - if @articles.present?
   %ul.articles.nav-list

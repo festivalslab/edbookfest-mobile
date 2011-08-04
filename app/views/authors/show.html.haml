@@ -11,4 +11,4 @@
       %p Sorry, no books were found for #{@author.full_name}.
       
   .content
-    %a.more-books.button{:href => @author.amazon_search_link, :'data-remote' => ""} More #{@author.full_name} books on Amazon
+    %a.more-books.button{:href => @author.amazon_search_link, :'data-remote' => "", :"data-analytics-action" => "Amazon book search"} More #{@author.full_name} books on Amazon

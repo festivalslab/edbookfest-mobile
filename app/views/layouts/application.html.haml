@@ -30,13 +30,13 @@
   %footer
     .footer-links
       %a.back-to-top{:href => "#container", :"data-anchor" => ""} Back to top
-      %a.desktop-site{:href => "http://www.edbookfest.co.uk", :"data-remote" => ""} Desktop site
+      %a.desktop-site{:href => "http://www.edbookfest.co.uk", :"data-remote" => "", :"data-analytics-action" => "Desktop site"} Desktop site
     .logos
       %p.eibf.ir
         Edinburgh International Book Festival
       %p.guardian 
         In association with
-        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => ""} The Guardian
+        %a.ir{:href => "http://m.guardian.co.uk/books", :"data-remote" => "", :"data-analytics-action" => "Guardian Footer Logo"} The Guardian
   #loading{:style => "display:none"}
     %span.ir Loading
   = javascript_include_tag :application
