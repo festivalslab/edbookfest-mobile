@@ -7,10 +7,16 @@ module ApplicationHelper
     date_string.to_date.to_s format
   end
   
-  def jacket_image(image, width = 40, alt = "")
+  def jacket_image(image, options)
     ratio = 1.5
+    width = options[:width] || 40
+    attributes = {
+      :width => width,
+      :height => (image.present?) ? image.ratio_height(width) : (width * ratio).round,
+      :alt => options[:alt] || '',
+      :class => options[:class]
+    }
     image_src = (image.present? && image.src) ? image.src : image_path('jacket-default.png')
-    height = (image.present?) ? image.ratio_height(width) : (width * ratio).round
-    image_tag image_src, { :alt => alt, :width => width, :height => height }
+    image_tag image_src, attributes
   end
 end

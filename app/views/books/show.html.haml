@@ -2,7 +2,8 @@
 - if @amazon_book.present?
   .book-detail.content.clearfix
     - if @amazon_book.jacket_image.present?
-      %img.jacket{:src => @amazon_book.jacket_image, :alt => "Book jacket for #{@book.title}"}
+      %a.amazon-affiliate-link{:"data-remote" => "", :href => @amazon_book.amazon_affiliate_link}
+        = jacket_image(@amazon_book.jacket_image, :width => 90, :alt => "Book jacket for #{@book.title}", :class => "jacket")
     - if @amazon_book.authors.present?
       %h4.authors by #{@amazon_book.authors.join(", ")}
     - if @amazon_book.product_description.present?

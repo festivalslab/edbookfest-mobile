@@ -47,7 +47,7 @@ describe ApplicationHelper do
       end
       
       it "outputs the image" do
-        jacket_image(amazon_book.jacket_image, 40, book_title).should == "<img alt=\"#{book_title}\" height=\"60\" src=\"#{url}\" width=\"40\" />"
+        jacket_image(amazon_book.jacket_image, :width => 40, :alt => book_title, :class => "my-class").should == "<img alt=\"#{book_title}\" class=\"my-class\" height=\"60\" src=\"#{url}\" width=\"40\" />"
       end
     end
     
@@ -57,7 +57,7 @@ describe ApplicationHelper do
       end
       
       it "outputs the default image" do
-        jacket_image(amazon_book.jacket_image, 40).should == "<img alt=\"\" height=\"60\" src=\"/images/jacket-default.png\" width=\"40\" />"
+        jacket_image(amazon_book.jacket_image, :width => 40).should == "<img alt=\"\" height=\"60\" src=\"/images/jacket-default.png\" width=\"40\" />"
       end
     end
   end

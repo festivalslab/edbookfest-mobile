@@ -5,3 +5,4 @@
 //= require navigation
 //= require books
 //= require events
+//= require jacket-images

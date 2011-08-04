@@ -38,8 +38,8 @@ Feature: Book detail page
     
   @amazon_lookup
   Scenario: Book jacket image not shown when not present
-    Given there is a book called "The Stolen Sister" with isbn 9781846471292
-    When I go to the "The Stolen Sister" book detail page
+    Given there is a book called "Scottish Tales of Adventure: World War I" with isbn 9781841589329
+    When I go to the "Scottish Tales of Adventure: World War I" book detail page
     Then the book jacket image should not be present
     
   @amazon_lookup

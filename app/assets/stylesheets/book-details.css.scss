@@ -3,7 +3,6 @@
     float: right;
     margin: 0 0 $padding $padding;
     @include boxShadow(0, 2px, 4px, rgba(0,0,0,.5));
-    width: 90px;
   }
   
   h4.authors {
