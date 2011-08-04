@@ -1,3 +1,40 @@
+.event-detail {
+  .details {
+    @include font(14);
+    margin-bottom: $vPadding;
+    
+    time {
+      font-weight: bold;
+      display: block;
+    }
+  }
+  
+  img.event {
+    background: #f0f0f0 url(#{$baseImagePath}loading-bg.png) 50% 50% no-repeat;
+    display: block;
+    width: 100%;
+    max-width: 369px;
+    height: 283px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .buy-tickets {
+    margin-right: $padding/2;
+    margin-bottom: $vPadding;
+  }
+  
+  span.price {
+    @include font(16);
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  .description {
+    margin-bottom: $padding;
+  }
+}
+
 ul.books {
   
   a {

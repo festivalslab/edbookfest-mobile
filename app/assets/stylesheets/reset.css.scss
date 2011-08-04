@@ -64,7 +64,7 @@ input:invalid, textarea:invalid {
 button {  width: auto; overflow: visible; }
 .iem7 img { -ms-interpolation-mode: bicubic; }
 body, select, input, textarea {
-  color: #444;
+  color: $mediumText;
 }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 .nocallout {-webkit-touch-callout: none;}
