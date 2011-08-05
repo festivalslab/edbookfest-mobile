@@ -23,6 +23,12 @@ Given /^the book "([^\"]*)" has "([^\"]*)" stock availability$/ do |book_title, 
   book.update_attribute :stock_status, availibility
 end
 
+Given /^the "([^\"]*)" event has a featured book called "([^\"]*)" with isbn (\d+)$/ do |event_title, book_title, isbn|
+  event = Event.find_by_title event_title
+  book = Factory.create :book, :title => book_title, :isbn => isbn
+  event.books << book
+end
+
 When /^I click the book amazon review link$/ do
   page.find(book_selector_for("amazon review link")).click
 end

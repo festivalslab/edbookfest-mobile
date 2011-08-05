@@ -148,10 +148,10 @@ describe EventsController do
   end
   
   describe "GET 'show'" do
-    let(:attributes) { {"title" => "My Title"} } 
+    let(:event) { mock_model("Event").as_null_object } 
     
     before(:each) do
-      Event.stub(:find_by_eibf_id).and_return attributes
+      Event.stub(:find_by_eibf_id).and_return event
     end
     
     it "should be successful" do
@@ -171,13 +171,38 @@ describe EventsController do
     
     it "assigns @event" do
       get :show, :id => "1234-title"
-      assigns[:event].should eq attributes
+      assigns[:event].should eq event
     end
     
     it "assigns @title" do
+      event.stub(:title).and_return "My Title"
       get :show, :id => "1234-title"
       assigns[:title].should eq "My Title"
     end
-  end
+    
+    it "assigns @authors" do
+      event.stub(:authors).and_return ["author"]
+      get :show, :id => "1234-title"
+      assigns[:authors].should eq ["author"]
+    end
+    
+    describe "amazon lookups for books" do
+      before(:each) do
+        @book = mock_model("Book").as_null_object
+        event.stub(:books).and_return [@book]
+      end
+      
+      it "assigns @books" do
+        get :show, :id => "1234-title"
+        assigns[:books].should eq [@book]
+      end
 
+      it "assigns @amazon_books" do
+        amazon_book = double("AmazonBook").as_null_object
+        @book.stub(:amazon_lookup).and_return amazon_book
+        get :show, :id => "1234-title"
+        assigns[:amazon_books].should eq [amazon_book]
+      end
+    end
+  end
 end

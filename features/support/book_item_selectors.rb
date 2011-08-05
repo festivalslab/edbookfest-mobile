@@ -5,7 +5,7 @@ module HtmlSelectorsHelpers
   #
   # step definitions in web_steps.rb
   #
-  def bibliography_selector_for(locator)
+  def book_item_selector_for(locator)
     case locator
       
     when "title"

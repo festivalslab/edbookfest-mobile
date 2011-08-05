@@ -84,12 +84,17 @@ Then /^I should be on the author detail page for author (\d+)$/ do |index|
 end
 
 Then /^the event should have (\d+) books?$/ do |book_count|
-  page.should have_css('ul.books li', :count => book_count)
+  page.should have_css('ul.amazon-books li', :count => book_count)
 end
 
-Then /^event book (\d+) should be "([^\"]*)"$/ do |index, title|
+Then /^event book (\d+) (.*) should be "([^\"]*)"$/ do |index, field, text|
   book = find(event_detail_selector_for("book #{index}"))
-  book.should have_content title
+  book.should have_css(book_item_selector_for(field), :text => text)
+end
+
+Then /^event book (\d+) (.*) should have source of "([^\"]*)"$/ do |index, field, src|
+  book = find(event_detail_selector_for("book #{index}"))
+  book.should have_css(book_item_selector_for(field), :src => src)
 end
 
 Then /^event book (\d+) should be in stock$/ do |index|
@@ -103,7 +108,7 @@ Then /^event book (\d+) should not be in stock$/ do |index|
 end
 
 Then /^the event should not have books$/ do
-  page.should_not have_css('ul.books')
+  page.should_not have_css('ul.amazon-books')
 end
 
 Then /^I should be on the book detail page for book (\d+)$/ do |index|

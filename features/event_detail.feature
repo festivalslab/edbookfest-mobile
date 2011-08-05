@@ -69,21 +69,21 @@ Feature: Event detail
   
   @amazon_lookup
   Scenario: Event detail page shows featured books
-    Given there are 2 books featured at the "Author debate" event
-    And the book "Book Title 1" has "available" stock availability
-    When I go to the "Author debate" event detail page
+    Given there is an event called "Ian Rankin"
+    And the "Ian Rankin" event has a featured book called "Knots And Crosses" with isbn 9780752883533
+    And the "Ian Rankin" event has a featured book called "Strip Jack" with isbn 9780752883564
+    And the book "Knots And Crosses" has "available" stock availability
+    When I go to the "Ian Rankin" event detail page
     Then I should see "Featured books"
     And the event should have 2 books
-    And event book 1 should be "Book Title 1"
-    And event book 2 should be "Book Title 2"
+    And event book 1 title should be "Knots And Crosses"
+    And event book 2 title should be "Strip Jack"
     And event book 1 should be in stock
     And event book 2 should not be in stock
-  
-  @nowebmock
-  Scenario: Event detail featured book shows correct details
-    Given there is 1 book featured at the "Author debate" event
-    When I go to the "Author debate" event detail page
-    Then event book 1 image is "http://book.image/image.jpg"
+    And event book 1 authors should be "Ian Rankin"
+    And event book 1 publication date should be "7 August 2008"
+    And event book 1 jacket image should have source of "http://ecx.images-amazon.com/images/I/419MNIz1-nL._SL160_.jpg"
+    And event book 1 binding should be "Paperback"
   
   @nowebmock
   Scenario: Event detail page does not show featured books if none exist
@@ -92,17 +92,11 @@ Feature: Event detail
     Then I should not see "Featured books"
     And the event should not have books
   
-  @nowebmock  
-  Scenario: Book image is not shown if empty
-    Given there is 1 book featured at the "Author debate" event without an image
-    When I go to the "Author debate" event detail page
-    Then the event should have 1 book
-    And event book 1 image is not present
-  
   @amazon_lookup
   Scenario: Event detail page links to featured books
-    Given there are 2 books featured at the "Author debate" event
-    When I go to the "Author debate" event detail page
+    Given there is an event called "Ian Rankin"
+    And the "Ian Rankin" event has a featured book called "Knots and Crosses" with isbn 9780752883533
+    When I go to the "Ian Rankin" event detail page
     And I click on book 1
     Then I should be on the book detail page for book 1
   

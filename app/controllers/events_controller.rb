@@ -20,6 +20,9 @@ class EventsController < ApplicationController
   def show
     @event = Event.find_by_eibf_id(params[:id])
     @title = @event["title"]
+    @authors = @event.authors
+    @books = @event.books
+    @amazon_books = @books.collect &:amazon_lookup
   end
   
 protected

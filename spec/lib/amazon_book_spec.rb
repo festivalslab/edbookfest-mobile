@@ -111,7 +111,7 @@ describe AmazonBook do
     context "valid response without jacket image" do
       use_vcr_cassette "amazon_book"
 
-      let(:isbn) { "9781846471292" } # The Stolen Sister by Joan Lingard 
+      let(:isbn) { "9780812108194" } # Parasitology: The Biology of Animal Parasites 
       let(:response) { get_lookup_response isbn }
 
       before(:each) do

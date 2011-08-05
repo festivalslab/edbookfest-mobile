@@ -35,14 +35,14 @@
         - if @event.price.present?
           %span.price= raw(@event.price)
     
-  - if @event.authors.present?    
+  - if @authors.present?    
     .content
       %h4 Featured authors
     %ul.authors.nav-list
-      = render(:partial => "shared/author", :collection => @event.authors)
+      = render(:partial => "shared/author", :collection => @authors)
       
-  - if @event.books.present?
+  - if @amazon_books.present?
     .content
       %h4 Featured books
-    %ul.books.nav-list
-      = render(:partial => "shared/book", :collection => @event.books)
+    %ul.amazon-books.nav-list
+      = render(:partial => "shared/amazon_book", :collection => @amazon_books)
