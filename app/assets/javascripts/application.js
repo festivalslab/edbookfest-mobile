@@ -7,3 +7,5 @@
 //= require events
 //= require jacket-images
 //= require analytics-outbound
+//= require add2home-config
+//= require add2home
