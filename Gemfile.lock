@@ -130,6 +130,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
+    newrelic_rpm (3.1.1)
     nokogiri (1.5.0)
     open4 (1.1.0)
     pg (0.11.0)
@@ -245,6 +246,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   multi_json
+  newrelic_rpm
   nokogiri
   pg
   rails (= 3.1.0.rc4)

@@ -7,6 +7,7 @@ gem 'nokogiri'
 gem 'httparty'
 gem 'multi_json'
 gem 'sucker'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
