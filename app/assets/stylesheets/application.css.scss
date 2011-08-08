@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-$baseImagePath: "<%= asset_path '' %>";
-
 @import "variables";
 @import "mixins";
 @import "reset";

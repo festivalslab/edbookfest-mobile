@@ -10,7 +10,7 @@
   }
   
   img.event {
-    background: #f0f0f0 url(#{$baseImagePath}loading-bg.png) 50% 50% no-repeat;
+    background: #f0f0f0 url(image_path("loading-bg.png")) 50% 50% no-repeat;
     display: block;
     width: 100%;
     max-width: 369px;

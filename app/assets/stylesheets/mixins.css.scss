@@ -1,10 +1,3 @@
-@mixin ir($image, $width, $height) {
-  display: block;
-  background: transparent url(#{$baseImagePath}#{$image}) 0 0 no-repeat;
-  width: #{$width}px;
-  height: #{$height}px;
-}
-
 @mixin font($pixels) {
   font-size: #{$pixels}px;
   font-size: #{$pixels/10}rem;
