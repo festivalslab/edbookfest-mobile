@@ -1,19 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc4'
+gem 'rails', '3.1.0.rc5'
 gem 'calendar_helper'
 gem 'faker'
 gem 'nokogiri'
 gem 'httparty'
 gem 'multi_json'
 gem 'sucker'
-gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'cucumber-rails'
-  gem 'capybara'
+  gem 'capybara', '~> 1.0.0'
   gem 'database_cleaner'
   gem 'ZenTest'
   gem 'autotest-rails'
@@ -24,7 +23,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-coffeescript'
   gem 'guard-livereload'
-  gem 'jasmine'
+  gem 'jasmine', '1.1.0.rc3'
   gem 'fakeweb', :require => false
   gem 'fakeweb-matcher', :require => false
   gem 'awesome_print'
@@ -39,6 +38,7 @@ end
 group :production do
   gem 'pg'
   gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'newrelic_rpm'
 end
 
 # Asset template engines
