@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 h3 {
   @include font(18);
   line-height: 1.2;

@@ -1,3 +1,6 @@
+@import "variables";
+@import "mixins";
+
 body.authors {  
   .main-title h4 {
     color: $nearlyWhiteText;
