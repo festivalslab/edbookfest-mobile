@@ -31,7 +31,7 @@ positionLoader = ->
 
 renderLoading = ->
   positionLoader()
-  $('#loading').css({ 'height': window.outerHeight + 'px' }).show()
+  $('#loading').css({ 'height': document.height + 'px' }).show()
 
 showLoading = ->
   renderLoading()
