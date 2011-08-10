@@ -43,7 +43,14 @@ Feature: Event detail
     Then the event is sold out
     And the event buy tickets button is missing
     And the event price is missing
-  
+    
+  @nowebmock
+  Scenario: Event detail page does not show buy tickets link once event has started
+    Given there is 1 event for 13/08/2011 starting at 13:00
+    And today is 13/08/2011 and the time is 13:01
+    When I go to the event detail page for 1
+    Then the event buy tickets button is missing
+    
   @nowebmock  
   Scenario: Event detail page shows featured authors
     Given there are 2 authors appearing at the "Author debate" event
@@ -99,4 +106,4 @@ Feature: Event detail
     When I go to the "Ian Rankin" event detail page
     And I click on book 1
     Then I should be on the book detail page for book 1
-  
+    

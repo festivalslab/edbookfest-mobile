@@ -57,6 +57,10 @@ Then /^I should see (\d+) events$/ do |count|
   page.should have_css("ul.events li", :count => count)
 end
 
+Then /^I should see (\d+) events on now$/ do |count|
+  page.should have_css("ul.on-now li", :count => count)
+end
+
 Then /^event (\d+) starts before event (\d+)$/ do |index1, index2|
   event_before_time = DateTime.parse(find(selector_for("event #{index1}")).find('time')['datetime'])
   event_after_time = DateTime.parse(find(selector_for("event #{index2}")).find('time')['datetime'])

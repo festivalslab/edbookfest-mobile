@@ -11,6 +11,8 @@ body.events {
     color: $nearlyWhiteText;
   }
   
+  
+  
   #main {
     a {
       color: $baseColorEvents;
@@ -23,6 +25,10 @@ body.events {
       &:active, &:hover {
         @include simpleGradient(darken($baseColorEvents, 5%), lighten($baseColorEvents, 5%), darken($baseColorEvents, 12%));
       }
+    }
+    
+    .heading-button {
+      color: #fff;
     }
     
     .nav-list a {

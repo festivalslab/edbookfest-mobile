@@ -64,6 +64,7 @@ describe Feed::Listings do
         e.sub_title.should == "Come and hear how to set up young adult book awards as a way to keep children reading."
         e.standfirst.should == "Librarians, Jacob Hope and Yvonne Manning describe how awards can be a fantastic way to create a buzz and sense of excitement around reading."
         e.start_time.should == DateTime.parse('2011-08-18T17:00:00+01:00')
+        e.end_time.should == DateTime.parse('2011-08-18T18:00:00+01:00')
         e.date.should == Date.parse('2011-08-18')
         e.is_sold_out.should_not be_true
         e.event_type.should == "Children"

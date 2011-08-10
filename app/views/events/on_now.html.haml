@@ -1,0 +1,10 @@
+%h3 
+  On now at the Festival
+  = link_to "Calendar", calendar_path, :class => 'heading-button'
+
+- if (@on_now.any?) then
+  %ul.nav-list.events.on-now
+    = render(:partial => "event", :collection => @on_now)
+    
+.content
+  = link_to "All events today", listings_path(:date => @date), :class => "button"

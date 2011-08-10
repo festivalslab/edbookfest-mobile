@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110730135559) do
+ActiveRecord::Schema.define(:version => 20110810071228) do
 
   create_table "appearances", :force => true do |t|
     t.integer  "event_id"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20110730135559) do
     t.string   "image"
     t.string   "theme"
     t.string   "main_site_url"
+    t.datetime "end_time"
   end
 
   create_table "featured_books", :force => true do |t|

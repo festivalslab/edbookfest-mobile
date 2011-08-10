@@ -63,6 +63,8 @@ html, body {
     }
     
     .home, .back {
+      display: block;
+      margin: 0;
       position: absolute;
       top: 10px;
       padding-left: 26px;

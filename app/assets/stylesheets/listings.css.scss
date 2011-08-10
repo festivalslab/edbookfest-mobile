@@ -44,3 +44,7 @@ ul.events {
     @include font(9);
   }
 }
+
+ul.on-now {
+  margin-bottom: $padding;
+}

@@ -64,7 +64,7 @@ describe EventsController do
     
   end
   
-  describe "GET 'index'" do
+  describe "GET 'index'" do    
     context "when a date is provided" do
       context "and when the date is during the festival" do
         let(:date) { Date.new(2011,8,13) }
@@ -101,6 +101,11 @@ describe EventsController do
         it "assigns @date" do
           get :index, :date => date.to_s
           assigns[:date].should eq(date);
+        end
+        
+        it "assigns @heading" do
+          get :index, :date => date.to_s
+          assigns[:heading].should eq("Sat 13 Aug 2011")
         end
         
         describe "when no type parameter is provided" do
@@ -142,6 +147,84 @@ describe EventsController do
           lambda {
             get :index, :date => date.to_s
           }.should raise_exception(ActionController::RoutingError)
+        end
+      end
+    end
+    
+    context "when a date is not provided" do
+      context "and today is not during the festival" do
+        let(:date) { Date.new(2011,8,12) } 
+        
+        before(:each) do
+          Festival.stub(:date_in_festival).and_return(false)
+          Delorean.time_travel_to date
+        end
+        
+        after(:each) do
+          Delorean.back_to_the_present
+        end
+        
+        it "redirects to the calendar" do
+          get :index
+          response.should redirect_to calendar_url
+        end
+      end
+      
+      context "and today is during the festival" do
+        let(:date) { Date.new(2011,8,13) } 
+        
+        before(:each) do
+          Delorean.time_travel_to date
+        end
+        
+        after(:each) do
+          Delorean.back_to_the_present
+        end
+        
+        context "and there are events on now" do
+          before(:each) do
+            Event.stub(:on_now).and_return([3,4])
+          end
+          
+          it "assigns title" do
+            get :index
+            assigns[:title].should eq("")
+          end
+          
+          it "requests events that are on now and assigns them to @on_now" do
+            Event.should_receive(:on_now)
+            get :index
+            assigns[:on_now].should eq([3,4])
+          end
+          
+          it "does not request other events" do
+            Event.should_not_receive(:on_date)
+            get :index
+          end
+          
+          it "renders the on_now view" do
+            get :index
+            response.should render_template :on_now
+          end
+        end
+        
+        context "and there are no events on now" do
+          before(:each) do
+            Event.stub(:on_now).and_return([])
+            Event.stub(:on_date).and_return([1,2])
+          end
+          
+          it "requests adult events for a date and assigns them to @events" do
+            Event.should_receive(:on_date).with(date, "Adult")
+            get :index
+            assigns[:events].should eq([1,2])
+            assigns[:type].should eq("Adult")
+          end
+          
+          it "assigns @heading" do
+            get :index
+            assigns[:heading].should eq("Today at the Festival")
+          end
         end
       end
     end

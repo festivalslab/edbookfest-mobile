@@ -37,6 +37,29 @@ describe Event do
     end
   end
   
+  describe "#on_now" do
+    let(:date) { Date.new(2011,8,13) }
+    let(:date_time) { DateTime.new(2011,8,13,15,30) }
+    
+    before(:each) do
+      Delorean.time_travel_to date_time
+      @on_now1 = Factory.create(:event, :date => date, :start_time => date_time - 1.minute, :title => "On Now 1", :duration => 60, :end_time => date_time + 59.minutes)
+      @on_now2 = Factory.create(:event, :date => date, :start_time => date_time - 59.minutes, :title => "On Now 2", :duration => 60, :end_time => date_time + 1.minute)
+      @not_on_now = Factory.create(:event, :date => date, :start_time => date_time + 1.minute, :title => "Not On Now", :duration => 60, :end_time => date_time + 61.minutes)
+    end
+    
+    after(:each) do
+      Delorean.back_to_the_present
+    end
+    
+    it "returns events that are currently on" do
+      events = Event.on_now
+      events.count.should == 2
+      events[0].should == @on_now1
+      events[1].should == @on_now2
+    end
+  end
+  
   describe "Author has_many_through association" do
     before(:each) do
       @event = Event.create
@@ -89,6 +112,18 @@ describe Event do
     it "removes non-letter characters" do
       @event = Event.create(:eibf_id => 1234, :title => "Jo Nesbø !*&§•ª¶€")
       @event.to_param.should == "1234-jo-nesbo"
+    end
+  end
+  
+  describe "#in_future?" do
+    it "returns false when event started in the past" do
+      @event = Event.create(:date => Date.today, :start_time => DateTime.now - 1)
+      @event.in_future?.should_not be_true
+    end
+    
+    it "returns true when event starts in the future" do
+      @event = Event.create(:date => Date.today, :start_time => DateTime.now + 1)
+      @event.in_future?.should be_true
     end
   end
 end

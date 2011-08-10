@@ -1,5 +1,10 @@
-Given /^today is (.+)$/ do |date|
+Given /^today is (\d{2}\/\d{2}\/\d{4})$/ do |date|
   Delorean.time_travel_to(date)
+end
+
+Given /^today is (\d{2}\/\d{2}\/\d{4}) and the time is (\d{2}:\d{2})$/ do |date, time|
+  date_time = DateTime.strptime("#{date} #{time}+0100", "%d/%m/%Y %H:%M%z")
+  Delorean.time_travel_to date_time
 end
 
 When /^I wait until "([^\"]*)" (?:are|is) visible$/ do |className|

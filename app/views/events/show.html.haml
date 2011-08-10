@@ -27,13 +27,14 @@
     - if @event.description.present?
       .description= raw(@event.description)
 
-    - if @event.is_sold_out
-      %div.sold-out Sold out
-    - elsif @event.main_site_url.present?
-      %div.price
-        %a.button.buy-tickets{:href => @event.main_site_url} Buy tickets
-        - if @event.price.present?
-          %span.price= raw(@event.price)
+    - if @event.in_future?
+      - if @event.is_sold_out
+        %div.sold-out Sold out
+      - elsif @event.main_site_url.present?
+        %div.price
+          %a.button.buy-tickets{:href => @event.main_site_url} Buy tickets
+          - if @event.price.present?
+            %span.price= raw(@event.price)
     
   - if @authors.present?    
     .content

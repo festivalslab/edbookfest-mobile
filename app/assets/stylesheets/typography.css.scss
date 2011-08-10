@@ -2,10 +2,11 @@
 @import "mixins";
 
 h3 {
-  @include font(18);
-  line-height: 1.2;
+  @include font(16);
+  line-height: 1.4;
   color: #fff;
   font-weight: normal;
+  position: relative;
 }
 
 h3, .main-title {

@@ -58,3 +58,12 @@
   transform: rotate(#{$deg}deg);
 }
 
+@mixin buttonBase() {
+  @include borderRadius(5px);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+}
+

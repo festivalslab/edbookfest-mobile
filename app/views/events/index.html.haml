@@ -1,5 +1,6 @@
 %h3
-  = @date.to_s :title
+  = @heading
+  = link_to "Calendar", calendar_path, :class => 'heading-button'
 
 %ul.tabs
   %li{:class => (@type == "Adult") ? 'active' : ''} 

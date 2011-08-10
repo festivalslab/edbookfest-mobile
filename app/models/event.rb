@@ -8,6 +8,11 @@ class Event < ActiveRecord::Base
     where("events.date = ? AND events.event_type = ?", date, event_type).order("events.start_time ASC, events.title ASC")
   end
   
+  def self.on_now
+    now = DateTime.now
+    where("events.date = ? AND events.start_time <= ? AND events.end_time >= ?", Date.today, now, now)
+  end
+  
   def to_param
     "#{eibf_id}-#{title.parameterize}"
   end
@@ -18,5 +23,9 @@ class Event < ActiveRecord::Base
   
   def add_book(book)
     books << book
+  end
+  
+  def in_future?
+    start_time > DateTime.now
   end
 end
