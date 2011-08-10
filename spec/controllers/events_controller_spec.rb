@@ -78,9 +78,9 @@ describe EventsController do
           response.should be_success
         end
         
-        it "sets the cache headers to an hour" do
+        it "sets the cache headers to a minute" do
           get :index, :date => date.to_s
-          response.headers['Cache-Control'].should == 'public, max-age=3600'
+          response.headers['Cache-Control'].should == 'public, max-age=60'
         end
         
         it "assigns @theme" do
@@ -168,6 +168,11 @@ describe EventsController do
           get :index
           response.should redirect_to calendar_url
         end
+        
+        it "sets the cache headers to a minute" do
+          get :index
+          response.headers['Cache-Control'].should == 'public, max-age=60'
+        end
       end
       
       context "and today is during the festival" do
@@ -184,6 +189,11 @@ describe EventsController do
         context "and there are events on now" do
           before(:each) do
             Event.stub(:on_now).and_return([3,4])
+          end
+          
+          it "sets the cache headers to a minute" do
+            get :index
+            response.headers['Cache-Control'].should == 'public, max-age=60'
           end
           
           it "assigns title" do
@@ -212,6 +222,11 @@ describe EventsController do
           before(:each) do
             Event.stub(:on_now).and_return([])
             Event.stub(:on_date).and_return([1,2])
+          end
+          
+          it "sets the cache headers to a minute" do
+            get :index
+            response.headers['Cache-Control'].should == 'public, max-age=60'
           end
           
           it "requests adult events for a date and assigns them to @events" do

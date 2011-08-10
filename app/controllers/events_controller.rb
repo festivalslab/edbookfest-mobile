@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   layout :set_layout
   
   def index
+    response.headers['Cache-Control'] = "public, max-age=60"
     if params[:date]
       @date = Date.parse(params[:date])
       not_found if @date.nil? || !Festival.date_in_festival(@date)
