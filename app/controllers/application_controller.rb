@@ -14,7 +14,12 @@ protected
   end
   
   def page_cache
-    response.headers['Cache-Control'] = "public, max-age=#{Rails.application.config.page_cache_minutes * 60}"
+    set_cache
   end
   
+  def set_cache(type = :default)
+    cache_time = Rails.application.config.cache_times[type] * 60
+    response.headers['Cache-Control'] = "public, max-age=#{cache_time}"
+  end
+
 end

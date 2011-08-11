@@ -40,7 +40,11 @@ module EdbookfestMobile
     # Enable the asset pipeline
     config.assets.enabled = true
     
-    config.page_cache_minutes = 60
+    config.cache_times = {
+      :default => 60,
+      :home => 1
+    }
+    
     config.cron_type = "none"
     config.allow_time_manipulation = false
   end
