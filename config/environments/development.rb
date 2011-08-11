@@ -26,4 +26,5 @@ EdbookfestMobile::Application.configure do
   config.assets.compress = false
   
   config.page_cache_minutes = 0
+  config.allow_time_manipulation = true
 end

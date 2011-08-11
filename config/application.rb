@@ -42,5 +42,6 @@ module EdbookfestMobile
     
     config.page_cache_minutes = 60
     config.cron_type = "none"
+    config.allow_time_manipulation = false
   end
 end

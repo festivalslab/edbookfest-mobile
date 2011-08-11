@@ -7,6 +7,7 @@ gem 'nokogiri'
 gem 'httparty'
 gem 'multi_json'
 gem 'sucker'
+gem 'delorean'
 
 group :development, :test do
   gem 'sqlite3'
@@ -16,7 +17,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'ZenTest'
   gem 'autotest-rails'
-  gem 'delorean'
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'autotest-growl'

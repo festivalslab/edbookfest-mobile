@@ -53,4 +53,5 @@ EdbookfestMobile::Application.configure do
   config.active_support.deprecation = :notify
   
   config.cron_type = "daily"
+  config.allow_time_manipulation = true
 end

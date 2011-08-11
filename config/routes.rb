@@ -17,6 +17,9 @@ EdbookfestMobile::Application.routes.draw do
     end
   end
   
+  match "time/set/:day/:hour/:minute" => "time#set"
+  match "time/reset" => "time#reset"
+  
   root :to => 'events#index'
 
 end
