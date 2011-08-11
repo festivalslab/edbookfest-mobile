@@ -1,26 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>EdBookFest – Page not found</title>
+  <meta charset="utf-8"> 
+  <meta content="True" name="HandheldFriendly"> 
+  <meta content="320" name="MobileOptimized"> 
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+  <meta content="yes" name="apple-mobile-web-app-capable"> 
+  <meta content="on" http-equiv="cleartype"> 
   <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #fff;
+    padding: 20px;
+    font: 14px Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #222;
+  }
+  h1 {
+    width: 200px;
+    height: 120px;
+    text-indent: -999px;
+    font-size: 1px;
+    overflow: hidden;
+    background: transparent url(/images/temporary-logo.png) 50% 0 no-repeat;
+    margin: 0 auto 20px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  a.button {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    background-color: #00a650;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    margin: 0 auto;
+       -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+            border-radius: 5px;       
+       -moz-background-clip: padding; 
+    -webkit-background-clip: padding-box; 
+            background-clip: padding-box;
+    background-color: #00a650;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom)); 
+    background-image: -webkit-linear-gradient(top, #00d969, #00823f);
+    background-image: -moz-linear-gradient(top, #00d969, #00823f);
+    background-image: -ms-linear-gradient(top, #00d969, #00823f);
+    background-image: -o-linear-gradient(top, #00d969, #00823f);
+    background-image: linear-gradient(top, #00d969, #00823f);
+  }
+  
+  #container {
+    text-align: left;
+  }
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
+  <h1><a href="/">Edinburgh International Book Festival</a></h1>
+  <div id="container">
+    <h2>Page not found</h2>
+    <p>Sorry, we could not find the page you were looking for.</p>
+    <a href="/" class="button">Home page</a>
   </div>
 </body>
 </html>
