@@ -1,0 +1,34 @@
+/* TEAM */
+  Design, Development: James Newbery, Tinned Fruit Ltd
+  Site: http://www.tinnedfruit.com
+  Twitter: @froots101
+  Location: Edinburgh, UK
+  
+  Site Owner, Feeds: Andrew Coulton, EIBF
+  Location: Edinburgh, UK
+  
+  Listings Feeds: Line Digital Ltd
+  Location: Edinburgh, UK
+  Site: http://www.line.uk.com/
+
+/* THANKS */
+  Open source developers for publishing your work. Keep on trucking.
+  
+  Rohan Gunatillake (@rohan21awake) and Ben Werdmuller (@benwerd) at 
+  Festivals Lab (http://festivalslab.com/) for organising Culture Hack
+  Scotland from whence this project emerged and for providing funding 
+  for part of the project.
+  
+  Philip Roberts (@philip_roberts) for a little Rails advice.
+  
+  Too many people to mention for guerilla usability help.
+  
+  Ian Rankin for the endless test data and the inspiration.
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Zepto, Pjax, Mobile HTML5 Boilerplate
+  Software: Rails 3.1, Sucker (Amazon Product), Capybara, Rspec,
+            Cucumber, SCSS, CoffeeScript, Nokogiri, Jasmine BDD
+  Hosting: Heroku
+  GitHub: https://github.com/festivalslab/edbookfest-mobile
