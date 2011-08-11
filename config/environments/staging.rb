@@ -52,6 +52,11 @@ EdbookfestMobile::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
+  config.cache_times = {
+    :default => 60,
+    :home => 0
+  }
+  
   config.cron_type = "daily"
   config.allow_time_manipulation = true
 end

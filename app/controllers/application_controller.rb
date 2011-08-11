@@ -19,7 +19,8 @@ protected
   
   def set_cache(type = :default)
     cache_time = Rails.application.config.cache_times[type] * 60
-    response.headers['Cache-Control'] = "public, max-age=#{cache_time}"
+    cache_header = cache_time > 0 ? "public, max-age=#{cache_time}" : "no-cache"
+    response.headers['Cache-Control'] = cache_header
   end
 
 end
