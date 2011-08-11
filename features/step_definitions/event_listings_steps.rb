@@ -6,7 +6,8 @@ Given /^there (?:is|are) (\d+) (child|adult)?\s?(sold out)?\s?events? for (\d+)\
   count.to_i.times do |c|
     factory_options = {
       :date => date, 
-      :start_time => date_time + c.minutes, 
+      :start_time => date_time + c.minutes,
+      :end_time => date_time + (60 + c).minutes, 
       :event_type => event_type
     }
     factory_options[:is_sold_out] = true if (sold_out)

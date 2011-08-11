@@ -19,14 +19,23 @@ Feature: Home page variations during and outside of Festival time
     And I should see "Today at the Festival"
   
   @nowebmock
-  Scenario: During festival, when events are on, current events are shown
+  Scenario: During festival, when events are on (with 15 mins grace), current events are shown
     Given today is 13/08/2011 and the time is 16:25
     And there is 1 event for 13/08/2011 starting at 16:00
-    And there is 1 event for 13/08/2011 starting at 16:24
-    And there is 1 event for 13/08/2011 starting at 16:26
+    And there is 1 event for 13/08/2011 starting at 16:39
+    And there is 1 event for 13/08/2011 starting at 16:41
     When I go to the home page
     Then I should see "On now at the Festival"
     And I should see 2 events on now
+    
+  @nowebmock
+  Scenario: During festival, when events are finished, but less than 15 minutes ago, these events are shown
+    Given today is 13/08/2011 and the time is 16:25
+    And there is 1 event for 13/08/2011 starting at 15:11 
+    And there is 1 event for 13/08/2011 starting at 15:09
+    When I go to the home page
+    Then I should see "On now at the Festival"
+    And I should see 1 events on now
     
   @nowebmock
   Scenario: During festival, after day's events have finished, today's events are shown

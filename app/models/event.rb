@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   
   def self.on_now
     now = DateTime.now
-    where("events.date = ? AND events.start_time <= ? AND events.end_time >= ?", Date.today, now, now)
+    where("events.date = ? AND events.start_time <= ? AND events.end_time >= ?", Date.today, now + 15.minutes, now - 15.minutes).order("events.start_time ASC")
   end
   
   def to_param

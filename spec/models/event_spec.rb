@@ -43,9 +43,10 @@ describe Event do
     
     before(:each) do
       Delorean.time_travel_to date_time
-      @on_now1 = Factory.create(:event, :date => date, :start_time => date_time - 1.minute, :title => "On Now 1", :duration => 60, :end_time => date_time + 59.minutes)
-      @on_now2 = Factory.create(:event, :date => date, :start_time => date_time - 59.minutes, :title => "On Now 2", :duration => 60, :end_time => date_time + 1.minute)
-      @not_on_now = Factory.create(:event, :date => date, :start_time => date_time + 1.minute, :title => "Not On Now", :duration => 60, :end_time => date_time + 61.minutes)
+      @on_now1 = Factory.create(:event, :date => date, :start_time => date_time + 14.minutes, :title => "On Now 1", :duration => 60, :end_time => date_time + 74.minutes) # 15 mins grace
+      @on_now2 = Factory.create(:event, :date => date, :start_time => date_time - 74.minutes, :title => "On Now 2", :duration => 60, :end_time => date_time - 14.minutes) # 15 mins grace
+      @not_on_now1 = Factory.create(:event, :date => date, :start_time => date_time + 16.minutes, :title => "Not On Now 1", :duration => 60, :end_time => date_time + 76.minutes)
+      @not_on_now2 = Factory.create(:event, :date => date, :start_time => date_time - 76.minutes, :title => "Not on Now 2", :duration => 60, :end_time => date_time - 16.minutes)
     end
     
     after(:each) do
@@ -55,8 +56,8 @@ describe Event do
     it "returns events that are currently on" do
       events = Event.on_now
       events.count.should == 2
-      events[0].should == @on_now1
-      events[1].should == @on_now2
+      events[0].should == @on_now2
+      events[1].should == @on_now1
     end
   end
   
