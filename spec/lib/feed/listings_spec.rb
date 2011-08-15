@@ -224,12 +224,6 @@ describe Feed::Listings do
         b1.amazon_image.should == "http://ecx.images-amazon.com/images/I/51soTM7-ctL._SL110_.jpg"
       end
       
-      it "deletes the orphaned book" do
-        listings.update false
-        listings_removed_book.update false
-        Book.find_by_eibf_id(7539).should be_nil
-      end
-      
       it "adds new books when added to feed" do
         listings_removed_book.update false
         listings.update false
