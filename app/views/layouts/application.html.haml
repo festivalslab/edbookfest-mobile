@@ -3,7 +3,7 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
 %head
   %meta{:charset => "utf-8"}
-  %title EdBookFest #{"– " if @title}#{@title}
+  %title EdBookFest #{"– " if @title.present?}#{@title}
   %meta{:content => "The mobile website for the 2011 Edinburgh International Book Festival, 13-29 August 2011 at Charlotte Square Gardens, Edinburgh", :name => "description"}
   %meta{:content => "Edinburgh International Book Festival (admin@edbookfest.co.uk)", :name => "author"}
   %meta{:content => "True", :name => "HandheldFriendly"}
