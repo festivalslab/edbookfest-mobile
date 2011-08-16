@@ -1,0 +1,13 @@
+@media only screen and (min-width: 768px) {
+  .event-detail {
+    img.event {
+      max-width: 360px;
+      float: left;
+      border-left: 1px solid $divider;
+      border-left: 1px solid $divider;
+      margin-left: $padding;
+      margin-right: $padding;
+      margin-bottom: $padding;
+    }
+  }
+}
