@@ -1,12 +1,13 @@
 %h3
   = @heading
-  = link_to "Calendar", calendar_path, :class => 'heading-button'
 
 %ul.tabs
   %li{:class => (@type == "Adult") ? 'active' : ''} 
     = link_to "Adult", listings_path(:date => @date)
   %li{:class => (@type == "Children") ? 'active' : ''}
     = link_to "Children", listings_path(:date => @date, :type => "Children")
+  %li.detached
+    = link_to "Calendar", calendar_path, :class => "button"
 
 - if (@events.any?) then  
   %ul.nav-list.events

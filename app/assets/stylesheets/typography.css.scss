@@ -66,6 +66,14 @@ h4 {
   }
 }
 
+.padding {
+  padding-top: $padding;
+}
+
+.grey {
+  background-color: #e0e0e0;
+}
+
 .info {
   @include font(12);
   color: $lightText;
