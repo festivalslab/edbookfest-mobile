@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://online.edbookfest.co.uk/booksales/eibf.bookstock.1.0.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://online.edbookfest.co.uk/booksales/eibf.bookstock.1.0.xsd"
+    xmlns:eibf="http://online.edbookfest.co.uk/booksales/eibf.bookstock.1.0.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="authors">
+    <xs:sequence>
+      <xs:element name="author" type="eibf:author" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="author">
+    <xs:sequence>
+      <xs:element name="full_name" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="eibf_id" type="xs:integer" />
+  </xs:complexType>
+
+  <xs:simpleType name="ISBN13">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="97[8-9]?[0-9 -]{9,12}[0-9xX]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+ <xs:simpleType name="stock">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="available" />
+      <xs:enumeration value="limited" />
+      <xs:enumeration value="none" />
+    </xs:restriction>
+  </xs:simpleType>
+
+ <xs:complexType name="book">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="stock" type="eibf:stock" minOccurs="1" maxOccurs="1" />
+      <xs:element name="authors" type="eibf:authors" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="isbn13" type="eibf:ISBN13" />
+  </xs:complexType>
+
+  <xs:complexType name="bookstock">
+    <xs:sequence>
+      <xs:element name="book" type="eibf:book" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="bookstock" type="eibf:bookstock">
+    <xs:unique name="Event-eibf_id">
+      <xs:selector xpath="Event" />
+      <xs:field xpath="@eibf_id" />
+    </xs:unique>
+    <xs:unique name="Event-via_id">
+      <xs:selector xpath="Event" />
+      <xs:field xpath="@via_id" />
+    </xs:unique>
+    <xs:unique name="Event-via_code">
+      <xs:selector xpath="Event" />
+      <xs:field xpath="@via_code" />
+    </xs:unique>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.edbookfest.co.uk/eibf.programmedata.1.0.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://www.edbookfest.co.uk/eibf.programmedata.1.0.xsd"
+    xmlns:eibf="http://www.edbookfest.co.uk/eibf.programmedata.1.0.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Title">
+    <xs:sequence>
+      <xs:element name="MainTitle" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="SubTitle" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="TitleSponsors" type="eibf:TitleSponsors" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TitleSponsors">
+    <xs:sequence>
+      <xs:element name="Credit" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Theme">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="href" type="xs:anyURI" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="null">
+      <xs:restriction base="xs:string">
+          <xs:maxLength value="0" />
+      </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="nullableInteger">
+      <xs:union memberTypes="xs:integer eibf:null" />
+  </xs:simpleType>
+
+
+  <xs:complexType name="ImageLink">
+    <xs:attribute name="href" type="xs:anyURI" />
+  </xs:complexType>
+
+  <xs:simpleType name="Geocode">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[+-]?[0-9]{1,2}\.[0-9]{6},[+-]?[0-9]{1,2}\.[0-9]{6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Venue">
+    <xs:sequence>
+      <xs:element name="PerformanceSpace" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Geocode" type="eibf:Geocode" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AgeRange">
+    <xs:sequence>
+      <xs:element name="Formatted" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="AgeLower" type="eibf:nullableInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="AgeUpper" type="eibf:nullableInteger" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Price">
+    <xs:sequence>
+      <xs:element name="Formatted" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="FullPrice" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Concession" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Description">
+    <xs:sequence>
+      <xs:element name="Standfirst" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Copy" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Teaser" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Author">
+    <xs:sequence>
+      <xs:element name="Forename" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Surname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Image" type="eibf:ImageLink" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="eibf_id" type="xs:integer" />
+    <xs:attribute name="is_active" type="xs:boolean" />
+  </xs:complexType>
+
+  <xs:simpleType name="ISBN">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(97[8-9])?[0-9 -]{9,12}[0-9xX]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="nullableISBN">
+      <xs:union memberTypes="eibf:null eibf:ISBN"/>
+  </xs:simpleType>
+
+
+  <xs:complexType name="Book">
+    <xs:sequence>
+      <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Image" type="eibf:ImageLink" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="eibf_id" type="xs:integer" />
+    <xs:attribute name="href" type="xs:anyURI" />
+    <xs:attribute name="isbn" type="eibf:nullableISBN" />
+    <xs:attribute name="is_active" type="xs:boolean" />
+  </xs:complexType>
+
+  <xs:complexType name="Authors">
+    <xs:sequence>
+      <xs:element name="Author" type="eibf:Author" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Books">
+    <xs:sequence>
+      <xs:element name="Book" type="eibf:Book" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="VIAId">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]+:[0-9]+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Adult" />
+      <xs:enumeration value="Children" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element name="Title" type="eibf:Title" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Theme" type="eibf:Theme" minOccurs="0" maxOccurs="1" />
+      <xs:element name="Venue" type="eibf:Venue" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="EventDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Duration" type="xs:integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="AgeRange" type="eibf:AgeRange" minOccurs="0" maxOccurs="1" />
+      <xs:element name="Price" type="eibf:Price" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Description" type="eibf:Description" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Image" type="eibf:ImageLink" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Authors" type="eibf:Authors" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Books" type="eibf:Books" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="eibf_id" type="xs:integer" />
+    <xs:attribute name="via_id" type="eibf:VIAId" />
+    <xs:attribute name="via_code" type="xs:integer" />
+    <xs:attribute name="event_type" type="eibf:EventType" />
+    <xs:attribute name="href" type="xs:anyURI" />
+    <xs:attribute name="isCancelled" type="xs:boolean"/>
+    <xs:attribute name="isSoldOut" type="xs:boolean"/>
+    <xs:attribute name="isActive" type="xs:boolean"/>
+    <xs:attribute name="isFeatured" type="xs:boolean"/>
+    <xs:attribute name="isBslInterpreted" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="ProgrammeData">
+    <xs:sequence>
+      <xs:element name="Event" type="eibf:Event" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="ProgrammeData" type="eibf:ProgrammeData">
+    <xs:unique name="Event-eibf_id">
+      <xs:selector xpath="Event" />
+      <xs:field xpath="@eibf_id" />
+    </xs:unique>
+    <xs:unique name="Event-via_id">
+      <xs:selector xpath="Event" />
+      <xs:field xpath="@via_id" />
+    </xs:unique>
+    <xs:unique name="Event-via_code">
+      <xs:selector xpath="Event" />
+      <xs:field xpath="@via_code" />
+    </xs:unique>
+  </xs:element>
+
+</xs:schema>

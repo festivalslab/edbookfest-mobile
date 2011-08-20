@@ -39,3 +39,34 @@ further information if required. In the first instance, please contact admin@edb
 
 If you do find the code useful, we'd love to hear from you. Drop us a note at the Book Festival, via @acoulton or @festivalslab on
 twitter, or through the [festivalslab organisation on GitHub](http://github.com/festivalslab)
+
+## Data Sources
+The application combines data from a number of sources:
+ * The Edinburgh International Book Festival programme listings data
+ * Edinburgh International Book Festival bookshop stock data
+ * [Amazon Product Advertising API](https://affiliate-program.amazon.co.uk/gp/advertising/api/detail/main.html)
+ * [Guardian Open Platform Content API](http://www.guardian.co.uk/open-platform)
+ * [iTunes Search API](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+ 
+All external APIs are open access - with the relevant keys and subject to terms and conditions - and details are available on 
+the linked pages above.
+
+### Edinburgh International Book Festival programme listings data
+This is a superset of the real-time data provided to the [Edinburgh Festivals Listings API](http://festivalslab.com/api2011/about/) 
+which includes meta-data on related authors and books as well as more detailed data on pricing, sponsors, titles and subtitles in
+festival-specific format (elements of which are concatenated to fit the cross-festival API data format).
+
+The data is served as a single XML document, protected by standard HTTP Basic Authentication, and the Book Festival are happy to
+discuss providing access - subject to acceptable use policy - to other developers and consumers. The XML schema for this document
+is provided within the /docs folder of this repository. An archive copy of the 2011 XML document will be added to this repository
+in September 2011 for development, testing and review purposes. It is not yet publicly available to avoid stale content issues, but
+can be provided on request by [Andrew Coulton](https://github.com/acoulton).
+
+### Edinburgh International Book Festival bookshop stock data
+This is a feed from the Book Festival's independent Bookshops' stock control system, again provided in XML format and containing
+details of every title ordered for stock in the bookshops (which includes backlist titles, and general stock not related to current
+events).
+
+It is served in XML format over HTTP, and again the Book Festival is happy to discuss providing access to other users. The XML schema
+is provided within the /docs folder of this repository, and as above an archive copy of the 2011 XML document will be added to the repository
+in September 2011.
