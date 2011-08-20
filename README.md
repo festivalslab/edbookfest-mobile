@@ -42,12 +42,13 @@ twitter, or through the [festivalslab organisation on GitHub](http://github.com/
 
 ## Data Sources
 The application combines data from a number of sources:
- * The Edinburgh International Book Festival programme listings data
- * Edinburgh International Book Festival bookshop stock data
- * [Amazon Product Advertising API](https://affiliate-program.amazon.co.uk/gp/advertising/api/detail/main.html)
- * [Guardian Open Platform Content API](http://www.guardian.co.uk/open-platform)
- * [iTunes Search API](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
- 
+
+* The Edinburgh International Book Festival programme listings data
+* Edinburgh International Book Festival bookshop stock data
+* [Amazon Product Advertising API](https://affiliate-program.amazon.co.uk/gp/advertising/api/detail/main.html)
+* [Guardian Open Platform Content API](http://www.guardian.co.uk/open-platform)
+* [iTunes Search API](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+
 All external APIs are open access - with the relevant keys and subject to terms and conditions - and details are available on 
 the linked pages above.
 
