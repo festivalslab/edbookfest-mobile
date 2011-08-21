@@ -49,17 +49,9 @@
   </xs:complexType>
 
   <xs:element name="bookstock" type="eibf:bookstock">
-    <xs:unique name="Event-eibf_id">
-      <xs:selector xpath="Event" />
-      <xs:field xpath="@eibf_id" />
-    </xs:unique>
-    <xs:unique name="Event-via_id">
-      <xs:selector xpath="Event" />
-      <xs:field xpath="@via_id" />
-    </xs:unique>
-    <xs:unique name="Event-via_code">
-      <xs:selector xpath="Event" />
-      <xs:field xpath="@via_code" />
+    <xs:unique name="book-isbn">
+      <xs:selector xpath="book" />
+      <xs:field xpath="@isbn13" />
     </xs:unique>
   </xs:element>
 
