@@ -38,7 +38,7 @@ class EventsController < ApplicationController
     @title = @event["title"]
     @authors = @event.authors
     @books = @event.books
-    @amazon_books = @books.collect &:amazon_lookup
+    @amazon_books = @books.collect(&:amazon_lookup).compact
   end
   
 protected

@@ -301,6 +301,12 @@ describe EventsController do
         get :show, :id => "1234-title"
         assigns[:amazon_books].should eq [amazon_book]
       end
+      
+      it "eliminates nil amazon_books" do
+        @book.stub(:amazon_lookup).and_return nil
+        get :show, :id => "1234-title"
+        assigns[:amazon_books].should eq []
+      end
     end
   end
 end
