@@ -45,7 +45,7 @@ class AmazonBook
   
   def publication_date
     date = attrs['PublicationDate']
-    return nil if (date.empty?)
+    return nil unless date
     begin 
       Date.parse(date)
     rescue

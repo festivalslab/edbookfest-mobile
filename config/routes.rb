@@ -11,11 +11,7 @@ EdbookfestMobile::Application.routes.draw do
       end
     end
   end
-  resources :books, :only => [:show] do
-    member do
-      get :show, :constraints => {:id => /978\d{10}/}
-    end
-  end
+  resources :books, :only => [:show]
   
   match "time/set/:day/:hour/:minute" => "time#set"
   match "time/reset" => "time#reset"
