@@ -37,11 +37,11 @@ Feature: Author detail
   Scenario: Bibliography show correct details for an item
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
-    Then bibliography book 1 title should be "Knots And Crosses"
-    And bibliography book 1 authors should be "Ian Rankin"
-    And bibliography book 1 publication date should be "7 August 2008"
-    And bibliography book 1 jacket image should have source of "http://ecx.images-amazon.com/images/I/419MNIz1-nL._SL160_.jpg"
-    And bibliography book 1 binding should be "Paperback" 
+    Then bibliography book 2 title should be "Knots And Crosses"
+    And bibliography book 2 authors should be "Ian Rankin"
+    And bibliography book 2 publication date should be "7 August 2008"
+    And bibliography book 2 jacket image should have source of "http://ecx.images-amazon.com/images/I/419MNIz1-nL._SL160_.jpg"
+    And bibliography book 2 binding should be "Paperback" 
   
   @amazon_search
   Scenario: Bibliography shows message when no books found
@@ -55,14 +55,14 @@ Feature: Author detail
     Given there is an author called "Ian Rankin"
     And there is a book called "Knots and Crosses" with isbn 9780752883533
     When I go to the "Ian Rankin" author detail page
-    And I click bibliography book 1
+    And I click bibliography book 2
     Then I should be on the "Knots and Crosses" book detail page
     
   @amazon_search
   Scenario: Bibliography links to book detail page for book that isn't in database
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
-    And I click bibliography book 1
+    And I click bibliography book 2
     Then I should be on the book detail page for isbn 9780752883533
 
   @amazon_search
@@ -71,7 +71,7 @@ Feature: Author detail
     And there is a book called "Knots and Crosses" with isbn 9780752883533
     And the book "Knots and Crosses" has "available" stock availability
     When I go to the "Ian Rankin" author detail page
-    Then bibliography book 1 should be in stock
+    Then bibliography book 2 should be in stock
     
   @amazon_search
   Scenario: In stock indicator not shown for book in db that is not in stock
@@ -79,13 +79,13 @@ Feature: Author detail
     And there is a book called "Knots and Crosses" with isbn 9780752883533
     And the book "Knots and Crosses" has "none" stock availability
     When I go to the "Ian Rankin" author detail page
-    Then bibliography book 1 should not be in stock
+    Then bibliography book 2 should not be in stock
     
   @amazon_search
   Scenario: In stock indicator not shown for book not in db
     Given there is an author called "Ian Rankin"
     When I go to the "Ian Rankin" author detail page
-    Then bibliography book 1 should not be in stock
+    Then bibliography book 2 should not be in stock
     
   @amazon_search
   Scenario: More books link shown for author with more books available

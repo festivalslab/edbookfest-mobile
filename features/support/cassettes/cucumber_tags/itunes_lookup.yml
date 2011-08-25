@@ -1,0 +1,450 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9781846142147&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=G1dlbodEghYOMJJEgFI7xJSuv3904O2iNMwNIjIWLKA=&Timestamp=2011-08-25T06:22:46Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:22:46 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: ! '<?xml version="1.0" encoding="UTF-8"?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+      Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header></HTTPHeaders><RequestId>0VX9XEH5000EKET8XEM7</RequestId><Arguments><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="ItemId" Value="9781846142147"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Signature" Value="G1dlbodEghYOMJJEgFI7xJSuv3904O2iNMwNIjIWLKA="></Argument><Argument
+      Name="ResponseGroup" Value="Images,ItemAttributes,EditorialReview,AlternateVersions"></Argument><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:22:46Z"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.070991039276123</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9781846142147</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest></Request><Item><ASIN>1846142148</ASIN><DetailPageURL>http://www.amazon.co.uk/India-Portrait-Patrick-French/dp/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1846142148</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3D1846142148%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">49</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">105</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">327</Width></LargeImage><ImageSets><ImageSet
+      Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL30_.jpg</URL><Height
+      Units="pixels">30</Height><Width Units="pixels">20</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">49</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">49</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL110_.jpg</URL><Height
+      Units="pixels">110</Height><Width Units="pixels">72</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">105</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">327</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Author>Patrick
+      French</Author><Binding>Hardcover</Binding><EAN>9781846142147</EAN><EANList><EANListElement>9781846142147</EANListElement></EANList><Feature>New</Feature><Feature>Mint
+      Condition</Feature><Feature>Dispatch same day for order received before 12 noon</Feature><Feature>Guaranteed
+      packaging</Feature><Feature>No quibbles returns</Feature><ISBN>1846142148</ISBN><Label>Allen
+      Lane</Label><ListPrice><Amount>2500</Amount><CurrencyCode>GBP</CurrencyCode><FormattedPrice>£25.00</FormattedPrice></ListPrice><Manufacturer>Allen
+      Lane</Manufacturer><NumberOfPages>448</NumberOfPages><PackageDimensions><Height
+      Units="hundredths-inches">160</Height><Length Units="hundredths-inches">940</Length><Weight
+      Units="hundredths-pounds">150</Weight><Width Units="hundredths-inches">620</Width></PackageDimensions><ProductGroup>Book</ProductGroup><ProductTypeName>ABIS_BOOK</ProductTypeName><PublicationDate>2011-01-27</PublicationDate><Publisher>Allen
+      Lane</Publisher><SKU>mon0000359939</SKU><Studio>Allen Lane</Studio><Title>India:
+      A Portrait</Title></ItemAttributes><EditorialReviews><EditorialReview><Source>Product
+      Description</Source><Content>Presents social, political and economic history
+      of India. Examining the cultural foundations that made India''s accelerated
+      transformation from socialist economy to capitalist powerhouse possible, this
+      title provides a picture of what it is like to live at a time when millions
+      have pulled themselves free of poverty.</Content></EditorialReview></EditorialReviews><AlternateVersions><AlternateVersion><ASIN>0670085510</ASIN><Title>India:
+      A Portrait</Title><Binding>Hardcover</Binding></AlternateVersion><AlternateVersion><ASIN>B004NNULLI</ASIN><Title>India:
+      A Portrait</Title><Binding>Kindle Edition</Binding></AlternateVersion><AlternateVersion><ASIN>0307272435</ASIN><Title>India:
+      A Portrait</Title><Binding>Hardcover</Binding></AlternateVersion></AlternateVersions></Item></Items></ItemLookupResponse>'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=ASIN&ItemId=B004NNULLI&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Signature=dUU5puXPRw6zzdmgMIMTVurbH/h2ZHX++WAbZWjAyy8=&Timestamp=2011-08-25T06:22:46Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:22:47 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: ! '<?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>ee780707-3ae9-47c2-a04d-7b3818fe6132</RequestId><Arguments><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="ItemId" Value="B004NNULLI"></Argument><Argument Name="IdType" Value="ASIN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:22:46Z"></Argument><Argument Name="Signature" Value="dUU5puXPRw6zzdmgMIMTVurbH/h2ZHX++WAbZWjAyy8="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes"></Argument><Argument Name="AssociateTag"
+      Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0082350000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>ASIN</IdType><ItemId>B004NNULLI</ItemId><ResponseGroup>ItemAttributes</ResponseGroup><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B004NNULLI</ASIN><DetailPageURL>http://www.amazon.co.uk/India-A-Portrait-ebook/dp/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB004NNULLI</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3DB004NNULLI%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink></ItemLinks><ItemAttributes><Author>Patrick
+      French</Author><Binding>Kindle Edition</Binding><EISBN>9780141947006</EISBN><Format>Kindle
+      eBook</Format><Label>ePenguin</Label><Languages><Language><Name>English</Name><Type>Published</Type></Language></Languages><Manufacturer>ePenguin</Manufacturer><NumberOfItems>1</NumberOfItems><NumberOfPages>448</NumberOfPages><ProductGroup>eBooks</ProductGroup><ProductTypeName>ABIS_EBOOKS</ProductTypeName><PublicationDate>2011-01-27</PublicationDate><Publisher>ePenguin</Publisher><ReleaseDate>2011-01-27</ReleaseDate><Studio>ePenguin</Studio><Title>India:
+      A Portrait</Title></ItemAttributes></Item></Items></ItemLookupResponse>'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://itunes.apple.com:80/lookup?country=gb&isbn=9781846142147
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-apple-orig-url-path:
+      - /lookup?country=gb&isbn=9781846142147
+      x-apple-application-site:
+      - NWK
+      x-apple-max-age:
+      - '3600'
+      x-apple-woa-inbound-url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?country=gb&isbn=9781846142147
+      content-type:
+      - text/javascript; charset=utf-8
+      x-apple-application-instance:
+      - '1008012'
+      x-webobjects-loadaverage:
+      - '0'
+      cache-control:
+      - no-transform, max-age=57
+      date:
+      - Thu, 25 Aug 2011 06:22:47 GMT
+      content-length:
+      - '783'
+      x-apple-partner:
+      - origin.0
+    body: ! "\n\n\n{\n \"resultCount\":1,\n \"results\": [\n{\"kind\":\"ebook\", \"artistId\":419256050,
+      \"artistName\":\"Patrick French\", \"price\":11.99, \"description\":null, \"genreIds\":[\"10073\",
+      \"38\", \"9015\"], \"releaseDate\":\"2011-01-27T08:00:00Z\", \"currency\":\"GBP\",
+      \"genres\":[\"Asia\", \"Books\", \"History\"], \"trackId\":419753457, \"trackName\":\"India\",
+      \"artistIds\":[419256050], \"artworkUrl60\":\"http://a4.mzstatic.com/us/r30/Publication/65/42/1c/mzi.snjhvjgz.60x60-50.jpg\",
+      \"artworkUrl100\":\"http://a5.mzstatic.com/us/r30/Publication/65/42/1c/mzi.snjhvjgz.100x100-75.jpg\",
+      \"artistViewUrl\":\"http://itunes.apple.com/gb/artist/patrick-french/id419256050?mt=11&uo=4\",
+      \"trackCensoredName\":\"India\", \"trackViewUrl\":\"http://itunes.apple.com/gb/book/india/id419753457?mt=11&uo=4\",
+      \"averageUserRating\":5.0, \"userRatingCount\":1}]\n}\n\n\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9781848775565&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=WnLdkpau7vt1AFQeOHJn8x0a6X+qJd4SyJM4a0Hx2+E=&Timestamp=2011-08-25T06:22:47Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:22:47 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" encoding="UTF-8"?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+      Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header></HTTPHeaders><RequestId>0ANSFE0PHDW1E7ZRBA46</RequestId><Arguments><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="ItemId" Value="9781848775565"></Argument><Argument
+      Name="Service" Value="AWSECommerceService"></Argument><Argument Name="ResponseGroup"
+      Value="Images,ItemAttributes,EditorialReview,AlternateVersions"></Argument><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
+      Name="Timestamp" Value="2011-08-25T06:22:47Z"></Argument><Argument Name="Version"
+      Value="2011-08-01"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="Signature" Value="WnLdkpau7vt1AFQeOHJn8x0a6X+qJd4SyJM4a0Hx2+E="></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument></Arguments><RequestProcessingTime>0.0348029136657715</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9781848775565</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest></Request><Item><ASIN>1848775563</ASIN><DetailPageURL>http://www.amazon.co.uk/Silly-Doggy-Adam-Stower/dp/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1848775563</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3D1848775563%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">65</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">138</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">432</Width></LargeImage><ImageSets><ImageSet
+      Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL30_.jpg</URL><Height
+      Units="pixels">30</Height><Width Units="pixels">26</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">65</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">65</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL110_.jpg</URL><Height
+      Units="pixels">110</Height><Width Units="pixels">95</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">138</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">432</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Author>Adam
+      Stower</Author><Binding>Hardcover</Binding><EAN>9781848775565</EAN><EANList><EANListElement>9781848775565</EANListElement></EANList><ISBN>1848775563</ISBN><Label>Templar</Label><ListPrice><Amount>1099</Amount><CurrencyCode>GBP</CurrencyCode><FormattedPrice>£10.99</FormattedPrice></ListPrice><Manufacturer>Templar</Manufacturer><NumberOfItems>1</NumberOfItems><NumberOfPages>40</NumberOfPages><PackageDimensions><Height
+      Units="hundredths-inches">63</Height><Length Units="hundredths-inches">1055</Length><Weight
+      Units="hundredths-pounds">115</Weight><Width Units="hundredths-inches">913</Width></PackageDimensions><ProductGroup>Book</ProductGroup><ProductTypeName>ABIS_BOOK</ProductTypeName><PublicationDate>2011-05-01</PublicationDate><Publisher>Templar</Publisher><SKU>9781848775565</SKU><Studio>Templar</Studio><Title>Silly
+      Doggy</Title></ItemAttributes></Item></Items></ItemLookupResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=ASIN&ItemId=&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Signature=NEUCL69k2hXcMSpVLIM++U1j0WnDBO5fCsd9fZfcPRY=&Timestamp=2011-08-25T06:22:47Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:22:47 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>cc17fc05-ef82-469e-b0e4-54dc776e8696</RequestId><Arguments><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="ItemId"></Argument><Argument Name="IdType" Value="ASIN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:22:47Z"></Argument><Argument Name="Signature" Value="NEUCL69k2hXcMSpVLIM++U1j0WnDBO5fCsd9fZfcPRY="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes"></Argument><Argument Name="AssociateTag"
+      Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0022570000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>False</IsValid><ItemLookupRequest><IdType>ASIN</IdType><ResponseGroup>ItemAttributes</ResponseGroup><VariationPage>All</VariationPage></ItemLookupRequest><Errors><Error><Code>AWS.MissingParameters</Code><Message>Your
+      request is missing required parameters. Required parameters include ItemId.</Message></Error></Errors></Request></Items></ItemLookupResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://itunes.apple.com:80/lookup?country=gb&isbn=9781848775565
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-apple-orig-url-path:
+      - /lookup?country=gb&isbn=9781848775565
+      x-apple-application-site:
+      - NWK
+      x-apple-max-age:
+      - '3600'
+      x-apple-woa-inbound-url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?country=gb&isbn=9781848775565
+      content-type:
+      - text/javascript; charset=utf-8
+      x-apple-application-instance:
+      - '1006006'
+      x-webobjects-loadaverage:
+      - '0'
+      cache-control:
+      - no-transform, max-age=56
+      date:
+      - Thu, 25 Aug 2011 06:22:47 GMT
+      content-length:
+      - '42'
+      x-apple-partner:
+      - origin.0
+    body: ! "\n\n\n{\n \"resultCount\":0,\n \"results\": []\n}\n\n\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9781846142147&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=K7uBhwxUAhJyGUILzYkTYDb97XLhAnSg3paTSEbSJAI=&Timestamp=2011-08-25T06:26:10Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:26:10 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: ! '<?xml version="1.0" encoding="UTF-8"?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+      Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header></HTTPHeaders><RequestId>1T4W802HHHZBK8W161FN</RequestId><Arguments><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="ItemId" Value="9781846142147"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Signature" Value="K7uBhwxUAhJyGUILzYkTYDb97XLhAnSg3paTSEbSJAI="></Argument><Argument
+      Name="ResponseGroup" Value="Images,ItemAttributes,EditorialReview,AlternateVersions"></Argument><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:26:10Z"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0570869445800781</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9781846142147</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest></Request><Item><ASIN>1846142148</ASIN><DetailPageURL>http://www.amazon.co.uk/India-Portrait-Patrick-French/dp/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1846142148</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3D1846142148%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/1846142148%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1846142148</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">49</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">105</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">327</Width></LargeImage><ImageSets><ImageSet
+      Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL30_.jpg</URL><Height
+      Units="pixels">30</Height><Width Units="pixels">20</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">49</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">49</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL110_.jpg</URL><Height
+      Units="pixels">110</Height><Width Units="pixels">72</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">105</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51Ye-0nBhYL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">327</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Author>Patrick
+      French</Author><Binding>Hardcover</Binding><EAN>9781846142147</EAN><EANList><EANListElement>9781846142147</EANListElement></EANList><Feature>New</Feature><Feature>Mint
+      Condition</Feature><Feature>Dispatch same day for order received before 12 noon</Feature><Feature>Guaranteed
+      packaging</Feature><Feature>No quibbles returns</Feature><ISBN>1846142148</ISBN><Label>Allen
+      Lane</Label><ListPrice><Amount>2500</Amount><CurrencyCode>GBP</CurrencyCode><FormattedPrice>£25.00</FormattedPrice></ListPrice><Manufacturer>Allen
+      Lane</Manufacturer><NumberOfPages>448</NumberOfPages><PackageDimensions><Height
+      Units="hundredths-inches">160</Height><Length Units="hundredths-inches">940</Length><Weight
+      Units="hundredths-pounds">150</Weight><Width Units="hundredths-inches">620</Width></PackageDimensions><ProductGroup>Book</ProductGroup><ProductTypeName>ABIS_BOOK</ProductTypeName><PublicationDate>2011-01-27</PublicationDate><Publisher>Allen
+      Lane</Publisher><SKU>mon0000359939</SKU><Studio>Allen Lane</Studio><Title>India:
+      A Portrait</Title></ItemAttributes><EditorialReviews><EditorialReview><Source>Product
+      Description</Source><Content>Presents social, political and economic history
+      of India. Examining the cultural foundations that made India''s accelerated
+      transformation from socialist economy to capitalist powerhouse possible, this
+      title provides a picture of what it is like to live at a time when millions
+      have pulled themselves free of poverty.</Content></EditorialReview></EditorialReviews><AlternateVersions><AlternateVersion><ASIN>0670085510</ASIN><Title>India:
+      A Portrait</Title><Binding>Hardcover</Binding></AlternateVersion><AlternateVersion><ASIN>B004NNULLI</ASIN><Title>India:
+      A Portrait</Title><Binding>Kindle Edition</Binding></AlternateVersion><AlternateVersion><ASIN>0307272435</ASIN><Title>India:
+      A Portrait</Title><Binding>Hardcover</Binding></AlternateVersion></AlternateVersions></Item></Items></ItemLookupResponse>'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=ASIN&ItemId=B004NNULLI&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Signature=3hDL688nhMlsaE6RhZMuRcmkhu8GHSI7JwutT/iXdvw=&Timestamp=2011-08-25T06:26:10Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:26:10 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: ! '<?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>da04e74b-dd91-495e-9c52-2da69de740ef</RequestId><Arguments><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="ItemId" Value="B004NNULLI"></Argument><Argument Name="IdType" Value="ASIN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:26:10Z"></Argument><Argument Name="Signature" Value="3hDL688nhMlsaE6RhZMuRcmkhu8GHSI7JwutT/iXdvw="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes"></Argument><Argument Name="AssociateTag"
+      Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0067130000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>ASIN</IdType><ItemId>B004NNULLI</ItemId><ResponseGroup>ItemAttributes</ResponseGroup><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B004NNULLI</ASIN><DetailPageURL>http://www.amazon.co.uk/India-A-Portrait-ebook/dp/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB004NNULLI</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3DB004NNULLI%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/B004NNULLI%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB004NNULLI</URL></ItemLink></ItemLinks><ItemAttributes><Author>Patrick
+      French</Author><Binding>Kindle Edition</Binding><EISBN>9780141947006</EISBN><Format>Kindle
+      eBook</Format><Label>ePenguin</Label><Languages><Language><Name>English</Name><Type>Published</Type></Language></Languages><Manufacturer>ePenguin</Manufacturer><NumberOfItems>1</NumberOfItems><NumberOfPages>448</NumberOfPages><ProductGroup>eBooks</ProductGroup><ProductTypeName>ABIS_EBOOKS</ProductTypeName><PublicationDate>2011-01-27</PublicationDate><Publisher>ePenguin</Publisher><ReleaseDate>2011-01-27</ReleaseDate><Studio>ePenguin</Studio><Title>India:
+      A Portrait</Title></ItemAttributes></Item></Items></ItemLookupResponse>'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9781848775565&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=VGPFbxcuB7qNXW7NO4dJe9i1YGUZGdFjzjB9uSKT3D8=&Timestamp=2011-08-25T06:26:10Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:26:10 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" encoding="UTF-8"?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+      Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header></HTTPHeaders><RequestId>1B6X1DRWMX1M23MDH2PG</RequestId><Arguments><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="ItemId" Value="9781848775565"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Signature" Value="VGPFbxcuB7qNXW7NO4dJe9i1YGUZGdFjzjB9uSKT3D8="></Argument><Argument
+      Name="ResponseGroup" Value="Images,ItemAttributes,EditorialReview,AlternateVersions"></Argument><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:26:10Z"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0428168773651123</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9781848775565</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest></Request><Item><ASIN>1848775563</ASIN><DetailPageURL>http://www.amazon.co.uk/Silly-Doggy-Adam-Stower/dp/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1848775563</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3D1848775563%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/1848775563%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D1848775563</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">65</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">138</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">432</Width></LargeImage><ImageSets><ImageSet
+      Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL30_.jpg</URL><Height
+      Units="pixels">30</Height><Width Units="pixels">26</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">65</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL75_.jpg</URL><Height
+      Units="pixels">75</Height><Width Units="pixels">65</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL110_.jpg</URL><Height
+      Units="pixels">110</Height><Width Units="pixels">95</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL160_.jpg</URL><Height
+      Units="pixels">160</Height><Width Units="pixels">138</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51z97ViwzFL._SL500_.jpg</URL><Height
+      Units="pixels">500</Height><Width Units="pixels">432</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Author>Adam
+      Stower</Author><Binding>Hardcover</Binding><EAN>9781848775565</EAN><EANList><EANListElement>9781848775565</EANListElement></EANList><ISBN>1848775563</ISBN><Label>Templar</Label><ListPrice><Amount>1099</Amount><CurrencyCode>GBP</CurrencyCode><FormattedPrice>£10.99</FormattedPrice></ListPrice><Manufacturer>Templar</Manufacturer><NumberOfItems>1</NumberOfItems><NumberOfPages>40</NumberOfPages><PackageDimensions><Height
+      Units="hundredths-inches">63</Height><Length Units="hundredths-inches">1055</Length><Weight
+      Units="hundredths-pounds">115</Weight><Width Units="hundredths-inches">913</Width></PackageDimensions><ProductGroup>Book</ProductGroup><ProductTypeName>ABIS_BOOK</ProductTypeName><PublicationDate>2011-05-01</PublicationDate><Publisher>Templar</Publisher><SKU>9781848775565</SKU><Studio>Templar</Studio><Title>Silly
+      Doggy</Title></ItemAttributes></Item></Items></ItemLookupResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=ASIN&ItemId=&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Signature=6JKdEfn7XFlQhz6YDEiaqPruR7DkJ73s/AOexGZ2Cxc=&Timestamp=2011-08-25T06:26:11Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:26:11 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>faf80b24-24c8-4442-9a4a-d1492d709152</RequestId><Arguments><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="ItemId"></Argument><Argument Name="IdType" Value="ASIN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:26:11Z"></Argument><Argument Name="Signature" Value="6JKdEfn7XFlQhz6YDEiaqPruR7DkJ73s/AOexGZ2Cxc="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes"></Argument><Argument Name="AssociateTag"
+      Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0024460000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>False</IsValid><ItemLookupRequest><IdType>ASIN</IdType><ResponseGroup>ItemAttributes</ResponseGroup><VariationPage>All</VariationPage></ItemLookupRequest><Errors><Error><Code>AWS.MissingParameters</Code><Message>Your
+      request is missing required parameters. Required parameters include ItemId.</Message></Error></Errors></Request></Items></ItemLookupResponse>
+    http_version: '1.1'

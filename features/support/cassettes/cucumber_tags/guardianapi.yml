@@ -1,0 +1,816 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://content.guardianapis.com:80/books/2011/jan/22/the-leopard-jo-nesbo-review?api-key=<EIBF_GUARDIAN_API>&format=json&show-fields=all
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-mashery-responder:
+      - proxyworker-eu-i-c16d64b5.mashery.com
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - public, max-age=60
+      expires:
+      - Thu, 25 Aug 2011 06:23:58 UTC
+      x-lift-version:
+      - '2.3'
+      x-content-api-build:
+      - '964'
+      date:
+      - Thu, 25 Aug 2011 06:22:58 GMT
+      - Thu, 25 Aug 2011 06:22:58 UTC
+      x-gu-jas:
+      - 08c0b24d44f5c9669fb11521ff5e7741!1727531446@qtp-1761506447-876
+      vary:
+      - Accept,Accept-Encoding
+      accept-ranges:
+      - bytes
+      content-length:
+      - '6075'
+      server:
+      - Mashery Proxy
+    body: ! "{\n  \"response\":{\n    \"status\":\"ok\",\n    \"userTier\":\"approved\",\n
+      \   \"total\":1,\n    \"content\":{\n      \"id\":\"books/2011/jan/22/the-leopard-jo-nesbo-review\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-01-22T00:05:39Z\",\n
+      \     \"webTitle\":\"The Leopard by Jo Nesbø | Review\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jan/22/the-leopard-jo-nesbo-review\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jan/22/the-leopard-jo-nesbo-review\",\n
+      \     \"fields\":{\n        \"newspaperPageNumber\":\"11\",\n        \"trailText\":\"<strong>Laura
+      Wilson</strong> goes on a Nordic murder spree\",\n        \"headline\":\"The
+      Leopard by Jo Nesbø\",\n        \"body\":\"<p>Since <em>The Girl With the Dragon
+      Tattoo</em> was published in 2008, there's been something of a Nordic noir bonanza
+      in this country, with every new Scandinavian crime novel, whether good, bad
+      or indifferent, being engulfed in a blizzard of hyperbole, and every author
+      trailed as \\\"the next Stieg Larsson\\\". While this label is neither intelligent
+      nor helpful, it is probably fair to say that, in terms of both critical and
+      commercial success, Norwegian Jo Nesbø is the writer to whom it is the most
+      applicable.</p><p>However, those who did not appreciate Larsson's work need
+      not fear: in both style and content, Nesbø is entirely his own man. <em>The
+      Leopard</em>, the sixth Harry Hole novel to be published in Britain, is a big
+      and meaty, but easily digestible, slab of a read, ably translated by Don Bartlett.
+      At first glance, 610 pages might seem a little (or a lot) on the long side for
+      what is, in essence, a serial killer/maverick cop story, but the labyrinthine
+      plot and the large canvas (Hong Kong and Africa as well as Norway, and several
+      points in between) justify the word-count.</p><p>As with Nesbø's other books,
+      all the characters, both heroes and villains, are toting phenomenal amounts
+      of personal baggage, none more so than Hole himself. He has a full checklist
+      of the character requirements of the noir hero \\u2013 being melancholic, alcoholic,
+      intuitive, uncompromising, anti-authority and, although often unsanitary, astonishingly
+      attractive to women (including his stunningly beautiful colleague Kaja, who,
+      naturally, has a raft of problems of her own). He also has the requisite backstory,
+      in the form of a lost love and a dying father with whom he has unfinished emotional
+      business. Apart from this, he has near-superhuman powers of recovery, whether
+      from a mammoth hangover, an avalanche, or the attentions of a frenzied psychopath.
+      And boy, does he need them.</p><p>The story begins with Hole being recalled
+      (somewhat implausibly) from Hong Kong, where he has fled after his last, traumatic
+      case. He is in hock to the triads over gambling debts, and self-medicating with
+      opium to stop drinking. Lured back by the lovely Kaja with the prospect of seeing
+      his father, he reluctantly agrees to investigate the case of two women who have
+      been found murdered in a way so spectacularly ingenious and revolting that it
+      is the stuff (literally, in my case) of nightmares. With no forensic evidence
+      or even a single clue, and the media circling like hungry sharks, Hole finds
+      himself caught in the middle of a police turf-war over power and jurisdiction
+      (not that this bothers him \\u2013 he simply alienates both sides in equal measure).</p><p>The
+      only connection between the victims is that they spent the same night in an
+      isolated mountain hostel, and when another visitor is found murdered, it becomes
+      clear that the killer is determined to pick off the rest of the guests. As well
+      as making good use of that particularly Scandinavian USP the weather (or, more
+      specifically, snow, snow and more snow), which provides dramatic plot developments
+      in ways that writers who set their books in more temperate climes can only dream
+      of, Nesbø deploys all the key ingredients of a cracking good thriller with expertise
+      and verve. The ticking clock, the tension expertly racheted ever upwards, the
+      changing scenery, the constantly shifting goalposts and his effortless, triumphant
+      outpacing of the reader's ability to guess what's going to happen will keep
+      you gripped to the last page. Suspend disbelief, immerse yourself and enjoy
+      the ride. Oh, and don't have nightmares.</p><p>Laura Wilson's <em>A Capital
+      Crime</em> is published by Quercus.</p><div class=\\\"gu_advert\\\">\\n        <iframe
+      marginheight=\\\"0\\\" frameborder=\\\"0\\\" width=\\\"300px\\\" height=\\\"250px\\\"
+      style=\\\"border: none\\\" src=\\\"http://resource.guim.co.uk/global/adcode/generatehtml?slot=Bottom&partner=guardianapis.com/books&k=Fiction&k=Books&k=Thrillers&k=Culture\\\"
+      marginwidth=\\\"0\\\" scrolling=\\\"NO\\\">\\n          <a href=\\\"http://oas.guardian.co.uk/RealMedia/ads/click_nx.ads/guardianapis.com/books/oas.html/@Bottom\\\"
+      rel=\\\"nofollow\\\">\\n              <img src=\\\"http://oas.guardian.co.uk/RealMedia/ads/adstream_nx.ads/guardianapis.com/books/oas.html/@Bottom\\\"
+      alt=\\\"Ads by The Guardian\\\"></img>\\n          </a>\\n        </iframe>\\n
+      \     </div><img src='http://hits.guardian.co.uk/b/ss/guardiangu-api/1/H.20.3/98867?ns=guardian&pageName=The+Leopard+by+Jo+Nesb%C3%B8+%7C+Review+Article+1507629&ch=Books&c2=96952&c4=Fiction+%28Books+genre%29%2CBooks%2CThrillers+%28Books+genre%29%2CCulture&c3=The+Guardian&c6=Laura+Wilson&c7=11-Jan-22&c8=1507629&c9=Article'
+      width='1' height='1' /><img src='http://hits.guardianapis.com/t.gif?b=964&t=1314253378624&c=370779342&format=json&k=958714c&user-tier=approved&show-fields=all&application-id=96952'
+      width='1' height='1' /><!-- Guardian Watermark: books/2011/jan/22/the-leopard-jo-nesbo-review|2011-08-25T07:22:58+01:00|6f44eb2566f6fdbedea99e2ccea47cbbaf67673c
+      -->\",\n        \"lastModified\":\"2011-01-22T00:05:39Z\",\n        \"hasStoryPackage\":\"false\",\n
+      \       \"standfirst\":\"Laura Wilson goes on a Nordic murder spree\",\n        \"shortUrl\":\"http://gu.com/p/2mg23\",\n
+      \       \"commentable\":\"true\",\n        \"byline\":\"Laura Wilson\",\n        \"publication\":\"The
+      Guardian\",\n        \"newspaperEditionDate\":\"2011-01-22\",\n        \"liveBloggingNow\":\"false\"\n
+      \     }\n    }\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://content.guardianapis.com:80/books/2010/nov/28/writers-favourite-translations?api-key=<EIBF_GUARDIAN_API>&format=json&show-fields=all
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-mashery-responder:
+      - proxyworker-eu-i-c96d64bd.mashery.com
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - public, max-age=60
+      expires:
+      - Thu, 25 Aug 2011 06:23:59 UTC
+      x-lift-version:
+      - '2.3'
+      x-content-api-build:
+      - '964'
+      date:
+      - Thu, 25 Aug 2011 06:22:59 GMT
+      - Thu, 25 Aug 2011 06:22:59 UTC
+      x-gu-jas:
+      - ccbe471ba503f55504869f82a88de719!1656237981@qtp-429297187-827
+      vary:
+      - Accept,Accept-Encoding
+      accept-ranges:
+      - bytes
+      content-length:
+      - '1401'
+      server:
+      - Mashery Proxy
+    body: ! "{\n  \"response\":{\n    \"status\":\"ok\",\n    \"userTier\":\"approved\",\n
+      \   \"total\":1,\n    \"content\":{\n      \"id\":\"books/2010/nov/28/writers-favourite-translations\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2010-11-28T00:08:00Z\",\n
+      \     \"webTitle\":\"Writers pick their favourite translations...\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2010/nov/28/writers-favourite-translations\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2010/nov/28/writers-favourite-translations\",\n
+      \     \"fields\":{\n        \"newspaperPageNumber\":\"42\",\n        \"trailText\":\"<p>Novelists
+      and translators on the translated books that have impressed them most</p>\",\n
+      \       \"headline\":\"Writers pick their favourite translations...\",\n        \"body\":\"<!--
+      Redistribution rights for this field are unavailable -->\",\n        \"lastModified\":\"2010-11-28T00:08:00Z\",\n
+      \       \"hasStoryPackage\":\"true\",\n        \"standfirst\":\"Novelists and
+      translators on the translated books that have impressed them most\",\n        \"shortUrl\":\"http://gu.com/p/2yckx\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/Gallery_Images/2010/11/26/1290771146276/Tim-Parks-in-Kensington-G-003.jpg\",\n
+      \       \"commentable\":\"false\",\n        \"byline\":\"Various\",\n        \"publication\":\"The
+      Observer\",\n        \"newspaperEditionDate\":\"2010-11-28\",\n        \"liveBloggingNow\":\"false\"\n
+      \     }\n    }\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://content.guardianapis.com:80/search?api-key=<EIBF_GUARDIAN_API>&format=json&page-size=25&q=Joe%20Bloggs&section=books%7Cchildrens-books-site&show-fields=headline,trailText,shortUrl,standfirst,thumbnail,byline,publication
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-mashery-responder:
+      - proxyworker-eu-i-b76f66c3.mashery.com
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - public, max-age=60
+      expires:
+      - Thu, 25 Aug 2011 06:23:59 UTC
+      x-lift-version:
+      - '2.3'
+      x-content-api-build:
+      - '964'
+      date:
+      - Thu, 25 Aug 2011 06:22:59 GMT
+      - Thu, 25 Aug 2011 06:22:59 UTC
+      x-gu-jas:
+      - c2ae292db29aabd4e9d7c85cd99783d5!681794353@qtp-643059393-903
+      vary:
+      - Accept,Accept-Encoding
+      accept-ranges:
+      - bytes
+      content-length:
+      - '10079'
+      server:
+      - Mashery Proxy
+    body: ! "{\n  \"response\":{\n    \"status\":\"ok\",\n    \"userTier\":\"approved\",\n
+      \   \"total\":10,\n    \"startIndex\":1,\n    \"pageSize\":25,\n    \"currentPage\":1,\n
+      \   \"pages\":1,\n    \"orderBy\":\"newest\",\n    \"results\":[{\n      \"id\":\"books/booksblog/2011/aug/19/edinburgh-book-festival-tickets\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-19T11:03:41+01:00\",\n
+      \     \"webTitle\":\"Edinburgh book festival Friday round-up \",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2011/aug/19/edinburgh-book-festival-tickets\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2011/aug/19/edinburgh-book-festival-tickets\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Your one-stop-shop for signing
+      tent times, events with tickets still available and links to the local literary
+      blogosphere</p>\",\n        \"headline\":\"Edinburgh book festival Friday round-up\",\n
+      \       \"standfirst\":\"Your one-stop-shop for signing tent times, events with
+      tickets still available and links to the local literary blogosphere\",\n        \"shortUrl\":\"http://gu.com/p/3xb5y\",\n
+      \       \"byline\":\"Michael MacLeod\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jun/01/global-book-club-launches-twitter\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-01T13:32:18+01:00\",\n
+      \     \"webTitle\":\"Global book club launches on Twitter\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jun/01/global-book-club-launches-twitter\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jun/01/global-book-club-launches-twitter\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Margaret Atwood's The Blind Assassin
+      is first pick for 1book140</p>\",\n        \"headline\":\"Global book club launches
+      on Twitter\",\n        \"standfirst\":\"Margaret Atwood's The Blind Assassin
+      is first pick for 1book140\",\n        \"shortUrl\":\"http://gu.com/p/2pf35\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/1/1306931496712/Margaret-Atwood-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/booksblog/2011/apr/14/more-george-r-r-martin\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-04-14T14:17:21+01:00\",\n
+      \     \"webTitle\":\"Getting more from George RR Martin\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2011/apr/14/more-george-r-r-martin\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2011/apr/14/more-george-r-r-martin\",\n
+      \     \"fields\":{\n        \"trailText\":\"<strong>Alison Flood: </strong>Since
+      my obsession with Martin is widely shared, it seems only fair to share some
+      of the author's other answers in my Guardian interview\",\n        \"headline\":\"Getting
+      more from George RR Martin\",\n        \"standfirst\":\"Since my obsession with
+      Martin is widely shared, it seems only fair to share some of the author's other
+      answers in <a href=\\\"http://www.guardian.co.uk/books/2011/apr/13/george-rr-martin-game-thrones\\\"
+      title=\\\"\\\">my Guardian interview</a>\",\n        \"shortUrl\":\"http://gu.com/p/2zeab\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/4/14/1302786985173/George-RR-Martin-002.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/apr/13/george-rr-martin-game-thrones\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-04-13T21:30:00+01:00\",\n
+      \     \"webTitle\":\"George RR Martin: Barbarians at the gate\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/apr/13/george-rr-martin-game-thrones\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/apr/13/george-rr-martin-game-thrones\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Nothing is as savage as a horde
+      of starved fantasy fans \\u2013 as author George RR Martin found out. He tells
+      <strong>Alison Flood</strong> why a new book and HBO series should sate their
+      hunger \\u2013 and start a new era of swords'n'sorcery</p>\",\n        \"headline\":\"George
+      RR Martin: Barbarians at the gate\",\n        \"standfirst\":\"Nothing is as
+      savage as a horde of starved fantasy fans \\u2013 as author George RR Martin
+      found out. He tells Alison Flood why a new book and HBO series should sate their
+      hunger \\u2013 and start a new era of swords'n'sorcery\",\n        \"shortUrl\":\"http://gu.com/p/2zdz9\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/4/13/1302714143537/Not-your-slave---George-R-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2009/may/30/books-news-alice-munro\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2009-05-30T00:01:00+01:00\",\n
+      \     \"webTitle\":\"The week in books: Munro the icon; young Orange judges;
+      and Peace studies\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2009/may/30/books-news-alice-munro\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2009/may/30/books-news-alice-munro\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Munro the icon; young Orange
+      judges; and Peace studies</p>\",\n        \"headline\":\"The week in books\",\n
+      \       \"standfirst\":\"Munro the icon; young Orange judges; and Peace studies\",\n
+      \       \"shortUrl\":\"http://gu.com/p/283hk\",\n        \"byline\":\"Margaret
+      Atwood, Clarissa Pabi, Joe Kerridge, Simon Armitage and James Morrison\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"books/booksblog/2008/jun/25/nobodysfaulttheproblemwith\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2008-06-25T15:30:45+01:00\",\n
+      \     \"webTitle\":\"Nobody's fault: the problem with anonymity\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2008/jun/25/nobodysfaulttheproblemwith\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2008/jun/25/nobodysfaulttheproblemwith\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Used as a licence for mischief
+      and prevarication, the proud tradition of anonymous authorship is being undermined</p>\",\n
+      \       \"headline\":\"Nobody's fault: the problem with anonymity\",\n        \"standfirst\":\"Used
+      as a licence for mischief and prevarication, the proud tradition of anonymous
+      authorship is being undermined\",\n        \"shortUrl\":\"http://gu.com/p/2vfan\",\n
+      \       \"byline\":\"Claire Armitstead\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/booksblog/2008/apr/02/criticsvbloggerswhollwin\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2008-04-02T12:30:35+01:00\",\n
+      \     \"webTitle\":\"Critics v bloggers - who'll win? \",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2008/apr/02/criticsvbloggerswhollwin\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2008/apr/02/criticsvbloggerswhollwin\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Can academics and online commentators
+      put their differences behind them to create a new, interactive platform for
+      literary criticism?</p>\",\n        \"headline\":\"Critics v bloggers - who'll
+      win?\",\n        \"standfirst\":\"Can academics and online commentators put
+      their differences behind them to create a new, interactive platform for literary
+      criticism?\",\n        \"shortUrl\":\"http://gu.com/p/2vapk\",\n        \"byline\":\"Molly
+      Flatt\",\n        \"publication\":\"guardian.co.uk\"\n      }\n    },{\n      \"id\":\"books/booksblog/2008/jan/14/catchofthedayperilsoffan\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2008-01-14T15:45:00Z\",\n
+      \     \"webTitle\":\"Catch of the day: Perils of fans recreating Potter magic\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2008/jan/14/catchofthedayperilsoffan\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2008/jan/14/catchofthedayperilsoffan\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>A fan site is being sued for
+      copyright infringement after announcing it would publish its one-stop guide
+      to Harry Potter in book form</p>\",\n        \"headline\":\"Catch of the day:
+      Perils of fans recreating Potter magic\",\n        \"standfirst\":\"A fan site
+      is being sued for copyright infringement after announcing it would publish its
+      one-stop guide to Harry Potter in book form\",\n        \"shortUrl\":\"http://gu.com/p/2v6g2\",\n
+      \       \"byline\":\"Mark Hooper\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2007/nov/10/featuresreviews.guardianreview35\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2007-11-10T23:51:18Z\",\n
+      \     \"webTitle\":\"Non-fiction: Nov 10\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2007/nov/10/featuresreviews.guardianreview35\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2007/nov/10/featuresreviews.guardianreview35\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>PD Smith, Jo Littler and Vera
+      Rule The History of Science Fiction | When Computers Were Human | Diary of an
+      On-Call Girl | White Heat | The Dead Beat</p>\",\n        \"headline\":\"Space
+      and time\",\n        \"standfirst\":\"PD Smith, Jo Littler and Vera Rule The
+      History of Science Fiction | When Computers Were Human | Diary of an On-Call
+      Girl | White Heat | The Dead Beat\",\n        \"shortUrl\":\"http://gu.com/p/xjndf\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"books/2005/oct/29/featuresreviews.guardianreview6\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2005-10-29T00:54:39+01:00\",\n
+      \     \"webTitle\":\"Audio: Oct 29\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2005/oct/29/featuresreviews.guardianreview6\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2005/oct/29/featuresreviews.guardianreview6\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Sue Arnold on The Chronicle |
+      Victorian London | Voices of History 2</p>\",\n        \"headline\":\"Back in
+      time\",\n        \"standfirst\":\"Sue Arnold on The Chronicle | Victorian London
+      | Voices of History 2\",\n        \"shortUrl\":\"http://gu.com/p/xembe\",\n
+      \       \"byline\":\"Sue Arnold\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    }]\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://content.guardianapis.com:80/search?api-key=<EIBF_GUARDIAN_API>&format=json&page-size=25&q=Ian%20Rankin&section=books%7Cchildrens-books-site&show-fields=headline,trailText,shortUrl,standfirst,thumbnail,byline,publication
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-mashery-responder:
+      - proxyworker-eu-i-b76f66c3.mashery.com
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - public, max-age=60
+      expires:
+      - Thu, 25 Aug 2011 06:23:59 UTC
+      x-lift-version:
+      - '2.3'
+      x-content-api-build:
+      - '964'
+      date:
+      - Thu, 25 Aug 2011 06:22:59 GMT
+      - Thu, 25 Aug 2011 06:22:59 UTC
+      x-gu-jas:
+      - f846f6ac3d4513eeec307a1f6144a889!51611075@qtp-1800251636-890
+      vary:
+      - Accept,Accept-Encoding
+      accept-ranges:
+      - bytes
+      content-length:
+      - '27646'
+      server:
+      - Mashery Proxy
+    body: ! "{\n  \"response\":{\n    \"status\":\"ok\",\n    \"userTier\":\"approved\",\n
+      \   \"total\":361,\n    \"startIndex\":1,\n    \"pageSize\":25,\n    \"currentPage\":1,\n
+      \   \"pages\":15,\n    \"orderBy\":\"newest\",\n    \"results\":[{\n      \"id\":\"books/booksblog/2011/aug/24/edinburgh-book-festival\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-24T10:39:00+01:00\",\n
+      \     \"webTitle\":\"Edinburgh book festival: Wednesday round-up \",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2011/aug/24/edinburgh-book-festival\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2011/aug/24/edinburgh-book-festival\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Today's highlights: Jo Nesbo,
+      Ian Rankin, Carol Ann Duffy and Michel Faber</p>\",\n        \"headline\":\"Edinburgh
+      book festival: Wednesday round-up\",\n        \"standfirst\":\"Today's highlights:
+      Jo Nesbo, Ian Rankin, Carol Ann Duffy and Michel Faber\",\n        \"shortUrl\":\"http://gu.com/p/3xdtg\",\n
+      \       \"byline\":\"Michael MacLeod\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/booksblog/2011/aug/23/edinburgh-book-festival-tickets\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-23T10:25:36+01:00\",\n
+      \     \"webTitle\":\"Edinburgh book festival: Tuesday round-up \",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2011/aug/23/edinburgh-book-festival-tickets\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2011/aug/23/edinburgh-book-festival-tickets\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Ian Rankin, Steve Bell, the future
+      of faith and Writers' Bloc</p>\",\n        \"headline\":\"Edinburgh book festival:
+      Tuesday round-up\",\n        \"standfirst\":\"Ian Rankin, Steve Bell, the future
+      of faith and Writers' Bloc\",\n        \"shortUrl\":\"http://gu.com/p/3xcp6\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/23/1314090939192/Rankin_SMALL.jpg\",\n
+      \       \"byline\":\"Michael MacLeod\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/aug/14/alasdair-gray-edinburgh-book-festival\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-14T18:58:03+01:00\",\n
+      \     \"webTitle\":\"Alasdair Gray honoured by Edinburgh book festival on Lanark
+      anniversary\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/aug/14/alasdair-gray-edinburgh-book-festival\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/aug/14/alasdair-gray-edinburgh-book-festival\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>'Most important Scottish writer
+      since Walter Scott' speaks about masterpiece and more recent work at literary
+      event</p>\",\n        \"headline\":\"Alasdair Gray honoured by Edinburgh book
+      festival on Lanark anniversary\",\n        \"standfirst\":\"'Most important
+      Scottish writer since Walter Scott' speaks about masterpiece and more recent
+      work at literary event\",\n        \"shortUrl\":\"http://gu.com/p/3x8xk\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/14/1313344534413/Alasdair-Gray-003.jpg\",\n
+      \       \"byline\":\"Charlotte Higgins, chief arts writer\",\n        \"publication\":\"The
+      Guardian\"\n      }\n    },{\n      \"id\":\"books/booksblog/2011/aug/14/edinburgh-book-festival-stuart-kelly\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-14T13:52:00+01:00\",\n
+      \     \"webTitle\":\"Favourite book festival moments: Stuart Kelly \",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2011/aug/14/edinburgh-book-festival-stuart-kelly\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2011/aug/14/edinburgh-book-festival-stuart-kelly\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>In the first of a regular series
+      of guest posts by writers, illustrators and critics taking part in the book
+      festival, <strong>Stuart Kelly</strong> shares some of his highlights from a
+      decade of visiting Charlotte Square in August</p>\",\n        \"headline\":\"Favourite
+      book festival moments: Stuart Kelly\",\n        \"standfirst\":\"In the first
+      of a regular series of guest posts by writers, illustrators and critics taking
+      part in the book festival, <strong>Stuart Kelly</strong> shares some of his
+      highlights from a decade of visiting Charlotte Square in August\",\n        \"shortUrl\":\"http://gu.com/p/3x7za\",\n
+      \       \"byline\":\"Stuart Kelly\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/aug/12/edinburgh-international-book-festival-director\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-12T22:55:15+01:00\",\n
+      \     \"webTitle\":\"Directing the Edinburgh international book festival: Nick
+      Barley\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/aug/12/edinburgh-international-book-festival-director\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/aug/12/edinburgh-international-book-festival-director\",\n
+      \     \"fields\":{\n        \"trailText\":\"Nick Barley, reflects on the challenges
+      of organising the world's biggest book festival in Edinburgh\",\n        \"headline\":\"Directing
+      the Edinburgh international book festival\",\n        \"standfirst\":\"'We really
+      are living through revolutionary times. So \\\"revolution\\\" is the overarching
+      theme of the 2011 festival'\",\n        \"shortUrl\":\"http://gu.com/p/3x6b6\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/11/1313060222998/Edinburgh-international-b-003.jpg\",\n
+      \       \"byline\":\"Nick Barley\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/aug/12/edinburgh-book-festival-writers-picks\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-12T22:55:15+01:00\",\n
+      \     \"webTitle\":\"Edinburgh international book festival: writers' picks\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/aug/12/edinburgh-book-festival-writers-picks\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/aug/12/edinburgh-book-festival-writers-picks\",\n
+      \     \"fields\":{\n        \"trailText\":\"Literary festivals give readers
+      the opportunity to see their favourite authors in the flesh \\u2013 but they're
+      also a chance for authors to meet their heroes too. As the Edinburgh international
+      book festival opens its doors, the stars of the show reveal their top tickets\",\n
+      \       \"headline\":\"Edinburgh international book festival: writers' picks\",\n
+      \       \"standfirst\":\"Literary festivals give readers the opportunity to
+      see their favourite authors \\u2013 but they're also a chance for authors to
+      meet their heroes too. The stars of the show reveal their top tickets\",\n        \"shortUrl\":\"http://gu.com/p/3x6c8\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/8/11/1313062492884/Entrance-to-the-Edinburgh-003.jpg\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"books/2011/aug/12/made-up-janice-galloway-review\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-08-12T10:00:01+01:00\",\n
+      \     \"webTitle\":\"All Made Up by Janice Galloway \\u2013 review\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/aug/12/made-up-janice-galloway-review\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/aug/12/made-up-janice-galloway-review\",\n
+      \     \"fields\":{\n        \"trailText\":\"A brilliant 'anti-memoir' of growing
+      up in 1970s Scotland captivates <strong>Ian&nbsp;Rankin </strong>\",\n        \"headline\":\"All
+      Made Up by Janice Galloway \\u2013 review\",\n        \"standfirst\":\"A brilliant
+      'anti-memoir' of growing up in 1970s Scotland\",\n        \"shortUrl\":\"http://gu.com/p/3x5hk\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/8/10/1312974808051/Janice-Galloway-in-the-19-003.jpg\",\n
+      \       \"byline\":\"Ian Rankin\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jul/22/crime-fiction-harrogate-writing-festival\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-07-22T09:00:00+01:00\",\n
+      \     \"webTitle\":\"Partners in crime fiction\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jul/22/crime-fiction-harrogate-writing-festival\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jul/22/crime-fiction-harrogate-writing-festival\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>As the crime-writing world comes
+      together for its annual festival, top authors in the genre choose their favourite
+      fictional characters. But who is your most wanted?</p>\",\n        \"headline\":\"Partners
+      in crime fiction\",\n        \"standfirst\":\"Philip Marlowe, George Smiley,
+      Nancy Drew, Count Fosco ... detectives, spies and villains are among our best-loved
+      fictional characters. As the crime-writing world comes together for its annual
+      festival, top authors in the genre choose their favourites. But who is your
+      most wanted?\",\n        \"shortUrl\":\"http://gu.com/p/3vy95\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/7/20/1311180352794/Patrick-Stewart-and-Alec--003.jpg\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"books/2011/jul/17/literary-career-heroes-robert-mccrum\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-07-17T00:05:14+01:00\",\n
+      \     \"webTitle\":\"Why every novelist is holding out for a hero\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jul/17/literary-career-heroes-robert-mccrum\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jul/17/literary-career-heroes-robert-mccrum\",\n
+      \     \"fields\":{\n        \"trailText\":\"<strong>Robert McCrum: </strong>Only
+      by creating an enduring character can a writer entertain thoughts of a literary
+      career\",\n        \"headline\":\"Why every novelist is holding out for a hero\",\n
+      \       \"standfirst\":\"Only by creating an enduring character can a writer
+      entertain thoughts of a literary career\",\n        \"shortUrl\":\"http://gu.com/p/3vfyz\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Observer/Pix/pictures/2011/7/12/1310476468178/Sherlock-Holmes-McCrum-003.jpg\",\n
+      \       \"byline\":\"Robert McCrum\",\n        \"publication\":\"The Observer\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jul/07/death-summer-benjamin-black-review\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-07-07T09:16:57+01:00\",\n
+      \     \"webTitle\":\"A Death in Summer by Benjamin Black \\u2013 review\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/jul/07/death-summer-benjamin-black-review\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jul/07/death-summer-benjamin-black-review\",\n
+      \     \"fields\":{\n        \"trailText\":\"John Banville's sleuthing alter
+      ego is back \\u2013 and <strong>Mark Lawson</strong> is glad\",\n        \"headline\":\"A
+      Death in Summer by Benjamin Black \\u2013 review\",\n        \"standfirst\":\"John
+      Banville's sleuthing alter ego is back\",\n        \"shortUrl\":\"http://gu.com/p/3vbyj\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/7/5/1309881721386/Illustration-by-Clifford--003.jpg\",\n
+      \       \"byline\":\"Mark Lawson\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jul/04/dan-brown-oxfam-least-wanted-chart\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-07-04T13:33:53+01:00\",\n
+      \     \"webTitle\":\"Dan Brown stays top of Oxfam's 'least wanted' chart\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/jul/04/dan-brown-oxfam-least-wanted-chart\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jul/04/dan-brown-oxfam-least-wanted-chart\",\n
+      \     \"fields\":{\n        \"trailText\":\"Da Vinci Code author heads charity
+      shop's list of most-donated books for a third year\",\n        \"headline\":\"Dan
+      Brown stays top of Oxfam's 'least wanted' chart\",\n        \"standfirst\":\"Da
+      Vinci Code author heads charity shop's list of most-donated books for a third
+      year\",\n        \"shortUrl\":\"http://gu.com/p/3vanc\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/7/4/1309782793719/Oxfam-bookshop-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jul/03/blue-monday-nicci-french-review\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-07-03T00:05:02+01:00\",\n
+      \     \"webTitle\":\"Blue Monday by Nicci French \\u2013 review\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jul/03/blue-monday-nicci-french-review\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jul/03/blue-monday-nicci-french-review\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>The husband-and-wife writing
+      team introduce a new star \\u2013 psychotherapist Frieda Klein \\u2013 in a
+      dark tale of child abduction, writes <strong>Alison Flood</strong></p>\",\n
+      \       \"headline\":\"Blue Monday by Nicci French \\u2013review\",\n        \"standfirst\":\"The
+      husband-and-wife writing team introduce a new star \\u2013 psychotherapist Frieda
+      Klein \\u2013 in a dark tale of child abduction\",\n        \"shortUrl\":\"http://gu.com/p/3v6kk\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/6/27/1309193227112/Blue-Monday-s-insomniac-h-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"The Observer\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jun/30/real-life-ian-rankin-mystery-sculptures\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-30T12:57:48+01:00\",\n
+      \     \"webTitle\":\"Real-life Ian Rankin mystery of 'reverse heist' sculptures\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/jun/30/real-life-ian-rankin-mystery-sculptures\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jun/30/real-life-ian-rankin-mystery-sculptures\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Series of intricate paper artworks
+      linked to Rebus author's work left around Edinburgh</p>\",\n        \"headline\":\"Real-life
+      Ian Rankin mystery of 'reverse heist' sculptures\",\n        \"standfirst\":\"Series
+      of intricate paper artworks linked to Rebus author's work left around Edinburgh\",\n
+      \       \"shortUrl\":\"http://gu.com/p/3v8pb\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/30/1309435006655/Rankin-paper-sculpture-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jun/26/edinburgh-book-festival-tickets-sold-out\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-26T21:26:58+01:00\",\n
+      \     \"webTitle\":\"Edinburgh book festival: record levels of interest cause
+      booking chaos\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jun/26/edinburgh-book-festival-tickets-sold-out\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jun/26/edinburgh-book-festival-tickets-sold-out\",\n
+      \     \"fields\":{\n        \"trailText\":\"Director apologises to those unable
+      to book online after high-profile events sell out on first day of full ticket
+      sales\",\n        \"headline\":\"Edinburgh book festival: record levels of interest
+      cause booking chaos\",\n        \"standfirst\":\"Director apologises to those
+      unable to book online after high-profile events sell out on first day of full
+      ticket sales\",\n        \"shortUrl\":\"http://gu.com/p/3v693\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/26/1309112487685/Alasdair-Gray-003.jpg\",\n
+      \       \"byline\":\"Severin Carrell, Scotland correspondent\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jun/17/best-holiday-reads\",\n      \"sectionId\":\"books\",\n
+      \     \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-17T23:55:00+01:00\",\n
+      \     \"webTitle\":\"The best holiday reads\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jun/17/best-holiday-reads\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jun/17/best-holiday-reads\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Anna Karenina on the beach, The
+      Corrections in Patagonia, Death in Venice in . . . where else?  Writers recall
+      their most memorable holiday reads</p>\",\n        \"headline\":\"The best holiday
+      reads\",\n        \"standfirst\":\"Anna Karenina on the beach, The Corrections
+      in Patagonia, Death in Venice overlooking the Lido ...  Writers recall their
+      most memorable holiday reads \\u2013 what are yours?\",\n        \"shortUrl\":\"http://gu.com/p/3vv2d\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/15/1308155216090/Man-reading-on-a-beach-003.jpg\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"books/2011/jun/16/edinburgh-book-festival-highlights\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-16T09:46:00+01:00\",\n
+      \     \"webTitle\":\"Edinburgh book festival highlights\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jun/16/edinburgh-book-festival-highlights\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jun/16/edinburgh-book-festival-highlights\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>From fiction to poetry to children's
+      illustrators, here is the pick of the events at the festival this year</p>\",\n
+      \       \"headline\":\"Edinburgh book festival highlights\",\n        \"standfirst\":\"From
+      fiction to poetry to children's illustrators, here is the pick of the events
+      at the festival this year\",\n        \"shortUrl\":\"http://gu.com/p/3vvva\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Books/Pix/pictures/2011/6/16/1308213945148/The-city-of-Edinburgh-by--003.jpg\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"culture/2011/jun/16/edinburgh-book-festival-ian-rankin\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-16T09:24:00+01:00\",\n
+      \     \"webTitle\":\"Edinburgh book festival\",\n      \"webUrl\":\"http://www.guardian.co.uk/culture/2011/jun/16/edinburgh-book-festival-ian-rankin\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/culture/2011/jun/16/edinburgh-book-festival-ian-rankin\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Ian Rankin has hardly missed
+      a year of the Edinburgh International Books Festival since his first, memorable
+      days reporting it as a student in 1985. Here he explains why, despite the growth
+      of literary events in recent years, it remains special</p>\",\n        \"headline\":\"Ian
+      Rankin: 'Rain or shine, I'll be there'\",\n        \"standfirst\":\"Ian Rankin
+      has hardly missed a year of the Edinburgh International Books Festival since
+      his first, memorable days reporting it as a student in 1985. Here he explains
+      why, despite the growth of literary events in recent years, it remains special\",\n
+      \       \"shortUrl\":\"http://gu.com/p/2qqp9\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/6/15/1308149412824/Ian-Rankin-003.jpg\",\n
+      \       \"byline\":\"Ian Rankin\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/jun/16/edinburgh-literary-festival-revolution-theme\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-16T07:50:00+01:00\",\n
+      \     \"webTitle\":\"Writers in revolutionary mood at Edinburgh International
+      Book Festival\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/jun/16/edinburgh-literary-festival-revolution-theme\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/jun/16/edinburgh-literary-festival-revolution-theme\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Authors from 40 countries to
+      attend literary event, with Alasdair Gray and AS Byatt among those unveiling
+      new works</p>\",\n        \"headline\":\"Writers in revolutionary mood at Edinburgh
+      International Book Festival\",\n        \"standfirst\":\"Authors from 40 countries
+      to attend literary event, with Alasdair Gray and AS Byatt among those unveiling
+      new works\",\n        \"shortUrl\":\"http://gu.com/p/2qqq3\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/6/15/1308150468584/Ahdaf-Soueif-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/booksblog/2011/jun/13/help-improve-books-site\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-06-13T10:56:21+01:00\",\n
+      \     \"webTitle\":\"Help us improve the books site\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/booksblog/2011/jun/13/help-improve-books-site\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/booksblog/2011/jun/13/help-improve-books-site\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>This week, we'd like you tell
+      us which authors' book lists you'd like to see</p>\",\n        \"headline\":\"Help
+      us improve the books site\",\n        \"standfirst\":\"This week, we'd like
+      you tell us which authors' book lists you'd like to see\",\n        \"shortUrl\":\"http://gu.com/p/2qk3p\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/6/13/1307958922459/Lists-003.jpg\",\n
+      \       \"byline\":\"Hannah Freeman\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/may/13/women-crime-fiction-prize-longlist\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-05-13T16:08:48+01:00\",\n
+      \     \"webTitle\":\"More women break into crime fiction prize longlist\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/may/13/women-crime-fiction-prize-longlist\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/may/13/women-crime-fiction-prize-longlist\",\n
+      \     \"fields\":{\n        \"trailText\":\"A third of contenders for Theakston's
+      Old Peculier award are by women\",\n        \"headline\":\"More women break
+      into crime fiction prize longlist\",\n        \"standfirst\":\"A third of contenders
+      for Theakston's Old Peculier award are by women\",\n        \"shortUrl\":\"http://gu.com/p/2p48p\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/BOOKS/Pix/pictures/2011/5/13/1305299175091/Sophie-Hannah-003.jpg\",\n
+      \       \"byline\":\"Alison Flood\",\n        \"publication\":\"guardian.co.uk\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/apr/10/top-earning-crime-writers-uk\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-04-10T20:29:39+01:00\",\n
+      \     \"webTitle\":\"Ian Fleming and Agatha Christie lead list of UK's top-earning
+      crimewriters\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/apr/10/top-earning-crime-writers-uk\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/apr/10/top-earning-crime-writers-uk\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Dead authors are still making
+      a fortune, while John Grisham and Dan Brown lead the US rankings</p>\",\n        \"headline\":\"Ian
+      Fleming and Agatha Christie lead list of UK's top-earning crimewriters\",\n
+      \       \"standfirst\":\"Dead authors are still making a fortune, while John
+      Grisham and Dan Brown lead the US rankings\",\n        \"shortUrl\":\"http://gu.com/p/2zbk5\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/4/10/1302459261861/Agatha-Christie-003.jpg\",\n
+      \       \"byline\":\"Maev Kennedy\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/apr/08/comic-convention-britain-kapow\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-04-08T16:40:44+01:00\",\n
+      \     \"webTitle\":\"Kapow! Superheroes come to Britain\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/apr/08/comic-convention-britain-kapow\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/apr/08/comic-convention-britain-kapow\",\n
+      \     \"fields\":{\n        \"trailText\":\"Comics convention billed as the
+      UK's answer to sprawling US festivals dedicated to the industry and its spin-offs\",\n
+      \       \"headline\":\"Kapow! Superheroes come to Britain\",\n        \"standfirst\":\"Comics
+      convention billed as the UK's answer to sprawling US festivals dedicated to
+      the industry and its spin-offs\",\n        \"shortUrl\":\"http://gu.com/p/2zbx3\",\n
+      \       \"byline\":\"Ben Quinn\",\n        \"publication\":\"The Guardian\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/apr/03/henning-mankell-wallander-troubled-man\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-04-03T00:05:00+01:00\",\n
+      \     \"webTitle\":\"The Troubled Man: A Kurt Wallander Mystery by Henning Mankell
+      \\u2013 review\",\n      \"webUrl\":\"http://www.guardian.co.uk/books/2011/apr/03/henning-mankell-wallander-troubled-man\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/apr/03/henning-mankell-wallander-troubled-man\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>The world's most popular fictional
+      detective bows out, gloriously gloomy as ever, writes <strong>Brian Oliver</strong></p>\",\n
+      \       \"headline\":\"The Troubled Man: A Kurt Wallander Mystery by Henning
+      Mankell \\u2013 review\",\n        \"standfirst\":\"The world's most popular
+      fictional detective bows out, gloriously gloomy as ever\",\n        \"shortUrl\":\"http://gu.com/p/2nqtq\",\n
+      \       \"thumbnail\":\"http://static.guim.co.uk/sys-images/Observer/Pix/pictures/2011/3/21/1300724739118/Mankell-003.jpg\",\n
+      \       \"byline\":\"Brian Oliver\",\n        \"publication\":\"The Observer\"\n
+      \     }\n    },{\n      \"id\":\"books/2011/mar/26/authors-secrets-writing\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-03-26T00:05:44Z\",\n
+      \     \"webTitle\":\"On writing: authors reveal the secrets of their craft\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/mar/26/authors-secrets-writing\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/mar/26/authors-secrets-writing\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>Listen in to interviews with
+      some of our&nbsp;most&nbsp;celebrated writers recorded for the British Library,
+      and enter our competition to identify the mystery writer</p>\",\n        \"headline\":\"On
+      writing: authors reveal the secrets of their craft\",\n        \"standfirst\":\"How
+      do you set about writing a novel? What inspires a poem? Pencil or computer?
+      Pain or pleasure? Listen in to interviews with some of our&nbsp;most&nbsp;celebrated
+      writers recorded for the British Library, and enter our competition to identify
+      the mystery writer\",\n        \"shortUrl\":\"http://gu.com/p/2z26m\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/3/25/1301048101214/William-Faulkner-In-Holly-003.jpg\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    },{\n      \"id\":\"books/2011/mar/25/preview-authors-secrets-writing\",\n
+      \     \"sectionId\":\"books\",\n      \"sectionName\":\"Books\",\n      \"webPublicationDate\":\"2011-03-25T12:31:00Z\",\n
+      \     \"webTitle\":\"Preview: authors reveal the secrets of their craft\",\n
+      \     \"webUrl\":\"http://www.guardian.co.uk/books/2011/mar/25/preview-authors-secrets-writing\",\n
+      \     \"apiUrl\":\"http://content.guardianapis.com/books/2011/mar/25/preview-authors-secrets-writing\",\n
+      \     \"fields\":{\n        \"trailText\":\"<p>In this preview from tomorrow's
+      Guardian Review, listen in to some of our&nbsp;most&nbsp;celebrated writers,
+      as they explain the secrets of their craft, and enter our competition to identify
+      the mystery writer</p>\",\n        \"headline\":\"Preview: authors reveal the
+      secrets of their craft\",\n        \"standfirst\":\"How do you set about writing
+      a novel? What inspires a poem? Pencil or computer? Pain or pleasure? In a preview
+      from tomorrow's Guardian Review, listen to Ian McEwan, Howard Jacobson, Ian
+      Rankin, Hilary Mantel and Beryl Bainbridge, and enter our competition to identify
+      the mystery writer\",\n        \"shortUrl\":\"http://gu.com/p/2z2a5\",\n        \"thumbnail\":\"http://static.guim.co.uk/sys-images/Admin/BkFill/Default_image_group/2011/3/25/1301048101214/William-Faulkner-In-Holly-003.jpg\",\n
+      \       \"publication\":\"The Guardian\"\n      }\n    }]\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://content.guardianapis.com:80/search?api-key=<EIBF_GUARDIAN_API>&format=json&page-size=25&q=Alksadlfkjoi%20Bkajlaksdjflk&section=books%7Cchildrens-books-site&show-fields=headline,trailText,shortUrl,standfirst,thumbnail,byline,publication
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-mashery-responder:
+      - proxyworker-eu-i-c96d64bd.mashery.com
+      content-type:
+      - application/json; charset=utf-8
+      cache-control:
+      - public, max-age=60
+      expires:
+      - Thu, 25 Aug 2011 06:24:00 UTC
+      x-lift-version:
+      - '2.3'
+      x-content-api-build:
+      - '964'
+      date:
+      - Thu, 25 Aug 2011 06:22:59 GMT
+      - Thu, 25 Aug 2011 06:23:00 UTC
+      x-gu-jas:
+      - ccbe471ba503f55504869f82a88de719!1656237981@qtp-429297187-827
+      vary:
+      - Accept,Accept-Encoding
+      accept-ranges:
+      - bytes
+      content-length:
+      - '240'
+      server:
+      - Mashery Proxy
+    body: ! "{\n  \"response\":{\n    \"status\":\"ok\",\n    \"userTier\":\"approved\",\n
+      \   \"total\":0,\n    \"startIndex\":0,\n    \"pageSize\":25,\n    \"currentPage\":1,\n
+      \   \"pages\":0,\n    \"orderBy\":\"newest\",\n    \"didYouMean\":\"alkali Bkajlaksdjflk\",\n
+      \   \"results\":[]\n  }\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=jmmRWKFDT0ZRPMrtALV44QBE5Wm56AlzfeoAajlroz0=&Sort=salesrank&Timestamp=2011-08-25T06:23:00Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:23:00 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>c81fa25b-cb48-4def-83e2-7fd2ed323fd7</RequestId><Arguments><Argument
+      Name="Condition" Value="New"></Argument><Argument Name="Sort" Value="salesrank"></Argument><Argument
+      Name="Operation" Value="ItemSearch"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Power" Value="author-exact:Joe Bloggs and not binding:Kindle Edition"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:23:00Z"></Argument><Argument Name="Signature" Value="jmmRWKFDT0ZRPMrtALV44QBE5Wm56AlzfeoAajlroz0="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes,ItemIds,Images"></Argument><Argument
+      Name="MerchantId" Value="Amazon"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0151940000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemSearchRequest><Condition>New</Condition><MerchantId>Amazon</MerchantId><Power>author-exact:Joe
+      Bloggs and not binding:Kindle Edition</Power><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>ItemIds</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex><Sort>salesrank</Sort></ItemSearchRequest><Errors><Error><Code>AWS.ECommerceService.NoExactMatches</Code><Message>We
+      did not find any matches for your request.</Message></Error></Errors></Request><TotalResults>0</TotalResults><TotalPages>0</TotalPages><MoreSearchResultsUrl>http://www.amazon.co.uk/gp/redirect.html?camp=2025&amp;creative=12734&amp;location=http%3A%2F%2Fwww.amazon.co.uk%2Fgp%2Fsearch%3Furl%3Dsearch-alias%253Dbooks-single-index&amp;linkCode=xm2&amp;tag=<EIBF_AMAZON_TRACKING_ID>&amp;SubscriptionId=<EIBF_AMAZON_KEY></MoreSearchResultsUrl></Items></ItemSearchResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=jmmRWKFDT0ZRPMrtALV44QBE5Wm56AlzfeoAajlroz0=&Sort=salesrank&Timestamp=2011-08-25T06:23:00Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:23:00 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>e03e1d14-7d2a-43d5-95a4-ae37b5f6b144</RequestId><Arguments><Argument
+      Name="Condition" Value="New"></Argument><Argument Name="Sort" Value="salesrank"></Argument><Argument
+      Name="Operation" Value="ItemSearch"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Power" Value="author-exact:Joe Bloggs and not binding:Kindle Edition"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:23:00Z"></Argument><Argument Name="Signature" Value="jmmRWKFDT0ZRPMrtALV44QBE5Wm56AlzfeoAajlroz0="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes,ItemIds,Images"></Argument><Argument
+      Name="MerchantId" Value="Amazon"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0172420000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemSearchRequest><Condition>New</Condition><MerchantId>Amazon</MerchantId><Power>author-exact:Joe
+      Bloggs and not binding:Kindle Edition</Power><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>ItemIds</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex><Sort>salesrank</Sort></ItemSearchRequest><Errors><Error><Code>AWS.ECommerceService.NoExactMatches</Code><Message>We
+      did not find any matches for your request.</Message></Error></Errors></Request><TotalResults>0</TotalResults><TotalPages>0</TotalPages><MoreSearchResultsUrl>http://www.amazon.co.uk/gp/redirect.html?camp=2025&amp;creative=12734&amp;location=http%3A%2F%2Fwww.amazon.co.uk%2Fgp%2Fsearch%3Furl%3Dsearch-alias%253Dbooks-single-index&amp;linkCode=xm2&amp;tag=<EIBF_AMAZON_TRACKING_ID>&amp;SubscriptionId=<EIBF_AMAZON_KEY></MoreSearchResultsUrl></Items></ItemSearchResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=a2MZy/tqlFgyY8yoqGtKM3IyDEOsIt7EuP2KfB+iIzI=&Sort=salesrank&Timestamp=2011-08-25T06:26:22Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:26:22 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>1dc3e8ea-9d68-46be-91a5-7b7556bb3d8a</RequestId><Arguments><Argument
+      Name="Condition" Value="New"></Argument><Argument Name="Sort" Value="salesrank"></Argument><Argument
+      Name="Operation" Value="ItemSearch"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Power" Value="author-exact:Joe Bloggs and not binding:Kindle Edition"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:26:22Z"></Argument><Argument Name="Signature" Value="a2MZy/tqlFgyY8yoqGtKM3IyDEOsIt7EuP2KfB+iIzI="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes,ItemIds,Images"></Argument><Argument
+      Name="MerchantId" Value="Amazon"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0189250000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemSearchRequest><Condition>New</Condition><MerchantId>Amazon</MerchantId><Power>author-exact:Joe
+      Bloggs and not binding:Kindle Edition</Power><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>ItemIds</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex><Sort>salesrank</Sort></ItemSearchRequest><Errors><Error><Code>AWS.ECommerceService.NoExactMatches</Code><Message>We
+      did not find any matches for your request.</Message></Error></Errors></Request><TotalResults>0</TotalResults><TotalPages>0</TotalPages><MoreSearchResultsUrl>http://www.amazon.co.uk/gp/redirect.html?camp=2025&amp;creative=12734&amp;location=http%3A%2F%2Fwww.amazon.co.uk%2Fgp%2Fsearch%3Furl%3Dsearch-alias%253Dbooks-single-index&amp;linkCode=xm2&amp;tag=<EIBF_AMAZON_TRACKING_ID>&amp;SubscriptionId=<EIBF_AMAZON_KEY></MoreSearchResultsUrl></Items></ItemSearchResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=AdPj+k7/sj5FCIPLmAfTYoZVrpGvPtDqMuHWKHj19IA=&Sort=salesrank&Timestamp=2011-08-25T06:26:23Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:26:23 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>beb415ca-2a61-4666-b9db-3fe422be6fa0</RequestId><Arguments><Argument
+      Name="Condition" Value="New"></Argument><Argument Name="Sort" Value="salesrank"></Argument><Argument
+      Name="Operation" Value="ItemSearch"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="Power" Value="author-exact:Joe Bloggs and not binding:Kindle Edition"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:26:23Z"></Argument><Argument Name="Signature" Value="AdPj+k7/sj5FCIPLmAfTYoZVrpGvPtDqMuHWKHj19IA="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes,ItemIds,Images"></Argument><Argument
+      Name="MerchantId" Value="Amazon"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
+      Name="SearchIndex" Value="Books"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0165920000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemSearchRequest><Condition>New</Condition><MerchantId>Amazon</MerchantId><Power>author-exact:Joe
+      Bloggs and not binding:Kindle Edition</Power><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>ItemIds</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex><Sort>salesrank</Sort></ItemSearchRequest><Errors><Error><Code>AWS.ECommerceService.NoExactMatches</Code><Message>We
+      did not find any matches for your request.</Message></Error></Errors></Request><TotalResults>0</TotalResults><TotalPages>0</TotalPages><MoreSearchResultsUrl>http://www.amazon.co.uk/gp/redirect.html?camp=2025&amp;creative=12734&amp;location=http%3A%2F%2Fwww.amazon.co.uk%2Fgp%2Fsearch%3Furl%3Dsearch-alias%253Dbooks-single-index&amp;linkCode=xm2&amp;tag=<EIBF_AMAZON_TRACKING_ID>&amp;SubscriptionId=<EIBF_AMAZON_KEY></MoreSearchResultsUrl></Items></ItemSearchResponse>
+    http_version: '1.1'

@@ -1,0 +1,77 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=ASIN&ItemId=B002S0KB4U&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Signature=6Ru0Cxi56729/EPSjI/cKY5LyQBpsPlnqyBuL99OZOU=&Timestamp=2011-08-25T05:37:26Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 05:37:26 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>cea503d7-258d-461c-93b6-8aff9cfe6fd2</RequestId><Arguments><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="ItemId" Value="B002S0KB4U"></Argument><Argument Name="IdType" Value="ASIN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T05:37:26Z"></Argument><Argument Name="Signature" Value="6Ru0Cxi56729/EPSjI/cKY5LyQBpsPlnqyBuL99OZOU="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes"></Argument><Argument Name="AssociateTag"
+      Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0433140000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>ASIN</IdType><ItemId>B002S0KB4U</ItemId><ResponseGroup>ItemAttributes</ResponseGroup><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B002S0KB4U</ASIN><DetailPageURL>http://www.amazon.co.uk/The-Complaints-ebook/dp/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002S0KB4U</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3DB002S0KB4U%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink></ItemLinks><ItemAttributes><Author>Ian
+      Rankin</Author><Binding>Kindle Edition</Binding><EISBN>9781409107293</EISBN><Format>Kindle
+      eBook</Format><Label>Orion</Label><Languages><Language><Name>English</Name><Type>Published</Type></Language></Languages><Manufacturer>Orion</Manufacturer><NumberOfItems>1</NumberOfItems><NumberOfPages>496</NumberOfPages><ProductGroup>eBooks</ProductGroup><ProductTypeName>ABIS_EBOOKS</ProductTypeName><PublicationDate>2009-09-03</PublicationDate><Publisher>Orion</Publisher><ReleaseDate>2009-09-03</ReleaseDate><Studio>Orion</Studio><Title>The
+      Complaints</Title></ItemAttributes></Item></Items></ItemLookupResponse>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=ASIN&ItemId=B002S0KB4U&Operation=ItemLookup&ResponseGroup=ItemAttributes&Service=AWSECommerceService&Signature=B1Q4oCw8UoyfwMJcr5a3Khokz+GReQzHeZsWdg4nj1k=&Timestamp=2011-08-25T06:24:56Z&Version=2011-08-01
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 25 Aug 2011 06:24:56 GMT
+      server:
+      - Server
+      content-type:
+      - text/xml;charset=UTF-8
+      vary:
+      - Accept-Encoding,User-Agent
+      nncoection:
+      - close
+      transfer-encoding:
+      - chunked
+    body: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><RequestId>639a20c8-21ce-4dad-a26f-7f563051ff7d</RequestId><Arguments><Argument
+      Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+      Name="ItemId" Value="B002S0KB4U"></Argument><Argument Name="IdType" Value="ASIN"></Argument><Argument
+      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
+      Value="2011-08-25T06:24:56Z"></Argument><Argument Name="Signature" Value="B1Q4oCw8UoyfwMJcr5a3Khokz+GReQzHeZsWdg4nj1k="></Argument><Argument
+      Name="ResponseGroup" Value="ItemAttributes"></Argument><Argument Name="AssociateTag"
+      Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0095890000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>ASIN</IdType><ItemId>B002S0KB4U</ItemId><ResponseGroup>ItemAttributes</ResponseGroup><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B002S0KB4U</ASIN><DetailPageURL>http://www.amazon.co.uk/The-Complaints-ebook/dp/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002S0KB4U</DetailPageURL><ItemLinks><ItemLink><Description>Add
+      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3DB002S0KB4U%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink><ItemLink><Description>Tell
+      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink><ItemLink><Description>All
+      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink><ItemLink><Description>All
+      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/B002S0KB4U%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3DB002S0KB4U</URL></ItemLink></ItemLinks><ItemAttributes><Author>Ian
+      Rankin</Author><Binding>Kindle Edition</Binding><EISBN>9781409107293</EISBN><Format>Kindle
+      eBook</Format><Label>Orion</Label><Languages><Language><Name>English</Name><Type>Published</Type></Language></Languages><Manufacturer>Orion</Manufacturer><NumberOfItems>1</NumberOfItems><NumberOfPages>496</NumberOfPages><ProductGroup>eBooks</ProductGroup><ProductTypeName>ABIS_EBOOKS</ProductTypeName><PublicationDate>2009-09-03</PublicationDate><Publisher>Orion</Publisher><ReleaseDate>2009-09-03</ReleaseDate><Studio>Orion</Studio><Title>The
+      Complaints</Title></ItemAttributes></Item></Items></ItemLookupResponse>
+    http_version: '1.1'

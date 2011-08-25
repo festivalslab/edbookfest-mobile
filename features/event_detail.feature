@@ -6,6 +6,7 @@ Feature: Event detail
   @nowebmock
   Scenario: Event detail page has accurate information
     Given there is an event called "Joe Bloggs"
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Joe Bloggs" event detail page
     Then the title should be "Joe Bloggs"
     And the event title should be "Joe Bloggs"
@@ -24,6 +25,7 @@ Feature: Event detail
   @nowebmock  
   Scenario: Event detail page doesn't render blocks when no content is present
     Given there is an event called "Joe Bloggs" without optional data
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Joe Bloggs" event detail page
     Then the event subtitle is missing
     And the event title sponsors is missing
@@ -39,6 +41,7 @@ Feature: Event detail
   @nowebmock  
   Scenario: Event detail page shows sold out when event is sold out
     Given there is a sold out event called "Joe Bloggs"
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Joe Bloggs" event detail page
     Then the event is sold out
     And the event buy tickets button is missing
@@ -54,6 +57,7 @@ Feature: Event detail
   @nowebmock  
   Scenario: Event detail page shows featured authors
     Given there are 2 authors appearing at the "Author debate" event
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Author debate" event detail page
     Then I should see "Featured authors"
     And the event should have 2 authors
@@ -63,6 +67,7 @@ Feature: Event detail
   @nowebmock  
   Scenario: Event detail page does not show featured authors if none exist
     Given there are 0 authors appearing at the "Author debate" event
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Author debate" event detail page
     Then I should not see "Featured authors"
     And the event should not have authors
@@ -70,6 +75,7 @@ Feature: Event detail
   @amazon_search
   Scenario: Event detail page links to featured authors
     Given there are 2 authors appearing at the "Author debate" event
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Author debate" event detail page
     And I click on author 1
     Then I should be on the author detail page for author 1
@@ -95,6 +101,7 @@ Feature: Event detail
   @nowebmock
   Scenario: Event detail page does not show featured books if none exist
     Given there are 0 books featured at the "Author debate" event
+    And today is 12/08/2011 and the time is 12:00
     When I go to the "Author debate" event detail page
     Then I should not see "Featured books"
     And the event should not have books
