@@ -1,7 +1,7 @@
 # Edinburgh International Book Festival mobile website
 
 ## What is this?
-This is the application behind the [Edinburgh International Book Festival](http://www.edbookfest.co.uk) 2011 [mobile website at m.edbookfest.co.uk](http://m.edbookfest.co.uk) which was developed by James Newbery of [Tinned Fruit Ltd](http://tinnedfruit.com). The project originated at [Culture Hack Scotland](http://culturehackscotland.com) and was supported by the [Edinburgh Festivals Innovation Lab](http://festivalslab.com).
+This is the application behind the [Edinburgh International Book Festival](http://www.edbookfest.co.uk) 2011 [mobile website at m.edbookfest.co.uk](http://m.edbookfest.co.uk) which was developed by [James Newbery](https://github.com/froots) of [Tinned Fruit Ltd](http://tinnedfruit.com). The project originated at [Culture Hack Scotland](http://culturehackscotland.com) and was supported by the [Edinburgh Festivals Innovation Lab](http://festivalslab.com).
 
 ## Licence
 m.edbookfest.co.uk mobile website application
@@ -28,7 +28,7 @@ own site as follows:
     This website makes use of technology developed by Tinned Fruit Ltd (www.tinnedfruit.com) for the Edinburgh International 
 	Book Festival Ltd (www.edbookfest.co.uk) with the support of the Edinburgh Festivals Innovation Lab	and Culture Hack Scotland.
 
-This credit should also be included as a meta-tag within the <head> element of all pages within the site.
+This credit should also be included as a meta-tag within the `<head>` element of all pages within the site.
 
 This acknowledgement is non-contractual, but it is a condition of licence that the request be distributed verbatim
 as part of the original licence terms.
@@ -71,3 +71,72 @@ events).
 It is served in XML format over HTTP, and again the Book Festival is happy to discuss providing access to other users. The XML schema
 is provided within the /docs folder of this repository, and as above an archive copy of the 2011 XML document will be added to the repository
 in September 2011.
+
+## Development
+
+The Edinburgh International Book Festival mobile app is a Ruby on Rails 3.1 application. Installing and setting up for local development follows the standard path for Rails applications.
+
+### Pre-requisites
+
+* [Git](http://git-scm.com/)
+* [Ruby 1.9.2](http://www.ruby-lang.org/) - suggest using [RVM](http://beginrescueend.com/) to manage Ruby versions and gemsets
+* [RubyGems](http://rubygems.org/)
+* [Bundler](http://gembundler.com/) (`gem install bundler`)
+* [Chrome WebDriver](http://www.chromium.org/developers/testing/webdriver-for-chrome) for running some Cucumber features
+
+### Installation
+
+The following instructions are for Mac OS X, but should also work for Linux. Windows users may have to be creative.
+
+* Fork / clone this repo using `git clone` (use GitHub's help if you are not familiar with Git)
+* `cd edbookfest-mobile`
+* At this point, if you have RVM installed, it will prompt you to create a project-specific gemset named 'edbookfest-mobile'.
+* From the project root, `bundle install` to install required gems.
+* `rake db:migrate` to run database migrations
+* To run the application locally, run `foreman start` or `rails server`. You should see a festival calendar when visiting the home page. There will be no data in the application at this point.
+
+### Fake data
+
+There is a basic rake task to create some fake events data, but this does not currently include featured authors or books. Run `rake listings:fake`.
+
+### Programme listings data
+
+If you would like to have access to the EIBF programme listings data feed, please see the above section on obtaining access credentials.
+
+Listings data are consumed over HTTP via a rake task to import and update the database. The task requires the presence of these environment variables:
+
+* `EIBF_FEED_URL` - full URL to the XML events feed
+* `EIBF_FEED_USERNAME` - HTTP basic authentication username for feed
+* `EIBF_FEED_PASSWORD` - HTTP basic authentication password for feed
+
+`rake listings:import` will create or update event listings, featured authors and featured books from the feed.
+
+### Stock data
+
+Edinburgh International Book Festival bookshop stock data is also available as a feed. Stock data is imported in a separate rake task, and requires the following environment variable:
+
+* `EIBF_STOCK_URL` - full URL to the XML stock feed
+
+`rake stock:import` creates or updates book entries in the local database.
+
+### Gems
+
+Some of the key gems used in the project:
+
+* [Calendar Helper](https://github.com/topfunky/calendar_helper) is used to generate the calendar
+* [Nokogiri](http://nokogiri.org/) is used for consuming and parsing XML feeds
+* [httparty](http://httparty.rubyforge.org/) is used for consuming JSON api responses
+* [Sucker](http://code.papercavalier.com/sucker/) (now [Amazon Product](http://code.papercavalier.com/amazon_product/)) is used to interact with the Amazon Product Advertising API
+
+### Tests
+
+The codebase has good test coverage with [Cucumber](http://cukes.info/) examples driven by [Capybara](https://github.com/jnicklas/capybara), an [RSpec](http://relishapp.com/rspec) suite and [Jasmine](http://pivotal.github.com/jasmine/) examples for JavaScript code. 
+
+Other test tools are used for mocking time ([Delorean](https://github.com/bebanjo/delorean)), recording and replaying external HTTP responses ([VCR](http://relishapp.com/myronmarston/vcr)), mocking HTTP responses ([WebMock](https://github.com/bblimke/webmock) and [Fakeweb](https://github.com/chrisk/fakeweb)) and creating fake data ([Factory Girl](https://github.com/thoughtbot/factory_girl)).
+
+Tests are run in the usual way:
+
+* `rake` will run all Cucumber examples and the RSpec suite
+* `rake cucumber` runs just the cucumber examples
+* `rake spec` runs just the RSpec suite
+* `rake jasmine` or `rake jasmine:ci` will run the Jasmine JavaScript examples
