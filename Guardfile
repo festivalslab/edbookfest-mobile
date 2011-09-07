@@ -3,6 +3,7 @@
 guard 'coffeescript', :output => 'public/javascripts/compiled' do
   watch /^app\/assets\/javascripts\/(.*)\.coffee/
   watch /^lib\/assets\/javascripts\/(.*)\.coffee/
+  watch /^vendor\/assets\/javascripts\/(.*).coffee/
 end
 
 guard 'coffeescript', :output => 'spec/javascripts' do

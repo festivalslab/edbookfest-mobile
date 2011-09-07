@@ -11,7 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
-  - lib/assets/javascripts/zepto.js
+  - vendor/assets/javascripts/zepto.js
   - public/javascripts/**/*.js
 
 # stylesheets
