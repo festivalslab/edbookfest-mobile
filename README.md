@@ -59,9 +59,10 @@ festival-specific format (elements of which are concatenated to fit the cross-fe
 
 The data is served as a single XML document, protected by standard HTTP Basic Authentication, and the Book Festival are happy to
 discuss providing access - subject to acceptable use policy - to other developers and consumers. The XML schema for this document
-is provided within the /docs folder of this repository. An archive copy of the 2011 XML document will be added to this repository
-in September 2011 for development, testing and review purposes. It is not yet publicly available to avoid stale content issues, but
-can be provided on request by [Andrew Coulton](https://github.com/acoulton).
+is provided within the /docs folder of this repository, as is an archive copy of the 2011 XML document for development, testing 
+and review purposes. Please note that URLs listed within the document are not guaranteed to be persistent and may become unavailable
+over time. Under no circumstances should this data be used other than for experimentation. To discuss access to live data, or other
+usage of archive data, contact [Andrew Coulton](https://github.com/acoulton).
 
 ### Edinburgh International Book Festival bookshop stock data
 This is a feed from the Book Festival's independent Bookshops' stock control system, again provided in XML format and containing
@@ -69,8 +70,7 @@ details of every title ordered for stock in the bookshops (which includes backli
 events).
 
 It is served in XML format over HTTP, and again the Book Festival is happy to discuss providing access to other users. The XML schema
-is provided within the /docs folder of this repository, and as above an archive copy of the 2011 XML document will be added to the repository
-in September 2011.
+is provided within the /docs folder of this repository, and as above an archive copy of the 2011 XML document is also available.
 
 ## Development
 
