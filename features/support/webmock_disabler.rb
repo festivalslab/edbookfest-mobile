@@ -1,5 +1,4 @@
 require 'webmock'
-require 'webmock/disabler'
 
 Before('@nowebmock') do
   WebMock.disable!
