@@ -677,7 +677,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=jmmRWKFDT0ZRPMrtALV44QBE5Wm56AlzfeoAajlroz0=&Sort=salesrank&Timestamp=2011-08-25T06:23:00Z&Version=2011-08-01
+    uri: !ruby/regexp /^http:\/\/ecs.amazonaws.co.uk(:80)?\/onca\/xml\?AWSAccessKeyId=[^&]+&AssociateTag=[^&]+&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=[^&]+&Sort=salesrank&Timestamp=[^&]+&Version=2011-08-01$/
     body: !!null 
     headers: !!null 
   response: !ruby/struct:VCR::Response
@@ -712,7 +712,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=jmmRWKFDT0ZRPMrtALV44QBE5Wm56AlzfeoAajlroz0=&Sort=salesrank&Timestamp=2011-08-25T06:23:00Z&Version=2011-08-01
+    uri: !ruby/regexp /^http:\/\/ecs.amazonaws.co.uk(:80)?\/onca\/xml\?AWSAccessKeyId=[^&]+&AssociateTag=[^&]+&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=[^&]+&Sort=salesrank&Timestamp=[^&]+&Version=2011-08-01$/
     body: !!null 
     headers: !!null 
   response: !ruby/struct:VCR::Response
@@ -747,7 +747,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=a2MZy/tqlFgyY8yoqGtKM3IyDEOsIt7EuP2KfB+iIzI=&Sort=salesrank&Timestamp=2011-08-25T06:26:22Z&Version=2011-08-01
+    uri: !ruby/regexp /^http:\/\/ecs.amazonaws.co.uk(:80)?\/onca\/xml\?AWSAccessKeyId=[^&]+&AssociateTag=[^&]+&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=[^&]+&Sort=salesrank&Timestamp=[^&]+&Version=2011-08-01$/
     body: !!null 
     headers: !!null 
   response: !ruby/struct:VCR::Response
@@ -782,7 +782,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=AdPj+k7/sj5FCIPLmAfTYoZVrpGvPtDqMuHWKHj19IA=&Sort=salesrank&Timestamp=2011-08-25T06:26:23Z&Version=2011-08-01
+    uri: !ruby/regexp /^http:\/\/ecs.amazonaws.co.uk(:80)?\/onca\/xml\?AWSAccessKeyId=[^&]+&AssociateTag=[^&]+&Condition=New&MerchantId=Amazon&Operation=ItemSearch&Power=author-exact:Joe%20Bloggs%20and%20not%20binding:Kindle%20Edition&ResponseGroup=ItemAttributes,ItemIds,Images&SearchIndex=Books&Service=AWSECommerceService&Signature=[^&]+&Sort=salesrank&Timestamp=[^&]+&Version=2011-08-01$/
     body: !!null 
     headers: !!null 
   response: !ruby/struct:VCR::Response

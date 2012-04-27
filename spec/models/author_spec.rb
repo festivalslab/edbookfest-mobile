@@ -44,7 +44,7 @@ describe Author do
   end
   
   describe "#bibliography" do
-    use_vcr_cassette "amazon search"
+    use_vcr_cassette "amazon_search"
     
     let(:amazon_book) { double("AmazonBook") }
     

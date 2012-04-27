@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9780099548973&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=mFjq2URIz0OVQbjWGHMdGzJi3ErJYfLn/rKpnbdKC2M=&Timestamp=2011-08-25T05:37:44Z&Version=2011-08-01
+    uri: !ruby/regexp /^http:\/\/ecs.amazonaws.co.uk\/onca\/xml\?AWSAccessKeyId=[^&]+&AssociateTag=[^&]+&IdType=EAN&ItemId=9780099548973&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=.{44}&Timestamp=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z&Version=2011-08-01$/
     body: !!null 
     headers: !!null 
   response: !ruby/struct:VCR::Response
@@ -55,7 +55,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9780000000000&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=XALt/hSEA6pgZom0ayjHkuHPJwYswFy2qrSDSO2y9uI=&Timestamp=2011-08-25T05:37:45Z&Version=2011-08-01
+    uri: !ruby/regexp /^http:\/\/ecs.amazonaws.co.uk\/onca\/xml\?AWSAccessKeyId=[^&]+&AssociateTag=[^&]+&IdType=EAN&ItemId=9780000000000&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=.{44}&Timestamp=[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z&Version=2011-08-01$/
     body: !!null 
     headers: !!null 
   response: !ruby/struct:VCR::Response
@@ -84,92 +84,5 @@
       Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
       Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
       Value="2011-08-25T05:37:45Z"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0191171169281006</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9780000000000</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest><Errors><Error><Code>AWS.InvalidParameterValue</Code><Message>9780000000000
-      is not a valid value for ItemId. Please change this value and retry your request.</Message></Error></Errors></Request></Items></ItemLookupResponse>
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9780099548973&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=Msw/eRQCEDEU4Gg/gJd3c0UBwGRySnYNIROz3NFWGDU=&Timestamp=2011-08-25T06:25:17Z&Version=2011-08-01
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      date:
-      - Thu, 25 Aug 2011 06:25:17 GMT
-      server:
-      - Server
-      content-type:
-      - text/xml;charset=UTF-8
-      vary:
-      - Accept-Encoding,User-Agent
-      nncoection:
-      - close
-      transfer-encoding:
-      - chunked
-    body: <?xml version="1.0" encoding="UTF-8"?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
-      Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header></HTTPHeaders><RequestId>0XFCY8H4QZ6K6YDVSH62</RequestId><Arguments><Argument
-      Name="SearchIndex" Value="Books"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
-      Name="ItemId" Value="9780099548973"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
-      Name="Signature" Value="Msw/eRQCEDEU4Gg/gJd3c0UBwGRySnYNIROz3NFWGDU="></Argument><Argument
-      Name="ResponseGroup" Value="Images,ItemAttributes,EditorialReview,AlternateVersions"></Argument><Argument
-      Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
-      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
-      Value="2011-08-25T06:25:17Z"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0572371482849121</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9780099548973</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest></Request><Item><ASIN>0099548976</ASIN><DetailPageURL>http://www.amazon.co.uk/Leopard-Jo-Nesbo/dp/0099548976%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0099548976</DetailPageURL><ItemLinks><ItemLink><Description>Add
-      To Wishlist</Description><URL>http://www.amazon.co.uk/gp/registry/wishlist/add-item.html%3Fasin.0%3D0099548976%26SubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D0099548976</URL></ItemLink><ItemLink><Description>Tell
-      A Friend</Description><URL>http://www.amazon.co.uk/gp/pdp/taf/0099548976%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D0099548976</URL></ItemLink><ItemLink><Description>All
-      Customer Reviews</Description><URL>http://www.amazon.co.uk/review/product/0099548976%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D0099548976</URL></ItemLink><ItemLink><Description>All
-      Offers</Description><URL>http://www.amazon.co.uk/gp/offer-listing/0099548976%3FSubscriptionId%3D<EIBF_AMAZON_KEY>%26tag%3D<EIBF_AMAZON_TRACKING_ID>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12734%26creativeASIN%3D0099548976</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL75_.jpg</URL><Height
-      Units="pixels">75</Height><Width Units="pixels">49</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL160_.jpg</URL><Height
-      Units="pixels">160</Height><Width Units="pixels">104</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL500_.jpg</URL><Height
-      Units="pixels">500</Height><Width Units="pixels">325</Width></LargeImage><ImageSets><ImageSet
-      Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL30_.jpg</URL><Height
-      Units="pixels">30</Height><Width Units="pixels">20</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL75_.jpg</URL><Height
-      Units="pixels">75</Height><Width Units="pixels">49</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL75_.jpg</URL><Height
-      Units="pixels">75</Height><Width Units="pixels">49</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL110_.jpg</URL><Height
-      Units="pixels">110</Height><Width Units="pixels">72</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL160_.jpg</URL><Height
-      Units="pixels">160</Height><Width Units="pixels">104</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/51WGMXdyzpL._SL500_.jpg</URL><Height
-      Units="pixels">500</Height><Width Units="pixels">325</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Author>Jo
-      Nesbo</Author><Binding>Paperback</Binding><Creator Role="Translator">Don Bartlett</Creator><EAN>9780099548973</EAN><EANList><EANListElement>9780099548973</EANListElement></EANList><ISBN>0099548976</ISBN><Label>Vintage</Label><ListPrice><Amount>799</Amount><CurrencyCode>GBP</CurrencyCode><FormattedPrice>£7.99</FormattedPrice></ListPrice><Manufacturer>Vintage</Manufacturer><NumberOfPages>752</NumberOfPages><PackageDimensions><Height
-      Units="hundredths-inches">157</Height><Length Units="hundredths-inches">780</Length><Weight
-      Units="hundredths-pounds">115</Weight><Width Units="hundredths-inches">504</Width></PackageDimensions><ProductGroup>Book</ProductGroup><ProductTypeName>ABIS_BOOK</ProductTypeName><PublicationDate>2011-07-07</PublicationDate><Publisher>Vintage</Publisher><ReleaseDate>2011-07-07</ReleaseDate><SKU>NU-GRD-04728985</SKU><Studio>Vintage</Studio><Title>The
-      Leopard</Title></ItemAttributes><AlternateVersions><AlternateVersion><ASIN>1846554004</ASIN><Title>The
-      Leopard</Title><Binding>Hardcover</Binding></AlternateVersion><AlternateVersion><ASIN>B004FV4XBC</ASIN><Title>The
-      Leopard</Title><Binding>Kindle Edition</Binding></AlternateVersion></AlternateVersions></Item></Items></ItemLookupResponse>
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://ecs.amazonaws.co.uk:80/onca/xml?AWSAccessKeyId=<EIBF_AMAZON_KEY>&AssociateTag=<EIBF_AMAZON_TRACKING_ID>&IdType=EAN&ItemId=9780000000000&Operation=ItemLookup&ResponseGroup=Images,ItemAttributes,EditorialReview,AlternateVersions&SearchIndex=Books&Service=AWSECommerceService&Signature=UUhtYJiPyFjtVi+ev10N0LvbTg6y0+pyHuX/5NmcZ9c=&Timestamp=2011-08-25T06:25:18Z&Version=2011-08-01
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      date:
-      - Thu, 25 Aug 2011 06:25:18 GMT
-      server:
-      - Server
-      content-type:
-      - text/xml;charset=UTF-8
-      vary:
-      - Accept-Encoding,User-Agent
-      nncoection:
-      - close
-      transfer-encoding:
-      - chunked
-    body: <?xml version="1.0" encoding="UTF-8"?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
-      Name="UserAgent" Value="Jakarta Commons-HttpClient/3.0.1"></Header></HTTPHeaders><RequestId>0NJ60MS5DBF3W37JNFPQ</RequestId><Arguments><Argument
-      Name="SearchIndex" Value="Books"></Argument><Argument Name="AssociateTag" Value="<EIBF_AMAZON_TRACKING_ID>"></Argument><Argument
-      Name="ItemId" Value="9780000000000"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
-      Name="Signature" Value="UUhtYJiPyFjtVi+ev10N0LvbTg6y0+pyHuX/5NmcZ9c="></Argument><Argument
-      Name="ResponseGroup" Value="Images,ItemAttributes,EditorialReview,AlternateVersions"></Argument><Argument
-      Name="Operation" Value="ItemLookup"></Argument><Argument Name="IdType" Value="EAN"></Argument><Argument
-      Name="AWSAccessKeyId" Value="<EIBF_AMAZON_KEY>"></Argument><Argument Name="Timestamp"
-      Value="2011-08-25T06:25:18Z"></Argument><Argument Name="Version" Value="2011-08-01"></Argument></Arguments><RequestProcessingTime>0.0182790756225586</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>EAN</IdType><ItemId>9780000000000</ItemId><ResponseGroup>AlternateVersions</ResponseGroup><ResponseGroup>EditorialReview</ResponseGroup><ResponseGroup>ItemAttributes</ResponseGroup><ResponseGroup>Images</ResponseGroup><SearchIndex>Books</SearchIndex></ItemLookupRequest><Errors><Error><Code>AWS.InvalidParameterValue</Code><Message>9780000000000
       is not a valid value for ItemId. Please change this value and retry your request.</Message></Error></Errors></Request></Items></ItemLookupResponse>
     http_version: '1.1'
