@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Installs the Chrome WebDriver for use with functional tests
+# Runs as a separate script as the dpkg task exits with nonzero status due to dependencies
+
+# Install Chrome
+mkdir /tmp/chrome-inst
+cd /tmp/chrome-inst
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+dpkg -i ./google-chrome*.deb
+apt-get -f -y install
+
+# Install ChromeDriver
+wget http://chromedriver.googlecode.com/files/chromedriver_linux32_18.0.1022.0.zip
+unzip chromedriver_linux32_18.0.1022.0.zip
+mv chromedriver /usr/bin/chromedriver

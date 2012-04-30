@@ -1,5 +1,10 @@
 # Edinburgh International Book Festival mobile website
 
+** [View builds](http://travis-ci.org/festivalslab/edbookfest-mobile) | master: [![Build Status](https://secure.travis-ci.org/festivalslab/edbookfest-mobile.png?branch=master)](http://travis-ci.org/festivalslab/edbookfest-mobile) |
+stage: [![Build Status](https://secure.travis-ci.org/festivalslab/edbookfest-mobile.png?branch=stage)](http://travis-ci.org/festivalslab/edbookfest-mobile) | 
+production: [![Build Status](https://secure.travis-ci.org/festivalslab/edbookfest-mobile.png?branch=production)](http://travis-ci.org/festivalslab/edbookfest-mobile) **
+
+
 ## What is this?
 This is the application behind the [Edinburgh International Book Festival](http://www.edbookfest.co.uk) 2011 [mobile website at m.edbookfest.co.uk](http://m.edbookfest.co.uk) which was developed by [James Newbery](https://github.com/froots) of [Tinned Fruit Ltd](http://tinnedfruit.com). The project originated at [Culture Hack Scotland](http://culturehackscotland.com) and was supported by the [Edinburgh Festivals Innovation Lab](http://festivalslab.com).
 

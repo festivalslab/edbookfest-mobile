@@ -1,0 +1,28 @@
+language: ruby
+
+rvm:
+  - 1.9.2
+  
+env:
+  # Dummy values for Travis CI test environment
+  - EIBF_AMAZON_KEY=ABCDEFG1234567890ABC
+    EIBF_AMAZON_SECRET=ABCDEFG1234567890ABCDEFG1234567890ABCDEF
+    EIBF_AMAZON_TRACKING_ID=tracktracktrack
+    EIBF_FEED_PASSWORD=123412341234
+    EIBF_FEED_URL=http://www.edbookfest.co.uk/events/feed
+    EIBF_FEED_USERNAME=m-ebf-mob
+    EIBF_GUARDIAN_API=abcdefghijklmnopqrstuvwx
+    EIBF_STOCK_URL=http://online.edbookfest.co.uk/booksales/stock.xml
+  
+before_install:
+  # Install Chrome WebDriver
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sudo ./install_chrome_webdriver
+  
+before_script:
+  - rake db:migrate
+
+notifications:
+  email:
+    - andrew@edbookfest.co.uk
