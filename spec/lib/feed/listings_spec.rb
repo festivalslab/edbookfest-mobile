@@ -87,10 +87,29 @@ describe Feed::Listings do
         Event.first.title.should == "Keep Them Reading: Book Awards"
       end
       
-      it "deletes events that are not in the feed" do
-        Event.create :eibf_id => 1234567
-        listings.update false
-        Event.find_by_eibf_id(1234567).should be_nil
+      context "the feed contains events" do
+        it "deletes events that are not in the feed" do
+          Event.create :eibf_id => 1234567
+          listings.update false
+          Event.find_by_eibf_id(1234567).should be_nil
+        end
+      end
+      
+      context "the feed is empty" do
+        let(:listings_empty) { Feed::Listings.new(url) }
+        let(:listings_empty_file) { open(Rails.root + 'spec/support/listings_empty.xml') }
+      
+        before(:each) do
+          listings_empty.stub!(:open).and_return(listings_empty_file)
+          listings_empty.load false
+        end
+        
+        it "deletes all the events" do
+          Event.create
+          Event.create
+          listings_empty.update false
+          Event.all.count.should == 0
+        end
       end
     end
     

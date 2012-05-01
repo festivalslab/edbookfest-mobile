@@ -39,8 +39,13 @@ module Feed
     # Updates database records from feed data
     def update(output = true)
       eibf_ids = @doc.css('Event').map { |e| e['eibf_id'].to_i }
-      Event.where("eibf_id not in (?)", eibf_ids).delete_all
-      @doc.css('Event').each { |event| update_event(event) }
+      if eibf_ids.empty?
+        puts "Feed is empty - deleting all events" if output
+        Event.delete_all
+      else
+        Event.where("eibf_id not in (?)", eibf_ids).delete_all
+        @doc.css('Event').each { |event| update_event(event) }
+      end
       remove_orphans output
       puts "#{@events_modified} events added or modified" if output
       puts "There are now #{Event.all.count} events in the database" if output
