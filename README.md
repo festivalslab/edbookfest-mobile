@@ -87,7 +87,9 @@ The Edinburgh International Book Festival mobile app is a Ruby on Rails 3.1 appl
 * [Ruby 1.9.2](http://www.ruby-lang.org/) - suggest using [RVM](http://beginrescueend.com/) to manage Ruby versions and gemsets
 * [RubyGems](http://rubygems.org/)
 * [Bundler](http://gembundler.com/) (`gem install bundler`)
-* [Chrome WebDriver](http://www.chromium.org/developers/testing/webdriver-for-chrome) for running some Cucumber features
+* [Chrome WebDriver](http://www.chromium.org/developers/testing/webdriver-for-chrome) for running some Cucumber features - note
+  that this can be installed with "sudo ./install_chrome_webdriver" in the project root directory. A physical display, or an
+  emulator such as xvfb is required - see the Travis configuration for a usage example.
 
 ### Installation
 
