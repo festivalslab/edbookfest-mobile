@@ -77,3 +77,47 @@
       - origin.0
     body: ! "\n\n\n{\n \"resultCount\":0,\n \"results\": []\n}\n\n\n"
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://itunes.apple.com:80/lookup?country=gb&isbn=9781846142148
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      x-apple-orig-url-path:
+      - /lookup?country=gb&isbn=9781846142148
+      x-apple-application-site:
+      - NWK
+      x-apple-max-age:
+      - '3600'
+      x-apple-woa-inbound-url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?country=gb&isbn=9781846142148
+      content-type:
+      - text/javascript; charset=utf-8
+      x-apple-application-instance:
+      - '1001010'
+      x-webobjects-loadaverage:
+      - '0'
+      cache-control:
+      - no-transform, max-age=57
+      date:
+      - Thu, 25 Aug 2011 05:37:45 GMT
+      content-length:
+      - '783'
+      x-apple-partner:
+      - origin.0
+    body: ! "\n\n\n{\n \"resultCount\":1,\n \"results\": [\n{\"kind\":\"ebook\", \"artistId\":419256050,
+      \"artistName\":\"Patrick French\", \"price\":11.99, \"description\":null, \"genreIds\":[\"10073\",
+      \"38\", \"9015\"], \"releaseDate\":\"2011-01-27T08:00:00Z\", \"currency\":\"GBP\",
+      \"genres\":[\"Asia\", \"Books\", \"History\"], \"trackId\":419753457, \"trackName\":\"India\",
+      \"artistIds\":[419256050], \"artworkUrl60\":\"http://a4.mzstatic.com/us/r30/Publication/65/42/1c/mzi.snjhvjgz.60x60-50.jpg\",
+      \"artworkUrl100\":\"http://a5.mzstatic.com/us/r30/Publication/65/42/1c/mzi.snjhvjgz.100x100-75.jpg\",
+      \"artistViewUrl\":\"http://itunes.apple.com/gb/artist/patrick-french/id419256050\",
+      \"trackCensoredName\":\"India\", \"trackViewUrl\":\"http://itunes.apple.com/gb/book/india/id419753458\",
+      \"averageUserRating\":5.0, \"userRatingCount\":1}]\n}\n\n\n"
+    http_version: '1.1'
+

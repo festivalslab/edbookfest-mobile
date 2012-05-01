@@ -42,7 +42,14 @@ class Book < ActiveRecord::Base
   
   def itunes_lookup
     res = self.class.get '/lookup', :query => { :isbn => isbn.to_s }
-    (res && res['results'] && res['results'][0]) ? res['results'][0]['trackViewUrl'] : nil
+    if (res && res['results'] && res['results'][0])
+      url = res['results'][0]['trackViewUrl']
+      # Add the iTunes affiliate code
+      url << ((url.include? '?') ? "&" : "?")
+      url << "partnerId=2003&tduid=#{ENV["EIBF_ITUNES_TDUID"]}"
+    else
+      nil
+    end
   end
   
   def in_stock?

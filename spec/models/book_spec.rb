@@ -8,6 +8,7 @@ describe Book do
     before(:each) do
       @book = Book.new :isbn => "9780099548973"
       @book_with_itunes = Book.new :isbn => "9781846142147"
+      @book_with_itunes_no_query = Book.new :isbn => "9781846142148"
       @book_wihout_itunes = Book.new :isbn => "9780689837593"
     end
 
@@ -63,8 +64,18 @@ describe Book do
     describe "#itunes_lookup" do
       use_vcr_cassette "itunes lookup"
       
-      it "returns the itunes item link" do
-        @book_with_itunes.itunes_lookup.should == "http://itunes.apple.com/gb/book/india/id419753457?mt=11&uo=4"
+      context "when the itunes item edition link contains a query string" do
+        it "returns the itunes item link with affiliate code" do
+          @book_with_itunes.itunes_lookup.should == "http://itunes.apple.com/gb/book/india/id419753457?mt=11&uo=4&partnerId=2003&tduid=#{ENV["EIBF_ITUNES_TDUID"]}"
+        end
+      end
+      
+      context "when the itunes item edition link does not contain a query string" do
+        it "returns the itunes item link with affiliate code" do
+          # TradeDoubler were unable to provide a concrete example but indicated this was possible
+          #  - the VCR cassette has been faked
+          @book_with_itunes_no_query.itunes_lookup.should == "http://itunes.apple.com/gb/book/india/id419753458?partnerId=2003&tduid=#{ENV["EIBF_ITUNES_TDUID"]}"
+        end
       end
       
       it "returns nil for a book that has no itunes edition" do
