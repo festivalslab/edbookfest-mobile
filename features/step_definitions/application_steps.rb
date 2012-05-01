@@ -36,3 +36,10 @@ Then /^I should be on the (\w+) page$/ do |page|
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the #{page} page")
 end
+
+Then /^I wait until I am on the (\w+) page$/ do |page|
+  wait_until() do
+    current_path = URI.parse(current_url).path
+    current_path == path_to("the #{page} page")
+  end
+end

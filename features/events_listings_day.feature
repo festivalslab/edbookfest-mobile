@@ -92,6 +92,7 @@ Feature: Events listings for one day
     Given there are 2 adult events for 22/08/2011 starting at 14:00
     And I am on the calendar page
     When I click on day 22
+    And I wait until I am on the listings page for 22/08/2011
     Then I should be on the listings page for 22/08/2011
     And I should see 2 events
     And the title should be "Events for Mon 22 Aug 2011"
@@ -102,12 +103,9 @@ Feature: Events listings for one day
     And there are 2 child events for 22/08/2011 starting at 14:00
     And I am on the calendar page
     When I click on day 22
-    And I wait until "events" is visible
+    And I wait until I am on the listings page for 22/08/2011
     And I click the back button
-    Then I should be on the calendar page
-    And the title should be "Events calendar"
-  
-  
-  
+    And I wait until I am on the calendar page
+    Then the title should be "Events calendar"
   
   

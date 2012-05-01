@@ -49,6 +49,15 @@ Then /^I should be on the listings page for (\d+)\/(\d+)\/(\d+)$/ do |day, month
   current_path.should == path_to("the listings page for #{day}/#{month}/#{year}")
 end
 
+Then /^I wait until I am on the listings page for (\d+)\/(\d+)\/(\d+)$/ do |day, month, year|
+  wait_until() do
+    current_path = URI.parse(current_url).path
+    current_path == path_to("the listings page for #{day}/#{month}/#{year}")
+  end
+
+end
+
+
 Then /^I should be on the event detail page for event (\d+)$/ do |index|
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the event detail page for #{index}")
