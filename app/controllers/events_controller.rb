@@ -35,7 +35,12 @@ class EventsController < ApplicationController
   end
   
   def coming
-    redirect_to calendar_url unless (Event.all.count == 0)
+    if Festival.is_launched
+      set_cache(:default)
+      redirect_to calendar_url
+      return
+    end
+    set_cache(:home)
     @title = "Coming Soon"
     @section = "Coming Soon"
   end

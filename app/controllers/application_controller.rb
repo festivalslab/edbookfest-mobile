@@ -24,7 +24,10 @@ protected
   end
   
   def check_launched
-    redirect_to coming_url unless (Event.all.count > 0)
+    if ! Festival.is_launched
+      set_cache(:home)
+      redirect_to coming_url
+    end
   end
 
 end

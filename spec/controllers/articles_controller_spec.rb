@@ -8,6 +8,7 @@ describe ArticlesController do
   before(:each) do
     Author.stub(:find_by_eibf_id).and_return author
     author.stub(:full_name).and_return("Joe Bloggs")
+    Festival.stub(:is_launched).and_return true
   end
 
   describe "GET 'index'" do

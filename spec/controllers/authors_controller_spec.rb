@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe AuthorsController do
+  before(:each) do
+    Festival.stub(:is_launched).and_return true
+  end
+
   
   describe "GET 'show'" do
     let(:expected_theme) { "authors" }

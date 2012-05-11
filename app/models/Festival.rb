@@ -13,4 +13,8 @@ class Festival
   def self.date_in_festival(date)
     date >= @@start_date && date <= @@end_date
   end
+  
+  def self.is_launched
+    (Event.all.count > 0)
+  end
 end

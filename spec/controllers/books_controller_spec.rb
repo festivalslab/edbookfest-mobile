@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe BooksController do
+  before(:each) do
+    Festival.stub(:is_launched).and_return true
+  end
+  
   describe "GET 'show'" do
     let(:book) { mock_model(Book).as_null_object }
     let(:amazon_book) { double("AmazonBook").as_null_object }

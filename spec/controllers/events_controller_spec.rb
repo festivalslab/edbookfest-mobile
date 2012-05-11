@@ -11,6 +11,7 @@ describe EventsController do
     Festival.stub(:start_date).and_return(fest_start)
     Festival.stub(:end_date).and_return(fest_end)
     Festival.stub(:date_in_festival).and_return(true)
+    Festival.stub(:is_launched).and_return true
   end
   
   describe "setting layout" do
@@ -65,6 +66,22 @@ describe EventsController do
   end
   
   describe "GET 'index'" do    
+    context "when the festival has not launched" do
+      before(:each) do
+        Festival.stub(:is_launched).and_return(false)
+      end
+        
+      it "redirects to the coming soon page" do
+          get :index
+          response.should redirect_to coming_url
+      end
+        
+      it "sets the cache headers to a minute" do
+        get :index
+        response.headers['Cache-Control'].should == 'public, max-age=60'
+      end
+    end
+    
     context "when a date is provided" do
       context "and when the date is during the festival" do
         let(:date) { Date.new(2011,8,13) }
@@ -306,6 +323,56 @@ describe EventsController do
         @book.stub(:amazon_lookup).and_return nil
         get :show, :id => "1234-title"
         assigns[:amazon_books].should eq []
+      end
+    end
+  end
+  
+  describe "GET 'coming'" do
+    context "When the festival has not launched" do
+      before(:each) do
+        Festival.stub(:is_launched).and_return false
+      end
+      
+      it "should be successful" do
+        get :coming
+        response.should be_success
+      end
+      
+      it "sets the cache headers to a minute" do
+        get :calendar
+        response.headers['Cache-Control'].should == 'public, max-age=60'
+      end
+      
+      it "assigns @theme" do
+        get :coming
+        assigns[:theme].should eq(expected_theme)
+      end
+      
+      it "assigns @section" do
+        get :coming
+        assigns[:section].should eq("Coming Soon")
+      end
+      
+      it "assigns @title" do
+        get :coming
+        assigns[:title].should eq("Coming Soon")
+      end
+      
+    end
+    
+    context "When the festival has launched" do
+      before(:each) do
+        Festival.stub(:is_launched).and_return true
+      end
+      
+      it "redirects to the calendar" do
+        get :coming
+        response.should redirect_to calendar_url
+      end
+      
+      it "sets the cache headers to an hour" do
+        get :coming
+        response.headers['Cache-Control'].should == 'public, max-age=3600'
       end
     end
   end

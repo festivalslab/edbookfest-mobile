@@ -28,4 +28,19 @@ describe Festival do
       Festival.date_in_festival(date).should_not be_true
     end
   end
+  
+  describe "#is_launched" do
+    context "when there are events" do
+    end
+      it "returns true" do
+        Event.create
+        Festival.is_launched.should be_true
+      end
+    
+    context "when there are no events" do
+      it "returns false" do
+        Festival.is_launched.should_not be_true
+      end
+    end
+  end
 end
