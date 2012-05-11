@@ -2,6 +2,9 @@ Feature: Book detail page
   In order to see whether I am interested in a particular book
   As a potential book buyer
   I want to read details about an individual book and see where I can buy it
+  
+  Background:
+    Given there is an event called "Joe Bloggs"
 
   @amazon_lookup
   Scenario: standard locating information is shown

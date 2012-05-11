@@ -3,6 +3,9 @@ Feature: Guardian articles detail
   As a festival-goer
   I want to read an individual article of my choice
   
+  Background:
+    Given there is an event called "Joe Nesbø"
+  
   @guardianapi
   Scenario: Article has standard information
     Given there is an author called "Jo Nesbø"

@@ -2,6 +2,9 @@ Feature: Author detail
   In order to find out more about a particular author
   As a festival-goer
   I want to view details about an author
+  
+  Background:
+    Given there is an event called "Joe Bloggs"
 
   @amazon_search
   Scenario: Author detail shows accurate information

@@ -6,6 +6,7 @@ Feature: Home page variations during and outside of Festival time
   @nowebmock
   Scenario: Before festival starts, calendar is shown
     Given today is 12/08/2011
+    And there is an event called "Joe Bloggs"
     When I go to the home page
     Then I should be on the calendar page
 

@@ -3,6 +3,9 @@ Feature: Events calendar
   As a festival-goer
   I want to see which days have events
   
+  Background:
+    Given there is 1 event for 22/08/2011 starting at 10:00
+  
   @nowebmock
   Scenario: Show that user is in Events section
     Given I am on the calendar page

@@ -5,7 +5,8 @@ Feature: Events listings for one day
   
   @nowebmock
   Scenario: Shows chosen date
-    Given I am on the listings page for 22/08/2011
+    Given there is 1 event for 22/08/2011 starting at 14:00
+    And I am on the listings page for 22/08/2011
     Then the page heading should be "Mon 22 Aug 2011"
 
   @nowebmock

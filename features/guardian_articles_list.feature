@@ -2,6 +2,9 @@ Feature: Guardian articles list
   In order to read interesting articles about or by an author
   As a festival-goer
   I want to view a list of the 10 latest Guardian articles mentioning an author
+  
+  Background:
+    Given there is an event called "Joe Bloggs"
 
   @guardianapi
   Scenario: Author article page shows correct page details
