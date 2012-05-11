@@ -1,3 +1,7 @@
+Given /^there are no events in the database$/ do
+  Event.all.count.should == 0
+end
+
 Given /^there (?:is|are) (\d+) (child|adult)?\s?(sold out)?\s?events? for (\d+)\/(\d+)\/(\d+) starting at (\d+):(\d+)$/ do |count, type, sold_out, day, month, year, hours, minutes|
   event_type = (type == "child") ? "Children" : "Adult"
   date_pattern = "#{year}-#{month}-#{day}T#{hours}:#{minutes}:00+01:00"

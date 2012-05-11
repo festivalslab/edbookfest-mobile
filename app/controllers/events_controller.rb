@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   helper CalendarHelper
   before_filter :set_theme, :set_section
+  skip_before_filter :check_launched, :only => [:coming]
   layout :set_layout
   
   def index
@@ -31,6 +32,12 @@ class EventsController < ApplicationController
     @title = "Events calendar"
     @start_date = Festival.start_date
     @end_date = Festival.end_date
+  end
+  
+  def coming
+    redirect_to calendar_url unless (Event.all.count == 0)
+    @title = "Coming Soon"
+    @section = "Coming Soon"
   end
   
   def show

@@ -1,6 +1,7 @@
 EdbookfestMobile::Application.routes.draw do
   
   match "events/calendar" => "events#calendar", :as => :calendar
+  match "coming" => "events#coming", :as => :coming
   match "events/calendar/:date(/:type)" => "events#index", :as => :listings, :constraints => { :date => /\d{4}-\d{2}-\d{2}/, :type => /(Adult|Children)/ }
   
   resources :events, :only => [:index, :show]

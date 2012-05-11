@@ -13,6 +13,9 @@ module NavigationHelpers
       
     when /^the calendar page$/
       calendar_path
+    
+    when /^the coming soon page$/
+      coming_path
       
     when /^the listings page for (\d+)\/(\d+)\/(\d+)$/
       listings_path("#{$3}-#{$2}-#{$1}")

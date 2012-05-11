@@ -32,7 +32,7 @@ Then /^the page heading should be "([^\"]*)"$/ do |text|
   page.should have_css("h3", :text => text)
 end
 
-Then /^I should be on the (\w+) page$/ do |page|
+Then /^I should be on the (\w+|coming soon) page$/ do |page|
   current_path = URI.parse(current_url).path
   current_path.should == path_to("the #{page} page")
 end

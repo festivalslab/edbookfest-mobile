@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   http_basic_authenticate_with :name => ENV["HTTP_USERNAME"], :password => ENV["HTTP_PASSWORD"], :realm => "EIFB mobile site" if ENV["HTTP_AUTH_ACTIVE"]
-  before_filter :page_cache
+  before_filter :page_cache, :check_launched
   
 protected
 
@@ -21,6 +21,10 @@ protected
     cache_time = Rails.application.config.cache_times[type] * 60
     cache_header = cache_time > 0 ? "public, max-age=#{cache_time}" : "no-cache"
     response.headers['Cache-Control'] = cache_header
+  end
+  
+  def check_launched
+    redirect_to coming_url unless (Event.all.count > 0)
   end
 
 end
