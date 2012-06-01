@@ -41,9 +41,14 @@ module EdbookfestMobile
     config.assets.enabled = true
     config.assets.initialize_on_precompile = false
     
+    # Configure object caching
+    config.cache_store = :memory_store
+    
+    # Config for cache headers
     config.cache_times = {
       :default => 60,
-      :home => 1
+      :home => 1,
+      :admin => 0
     }
     
     config.cron_type = "none"

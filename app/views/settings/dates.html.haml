@@ -1,0 +1,25 @@
+%hgroup
+  %h3
+    = @heading
+%div.content.padding
+  - if @errors.any?
+    %div.alert.alert-error
+      There were problems with the values you entered, please check below and try again.
+  %form.form-horizontal{:method => :post}
+    %fieldset
+      %div{:class => ["control-group", ("error" if @errors.has_key?(:festival_start_date))].compact.join(" ")}
+        %label.control-label{:for => "festival_start_date"}
+          Start Date:
+        .controls
+          %input#festival_start_date{:name => "festival_start_date", :value => @festival_start_date}
+          - if @errors.has_key?(:festival_start_date)
+            %span.help-inline= @errors[:festival_start_date]
+      %div{:class => ["control-group", ("error" if @errors.has_key?(:festival_end_date))].compact.join(" ")}
+        %label.control-label{:for => "festival_end_date"}
+          End Date:
+        .controls
+          %input#festival_end_date{:name => "festival_end_date", :value => @festival_end_date}
+          - if @errors.has_key?(:festival_end_date)
+            %span.help-inline= @errors[:festival_end_date]
+      .form-actions
+        %input.btn#submit{:name => "submit", :value => "Save settings", :type => "submit"}

@@ -14,6 +14,8 @@ env:
     EIBF_GUARDIAN_API=abcdefghijklmnopqrstuvwx
     EIBF_STOCK_URL=http://online.edbookfest.co.uk/booksales/stock.xml
     EIBF_ITUNES_TDUID=UK0000000
+    HTTP_USERNAME=user
+    HTTP_PASSWORD=password
   
 before_install:
   # Install Chrome WebDriver

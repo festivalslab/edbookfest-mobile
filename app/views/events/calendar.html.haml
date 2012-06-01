@@ -1,4 +1,4 @@
-%h3 August 2011
+%h3=@start_date.strftime('%B %Y')
 #calendar
-  != calendar(:year => 2011, :month => 8, :month_header => false, :abbrev => (0..1)) do |day|
+  != calendar(:year => @start_date.year, :month => @start_date.month, :month_header => false, :abbrev => (0..1)) do |day|
     - render_calendar_cell(day, @start_date, @end_date)

@@ -25,6 +25,10 @@ EdbookfestMobile::Application.configure do
   # Do not compress assets
   config.assets.compress = false
   
+  # Configure object caching
+  config.cache_store = :null_store
+
+  
   config.cache_times = {
     :default => 0,
     :home => 0

@@ -50,17 +50,17 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 # 
-# When /^(?:|I )press "([^"]*)"$/ do |button|
-#   click_button(button)
-# end
+When /^(?:|I )press "([^"]*)"$/ do |button|
+  click_button(button)
+end
 # 
 # When /^(?:|I )follow "([^"]*)"$/ do |link|
 #   click_link(link)
 # end
 # 
-# When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-#   fill_in(field, :with => value)
-# end
+When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
 # 
 # When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
 #   fill_in(field, :with => value)
@@ -77,11 +77,11 @@ end
 # # TODO: Add support for checkbox, select og option
 # # based on naming conventions.
 # #
-# When /^(?:|I )fill in the following:$/ do |fields|
-#   fields.rows_hash.each do |name, value|
-#     When %{I fill in "#{name}" with "#{value}"}
-#   end
-# end
+When /^(?:|I )fill in the following:$/ do |fields|
+  fields.rows_hash.each do |name, value|
+    step %{I fill in "#{name}" with "#{value}"}
+  end
+end
 # 
 # When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
 #   select(value, :from => field)
@@ -139,17 +139,15 @@ end
 #   end
 # end
 # 
-# Then /^the "([^"]*)" field(?: within (.*))? should contain "([^"]*)"$/ do |field, parent, value|
-#   with_scope(parent) do
-#     field = find_field(field)
-#     field_value = (field.tag_name == 'textarea') ? field.text : field.value
-#     if field_value.respond_to? :should
-#       field_value.should =~ /#{value}/
-#     else
-#       assert_match(/#{value}/, field_value)
-#     end
-#   end
-# end
+Then /^the "([^"]*)" field should contain "([^"]*)"$/ do |field, value|
+  field = find_field(field)
+  field_value = (field.tag_name == 'textarea') ? field.text : field.value
+  if field_value.respond_to? :should
+    field_value.should =~ /#{value}/
+  else
+    assert_match(/#{value}/, field_value)
+  end
+end
 # 
 # Then /^the "([^"]*)" field(?: within (.*))? should not contain "([^"]*)"$/ do |field, parent, value|
 #   with_scope(parent) do

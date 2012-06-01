@@ -5,6 +5,7 @@ Feature: Events calendar
   
   Background:
     Given there is 1 event for 22/08/2011 starting at 10:00
+    And the festival dates are 13/08/2011 - 29/08/2011
   
   @nowebmock
   Scenario: Show that user is in Events section

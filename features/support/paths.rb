@@ -46,6 +46,9 @@ module NavigationHelpers
     
     when /^the book detail page with isbn \"(\d+)\"$/
       book_path($1)
+    
+    when /^the dates settings page$/
+      settings_dates_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

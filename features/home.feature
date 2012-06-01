@@ -3,6 +3,9 @@ Feature: Home page variations during and outside of Festival time
   As a festival-goer
   I want to see a list of events that are on today when I go to the home page
   
+  Background:
+    Given the festival dates are 13/08/2011 - 29/08/2011
+  
   @nowebmock
   Scenario: Before festival starts, calendar is shown
     Given today is 12/08/2011

@@ -28,4 +28,9 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
   config.extend VCR::RSpec::Macros
+  
+  # Clear the rails cache before each spec
+  config.before(:each) do
+    Rails.cache.clear
+  end
 end

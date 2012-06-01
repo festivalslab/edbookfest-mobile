@@ -17,6 +17,9 @@
   %link{:rel => "apple-touch-startup-image", :href => image_path("l/splash.png") }
   %meta{:content => "on", "http-equiv" => "cleartype"}
   = stylesheet_link_tag :application
+  - if @use_bootstrap
+    = stylesheet_link_tag :bootstrap
+
 
 %body{:class => @theme}
   #container
