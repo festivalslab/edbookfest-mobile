@@ -31,6 +31,14 @@ begin
       t.fork = true # You may get faster startup if you set this to false
       t.profile = 'rerun'
     end
+    
+    Cucumber::Rake::Task.new({:nojs => 'db:test:prepare'}, 'Run all tests except those tagged @javascript') do |t|
+      t.binary = vendored_cucumber_bin
+      t.fork = true # You may get faster startup if you set this to false
+      t.profile = (ENV["PROFILE"] || 'default')
+      t.cucumber_opts = ["--tags","~@javascript"]
+    end
+
 
     desc 'Run all features'
     task :all => [:ok, :wip]
