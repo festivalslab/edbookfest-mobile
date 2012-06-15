@@ -16,6 +16,12 @@ env:
     EIBF_ITUNES_TDUID=UK0000000
     HTTP_USERNAME=user
     HTTP_PASSWORD=password
+    EIBF_HASH_SECRET=foo
+    EIBF_S3_ACCESSKEY=s3access
+    EIBF_S3_SECRET=s3secret
+    EIBF_S3_BUCKET=s3bucket
+    EIBF_S3_HOST=s3.amazonaws.com
+
   
 before_install:
   # Install Chrome WebDriver

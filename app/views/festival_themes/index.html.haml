@@ -1,0 +1,19 @@
+%h1 Listing festival_themes
+= Paperclip::Attachment::default_options
+%table
+  %tr
+    %th Show from
+    %th
+    %th
+    %th
+
+  - @festival_themes.each do |festival_theme|
+    %tr
+      %td= festival_theme.show_from
+      %td= link_to 'Show', festival_theme
+      %td= link_to 'Edit', edit_festival_theme_path(festival_theme)
+      %td= link_to 'Destroy', festival_theme, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Festival theme', new_festival_theme_path

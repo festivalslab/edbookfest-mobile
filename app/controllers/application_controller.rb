@@ -10,6 +10,7 @@ protected
   end
   
   def set_layout
+    @festival_theme = FestivalTheme.current
     request.headers['X-PJAX'] ? 'pjax' : 'application'
   end
   

@@ -1,0 +1,19 @@
+= form_for @festival_theme, :html => { :multipart => true} do |f|
+  -if @festival_theme.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@festival_theme.errors.count, "error")} prohibited this festival_theme from being saved:"
+      %ul
+        - @festival_theme.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :show_from
+    = f.datetime_select :show_from
+  .field
+    = f.file_field :high
+  .field
+    = f.file_field :medium
+  .field
+    = f.file_field :low
+  .actions
+    = f.submit 'Save'

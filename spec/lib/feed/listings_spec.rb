@@ -255,5 +255,14 @@ describe Feed::Listings do
         Book.find_by_eibf_id(7142).should be_nil
       end
     end
+    
+    describe "application settings" do
+      it "clears the festival theme cache" do
+        @cache = double("ActiveSupport::Cache::Store")
+        Rails.stub(:cache).and_return(@cache)
+        @cache.should_receive(:delete).with('current_theme')
+        listings.update false
+      end
+    end
   end
 end

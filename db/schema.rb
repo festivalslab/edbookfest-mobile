@@ -64,8 +64,34 @@ ActiveRecord::Schema.define(:version => 20110810071228) do
   create_table "featured_books", :force => true do |t|
     t.integer  "event_id"
     t.integer  "book_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "festival_themes", :force => true do |t|
+    t.datetime "show_from"
+    t.string   "high_file_name"
+    t.string   "high_content_type"
+    t.integer  "high_file_size"
+    t.datetime "high_updated_at"
+    t.string   "medium_file_name"
+    t.string   "medium_content_type"
+    t.integer  "medium_file_size"
+    t.datetime "medium_updated_at"
+    t.string   "low_file_name"
+    t.string   "low_content_type"
+    t.integer  "low_file_size"
+    t.datetime "low_updated_at"
+    t.string   "shortcut_file_name"
+    t.string   "shortcut_content_type"
+    t.integer  "shortcut_file_size"
+    t.datetime "shortcut_updated_at"
+    t.string   "splash_file_name"
+    t.string   "splash_content_type"
+    t.integer  "splash_file_size"
+    t.datetime "splash_updated_at"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "settings", :force => true do |t|

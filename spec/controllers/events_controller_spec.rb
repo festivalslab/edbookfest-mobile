@@ -25,6 +25,15 @@ describe EventsController do
       get :calendar
       response.should_not render_template("layouts/application")
     end
+    
+    it "assigns the current theme for icons and images" do
+      @current = Factory.create(:festival_theme)
+      FestivalTheme.stub(:current).and_return(@current)
+      
+      get :calendar
+      assigns[:festival_theme].should == @current
+    end
+    
   end
 
   describe "GET 'calendar'" do

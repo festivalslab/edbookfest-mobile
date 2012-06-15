@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  = Paperclip::Attachment::default_options
+  %b Show from:
+  = @festival_theme.show_from
+  = image_tag @festival_theme.high.url
+  = image_tag @festival_theme.medium.url
+  = image_tag @festival_theme.low.url
+  = image_tag @festival_theme.shortcut.url
+  = image_tag @festival_theme.splash.url
+
+= link_to 'Edit', edit_festival_theme_path(@festival_theme)
+\|
+= link_to 'Back', festival_themes_path

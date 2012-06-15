@@ -47,6 +47,8 @@ module Feed
         @doc.css('Event').each { |event| update_event(event) }
       end
       remove_orphans output
+      # Clear up cached application settings that may no longer be correct
+      Rails.cache.delete('current_theme')
       puts "#{@events_modified} events added or modified" if output
       puts "There are now #{Event.all.count} events in the database" if output
     end

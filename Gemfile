@@ -11,6 +11,8 @@ gem 'sucker', '~> 2.1'
 gem 'delorean', '~> 1.1'
 #gem 'sprockets', :git => "git://github.com/sstephenson/sprockets.git", :tag => "v2.0.0.beta.13"
 gem 'rails-settings-cached', '~> 0.2'
+gem 'paperclip', '~> 3.0'
+gem 'aws-sdk', '~> 1.3.4'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3'
