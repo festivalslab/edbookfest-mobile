@@ -54,7 +54,8 @@ EdbookfestMobile::Application.configure do
   
   config.cache_times = {
     :default => 60,
-    :home => 0
+    :home => 0,
+    :admin => 0
   }
   
   config.cron_type = "daily"
