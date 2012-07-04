@@ -15,5 +15,5 @@ Factory.define :event do |f|
   f.image "/event/image.jpg"
   f.is_sold_out false
   f.event_type "Adult"
-  f.main_site_url "http://edbookfest.co.uk/event/buy"
+  f.main_site_url "http://edbookfest.co.uk/the-festival/event"
 end
