@@ -294,6 +294,12 @@ describe EventsController do
       get :show, :id => "1234-title"
       assigns[:title].should eq "My Title"
     end
+
+    it "assigns @canonical_url" do
+      event.stub(:main_site_url).and_return "http://www.edbookfest.co.uk/the-festival/my-event"
+      get :show, :id => "1234-title"
+      assigns[:canonical_url].should eq "http://www.edbookfest.co.uk/the-festival/my-event"
+    end
     
     it "assigns @authors" do
       event.stub(:authors).and_return ["author"]

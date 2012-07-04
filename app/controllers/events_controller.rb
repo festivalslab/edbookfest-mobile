@@ -47,6 +47,7 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find_by_eibf_id(params[:id])
+    @canonical_url = @event["main_site_url"]
     @title = @event["title"]
     @authors = @event.authors
     @books = @event.books

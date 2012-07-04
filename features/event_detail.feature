@@ -21,7 +21,8 @@ Feature: Event detail
     And the event image should be "/event/image.jpg" with alt text "Joe Bloggs"
     And the event theme should be "Event theme"
     And the event buy tickets button should be "http://edbookfest.co.uk/the-festival/event"
-  
+    And the page should have a canonical link to "http://edbookfest.co.uk/the-festival/event"
+
   @nowebmock  
   Scenario: Event detail page doesn't render blocks when no content is present
     Given there is an event called "Joe Bloggs" without optional data

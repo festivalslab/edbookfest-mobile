@@ -13,6 +13,8 @@
   %link{:href => image_path("m/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
   %link{:href => image_path("l/apple-touch-icon-precomposed.png"), :rel => "apple-touch-icon-precomposed"}
   %link{:href => image_path("l/apple-touch-icon.png"), :rel => "shortcut icon"}
+  - if @canonical_url.present?
+    %link{:rel => "canonical", :href => @canonical_url}
   %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
   %link{:rel => "apple-touch-startup-image", :href => image_path("l/splash.png") }
   %meta{:content => "on", "http-equiv" => "cleartype"}

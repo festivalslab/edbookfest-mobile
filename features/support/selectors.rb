@@ -10,7 +10,10 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
-      
+    
+    when "canonical url link"
+      "link[rel=\"canonical\"]"
+
     when /event (\d+)/
       "ul.events li:nth-child(#{$1})"
       
