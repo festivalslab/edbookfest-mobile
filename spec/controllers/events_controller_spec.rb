@@ -63,6 +63,11 @@ describe EventsController do
       assigns[:end_date].should eq(fest_end)
     end
     
+    it "assigns @google_site_verification" do
+      get :calendar
+      assigns[:google_site_verification].should eq(ENV["EIBF_GOOGLE_SITE_VERIFICATION"])
+    end
+    
   end
   
   describe "GET 'index'" do    
@@ -123,6 +128,11 @@ describe EventsController do
         it "assigns @heading" do
           get :index, :date => date.to_s
           assigns[:heading].should eq("Sat 13 Aug 2011")
+        end
+        
+        it "assigns @google_site_verification" do
+          get :index, :date => date.to_s
+          assigns[:google_site_verification].should eq(ENV["EIBF_GOOGLE_SITE_VERIFICATION"])
         end
         
         describe "when no type parameter is provided" do
@@ -218,6 +228,11 @@ describe EventsController do
             assigns[:title].should eq("")
           end
           
+          it "assigns @google_site_verification" do
+            get :index
+            assigns[:google_site_verification].should eq(ENV["EIBF_GOOGLE_SITE_VERIFICATION"])
+          end
+          
           it "requests events that are on now and assigns them to @on_now" do
             Event.should_receive(:on_now)
             get :index
@@ -252,7 +267,12 @@ describe EventsController do
             assigns[:events].should eq([1,2])
             assigns[:type].should eq("Adult")
           end
-          
+
+          it "assigns @google_site_verification" do
+            get :index
+            assigns[:google_site_verification].should eq(ENV["EIBF_GOOGLE_SITE_VERIFICATION"])
+          end
+
           it "assigns @heading" do
             get :index
             assigns[:heading].should eq("Today at the Festival")
@@ -364,6 +384,10 @@ describe EventsController do
         assigns[:title].should eq("Coming Soon")
       end
       
+      it "assigns @google_site_verification" do
+        get :coming
+        assigns[:google_site_verification].should eq(ENV["EIBF_GOOGLE_SITE_VERIFICATION"])
+      end
     end
     
     context "When the festival has launched" do

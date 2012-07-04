@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   helper CalendarHelper
-  before_filter :set_theme, :set_section
+  before_filter :set_theme, :set_section, :set_site_verification
   skip_before_filter :check_launched, :only => [:coming]
   layout :set_layout
   
@@ -62,6 +62,10 @@ protected
   
   def set_section
     @section = "Events"
+  end
+  
+  def set_site_verification
+    @google_site_verification = ENV["EIBF_GOOGLE_SITE_VERIFICATION"]
   end
     
 end

@@ -9,6 +9,8 @@
   %meta{:content => "True", :name => "HandheldFriendly"}
   %meta{:content => "320", :name => "MobileOptimized"}
   %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+  - if @google_site_verification.present?
+    %meta{:content => @google_site_verification, :name => "google-site-verification"}
   %link{:href => image_path("h/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
   %link{:href => image_path("m/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
   %link{:href => image_path("l/apple-touch-icon-precomposed.png"), :rel => "apple-touch-icon-precomposed"}

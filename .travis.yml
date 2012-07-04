@@ -16,6 +16,7 @@ env:
     EIBF_ITUNES_TDUID=UK0000000
     HTTP_USERNAME=user
     HTTP_PASSWORD=password
+    EIBF_GOOGLE_SITE_VERIFICATION=abcdefghijkl
   
 before_install:
   # Install Chrome WebDriver
