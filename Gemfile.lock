@@ -35,7 +35,7 @@ GEM
     autotest-growl (0.2.16)
     autotest-rails (4.1.2)
       ZenTest (~> 4.5)
-    awesome_print (1.0.2)
+    awesome_print (1.1.0)
     builder (3.0.4)
     calendar_helper (0.2.4)
       open4
