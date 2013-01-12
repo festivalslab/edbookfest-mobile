@@ -32,7 +32,7 @@ before_script:
   - rake db:migrate
 
 after_success:
-  - travis_deployer.rb
+  - ruby travis_deployer.rb
 
 notifications:
   email:
