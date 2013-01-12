@@ -58,7 +58,7 @@ if !system "yes | heroku keys:add"
 end
 
 # Deploy
-if !system "git push heroku master"
+if !system "git push heroku #{ENV['TRAVIS_BRANCH']}:master"
   puts "Could not push new version"
   exit $?.exitstatus
 end
