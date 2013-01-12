@@ -25,13 +25,13 @@ puts "Deploying build #{ENV['TRAVIS_JOB_NUMBER']} - branch #{ENV['TRAVIS_BRANCH'
 # Install the Heroku gem
 if !system 'gem install heroku'
   puts "Could not install heroku gem"
-  exit $?
+  exit $?.exitstatus
 end
 
 # Add the remote git branch
-if !system "git remote add heroku git@heroku.com:#{deploy_app}"
+if !system "git remote add heroku git@heroku.com:#{deploy_app}.git"
   puts "Could not add git remote"
-  exit $?
+  exit $?.exitstatus
 end
 
 # Ignore SSH key verification for Heroku
@@ -48,24 +48,24 @@ end
 # Clear any existing heroku keys for our instance
 if !system "heroku keys:clear"
   puts "Could not clear heroku keys"
-  exit $?
+  exit $?.exitstatus
 end
 
 # Add new heroku key
 if !system "yes | heroku keys:add"
   puts "Could not add heroku keys"
-  exit $?
+  exit $?.exitstatus
 end
 
 # Deploy
 if !system "git push heroku master"
   puts "Could not push new version"
-  exit $?
+  exit $?.exitstatus
 end
 
 # Run db:migrate
 if !system "heroku run rake db:migrate"
-  result = $?
+  result = $?.exitstatus
   puts "Could not migrate database - attempting rollback"
 
   system "heroku rollback"
@@ -75,5 +75,5 @@ end
 # Restart the app
 if !system "heroku restart"
   puts "Could not restart application"
-  exit $?
+  exit $?.exitstatus
 end
