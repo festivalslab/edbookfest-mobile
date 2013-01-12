@@ -2,7 +2,7 @@
 # First, identify the deploy application based on branch
 
 # Don't deploy pull requests
-if ENV['TRAVIS_PULL_REQUEST']
+if ENV['TRAVIS_PULL_REQUEST'] == "true"
   puts "Pull request builds are not deployed"
   exit
 end
@@ -67,7 +67,7 @@ end
 if !system "heroku run rake db:migrate"
   result = $?
   puts "Could not migrate database - attempting rollback"
-  
+
   system "heroku rollback"
   exit result
 end
