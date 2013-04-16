@@ -18,7 +18,7 @@ group :development, :test do
   gem 'cucumber-rails', '~> 1.0', :require => false
   gem 'capybara', '~> 1.0'
   gem 'database_cleaner', '~> 0.6'
-  gem 'ZenTest', '~> 4.6'
+  gem 'ZenTest', '~> 4.9'
   gem 'autotest-rails', '~> 4.1'
   gem 'factory_girl_rails', '~> 1.1'
   gem 'launchy', '~> 2.0'
