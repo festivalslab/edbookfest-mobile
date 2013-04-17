@@ -1,15 +1,21 @@
 #!/bin/bash
 
 # Installs the Chrome WebDriver for use with functional tests
+
+# Make sure /dev/shm has correct permissions
+ls -l /dev/shm
+sudo chmod 1777 /dev/shm
+ls -l /dev/shm
+
 # Runs as a separate script as the dpkg task exits with nonzero status due to dependencies
 
 # Install Chrome
-mkdir /tmp/chrome-inst
-cd /tmp/chrome-inst
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
-dpkg -i ./google-chrome*.deb
-sudo apt-get install libgconf2-4
-apt-get -f -y install
+
+export CHROME=google-chrome-stable_current_i386.deb
+wget https://dl.google.com/linux/direct/$CHROME
+sudo dpkg --install $CHROME || sudo apt-get -f install
+ls -l /usr/bin/google-chrome
+google-chrome --version
 
 # Install ChromeDriver
 wget http://chromedriver.googlecode.com/files/chromedriver_linux32_23.0.1240.0.zip
