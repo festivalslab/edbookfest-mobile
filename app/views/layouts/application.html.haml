@@ -11,14 +11,14 @@
   %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
   - if @google_site_verification.present?
     %meta{:content => @google_site_verification, :name => "google-site-verification"}
-  %link{:href => image_path("h/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
-  %link{:href => image_path("m/apple-touch-icon.png"), :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
-  %link{:href => image_path("l/apple-touch-icon-precomposed.png"), :rel => "apple-touch-icon-precomposed"}
-  %link{:href => image_path("l/apple-touch-icon.png"), :rel => "shortcut icon"}
+  %link{:href => image_path("h/apple-touch-icon.png?2013"), :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
+  %link{:href => image_path("m/apple-touch-icon.png?2013"), :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
+  %link{:href => image_path("l/apple-touch-icon-precomposed.png?2013"), :rel => "apple-touch-icon-precomposed"}
+  %link{:href => image_path("l/apple-touch-icon.png?2013"), :rel => "shortcut icon"}
   - if @canonical_url.present?
     %link{:rel => "canonical", :href => @canonical_url}
   %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
-  %link{:rel => "apple-touch-startup-image", :href => image_path("l/splash.png") }
+  %link{:rel => "apple-touch-startup-image", :href => image_path("l/splash.png?2013") }
   %meta{:content => "on", "http-equiv" => "cleartype"}
   = stylesheet_link_tag :application
   - if @use_bootstrap
