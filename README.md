@@ -137,7 +137,7 @@ Some of the key gems used in the project:
 
 ### Tests
 
-The codebase has good test coverage with [Cucumber](http://cukes.info/) examples driven by [Capybara](https://github.com/jnicklas/capybara), an [RSpec](http://relishapp.com/rspec) suite and [Jasmine](http://pivotal.github.com/jasmine/) examples for JavaScript code. 
+The codebase has good test coverage with [Cucumber](http://cukes.info/) examples driven by [Capybara](https://github.com/jnicklas/capybara), an [RSpec](http://relishapp.com/rspec) suite and [Jasmine](https://jasmine.github.io/) examples for JavaScript code. 
 
 Other test tools are used for mocking time ([Delorean](https://github.com/bebanjo/delorean)), recording and replaying external HTTP responses ([VCR](http://relishapp.com/myronmarston/vcr)), mocking HTTP responses ([WebMock](https://github.com/bblimke/webmock) and [Fakeweb](https://github.com/chrisk/fakeweb)) and creating fake data ([Factory Girl](https://github.com/thoughtbot/factory_girl)).
 
